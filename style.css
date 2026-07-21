@@ -1,16 +1,23 @@
 body {
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     text-align: center;
-    background: linear-gradient(to bottom, #000000, #1a1a1a);
-    color: white;
 }
-}
+
 header {
     padding: 40px;
     background: #222;
     color: white;
 }
+
+header img {
+    width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -18,13 +25,15 @@ header {
     gap: 20px;
     padding: 30px;
 }
+
 .card {
-    background: white;
+    background: #2b2b2b;
     padding: 20px;
     width: 220px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
 }
+
 .btn {
     display: inline-block;
     margin: 20px;
@@ -34,6 +43,7 @@ header {
     text-decoration: none;
     border-radius: 8px;
 }
+
 footer {
     margin-top: 30px;
     padding: 20px;
