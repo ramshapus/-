@@ -1,9 +1,10 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     text-align: center;
-    background: #f4f4f4;
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    color: white;
+}
 }
 header {
     padding: 40px;
