@@ -1,40 +1,73 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center;
-    background: #f4f4f4;
+body{
+background: linear-gradient(180deg,#050505,#0d061a,#050505);
+color:white;
+font-family:Tahoma,sans-serif;
+margin:0;
+padding:0;
+text-align:center;
 }
-header {
-    padding: 40px;
-    background: #222;
-    color: white;
+
+.logo{
+width:220px;
+margin-top:40px;
+filter:drop-shadow(0 0 20px #b14dff);
 }
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
+
+h1{
+font-size:48px;
+margin-top:15px;
 }
-.card {
-    background: white;
-    padding: 20px;
-    width: 220px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+
+.subtitle{
+color:#cfcfcf;
+font-size:24px;
+margin-bottom:40px;
 }
-.btn {
-    display: inline-block;
-    margin: 20px;
-    padding: 15px 25px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
+
+.products{
+display:flex;
+flex-direction:column;
+gap:25px;
+padding:20px;
 }
-footer {
-    margin-top: 30px;
-    padding: 20px;
-    background: #222;
-    color: white;
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid #8b3dff;
+border-radius:30px;
+padding:25px;
+box-shadow:0 0 25px rgba(162,0,255,.25);
+backdrop-filter:blur(10px);
+}
+
+.card h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:22px;
+color:#d5d5d5;
+}
+
+.btn{
+display:inline-block;
+padding:15px 40px;
+border-radius:18px;
+border:1px solid #666;
+background:transparent;
+color:white;
+text-decoration:none;
+font-size:22px;
+margin-top:15px;
+}
+
+.btn:hover{
+box-shadow:0 0 20px #a200ff;
+}
+
+footer{
+margin-top:50px;
+padding:25px;
+color:#ccc;
 }
