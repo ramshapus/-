@@ -120,88 +120,227 @@ body::after{
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+<!-- ================= HEADER ================= -->
 
-header{
-    text-align:center;
+<header class="ramsha-header">
 
-    padding:
-        45px
-        10px
-        20px;
+  <div class="ramsha-logo-wrap">
+    <img
+      src="E372B55E-7833-47B9-8A55-99A31DC1F3DC.PNG"
+      alt="رمشة بلس"
+      class="ramsha-logo"
+    >
+  </div>
+
+  <h1 class="ramsha-title">رمشة بلس</h1>
+
+  <p class="ramsha-subtitle">
+    اشتراكات رقمية بكل سهولة وأمان
+  </p>
+
+  <div class="ramsha-line">
+    <span></span>
+    <b>✦</b>
+    <span></span>
+  </div>
+
+</header>
+
+<style>
+
+/* ================= HEADER ================= */
+
+.ramsha-header {
+  position: relative;
+  text-align: center;
+
+  padding: 25px 20px 35px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(150, 45, 255, 0.18),
+      transparent 45%
+    );
+
+  overflow: hidden;
 }
 
-.logo-wrap{
-    position:relative;
+/* Glow خلف اللوقو */
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.ramsha-header::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 180px;
+
+  left: 50%;
+  top: 35px;
+
+  transform: translateX(-50%);
+
+  background: rgba(150, 45, 255, 0.20);
+
+  filter: blur(80px);
+
+  pointer-events: none;
 }
 
-.logo-wrap::before{
-    content:"";
+/* اللوقو */
 
-    position:absolute;
+.ramsha-logo-wrap {
+  position: relative;
 
-    width:380px;
-    height:250px;
+  width: 190px;
+  height: 135px;
 
-    background:#9b25ff;
+  margin: 0 auto 5px;
 
-    filter:blur(100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    opacity:.22;
-
-    z-index:-1;
+  z-index: 2;
 }
 
-.logo{
-    width:min(470px,92%);
+.ramsha-logo {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
 
-    display:block;
+  object-fit: contain;
 
-    filter:
-        drop-shadow(0 0 8px #9b39ff)
-        drop-shadow(0 0 25px rgba(145,0,255,.75))
-        drop-shadow(0 0 55px rgba(145,0,255,.35));
+  filter:
+    drop-shadow(0 0 10px rgba(170, 70, 255, .65))
+    drop-shadow(0 0 30px rgba(130, 40, 255, .35));
 
-    animation:
-        logoGlow 4s ease-in-out infinite;
+  transition: .3s ease;
 }
 
-@keyframes logoGlow{
+.ramsha-logo:hover {
+  transform: scale(1.04);
 
-    0%,100%{
-        transform:translateY(0);
-
-        filter:
-            drop-shadow(0 0 8px #9b39ff)
-            drop-shadow(0 0 25px rgba(145,0,255,.65));
-    }
-
-    50%{
-        transform:translateY(-5px);
-
-        filter:
-            drop-shadow(0 0 15px #d39aff)
-            drop-shadow(0 0 45px rgba(145,0,255,.95));
-    }
+  filter:
+    drop-shadow(0 0 15px rgba(190, 90, 255, .8))
+    drop-shadow(0 0 40px rgba(140, 50, 255, .45));
 }
 
-.tagline{
-    margin-top:5px;
+/* الاسم */
 
-    font-size:19px;
+.ramsha-title {
+  position: relative;
 
-    color:#ded5e7;
+  margin: 0;
 
-    letter-spacing:.2px;
+  font-size: 38px;
+  font-weight: 900;
+
+  color: #fff;
+
+  letter-spacing: .5px;
+
+  text-shadow:
+    0 0 10px rgba(190, 90, 255, .65),
+    0 0 25px rgba(130, 40, 255, .35);
+
+  z-index: 2;
+}
+
+/* الوصف */
+
+.ramsha-subtitle {
+  position: relative;
+
+  margin: 8px 0 12px;
+
+  color: #cfc4dc;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  z-index: 2;
+}
+
+/* الخط البنفسجي */
+
+.ramsha-line {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 210px;
+
+  margin: auto;
+
+  z-index: 2;
+}
+
+.ramsha-line span {
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #a84dff,
+      transparent
+    );
+
+  box-shadow:
+    0 0 8px rgba(170, 70, 255, .7);
+}
+
+.ramsha-line b {
+  color: #b75cff;
+
+  font-size: 15px;
+
+  text-shadow:
+    0 0 10px #a63cff;
 }
 
 
+/* ================= الجوال ================= */
+
+@media (max-width: 600px) {
+
+  .ramsha-header {
+    padding: 18px 15px 28px;
+  }
+
+  .ramsha-logo-wrap {
+    width: 165px;
+    height: 115px;
+  }
+
+  .ramsha-logo {
+    max-width: 165px;
+  }
+
+  .ramsha-title {
+    font-size: 31px;
+  }
+
+  .ramsha-subtitle {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .ramsha-line {
+    width: 180px;
+  }
+}
+
+</style>
 /* =====================================================
    PROMO
 ===================================================== */
