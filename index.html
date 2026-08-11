@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>رمشة بلس | اشتراكات رقمية</title>
 
-<meta name="description" content="رمشة بلس - اشتراكات رقمية بأسعار مميزة وتفعيل سريع">
+<meta name="description"
+content="رمشة بلس - اشتراكات رقمية بأسعار مميزة وتفعيل سريع">
+
 
 <style>
 
@@ -68,6 +73,7 @@ body{
 
 body::before{
     content:"";
+
     position:fixed;
     inset:0;
 
@@ -81,8 +87,7 @@ body::before{
             transparent 1px
         );
 
-    background-size:
-        150px 150px;
+    background-size:150px 150px;
 
     z-index:-5;
 }
@@ -120,245 +125,220 @@ body::after{
 }
 
 
-<!-- ================= HEADER ================= -->
+/* =====================================================
+   RAMSHA HEADER
+===================================================== */
 
-<header class="ramsha-header">
+.ramsha-header{
 
-  <div class="ramsha-logo-wrap">
-    <img
-      src="E372B55E-7833-47B9-8A55-99A31DC1F3DC.PNG"
-      alt="رمشة بلس"
-      class="ramsha-logo"
-    >
-  </div>
+    position:relative;
 
-  <h1 class="ramsha-title">رمشة بلس</h1>
+    text-align:center;
 
-  <p class="ramsha-subtitle">
-    اشتراكات رقمية بكل سهولة وأمان
-  </p>
+    padding:25px 20px 35px;
 
-  <div class="ramsha-line">
-    <span></span>
-    <b>✦</b>
-    <span></span>
-  </div>
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(150,45,255,.18),
+            transparent 45%
+        );
 
-</header>
-
-<style>
-
-/* ================= HEADER ================= */
-
-.ramsha-header {
-  position: relative;
-  text-align: center;
-
-  padding: 25px 20px 35px;
-
-  background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(150, 45, 255, 0.18),
-      transparent 45%
-    );
-
-  overflow: hidden;
+    overflow:hidden;
 }
+
 
 /* Glow خلف اللوقو */
 
-.ramsha-header::before {
-  content: "";
+.ramsha-header::before{
 
-  position: absolute;
+    content:"";
 
-  width: 260px;
-  height: 180px;
+    position:absolute;
 
-  left: 50%;
-  top: 35px;
+    width:260px;
+    height:180px;
 
-  transform: translateX(-50%);
+    left:50%;
+    top:35px;
 
-  background: rgba(150, 45, 255, 0.20);
+    transform:translateX(-50%);
 
-  filter: blur(80px);
+    background:
+        rgba(150,45,255,.20);
 
-  pointer-events: none;
+    filter:blur(80px);
+
+    pointer-events:none;
 }
+
 
 /* اللوقو */
 
-.ramsha-logo-wrap {
-  position: relative;
+.ramsha-logo-wrap{
 
-  width: 190px;
-  height: 135px;
+    position:relative;
 
-  margin: 0 auto 5px;
+    width:190px;
+    height:135px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin:0 auto 5px;
 
-  z-index: 2;
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:2;
 }
 
-.ramsha-logo {
-  width: 100%;
-  max-width: 190px;
-  height: auto;
+.ramsha-logo{
 
-  object-fit: contain;
+    width:100%;
 
-  filter:
-    drop-shadow(0 0 10px rgba(170, 70, 255, .65))
-    drop-shadow(0 0 30px rgba(130, 40, 255, .35));
+    max-width:190px;
 
-  transition: .3s ease;
+    height:auto;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(170,70,255,.65)
+        )
+        drop-shadow(
+            0 0 30px
+            rgba(130,40,255,.35)
+        );
+
+    transition:.3s ease;
 }
 
-.ramsha-logo:hover {
-  transform: scale(1.04);
+.ramsha-logo:hover{
 
-  filter:
-    drop-shadow(0 0 15px rgba(190, 90, 255, .8))
-    drop-shadow(0 0 40px rgba(140, 50, 255, .45));
+    transform:scale(1.04);
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(190,90,255,.8)
+        )
+        drop-shadow(
+            0 0 40px
+            rgba(140,50,255,.45)
+        );
 }
 
-/* الاسم */
 
-.ramsha-title {
-  position: relative;
+/* اسم رمشة بلس */
 
-  margin: 0;
+.ramsha-title{
 
-  font-size: 38px;
-  font-weight: 900;
+    position:relative;
 
-  color: #fff;
+    margin:0;
 
-  letter-spacing: .5px;
+    font-size:38px;
 
-  text-shadow:
-    0 0 10px rgba(190, 90, 255, .65),
-    0 0 25px rgba(130, 40, 255, .35);
+    font-weight:900;
 
-  z-index: 2;
+    color:#fff;
+
+    letter-spacing:.5px;
+
+    text-shadow:
+        0 0 10px
+        rgba(190,90,255,.65),
+
+        0 0 25px
+        rgba(130,40,255,.35);
+
+    z-index:2;
 }
+
 
 /* الوصف */
 
-.ramsha-subtitle {
-  position: relative;
+.ramsha-subtitle{
 
-  margin: 8px 0 12px;
+    position:relative;
 
-  color: #cfc4dc;
+    margin:8px 0 12px;
 
-  font-size: 17px;
-  font-weight: 500;
+    color:#cfc4dc;
 
-  z-index: 2;
-}
+    font-size:17px;
 
-/* الخط البنفسجي */
+    font-weight:500;
 
-.ramsha-line {
-  position: relative;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 10px;
-
-  width: 210px;
-
-  margin: auto;
-
-  z-index: 2;
-}
-
-.ramsha-line span {
-  height: 1px;
-
-  flex: 1;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #a84dff,
-      transparent
-    );
-
-  box-shadow:
-    0 0 8px rgba(170, 70, 255, .7);
-}
-
-.ramsha-line b {
-  color: #b75cff;
-
-  font-size: 15px;
-
-  text-shadow:
-    0 0 10px #a63cff;
+    z-index:2;
 }
 
 
-/* ================= الجوال ================= */
+/* الخط */
 
-@media (max-width: 600px) {
+.ramsha-line{
 
-  .ramsha-header {
-    padding: 18px 15px 28px;
-  }
+    position:relative;
 
-  .ramsha-logo-wrap {
-    width: 165px;
-    height: 115px;
-  }
+    display:flex;
 
-  .ramsha-logo {
-    max-width: 165px;
-  }
+    align-items:center;
+    justify-content:center;
 
-  .ramsha-title {
-    font-size: 31px;
-  }
+    gap:10px;
 
-  .ramsha-subtitle {
-    font-size: 14px;
-    margin-top: 6px;
-  }
+    width:210px;
 
-  .ramsha-line {
-    width: 180px;
-  }
+    margin:auto;
+
+    z-index:2;
 }
 
-</style>
+.ramsha-line span{
+
+    height:1px;
+
+    flex:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a84dff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 8px
+        rgba(170,70,255,.7);
+}
+
+.ramsha-line b{
+
+    color:#b75cff;
+
+    font-size:15px;
+
+    text-shadow:
+        0 0 10px #a63cff;
+}
+
+
 /* =====================================================
    PROMO
 ===================================================== */
 
 .promo{
 
-    margin:
-        20px
-        auto
-        35px;
+    margin:20px auto 35px;
 
     max-width:850px;
 
     position:relative;
 
-    padding:
-        18px
-        20px;
+    padding:18px 20px;
 
     border-radius:22px;
 
@@ -379,11 +359,15 @@ body::after{
         );
 
     box-shadow:
-        0 0 35px rgba(120,0,255,.12),
-        inset 0 1px rgba(255,255,255,.07);
+        0 0 35px
+        rgba(120,0,255,.12),
+
+        inset 0 1px
+        rgba(255,255,255,.07);
 }
 
 .promo::before{
+
     content:"";
 
     position:absolute;
@@ -404,8 +388,7 @@ body::after{
 
     transform:skewX(-20deg);
 
-    animation:
-        shine 4s infinite;
+    animation:shine 4s infinite;
 }
 
 @keyframes shine{
@@ -420,11 +403,14 @@ body::after{
 }
 
 .promo-small{
+
     color:#c8a1e8;
+
     font-size:13px;
 }
 
 .promo-title{
+
     margin-top:4px;
 
     font-size:25px;
@@ -433,6 +419,7 @@ body::after{
 }
 
 .promo-title span{
+
     color:#b95cff;
 
     text-shadow:
@@ -467,7 +454,8 @@ body::after{
     backdrop-filter:blur(20px);
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,.3);
+        0 20px 60px
+        rgba(0,0,0,.3);
 }
 
 .feature{
@@ -538,10 +526,12 @@ body::after{
         rgba(190,110,255,.25);
 
     box-shadow:
-        0 0 25px rgba(143,0,255,.2);
+        0 0 25px
+        rgba(143,0,255,.2);
 }
 
 .feature strong{
+
     display:block;
 
     font-size:15px;
@@ -550,6 +540,7 @@ body::after{
 }
 
 .feature span{
+
     display:block;
 
     font-size:11px;
@@ -673,12 +664,14 @@ body::after{
         1px solid
         rgba(255,255,255,.075);
 
-    backdrop-filter:
-        blur(25px);
+    backdrop-filter:blur(25px);
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,.35),
-        inset 0 1px rgba(255,255,255,.06);
+        0 20px 60px
+        rgba(0,0,0,.35),
+
+        inset 0 1px
+        rgba(255,255,255,.06);
 
     transition:
         transform .35s,
@@ -709,8 +702,7 @@ body::after{
 
 .product:hover{
 
-    transform:
-        translateY(-5px);
+    transform:translateY(-5px);
 
     border-color:
         color-mix(
@@ -720,7 +712,9 @@ body::after{
         );
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.45),
+        0 30px 80px
+        rgba(0,0,0,.45),
+
         0 0 35px
         color-mix(
             in srgb,
@@ -755,6 +749,7 @@ body::after{
             var(--main),
             transparent 45%
         ),
+
         linear-gradient(
             145deg,
             #15131c,
@@ -766,7 +761,8 @@ body::after{
         rgba(255,255,255,.09);
 
     box-shadow:
-        inset 0 0 45px rgba(0,0,0,.65);
+        inset 0 0 45px
+        rgba(0,0,0,.65);
 }
 
 .product-visual::before{
@@ -913,32 +909,8 @@ body::after{
     text-shadow:
         -5px 0 #00f2ea,
         5px 0 #ff0050,
-        0 0 30px rgba(255,0,80,.55);
-}
-
-.snapchat{
-
-    width:85px;
-    height:85px;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    border-radius:24px;
-
-    background:#fffc00;
-
-    color:#000;
-
-    font-size:52px;
-
-    text-shadow:
-        2px 2px 0 #fff;
-
-    box-shadow:
-        0 0 30px rgba(255,240,0,.5);
+        0 0 30px
+        rgba(255,0,80,.55);
 }
 
 
@@ -947,6 +919,7 @@ body::after{
 ===================================================== */
 
 .product-info{
+
     min-width:0;
 }
 
@@ -970,9 +943,7 @@ body::after{
 
 .badge{
 
-    padding:
-        4px
-        9px;
+    padding:4px 9px;
 
     border-radius:8px;
 
@@ -997,17 +968,6 @@ body::after{
 
     background:
         rgba(0,255,140,.07);
-}
-
-.badge.yellow{
-
-    color:#fff000;
-
-    border-color:
-        rgba(255,240,0,.4);
-
-    background:
-        rgba(255,240,0,.06);
 }
 
 .badge.blue{
@@ -1059,9 +1019,7 @@ body::after{
 
     min-width:105px;
 
-    padding:
-        9px
-        14px;
+    padding:9px 14px;
 
     text-align:center;
 
@@ -1146,6 +1104,7 @@ body::after{
             rgba(255,255,255,.28),
             transparent 22%
         ),
+
         linear-gradient(
             145deg,
             var(--main),
@@ -1172,6 +1131,7 @@ body::after{
 
     box-shadow:
         0 0 40px var(--main),
+
         0 0 75px
         color-mix(
             in srgb,
@@ -1190,6 +1150,309 @@ body::after{
     font-size:11px;
 
     font-weight:900;
+}
+
+
+/* =====================================================
+   SNAPCHAT PLUS
+===================================================== */
+
+.snapchat-card{
+
+    --main:#ffff00;
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        205px
+        1fr
+        125px;
+
+    align-items:center;
+
+    gap:25px;
+
+    min-height:200px;
+
+    padding:15px;
+
+    margin:0;
+
+    background:
+        linear-gradient(
+            125deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.012)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.075);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+}
+
+.snapchat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    right:25%;
+    top:-200px;
+
+    background:#ffff00;
+
+    filter:blur(120px);
+
+    opacity:.07;
+
+    pointer-events:none;
+}
+
+.snapchat-image{
+
+    position:relative;
+
+    height:170px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffff00 0%,
+            #ffe900 35%,
+            #8f8700 100%
+        );
+
+    border:
+        1px solid
+        rgba(255,255,0,.45);
+
+    box-shadow:
+        0 0 25px
+        rgba(255,255,0,.25),
+
+        inset 0 0 30px
+        rgba(0,0,0,.15);
+}
+
+.snap-logo{
+
+    width:85px;
+    height:85px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    font-size:52px;
+
+    box-shadow:
+        0 0 25px
+        rgba(255,255,255,.7),
+
+        0 0 55px
+        rgba(255,255,0,.6);
+}
+
+.snapchat-card .product-content{
+
+    position:relative;
+
+    z-index:2;
+
+    min-width:0;
+}
+
+.product-title-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:8px;
+}
+
+.product-title-row h2{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:27px;
+
+    font-weight:900;
+}
+
+.snapchat-badge{
+
+    padding:5px 12px;
+
+    border-radius:50px;
+
+    color:#ffff00;
+
+    border:
+        1px solid
+        rgba(255,255,0,.55);
+
+    background:
+        rgba(255,255,0,.08);
+
+    font-size:11px;
+}
+
+.snapchat-card .product-description{
+
+    margin:0 0 15px;
+
+    color:#aaa;
+
+    font-size:13px;
+}
+
+.snap-price-box{
+
+    width:200px;
+
+    padding:12px 15px;
+
+    background:
+        rgba(0,0,0,.25);
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:15px;
+
+    text-align:center;
+}
+
+.price-label{
+
+    display:block;
+
+    color:#888;
+
+    font-size:10px;
+
+    margin-bottom:2px;
+}
+
+.snap-price-box .price{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:baseline;
+
+    gap:6px;
+
+    min-width:0;
+
+    padding:0;
+
+    border:0;
+
+    background:none;
+}
+
+.snap-price-box .price strong{
+
+    color:#fff;
+
+    font-size:25px;
+
+    font-weight:900;
+}
+
+.snap-price-box .price span{
+
+    color:#aaa;
+
+    font-size:12px;
+}
+
+.duration{
+
+    display:block;
+
+    color:#ffff00;
+
+    font-size:12px;
+
+    margin-top:2px;
+}
+
+.snapchat-button{
+
+    margin-top:12px;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:11px 22px;
+
+    color:#111;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffff00,
+            #d9d900
+        );
+
+    font-size:13px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 20px
+        rgba(255,255,0,.25);
+
+    transition:.25s;
+}
+
+.snapchat-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 30px
+        rgba(255,255,0,.45);
 }
 
 
@@ -1219,7 +1482,8 @@ body::after{
         );
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,.3);
+        0 20px 60px
+        rgba(0,0,0,.3);
 
     backdrop-filter:blur(20px);
 }
@@ -1239,9 +1503,7 @@ body::after{
 
     letter-spacing:3px;
 
-    margin:
-        9px
-        0;
+    margin:9px 0;
 }
 
 .reviews p{
@@ -1257,9 +1519,7 @@ body::after{
 
     margin-top:15px;
 
-    padding:
-        12px
-        25px;
+    padding:12px 25px;
 
     border-radius:13px;
 
@@ -1277,18 +1537,19 @@ body::after{
         );
 
     box-shadow:
-        0 0 25px rgba(150,0,255,.3);
+        0 0 25px
+        rgba(150,0,255,.3);
 
     transition:.3s;
 }
 
 .review-btn:hover{
 
-    transform:
-        translateY(-3px);
+    transform:translateY(-3px);
 
     box-shadow:
-        0 0 35px rgba(150,0,255,.6);
+        0 0 35px
+        rgba(150,0,255,.6);
 }
 
 
@@ -1338,7 +1599,8 @@ body::after{
     background:#25d366;
 
     box-shadow:
-        0 0 25px rgba(37,211,102,.35);
+        0 0 25px
+        rgba(37,211,102,.35);
 }
 
 .support-text{
@@ -1375,10 +1637,7 @@ footer{
 
     text-align:center;
 
-    padding:
-        35px
-        10px
-        45px;
+    padding:35px 10px 45px;
 
     color:#666;
 
@@ -1427,7 +1686,8 @@ footer{
     font-size:28px;
 
     box-shadow:
-        0 5px 35px rgba(37,211,102,.45);
+        0 5px 35px
+        rgba(37,211,102,.45);
 
     z-index:999;
 
@@ -1439,7 +1699,8 @@ footer{
     transform:scale(1.1);
 
     box-shadow:
-        0 5px 45px rgba(37,211,102,.7);
+        0 5px 45px
+        rgba(37,211,102,.7);
 }
 
 
@@ -1449,23 +1710,49 @@ footer{
 
 @media(max-width:750px){
 
-    header{
-        padding-top:25px;
+    .ramsha-header{
+
+        padding:
+            18px
+            15px
+            28px;
     }
 
-    .logo{
-        width:340px;
+    .ramsha-logo-wrap{
+
+        width:165px;
+        height:115px;
     }
 
-    .tagline{
-        font-size:15px;
+    .ramsha-logo{
+
+        max-width:165px;
+    }
+
+    .ramsha-title{
+
+        font-size:31px;
+    }
+
+    .ramsha-subtitle{
+
+        font-size:14px;
+
+        margin-top:6px;
+    }
+
+    .ramsha-line{
+
+        width:180px;
     }
 
     .promo{
+
         margin-top:15px;
     }
 
     .promo-title{
+
         font-size:21px;
     }
 
@@ -1487,10 +1774,12 @@ footer{
     }
 
     .feature:nth-child(2)::after{
+
         display:none;
     }
 
     .feature:nth-child(3)::after{
+
         display:block;
     }
 
@@ -1505,23 +1794,28 @@ footer{
     }
 
     .feature strong{
+
         font-size:12px;
     }
 
     .feature span{
+
         font-size:9px;
     }
 
     .section-title h1{
+
         font-size:26px;
     }
 
     .section-title h1::before,
     .section-title h1::after{
+
         width:28px;
     }
 
-    .product{
+    .product,
+    .snapchat-card{
 
         grid-template-columns:
             105px
@@ -1536,7 +1830,8 @@ footer{
         border-radius:21px;
     }
 
-    .product-visual{
+    .product-visual,
+    .snapchat-image{
 
         height:145px;
 
@@ -1544,50 +1839,56 @@ footer{
     }
 
     .netflix{
+
         font-size:24px;
     }
 
     .netflix small{
+
         font-size:8px;
     }
 
     .shahid{
+
         font-size:24px;
     }
 
     .vip{
+
         font-size:11px;
     }
 
     .sports{
+
         font-size:20px;
     }
 
     .sports span{
+
         font-size:9px;
     }
 
     .tiktok{
+
         font-size:58px;
     }
 
-    .snapchat{
-        width:65px;
-        height:65px;
-        font-size:39px;
-    }
-
     .title-row h2{
+
         font-size:18px;
     }
 
     .description{
+
         font-size:10px;
+
         margin-bottom:9px;
     }
 
     .badge{
+
         font-size:7px;
+
         padding:3px 6px;
     }
 
@@ -1595,24 +1896,26 @@ footer{
 
         min-width:65px;
 
-        padding:
-            6px
-            7px;
+        padding:6px 7px;
     }
 
     .price small{
+
         font-size:8px;
     }
 
     .price strong{
+
         font-size:16px;
     }
 
     .price span{
+
         font-size:8px;
     }
 
     .product-info{
+
         padding-bottom:58px;
     }
 
@@ -1630,23 +1933,113 @@ footer{
     }
 
     .buy:hover{
+
         transform:scale(.88);
     }
 
     .cart{
+
         font-size:20px;
     }
 
     .buy span{
+
         font-size:8px;
     }
 
+
+    /* Snapchat */
+
+    .snapchat-card{
+
+        display:grid;
+
+        grid-template-columns:
+            105px
+            1fr;
+
+        align-items:center;
+    }
+
+    .snapchat-image{
+
+        width:105px;
+
+        height:145px;
+    }
+
+    .snap-logo{
+
+        width:65px;
+        height:65px;
+
+        border-radius:18px;
+
+        font-size:40px;
+    }
+
+    .product-title-row{
+
+        flex-wrap:wrap;
+
+        gap:6px;
+    }
+
+    .product-title-row h2{
+
+        font-size:18px;
+    }
+
+    .snapchat-card .product-description{
+
+        font-size:10px;
+
+        margin-bottom:9px;
+    }
+
+    .snap-price-box{
+
+        width:auto;
+
+        padding:9px 7px;
+    }
+
+    .snap-price-box .price strong{
+
+        font-size:20px;
+    }
+
+    .duration{
+
+        font-size:9px;
+    }
+
+    .snapchat-button{
+
+        width:100%;
+
+        padding:9px 7px;
+
+        font-size:11px;
+    }
+
     .reviews{
+
         padding:27px 15px;
     }
 
     .support-box{
+
         padding:18px;
+    }
+
+    .whatsapp{
+
+        width:56px;
+        height:56px;
+
+        left:15px;
+        bottom:15px;
     }
 }
 
@@ -1658,37 +2051,64 @@ footer{
 @media(max-width:390px){
 
     .container{
+
         width:95%;
     }
 
-    .product{
+    .product,
+    .snapchat-card{
+
         grid-template-columns:
             88px
             1fr;
     }
 
-    .product-visual{
+    .product-visual,
+    .snapchat-image{
+
         height:130px;
     }
 
-    .title-row h2{
+    .snapchat-image{
+
+        width:88px;
+    }
+
+    .title-row h2,
+    .product-title-row h2{
+
         font-size:16px;
     }
 
     .price{
+
         min-width:58px;
     }
 
     .price strong{
+
         font-size:14px;
     }
 
-    .logo{
-        width:300px;
+    .ramsha-logo-wrap{
+
+        width:150px;
+        height:105px;
+    }
+
+    .ramsha-logo{
+
+        max-width:150px;
+    }
+
+    .ramsha-title{
+
+        font-size:28px;
     }
 }
 
 </style>
+
 </head>
 
 
@@ -1699,23 +2119,40 @@ footer{
 
 
 <!-- =====================================================
-     HEADER
+     HEADER - رمشة بلس
 ===================================================== -->
 
-<header>
+<header class="ramsha-header">
 
-    <div class="logo-wrap">
+    <div class="ramsha-logo-wrap">
 
         <img
-            class="logo"
             src="E372B55E-7833-47B9-8A55-99A31DC1F3DC.PNG"
-            alt="رمشة بلس">
+            alt="رمشة بلس"
+            class="ramsha-logo">
 
     </div>
 
-    <p class="tagline">
+
+    <h1 class="ramsha-title">
+        رمشة بلس
+    </h1>
+
+
+    <p class="ramsha-subtitle">
         اشتراكات رقمية بكل سهولة وأمان
     </p>
+
+
+    <div class="ramsha-line">
+
+        <span></span>
+
+        <b>✦</b>
+
+        <span></span>
+
+    </div>
 
 </header>
 
@@ -1731,8 +2168,13 @@ footer{
     </div>
 
     <div class="promo-title">
+
         اشتراكات رقمية
-        <span>بأفضل الأسعار</span>
+
+        <span>
+            بأفضل الأسعار
+        </span>
+
     </div>
 
 </div>
@@ -1856,7 +2298,9 @@ footer{
 <section class="products">
 
 
-<!-- ================= NETFLIX ================= -->
+<!-- =====================================================
+     NETFLIX
+===================================================== -->
 
 <article
     class="product"
@@ -1955,7 +2399,9 @@ footer{
 </article>
 
 
-<!-- ================= SHAHID ================= -->
+<!-- =====================================================
+     SHAHID VIP
+===================================================== -->
 
 <article
     class="product"
@@ -2058,7 +2504,9 @@ footer{
 </article>
 
 
-<!-- ================= SHAHID SPORTS ================= -->
+<!-- =====================================================
+     SHAHID SPORTS
+===================================================== -->
 
 <article
     class="product"
@@ -2157,7 +2605,9 @@ footer{
 </article>
 
 
-<!-- ================= TIKTOK ================= -->
+<!-- =====================================================
+     TIKTOK
+===================================================== -->
 
 <article
     class="product"
@@ -2266,307 +2716,96 @@ footer{
 
 </article>
 
-<!-- Snapchat Plus -->
-<div class="product-card snapchat-card">
 
-  <div class="product-image snapchat-image">
-    <div class="snap-logo">👻</div>
-  </div>
+<!-- =====================================================
+     SNAPCHAT PLUS
+===================================================== -->
 
-  <div class="product-content">
+<article class="snapchat-card">
 
-    <div class="product-title-row">
-      <span class="product-badge snapchat-badge">حصري</span>
-      <h2>Snapchat Plus</h2>
+
+    <div class="snapchat-image">
+
+        <div class="snap-logo">
+            👻
+        </div>
+
     </div>
 
-    <p class="product-description">
-      اشتراك سناب بلس بمزايا حصرية
-    </p>
 
-    <div class="snap-price-box">
-      <span class="price-label">الاشتراك</span>
+    <div class="product-content">
 
-      <div class="price">
-        <strong>35.99</strong>
-        <span>ريال</span>
-      </div>
+        <div class="product-title-row">
 
-      <span class="duration">3 شهور</span>
+            <span class="snapchat-badge">
+                حصري
+            </span>
+
+            <h2>
+                Snapchat Plus
+            </h2>
+
+        </div>
+
+
+        <p class="product-description">
+            اشتراك سناب بلس بمزايا حصرية
+        </p>
+
+
+        <div class="snap-price-box">
+
+            <span class="price-label">
+                الاشتراك
+            </span>
+
+            <div class="price">
+
+                <strong>
+                    35.99
+                </strong>
+
+                <span>
+                    ريال
+                </span>
+
+            </div>
+
+            <span class="duration">
+                3 شهور
+            </span>
+
+        </div>
+
+
+        <button
+            class="snapchat-button"
+            onclick="window.open('https://wa.me/966501286453?text=السلام%20عليكم،%20أريد%20طلب%20Snapchat%20Plus%20لمدة%203%20شهور%20بسعر%2035.99%20ريال','_blank')">
+
+            🛒 اطلب الآن
+
+        </button>
+
     </div>
 
-    <button
-      class="order-button snapchat-button"
-      onclick="window.open('https://wa.me/966501286453?text=السلام عليكم، أريد طلب Snapchat Plus لمدة 3 شهور بسعر 35.99 ريال','_blank')">
-      🛒 اطلب الآن
-    </button>
 
-  </div>
+    <a
+        class="buy"
+        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أريد%20طلب%20Snapchat%20Plus%20لمدة%203%20شهور"
+        target="_blank">
 
-</div>
+        <div class="cart">
+            🛒
+        </div>
 
-<style>
-/* Snapchat Card */
-.snapchat-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  padding: 25px;
-  margin: 25px 0;
-  min-height: 280px;
+        <span>
+            اطلب الآن
+        </span>
 
-  background:
-    radial-gradient(circle at 15% 50%, rgba(255,255,0,.08), transparent 35%),
-    linear-gradient(135deg, #17131d, #0d0913);
+    </a>
 
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 25px;
 
-  box-shadow:
-    0 0 35px rgba(255,255,0,.06),
-    inset 0 0 30px rgba(255,255,255,.015);
-
-  overflow: hidden;
-}
-
-/* Glow */
-.snapchat-card::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  background: rgba(255,255,0,.12);
-  filter: blur(70px);
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-/* Image */
-.snapchat-image {
-  position: relative;
-  flex: 0 0 180px;
-  width: 180px;
-  height: 230px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 22px;
-
-  background:
-    radial-gradient(circle, #ffff00 0%, #ffe900 35%, #8f8700 100%);
-
-  border: 1px solid rgba(255,255,0,.45);
-
-  box-shadow:
-    0 0 25px rgba(255,255,0,.25),
-    inset 0 0 30px rgba(0,0,0,.15);
-
-  overflow: hidden;
-}
-
-/* Snapchat ghost */
-.snap-logo {
-  width: 105px;
-  height: 105px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #fff;
-  border-radius: 28px;
-
-  font-size: 65px;
-
-  box-shadow:
-    0 0 25px rgba(255,255,255,.7),
-    0 0 55px rgba(255,255,0,.6);
-}
-
-/* Content */
-.snapchat-card .product-content {
-  position: relative;
-  flex: 1;
-  z-index: 2;
-}
-
-/* Title */
-.product-title-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.product-title-row h2 {
-  margin: 0;
-  color: #fff;
-  font-size: 28px;
-  font-weight: 800;
-}
-
-/* Badge */
-.snapchat-badge {
-  padding: 5px 12px;
-  border-radius: 50px;
-
-  color: #ffff00;
-  border: 1px solid rgba(255,255,0,.55);
-
-  background: rgba(255,255,0,.08);
-
-  font-size: 13px;
-}
-
-/* Description */
-.snapchat-card .product-description {
-  margin: 0 0 20px;
-
-  color: #aaa;
-  font-size: 16px;
-}
-
-/* Price */
-.snap-price-box {
-  width: 250px;
-  padding: 18px 22px;
-
-  background: rgba(0,0,0,.25);
-
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 18px;
-
-  text-align: center;
-}
-
-.price-label {
-  display: block;
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 3px;
-}
-
-.price {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 7px;
-}
-
-.price strong {
-  color: #fff;
-  font-size: 34px;
-  font-weight: 900;
-}
-
-.price span {
-  color: #aaa;
-  font-size: 14px;
-}
-
-.duration {
-  display: block;
-  color: #ffff00;
-  font-size: 15px;
-  margin-top: 2px;
-}
-
-/* Button */
-.snapchat-button {
-  margin-top: 18px;
-
-  border: none;
-  border-radius: 50px;
-
-  padding: 13px 28px;
-
-  color: #111;
-  background: linear-gradient(135deg, #ffff00, #d9d900);
-
-  font-size: 16px;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 0 20px rgba(255,255,0,.25);
-
-  transition: .25s;
-}
-
-.snapchat-button:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 0 30px rgba(255,255,0,.45);
-}
-
-/* جوال */
-@media (max-width: 600px) {
-
-  .snapchat-card {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-
-    gap: 14px;
-    padding: 18px;
-
-    min-height: 220px;
-  }
-
-  .snapchat-image {
-    flex: 0 0 115px;
-    width: 115px;
-    height: 175px;
-
-    border-radius: 18px;
-  }
-
-  .snap-logo {
-    width: 70px;
-    height: 70px;
-
-    border-radius: 20px;
-
-    font-size: 42px;
-  }
-
-  .product-title-row {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .product-title-row h2 {
-    font-size: 22px;
-  }
-
-  .snapchat-card .product-description {
-    font-size: 13px;
-    margin-bottom: 12px;
-  }
-
-  .snap-price-box {
-    width: auto;
-    padding: 12px 10px;
-  }
-
-  .price strong {
-    font-size: 27px;
-  }
-
-  .snapchat-button {
-    width: 100%;
-    padding: 11px 10px;
-    font-size: 14px;
-  }
-}
-</style>
+</article>
 
 
 </section>
@@ -2590,10 +2829,6 @@ footer{
         جربت خدمات رمشة بلس؟ شاركنا تقييمك
     </p>
 
-
-    <!--
-    ضع رابط Google Form هنا بدل علامة #
-    -->
 
     <a
         class="review-btn"
@@ -2648,7 +2883,7 @@ footer{
     </p>
 
     <p style="margin-top:8px;">
-        © 2026 جميع الحقوق محفوظة
+        ©️ 2026 جميع الحقوق محفوظة
     </p>
 
 </footer>
@@ -2661,7 +2896,15 @@ footer{
      FLOATING WHATSAPP
 ===================================================== -->
 
+<a
+    class="whatsapp"
+    href="https://wa.me/966501286453"
+    target="_blank"
+    aria-label="واتساب">
 
+    💬
+
+</a>
 
 
 </body>
