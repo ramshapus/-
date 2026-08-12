@@ -52,9 +52,11 @@
             border-radius: 14px;
             height: 42px;
             padding: 0 12px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             gap: 5px;
             color: #fff;
             cursor: pointer;
@@ -79,28 +81,31 @@
         }
 
         /* =========================
-           اسم المتجر في الهيدر
+           اسم المتجر
         ========================= */
 
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
+
             flex: 1;
             margin: 0 8px;
         }
 
-        .store-name {
+        .logo-text {
             color: #D8B4FE;
-            font-size: 17px;
+
+            font-size: 21px;
             font-weight: bold;
+
             white-space: nowrap;
 
             text-shadow:
-                0 0 6px rgba(216, 180, 254, 0.35),
-                0 0 14px rgba(168, 85, 247, 0.25);
+                0 0 8px rgba(216, 180, 254, 0.6),
+                0 0 18px rgba(168, 85, 247, 0.35);
 
-            letter-spacing: 0.2px;
+            letter-spacing: 0.5px;
         }
 
         /* =========================
@@ -116,9 +121,13 @@
 
             border: 1px solid #29144a;
             border-radius: 24px;
+
             padding: 22px 15px;
+
             text-align: center;
+
             position: relative;
+
             margin-bottom: 25px;
 
             box-shadow:
@@ -127,24 +136,28 @@
 
         .hero-top {
             display: flex;
+
             align-items: center;
             justify-content: space-between;
+
             gap: 15px;
+
             margin-bottom: 20px;
         }
 
+        /* =========================
+           صندوق الشعار المستطيل
+        ========================= */
+
         .hero-badge-box {
-            width: 130px;
-            height: 130px;
+            width: 150px;
+            height: 95px;
 
-            background: radial-gradient(
-                circle,
-                rgba(168, 85, 247, 0.2) 0%,
-                transparent 70%
-            );
+            background: transparent;
 
-            border: 1px solid #2e1654;
-            border-radius: 20px;
+            border: none;
+
+            border-radius: 16px;
 
             display: flex;
             align-items: center;
@@ -152,21 +165,25 @@
 
             position: relative;
 
-            box-shadow:
-                0 0 25px rgba(139, 92, 246, 0.3);
-
             flex-shrink: 0;
         }
 
         .hero-badge-box img {
-            width: 85px;
+            width: 130px;
             height: auto;
+
             object-fit: contain;
 
-            filter: drop-shadow(
-                0 0 8px rgba(255, 255, 255, 0.6)
-            );
+            filter:
+                drop-shadow(
+                    0 0 8px
+                    rgba(255, 255, 255, 0.5)
+                );
         }
+
+        /* =========================
+           نص البانر
+        ========================= */
 
         .hero-text {
             text-align: right;
@@ -175,24 +192,33 @@
 
         .hero-text h3 {
             font-size: 15px;
+
             color: #d1c4e9;
+
             font-weight: normal;
+
             margin-bottom: 4px;
         }
 
         .hero-text h1 {
             font-size: 24px;
+
             color: #b875ff;
+
             margin-bottom: 6px;
+
             font-weight: bold;
 
             text-shadow:
-                0 0 15px rgba(168, 85, 247, 0.4);
+                0 0 15px
+                rgba(168, 85, 247, 0.4);
         }
 
         .hero-text p {
             font-size: 11px;
+
             color: #9ca3af;
+
             line-height: 1.4;
         }
 
@@ -202,18 +228,25 @@
 
         .features-row {
             display: flex;
+
             justify-content: space-around;
+
             gap: 10px;
 
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-top:
+                1px solid
+                rgba(255, 255, 255, 0.05);
 
             padding-top: 15px;
         }
 
         .feature-item {
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
             gap: 6px;
         }
 
@@ -222,20 +255,26 @@
             height: 42px;
 
             background: #170a2d;
-            border: 1px solid #371b63;
+
+            border:
+                1px solid
+                #371b63;
 
             border-radius: 50%;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             color: #c084fc;
+
             font-size: 16px;
         }
 
         .feature-item span {
             font-size: 11px;
+
             color: #d1d5db;
         }
 
@@ -247,16 +286,18 @@
             text-align: center;
 
             font-size: 17px;
+
             margin-bottom: 18px;
 
             color: #fff;
+
             font-weight: bold;
 
             scroll-margin-top: 20px;
         }
 
         /* =========================
-           شبكة الخدمات
+           الخدمات
         ========================= */
 
         .services-grid {
@@ -271,7 +312,9 @@
         .service-card {
             background: #0f071d;
 
-            border: 1px solid #23113d;
+            border:
+                1px solid
+                #23113d;
 
             border-radius: 20px;
 
@@ -280,9 +323,11 @@
             text-align: center;
 
             display: flex;
+
             flex-direction: column;
 
             align-items: center;
+
             justify-content: space-between;
 
             transition: 0.3s;
@@ -292,7 +337,8 @@
             border-color: #7e22ce;
 
             box-shadow:
-                0 0 15px rgba(126, 34, 206, 0.3);
+                0 0 15px
+                rgba(126, 34, 206, 0.3);
         }
 
         .service-icon-box {
@@ -301,17 +347,21 @@
 
             background: #170a2d;
 
-            border: 1px solid #371b63;
+            border:
+                1px solid
+                #371b63;
 
             border-radius: 16px;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             margin-bottom: 12px;
 
             font-size: 24px;
+
             color: #fff;
         }
 
@@ -321,6 +371,7 @@
             margin-bottom: 4px;
 
             color: #fff;
+
             font-weight: bold;
         }
 
@@ -335,7 +386,9 @@
         .order-btn {
             background: transparent;
 
-            border: 1px solid #581c87;
+            border:
+                1px solid
+                #581c87;
 
             color: #d8b4fe;
 
@@ -358,6 +411,7 @@
 
         .order-btn:hover {
             background: #581c87;
+
             color: #fff;
         }
 
@@ -372,18 +426,22 @@
 
             text-align: center;
 
-            background: linear-gradient(
-                145deg,
-                #120722,
-                #090312
-            );
+            background:
+                linear-gradient(
+                    145deg,
+                    #120722,
+                    #090312
+                );
 
-            border: 1px solid #29144a;
+            border:
+                1px solid
+                #29144a;
 
             border-radius: 22px;
 
             box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.35);
+                0 8px 25px
+                rgba(0, 0, 0, 0.35);
         }
 
         .review-section h2 {
@@ -413,13 +471,16 @@
 
             border-radius: 13px;
 
-            background: linear-gradient(
-                135deg,
-                #7e22ce,
-                #581c87
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #7e22ce,
+                    #581c87
+                );
 
-            border: 1px solid #9333ea;
+            border:
+                1px solid
+                #9333ea;
 
             color: #fff;
 
@@ -442,6 +503,7 @@
 
         footer {
             text-align: center;
+
             padding: 25px 0 10px;
         }
 
@@ -455,6 +517,7 @@
 
         footer p {
             color: #625a6b;
+
             font-size: 8px;
         }
 
@@ -466,6 +529,7 @@
 
             .header-action {
                 padding: 0 9px;
+
                 font-size: 11px;
             }
 
@@ -473,17 +537,17 @@
                 width: 40px;
             }
 
-            .store-name {
-                font-size: 15px;
+            .logo-text {
+                font-size: 18px;
             }
 
             .hero-badge-box {
-                width: 115px;
-                height: 115px;
+                width: 120px;
+                height: 80px;
             }
 
             .hero-badge-box img {
-                width: 75px;
+                width: 105px;
             }
 
             .hero-text h1 {
@@ -494,7 +558,9 @@
     </style>
 </head>
 
+
 <body>
+
 
 <div class="phone-frame">
 
@@ -505,7 +571,8 @@
 
     <header>
 
-        <!-- يسار: عروضنا -->
+
+        <!-- عروضنا -->
 
         <button
             class="header-action offers-btn"
@@ -521,18 +588,18 @@
         </button>
 
 
-        <!-- الوسط: اسم المتجر -->
+        <!-- اسم المتجر -->
 
         <div class="logo-container">
 
-            <div class="store-name">
-                ✦ ررمشة بلس ✦
+            <div class="logo-text">
+                ✦ رمشة بلس ✦
             </div>
 
         </div>
 
 
-        <!-- يمين: القائمة -->
+        <!-- القائمة -->
 
         <button
             class="header-action menu-btn"
@@ -544,6 +611,7 @@
 
         </button>
 
+
     </header>
 
 
@@ -553,18 +621,23 @@
 
     <section class="hero-banner">
 
+
         <div class="hero-top">
 
+
+            <!-- الشعار المستطيل -->
 
             <div class="hero-badge-box">
 
                 <img
                     src="IMG_1574.jpeg"
-                    alt="رمشة"
+                    alt="رمشة بلس"
                 >
 
             </div>
 
+
+            <!-- النص -->
 
             <div class="hero-text">
 
@@ -582,10 +655,13 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- المميزات -->
+        <!-- =========================
+             المميزات
+        ========================= -->
 
         <div class="features-row">
 
@@ -631,20 +707,27 @@
 
         </div>
 
+
     </section>
 
 
     <!-- =========================
-         الخدمات
+         عنوان الخدمات
     ========================= -->
 
     <h2
         class="section-title"
         id="services"
     >
+
         خدماتنا المميزة ✨
+
     </h2>
 
+
+    <!-- =========================
+         شبكة الخدمات
+    ========================= -->
 
     <div class="services-grid">
 
@@ -865,14 +948,19 @@
                 class="service-icon-box"
                 style="
                     color: #fff;
-                    background: linear-gradient(
-                        135deg,
-                        #833ab4,
-                        #fd1d1d,
-                        #fcb045
-                    );
+
+                    background:
+                        linear-gradient(
+                            135deg,
+                            #833ab4,
+                            #fd1d1d,
+                            #fcb045
+                        );
+
                     border-color: #8b2cc1;
+
                     font-size: 25px;
+
                     font-weight: bold;
                 "
             >
@@ -943,9 +1031,11 @@
 
     <section class="review-section">
 
+
         <h2>
             ⭐ قيّم تجربتك معنا
         </h2>
+
 
         <p>
             رأيك يهمنا ويساعدنا على تطوير متجر
@@ -958,8 +1048,11 @@
             class="review-btn"
             target="_blank"
         >
+
             ⭐ تقييم المتجر
+
         </a>
+
 
     </section>
 
@@ -970,14 +1063,17 @@
 
     <footer>
 
+
         <img
             src="IMG_1574.jpeg"
             alt="رمشة بلس"
         >
 
+
         <p>
             © 2026 رمشة بلس — جميع الحقوق محفوظة
         </p>
+
 
     </footer>
 
@@ -1003,6 +1099,7 @@
     }
 
 </script>
+
 
 </body>
 </html>
