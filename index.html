@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>رمشة بلس - أفضل الخدمات الرقمية بأفضل الأسعار</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -33,7 +35,7 @@
         }
 
         /* =========================
-           الهيدر العلوي
+           الهيدر
         ========================= */
 
         header {
@@ -76,6 +78,8 @@
             font-size: 22px;
         }
 
+        /* الشعار */
+
         .logo-container {
             display: flex;
             align-items: center;
@@ -85,22 +89,31 @@
         .logo-container img {
             height: 40px;
             object-fit: contain;
-            filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+            filter: drop-shadow(
+                0 0 10px rgba(168, 85, 247, 0.5)
+            );
         }
 
         /* =========================
-           البانر الرئيسي
+           البانر
         ========================= */
 
         .hero-banner {
-            background: linear-gradient(145deg, #120722 0%, #090312 100%);
+            background: linear-gradient(
+                145deg,
+                #120722 0%,
+                #090312 100%
+            );
+
             border: 1px solid #29144a;
             border-radius: 24px;
             padding: 22px 15px;
             text-align: center;
             position: relative;
             margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .hero-top {
@@ -114,18 +127,25 @@
         .hero-badge-box {
             width: 130px;
             height: 130px;
+
             background: radial-gradient(
                 circle,
                 rgba(168, 85, 247, 0.2) 0%,
                 transparent 70%
             );
+
             border: 1px solid #2e1654;
             border-radius: 20px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             position: relative;
-            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+
+            box-shadow:
+                0 0 25px rgba(139, 92, 246, 0.3);
+
             flex-shrink: 0;
         }
 
@@ -133,6 +153,7 @@
             width: 85px;
             height: auto;
             object-fit: contain;
+
             filter: drop-shadow(
                 0 0 8px rgba(255, 255, 255, 0.6)
             );
@@ -155,7 +176,9 @@
             color: #b875ff;
             margin-bottom: 6px;
             font-weight: bold;
-            text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+
+            text-shadow:
+                0 0 15px rgba(168, 85, 247, 0.4);
         }
 
         .hero-text p {
@@ -172,7 +195,9 @@
             display: flex;
             justify-content: space-around;
             gap: 10px;
+
             border-top: 1px solid rgba(255, 255, 255, 0.05);
+
             padding-top: 15px;
         }
 
@@ -186,12 +211,16 @@
         .feature-icon {
             width: 42px;
             height: 42px;
+
             background: #170a2d;
             border: 1px solid #371b63;
+
             border-radius: 50%;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             color: #c084fc;
             font-size: 16px;
         }
@@ -207,10 +236,13 @@
 
         .section-title {
             text-align: center;
+
             font-size: 17px;
             margin-bottom: 18px;
+
             color: #fff;
             font-weight: bold;
+
             scroll-margin-top: 20px;
         }
 
@@ -220,66 +252,98 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 12px;
         }
 
         .service-card {
             background: #0f071d;
+
             border: 1px solid #23113d;
+
             border-radius: 20px;
+
             padding: 18px 10px;
+
             text-align: center;
+
             display: flex;
             flex-direction: column;
+
             align-items: center;
             justify-content: space-between;
+
             transition: 0.3s;
         }
 
         .service-card:hover {
             border-color: #7e22ce;
-            box-shadow: 0 0 15px rgba(126, 34, 206, 0.3);
+
+            box-shadow:
+                0 0 15px rgba(126, 34, 206, 0.3);
         }
 
         .service-icon-box {
             width: 58px;
             height: 58px;
+
             background: #170a2d;
+
             border: 1px solid #371b63;
+
             border-radius: 16px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             margin-bottom: 12px;
+
             font-size: 24px;
             color: #fff;
         }
 
         .service-card h3 {
             font-size: 14px;
+
             margin-bottom: 4px;
+
             color: #fff;
             font-weight: bold;
         }
 
         .service-card p {
             font-size: 10px;
+
             color: #9ca3af;
+
             margin-bottom: 14px;
         }
 
         .order-btn {
             background: transparent;
+
             border: 1px solid #581c87;
+
             color: #d8b4fe;
+
             padding: 7px 0;
+
             width: 100%;
+
             border-radius: 12px;
+
             font-size: 12px;
+
             cursor: pointer;
+
             text-decoration: none;
+
             display: block;
+
             transition: 0.3s;
         }
 
@@ -294,46 +358,68 @@
 
         .review-section {
             margin-top: 25px;
+
             padding: 20px 15px;
+
             text-align: center;
+
             background: linear-gradient(
                 145deg,
                 #120722,
                 #090312
             );
+
             border: 1px solid #29144a;
+
             border-radius: 22px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.35);
         }
 
         .review-section h2 {
             font-size: 16px;
+
             margin-bottom: 8px;
+
             color: #fff;
         }
 
         .review-section p {
             font-size: 10px;
+
             color: #9ca3af;
+
             line-height: 1.7;
+
             margin-bottom: 15px;
         }
 
         .review-btn {
             display: block;
+
             width: 100%;
+
             padding: 10px;
+
             border-radius: 13px;
+
             background: linear-gradient(
                 135deg,
                 #7e22ce,
                 #581c87
             );
+
             border: 1px solid #9333ea;
+
             color: #fff;
+
             text-decoration: none;
+
             font-size: 11px;
+
             font-weight: bold;
+
             transition: 0.3s;
         }
 
@@ -352,7 +438,9 @@
 
         footer img {
             width: 60px;
+
             opacity: 0.75;
+
             margin-bottom: 8px;
         }
 
@@ -393,6 +481,7 @@
                 font-size: 22px;
             }
         }
+
     </style>
 </head>
 
@@ -408,16 +497,23 @@
     <header>
 
         <!-- يسار: عروضنا -->
+
         <button
             class="header-action offers-btn"
             onclick="goToServices()"
         >
-            <span class="fire">🔥</span>
+
+            <span class="fire">
+                🔥
+            </span>
+
             عروضنا
+
         </button>
 
 
         <!-- الوسط: الشعار -->
+
         <div class="logo-container">
 
             <img
@@ -429,12 +525,15 @@
 
 
         <!-- يمين: القائمة -->
+
         <button
             class="header-action menu-btn"
             onclick="goToServices()"
             aria-label="القائمة"
         >
+
             ☰
+
         </button>
 
     </header>
@@ -447,6 +546,7 @@
     <section class="hero-banner">
 
         <div class="hero-top">
+
 
             <div class="hero-badge-box">
 
@@ -480,6 +580,7 @@
         <!-- المميزات -->
 
         <div class="features-row">
+
 
             <div class="feature-item">
 
@@ -519,13 +620,14 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
     <!-- =========================
-         الخدمات المميزة
+         الخدمات
     ========================= -->
 
     <h2
@@ -540,14 +642,17 @@
 
 
         <!-- =========================
-             نتفلكس
+             1 - نتفلكس
         ========================= -->
 
         <div class="service-card">
 
             <div
                 class="service-icon-box"
-                style="color: #e50914; font-weight: bold;"
+                style="
+                    color: #e50914;
+                    font-weight: bold;
+                "
             >
                 N
             </div>
@@ -572,14 +677,18 @@
 
 
         <!-- =========================
-             شاهد VIP
+             2 - شاهد VIP
         ========================= -->
 
         <div class="service-card">
 
             <div
                 class="service-icon-box"
-                style="color: #00d878; font-size: 18px; font-weight: bold;"
+                style="
+                    color: #00d878;
+                    font-size: 18px;
+                    font-weight: bold;
+                "
             >
                 شاهد
             </div>
@@ -604,14 +713,18 @@
 
 
         <!-- =========================
-             شاهد رياضة
+             3 - شاهد رياضة
         ========================= -->
 
         <div class="service-card">
 
             <div
                 class="service-icon-box"
-                style="color: #00bfff; font-size: 16px; font-weight: bold;"
+                style="
+                    color: #00bfff;
+                    font-size: 16px;
+                    font-weight: bold;
+                "
             >
                 SPORTS
             </div>
@@ -636,28 +749,37 @@
 
 
         <!-- =========================
-             متابعين تيك توك
+             4 - OSN
         ========================= -->
 
         <div class="service-card">
 
             <div
                 class="service-icon-box"
-                style="color: #fff; font-size: 26px;"
+                style="
+                    color: #ffffff;
+                    background: linear-gradient(
+                        135deg,
+                        #111827,
+                        #312e81
+                    );
+                    font-size: 20px;
+                    font-weight: bold;
+                "
             >
-                ♪
+                OSN
             </div>
 
             <h3>
-                متابعين تيك توك
+                اشتراك OSN
             </h3>
 
             <p>
-                سرعة وجودة عالية
+                مسلسلات وأفلام حصرية
             </p>
 
             <a
-                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تيك%20توك"
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20OSN"
                 class="order-btn"
                 target="_blank"
             >
@@ -668,7 +790,7 @@
 
 
         <!-- =========================
-             سناب بلس - جديد
+             5 - سناب بلس
         ========================= -->
 
         <div class="service-card">
@@ -695,6 +817,122 @@
 
             <a
                 href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20سناب%20بلس"
+                class="order-btn"
+                target="_blank"
+            >
+                طلب الآن
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             6 - متابعين تيك توك
+        ========================= -->
+
+        <div class="service-card">
+
+            <div
+                class="service-icon-box"
+                style="
+                    color: #fff;
+                    font-size: 26px;
+                "
+            >
+                ♪
+            </div>
+
+            <h3>
+                متابعين تيك توك
+            </h3>
+
+            <p>
+                سرعة وجودة عالية
+            </p>
+
+            <a
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تيك%20توك"
+                class="order-btn"
+                target="_blank"
+            >
+                طلب الآن
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             7 - متابعين إنستقرام
+        ========================= -->
+
+        <div class="service-card">
+
+            <div
+                class="service-icon-box"
+                style="
+                    color: #fff;
+                    background: linear-gradient(
+                        135deg,
+                        #833ab4,
+                        #fd1d1d,
+                        #fcb045
+                    );
+                    border-color: #8b2cc1;
+                    font-size: 25px;
+                    font-weight: bold;
+                "
+            >
+                ◎
+            </div>
+
+            <h3>
+                متابعين إنستقرام
+            </h3>
+
+            <p>
+                متابعين بسرعة وجودة عالية
+            </p>
+
+            <a
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20إنستقرام"
+                class="order-btn"
+                target="_blank"
+            >
+                طلب الآن
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             8 - متابعين تويتر
+        ========================= -->
+
+        <div class="service-card">
+
+            <div
+                class="service-icon-box"
+                style="
+                    color: #fff;
+                    background: #000;
+                    border-color: #333;
+                    font-size: 23px;
+                    font-weight: bold;
+                "
+            >
+                𝕏
+            </div>
+
+            <h3>
+                متابعين تويتر
+            </h3>
+
+            <p>
+                زيادة متابعين حسابك بسرعة
+            </p>
+
+            <a
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تويتر"
                 class="order-btn"
                 target="_blank"
             >
