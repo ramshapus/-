@@ -1,358 +1,363 @@
-‏<!DOCTYPE html>
-‏<html lang="ar" dir="rtl">
-‏<head>
-‏    <meta charset="UTF-8">
-‏    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-‏    <title>رمشة بلس - أفضل الخدمات الرقمية بأفضل الأسعار</title>
-‏    <style>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رمشة بلس - أفضل الخدمات الرقمية</title>
+    <style>
         * {
-‏            margin: 0;
-‏            padding: 0;
-‏            box-sizing: border-box;
-‏            font-family: 'Tahoma', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tahoma', Arial, sans-serif;
         }
 
-‏        body {
-‏            background-color: #07030d;
-‏            color: #ffffff;
-‏            padding: 10px;
-‏            display: flex;
-‏            justify-content: center;
+        body {
+            background-color: #07030d;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
         }
 
-‏        .phone-frame {
-‏            width: 100%;
-‏            max-width: 480px;
-‏            background-color: #07030d;
-‏            padding: 10px;
+        .phone-frame {
+            width: 100%;
+            max-width: 480px;
+            background-color: #07030d;
+            padding: 10px;
         }
 
         /* الهيدر العلوي */
-‏        header {
-‏            display: flex;
-‏            justify-content: space-between;
-‏            align-items: center;
-‏            padding: 10px 5px;
-‏            margin-bottom: 10px;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5px;
+            margin-bottom: 10px;
         }
 
-‏        .header-icons {
-‏            display: flex;
-‏            gap: 8px;
+        .header-icons {
+            display: flex;
+            gap: 8px;
         }
 
-‏        .icon-btn {
-‏            background: #130a24;
-‏            border: 1px solid #281447;
-‏            border-radius: 14px;
-‏            width: 42px;
-‏            height: 42px;
-‏            display: flex;
-‏            align-items: center;
-‏            justify-content: center;
-‏            color: #fff;
-‏            position: relative;
-‏            cursor: pointer;
+        .icon-btn {
+            background: #130a24;
+            border: 1px solid #281447;
+            border-radius: 14px;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+            cursor: pointer;
         }
 
-‏        .icon-btn span {
-‏            position: absolute;
-‏            top: -4px;
-‏            right: -4px;
-‏            background: #a855f7;
-‏            color: white;
-‏            font-size: 10px;
-‏            width: 18px;
-‏            height: 18px;
-‏            border-radius: 50%;
-‏            display: flex;
-‏            align-items: center;
-‏            justify-content: center;
+        .icon-btn span {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: #a855f7;
+            color: white;
+            font-size: 10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-‏        .logo-container img {
-‏            height: 40px;
-‏            object-fit: contain;
-‏            filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+        /* تصحيح مقاس شعار الهيدر العلوي */
+        .logo-container img {
+            max-height: 45px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
         }
 
-‏        .menu-btn {
-‏            background: none;
-‏            border: none;
-‏            color: white;
-‏            font-size: 22px;
-‏            cursor: pointer;
-‏            padding: 5px;
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            padding: 5px;
         }
 
         /* البانر الرئيسي */
-‏        .hero-banner {
-‏            background: linear-gradient(145deg, #120722 0%, #090312 100%);
-‏            border: 1px solid #29144a;
-‏            border-radius: 24px;
-‏            padding: 22px 15px;
-‏            text-align: center;
-‏            position: relative;
-‏            margin-bottom: 25px;
-‏            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        .hero-banner {
+            background: linear-gradient(145deg, #120722 0%, #090312 100%);
+            border: 1px solid #29144a;
+            border-radius: 24px;
+            padding: 22px 15px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-‏        .hero-top {
-‏            display: flex;
-‏            align-items: center;
-‏            justify-content: space-between;
-‏            gap: 15px;
-‏            margin-bottom: 20px;
+        .hero-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
-‏        .hero-badge-box {
-‏            width: 130px;
-‏            height: 130px;
-‏            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
-‏            border: 1px solid #2e1654;
-‏            border-radius: 20px;
-‏            display: flex;
-‏            align-items: center;
-‏            justify-content: center;
-‏            position: relative;
-‏            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
-‏            flex-shrink: 0;
+        /* صندوق الشعار داخل البانر بمقاسات مضبوطة وثابتة */
+        .hero-badge-box {
+            width: 110px;
+            height: 110px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+            border: 1px solid #2e1654;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+            flex-shrink: 0;
+            overflow: hidden;
+            padding: 10px;
         }
 
-‏        .hero-badge-box img {
-‏            width: 85px;
-‏            height: auto;
-‏            object-fit: contain;
-‏            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+        .hero-badge-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
         }
 
-‏        .hero-text {
-‏            text-align: right;
-‏            flex-grow: 1;
+        .hero-text {
+            text-align: right;
+            flex-grow: 1;
         }
 
-‏        .hero-text h3 {
-‏            font-size: 15px;
-‏            color: #d1c4e9;
-‏            font-weight: normal;
-‏            margin-bottom: 4px;
+        .hero-text h3 {
+            font-size: 14px;
+            color: #d1c4e9;
+            font-weight: normal;
+            margin-bottom: 4px;
         }
 
-‏        .hero-text h1 {
-‏            font-size: 24px;
-‏            color: #b875ff;
-‏            margin-bottom: 6px;
-‏            font-weight: bold;
-‏            text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+        .hero-text h1 {
+            font-size: 22px;
+            color: #b875ff;
+            margin-bottom: 6px;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
         }
 
-‏        .hero-text p {
-‏            font-size: 11px;
-‏            color: #9ca3af;
-‏            line-height: 1.4;
+        .hero-text p {
+            font-size: 11px;
+            color: #9ca3af;
+            line-height: 1.4;
         }
 
         /* المميزات الثلاث أفقياً */
-‏        .features-row {
-‏            display: flex;
-‏            justify-content: space-around;
-‏            gap: 10px;
-‏            border-top: 1px solid rgba(255, 255, 255, 0.05);
-‏            padding-top: 15px;
+        .features-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
         }
 
-‏        .feature-item {
-‏            display: flex;
-‏            flex-direction: column;
-‏            align-items: center;
-‏            gap: 6px;
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
         }
 
-‏        .feature-icon {
-‏            width: 42px;
-‏            height: 42px;
-‏            background: #170a2d;
-‏            border: 1px solid #371b63;
-‏            border-radius: 50%;
-‏            display: flex;
-‏            align-items: center;
-‏            justify-content: center;
-‏            color: #c084fc;
-‏            font-size: 16px;
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            background: #170a2d;
+            border: 1px solid #371b63;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c084fc;
+            font-size: 16px;
         }
 
-‏        .feature-item span {
-‏            font-size: 11px;
-‏            color: #d1d5db;
+        .feature-item span {
+            font-size: 11px;
+            color: #d1d5db;
         }
 
         /* عنوان القسم */
-‏        .section-title {
-‏            text-align: center;
-‏            font-size: 17px;
-‏            margin-bottom: 18px;
-‏            color: #fff;
-‏            font-weight: bold;
+        .section-title {
+            text-align: center;
+            font-size: 17px;
+            margin-bottom: 18px;
+            color: #fff;
+            font-weight: bold;
         }
 
         /* شبكة الخدمات (عنصرين في كل صف) */
-‏        .services-grid {
-‏            display: grid;
-‏            grid-template-columns: repeat(2, 1fr);
-‏            gap: 12px;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
         }
 
-‏        .service-card {
-‏            background: #0f071d;
-‏            border: 1px solid #23113d;
-‏            border-radius: 20px;
-‏            padding: 18px 10px;
-‏            text-align: center;
-‏            display: flex;
-‏            flex-direction: column;
-‏            align-items: center;
-‏            justify-content: space-between;
-‏            transition: 0.3s;
+        .service-card {
+            background: #0f071d;
+            border: 1px solid #23113d;
+            border-radius: 20px;
+            padding: 18px 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: 0.3s;
         }
 
-‏        .service-card:hover {
-‏            border-color: #7e22ce;
-‏            box-shadow: 0 0 15px rgba(126, 34, 206, 0.3);
+        .service-card:hover {
+            border-color: #7e22ce;
+            box-shadow: 0 0 15px rgba(126, 34, 206, 0.3);
         }
 
-‏        .service-icon-box {
-‏            width: 58px;
-‏            height: 58px;
-‏            background: #170a2d;
-‏            border: 1px solid #371b63;
-‏            border-radius: 16px;
-‏            display: flex;
-‏            align-items: center;
-‏            justify-content: center;
-‏            margin-bottom: 12px;
-‏            font-size: 24px;
-‏            color: #fff;
+        .service-icon-box {
+            width: 58px;
+            height: 58px;
+            background: #170a2d;
+            border: 1px solid #371b63;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            font-size: 24px;
+            color: #fff;
         }
 
-‏        .service-card h3 {
-‏            font-size: 14px;
-‏            margin-bottom: 4px;
-‏            color: #fff;
-‏            font-weight: bold;
+        .service-card h3 {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #fff;
+            font-weight: bold;
         }
 
-‏        .service-card p {
-‏            font-size: 10px;
-‏            color: #9ca3af;
-‏            margin-bottom: 14px;
+        .service-card p {
+            font-size: 10px;
+            color: #9ca3af;
+            margin-bottom: 14px;
         }
 
-‏        .order-btn {
-‏            background: transparent;
-‏            border: 1px solid #581c87;
-‏            color: #d8b4fe;
-‏            padding: 7px 0;
-‏            width: 100%;
-‏            border-radius: 12px;
-‏            font-size: 12px;
-‏            cursor: pointer;
-‏            text-decoration: none;
-‏            display: block;
-‏            transition: 0.3s;
+        .order-btn {
+            background: transparent;
+            border: 1px solid #581c87;
+            color: #d8b4fe;
+            padding: 7px 0;
+            width: 100%;
+            border-radius: 12px;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
         }
 
-‏        .order-btn:hover {
-‏            background: #581c87;
-‏            color: #fff;
+        .order-btn:hover {
+            background: #581c87;
+            color: #fff;
         }
-‏    </style>
-‏</head>
-‏<body>
+    </style>
+</head>
+<body>
 
-‏<div class="phone-frame">
+<div class="phone-frame">
 
     <!-- الهيدر العلوي -->
-‏    <header>
-‏        <div class="header-icons">
-‏            <div class="icon-btn">
+    <header>
+        <div class="header-icons">
+            <div class="icon-btn">
                 🛒
-‏                <span>0</span>
-‏            </div>
-‏            <div class="icon-btn">🌙</div>
-‏        </div>
-‏        <div class="logo-container">
-‏            <img src="IMG_1574.jpeg" alt="رمشة بلس">
-‏        </div>
-‏        <button class="menu-btn">☰</button>
-‏    </header>
+                <span>0</span>
+            </div>
+            <div class="icon-btn">🌙</div>
+        </div>
+        <div class="logo-container">
+            <img src="IMG_1574.jpeg" alt="رمشة بلس">
+        </div>
+        <button class="menu-btn">☰</button>
+    </header>
 
     <!-- البانر الرئيسي -->
-‏    <section class="hero-banner">
-‏        <div class="hero-top">
-‏            <div class="hero-badge-box">
-‏                <img src="IMG_1574.jpeg" alt="رمشة">
-‏            </div>
-‏            <div class="hero-text">
-‏                <h3>مرحباً بك في</h3>
-‏                <h1>رمشة بلس</h1>
-‏                <p>أفضل الخدمات الرقمية بأفضل الأسعار</p>
-‏            </div>
-‏        </div>
+    <section class="hero-banner">
+        <div class="hero-top">
+            <div class="hero-badge-box">
+                <img src="IMG_1574.jpeg" alt="رمشة">
+            </div>
+            <div class="hero-text">
+                <h3>مرحباً بك في</h3>
+                <h1>رمشة بلس</h1>
+                <p>أفضل الخدمات الرقمية بأفضل الأسعار</p>
+            </div>
+        </div>
         
-‏        <div class="features-row">
-‏            <div class="feature-item">
-‏                <div class="feature-icon">🛡️</div>
-‏                <span>ضمان كامل</span>
-‏            </div>
-‏            <div class="feature-item">
-‏                <div class="feature-icon">⚡</div>
-‏                <span>تسليم فوري</span>
-‏            </div>
-‏            <div class="feature-item">
-‏                <div class="feature-icon">🎧</div>
-‏                <span>دعم 24/7</span>
-‏            </div>
-‏        </div>
-‏    </section>
+        <div class="features-row">
+            <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <span>ضمان كامل</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <span>تسليم فوري</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎧</div>
+                <span>دعم 24/7</span>
+            </div>
+        </div>
+    </section>
 
     <!-- الخدمات المميزة -->
-‏    <h2 class="section-title">خدماتنا المميزة ✨</h2>
+    <h2 class="section-title">خدماتنا المميزة ✨</h2>
     
-‏    <div class="services-grid">
+    <div class="services-grid">
         <!-- خدمة 1: اشتراك نتفلكس -->
-‏        <div class="service-card">
-‏            <div class="service-icon-box" style="color: #e50914; font-weight: bold;">N</div>
-‏            <h3>اشتراك نتفلكس</h3>
-‏            <p>أشهر بأسعار مميزة</p>
-‏            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20نتفلكس" class="order-btn" target="_blank">طلب الآن</a>
-‏        </div>
+        <div class="service-card">
+            <div class="service-icon-box" style="color: #e50914; font-weight: bold;">N</div>
+            <h3>اشتراك نتفلكس</h3>
+            <p>أشهر بأسعار مميزة</p>
+            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20نتفلكس" class="order-btn" target="_blank">طلب الآن</a>
+        </div>
 
         <!-- خدمة 2: اشتراك شاهد VIP -->
-‏        <div class="service-card">
-‏            <div class="service-icon-box" style="color: #00d878; font-size: 18px; font-weight: bold;">شاهد</div>
-‏            <h3>اشتراك شاهد VIP</h3>
-‏            <p>مسلسلات وأفلام حصرية</p>
-‏            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20شاهد%20VIP" class="order-btn" target="_blank">طلب الآن</a>
-‏        </div>
+        <div class="service-card">
+            <div class="service-icon-box" style="color: #00d878; font-size: 16px; font-weight: bold;">شاهد</div>
+            <h3>اشتراك شاهد VIP</h3>
+            <p>مسلسلات وأفلام حصرية</p>
+            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20شاهد%20VIP" class="order-btn" target="_blank">طلب الآن</a>
+        </div>
 
         <!-- خدمة 3: شاهد رياضة -->
-‏        <div class="service-card">
-‏            <div class="service-icon-box" style="color: #00bfff; font-size: 16px; font-weight: bold;">SPORTS</div>
-‏            <h3>شاهد رياضة</h3>
-‏            <p>مباريات ودوري روشن</p>
-‏            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20شاهد%20رياضة" class="order-btn" target="_blank">طلب الآن</a>
-‏        </div>
+        <div class="service-card">
+            <div class="service-icon-box" style="color: #00bfff; font-size: 14px; font-weight: bold;">SPORTS</div>
+            <h3>شاهد رياضة</h3>
+            <p>مباريات ودوري روشن</p>
+            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20شاهد%20رياضة" class="order-btn" target="_blank">طلب الآن</a>
+        </div>
 
         <!-- خدمة 4: متابعين تيك توك -->
-‏        <div class="service-card">
-‏            <div class="service-icon-box" style="color: #fff; font-size: 26px;">♪</div>
-‏            <h3>متابعين تيك توك</h3>
-‏            <p>سرعة وجودة عالية</p>
-‏            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تيك%20توك" class="order-btn" target="_blank">طلب الآن</a>
-‏        </div>
-‏    </div>
+        <div class="service-card">
+            <div class="service-icon-box" style="color: #fff; font-size: 26px;">♪</div>
+            <h3>متابعين تيك توك</h3>
+            <p>سرعة وجودة عالية</p>
+            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تيك%20توك" class="order-btn" target="_blank">طلب الآن</a>
+        </div>
+    </div>
 
-‏</div>
+</div>
 
-‏</body>
-‏</html>
+</body>
+</html>
