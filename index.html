@@ -70,7 +70,6 @@
             justify-content: center;
         }
 
-        /* تصحيح مقاس شعار الهيدر العلوي */
         .logo-container img {
             max-height: 45px;
             width: auto;
@@ -107,7 +106,6 @@
             margin-bottom: 20px;
         }
 
-        /* صندوق الشعار داخل البانر بمقاسات مضبوطة وثابتة */
         .hero-badge-box {
             width: 110px;
             height: 110px;
@@ -157,7 +155,7 @@
             line-height: 1.4;
         }
 
-        /* المميزات الثلاث أفقياً */
+        /* المميزات أفقياً */
         .features-row {
             display: flex;
             justify-content: space-around;
@@ -200,11 +198,12 @@
             font-weight: bold;
         }
 
-        /* شبكة الخدمات (عنصرين في كل صف) */
+        /* شبكة الخدمات */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
+            margin-bottom: 30px;
         }
 
         .service-card {
@@ -270,6 +269,43 @@
             background: #581c87;
             color: #fff;
         }
+
+        /* قسم تقييمات العملاء */
+        .reviews-section {
+            margin-top: 20px;
+        }
+
+        .review-card {
+            background: #0f071d;
+            border: 1px solid #23113d;
+            border-radius: 16px;
+            padding: 14px;
+            margin-bottom: 10px;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .reviewer-name {
+            font-size: 13px;
+            color: #d1c4e9;
+            font-weight: bold;
+        }
+
+        .review-stars {
+            color: #facc15;
+            font-size: 12px;
+        }
+
+        .review-text {
+            font-size: 11px;
+            color: #9ca3af;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -300,7 +336,7 @@
             <div class="hero-text">
                 <h3>مرحباً بك في</h3>
                 <h1>رمشة بلس</h1>
-                <p>أفضل الخدمات الرقمية بأفضل الأسعار</p>
+                <p>تفعيل فوري وضمان كامل على جميع الخدمات الرقمية ⚡</p>
             </div>
         </div>
         
@@ -311,7 +347,7 @@
             </div>
             <div class="feature-item">
                 <div class="feature-icon">⚡</div>
-                <span>تسليم فوري</span>
+                <span>تفعيل فوري</span>
             </div>
             <div class="feature-item">
                 <div class="feature-icon">🎧</div>
@@ -328,7 +364,7 @@
         <div class="service-card">
             <div class="service-icon-box" style="color: #e50914; font-weight: bold;">N</div>
             <h3>اشتراك نتفلكس</h3>
-            <p>أشهر بأسعار مميزة</p>
+            <p>تفعيل فوري وسريع</p>
             <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20نتفلكس" class="order-btn" target="_blank">طلب الآن</a>
         </div>
 
@@ -356,6 +392,35 @@
             <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تيك%20توك" class="order-btn" target="_blank">طلب الآن</a>
         </div>
     </div>
+
+    <!-- قسم آراء وتقييمات العملاء -->
+    <section class="reviews-section">
+        <h2 class="section-title">آراء عملائنا ⭐</h2>
+
+        <div class="review-card">
+            <div class="review-header">
+                <span class="reviewer-name">محمد القحطاني</span>
+                <span class="review-stars">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-text">ما شاء الله تبارك الله، تفعيل السلعة ما اخذ دقايق، والتعامل جداً راقي وسريع. الله يرزقكم.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <span class="reviewer-name">سارة العتيبي</span>
+                <span class="review-stars">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-text">افضل متجر تعاملت معه، اشتراك نتفلكس شغال زي العسل وتفعيل فوري انصح فيه وبقوة.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <span class="reviewer-name">فيصل الشمري</span>
+                <span class="review-stars">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-text">خدمة شاهد رياضة ممتازة ومارست البث بدون أي تقطيع، شكراً لكم على المصداقية وسرعة الرد.</p>
+        </div>
+    </section>
 
 </div>
 
