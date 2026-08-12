@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رمشة بلس - أفضل الخدمات الرقمية</title>
+    <title>رمشة بلس - أفضل الخدمات الرقمية بأفضل الأسعار</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Tahoma', Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -27,7 +32,10 @@
             padding: 10px;
         }
 
-        /* الهيدر العلوي */
+        /* =========================
+           الهيدر العلوي
+        ========================= */
+
         header {
             display: flex;
             justify-content: space-between;
@@ -36,57 +44,56 @@
             margin-bottom: 10px;
         }
 
-        .header-icons {
-            display: flex;
-            gap: 8px;
-        }
-
-        .icon-btn {
+        /* أزرار الهيدر */
+        .header-action {
             background: #130a24;
             border: 1px solid #281447;
             border-radius: 14px;
-            width: 42px;
             height: 42px;
+            padding: 0 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 5px;
             color: #fff;
-            position: relative;
             cursor: pointer;
+            font-size: 13px;
+            transition: 0.3s;
         }
 
-        .icon-btn span {
-            position: absolute;
-            top: -4px;
-            right: -4px;
-            background: #a855f7;
-            color: white;
-            font-size: 10px;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
+        .header-action:hover {
+            background: #1c0d31;
+            border-color: #7e22ce;
+            transform: translateY(-1px);
+        }
+
+        .offers-btn .fire {
+            font-size: 17px;
+        }
+
+        .menu-btn {
+            width: 42px;
+            padding: 0;
+            font-size: 22px;
+        }
+
+        /* الشعار */
+        .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .logo-container img {
-            max-height: 45px;
-            width: auto;
+            height: 40px;
             object-fit: contain;
             filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
         }
 
-        .menu-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 22px;
-            cursor: pointer;
-            padding: 5px;
-        }
+        /* =========================
+           البانر الرئيسي
+        ========================= */
 
-        /* البانر الرئيسي */
         .hero-banner {
             background: linear-gradient(145deg, #120722 0%, #090312 100%);
             border: 1px solid #29144a;
@@ -107,9 +114,13 @@
         }
 
         .hero-badge-box {
-            width: 110px;
-            height: 110px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+            width: 130px;
+            height: 130px;
+            background: radial-gradient(
+                circle,
+                rgba(168, 85, 247, 0.2) 0%,
+                transparent 70%
+            );
             border: 1px solid #2e1654;
             border-radius: 20px;
             display: flex;
@@ -118,15 +129,15 @@
             position: relative;
             box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
             flex-shrink: 0;
-            overflow: hidden;
-            padding: 10px;
         }
 
         .hero-badge-box img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 85px;
+            height: auto;
             object-fit: contain;
-            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+            filter: drop-shadow(
+                0 0 8px rgba(255, 255, 255, 0.6)
+            );
         }
 
         .hero-text {
@@ -135,14 +146,14 @@
         }
 
         .hero-text h3 {
-            font-size: 14px;
+            font-size: 15px;
             color: #d1c4e9;
             font-weight: normal;
             margin-bottom: 4px;
         }
 
         .hero-text h1 {
-            font-size: 22px;
+            font-size: 24px;
             color: #b875ff;
             margin-bottom: 6px;
             font-weight: bold;
@@ -155,7 +166,10 @@
             line-height: 1.4;
         }
 
-        /* المميزات أفقياً */
+        /* =========================
+           المميزات
+        ========================= */
+
         .features-row {
             display: flex;
             justify-content: space-around;
@@ -189,21 +203,28 @@
             color: #d1d5db;
         }
 
-        /* عنوان القسم */
+        /* =========================
+           عنوان الخدمات
+        ========================= */
+
         .section-title {
             text-align: center;
             font-size: 17px;
             margin-bottom: 18px;
             color: #fff;
             font-weight: bold;
+
+            scroll-margin-top: 20px;
         }
 
-        /* شبكة الخدمات */
+        /* =========================
+           شبكة الخدمات
+        ========================= */
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            margin-bottom: 30px;
         }
 
         .service-card {
@@ -270,159 +291,450 @@
             color: #fff;
         }
 
-        /* قسم تقييمات العملاء */
-        .reviews-section {
-            margin-top: 20px;
+        /* =========================
+           تقييم المتجر
+        ========================= */
+
+        .review-section {
+            margin-top: 25px;
+            padding: 20px 15px;
+            text-align: center;
+            background: linear-gradient(
+                145deg,
+                #120722,
+                #090312
+            );
+            border: 1px solid #29144a;
+            border-radius: 22px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
         }
 
-        .review-card {
-            background: #0f071d;
-            border: 1px solid #23113d;
-            border-radius: 16px;
-            padding: 14px;
-            margin-bottom: 10px;
+        .review-section h2 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #fff;
         }
 
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-        }
-
-        .reviewer-name {
-            font-size: 13px;
-            color: #d1c4e9;
-            font-weight: bold;
-        }
-
-        .review-stars {
-            color: #facc15;
-            font-size: 12px;
-        }
-
-        .review-text {
-            font-size: 11px;
+        .review-section p {
+            font-size: 10px;
             color: #9ca3af;
-            line-height: 1.4;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .review-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 13px;
+            background: linear-gradient(
+                135deg,
+                #7e22ce,
+                #581c87
+            );
+            border: 1px solid #9333ea;
+            color: #fff;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .review-btn:hover {
+            background: #9333ea;
+        }
+
+        /* =========================
+           الفوتر
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 25px 0 10px;
+        }
+
+        footer img {
+            width: 60px;
+            opacity: 0.75;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #625a6b;
+            font-size: 8px;
+        }
+
+        /* =========================
+           الجوال
+        ========================= */
+
+        @media (max-width: 360px) {
+
+            .header-action {
+                padding: 0 9px;
+                font-size: 11px;
+            }
+
+            .menu-btn {
+                width: 40px;
+            }
+
+            .logo-container img {
+                height: 36px;
+            }
+
+            .hero-badge-box {
+                width: 115px;
+                height: 115px;
+            }
+
+            .hero-badge-box img {
+                width: 75px;
+            }
+
+            .hero-text h1 {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <div class="phone-frame">
 
-    <!-- الهيدر العلوي -->
+
+    <!-- =========================
+         الهيدر
+    ========================= -->
+
     <header>
-        <div class="header-icons">
-            <div class="icon-btn">
-                🛒
-                <span>0</span>
-            </div>
-            <div class="icon-btn">🌙</div>
-        </div>
+
+        <!-- يسار: عروضنا -->
+        <button
+            class="header-action offers-btn"
+            onclick="goToServices()"
+        >
+            <span class="fire">🔥</span>
+            عروضنا
+        </button>
+
+
+        <!-- الوسط: الشعار -->
         <div class="logo-container">
-            <img src="IMG_1574.jpeg" alt="رمشة بلس">
+
+            <img
+                src="IMG_1574.jpeg"
+                alt="رمشة بلس"
+            >
+
         </div>
-        <button class="menu-btn">☰</button>
+
+
+        <!-- يمين: القائمة -->
+        <button
+            class="header-action menu-btn"
+            onclick="goToServices()"
+            aria-label="القائمة"
+        >
+            ☰
+        </button>
+
     </header>
 
-    <!-- البانر الرئيسي -->
+
+    <!-- =========================
+         البانر الرئيسي
+    ========================= -->
+
     <section class="hero-banner">
+
         <div class="hero-top">
+
             <div class="hero-badge-box">
-                <img src="IMG_1574.jpeg" alt="رمشة">
+
+                <img
+                    src="IMG_1574.jpeg"
+                    alt="رمشة"
+                >
+
             </div>
+
+
             <div class="hero-text">
-                <h3>  حياك الله في </h3>
-                <h1>رمشة بلس</h1>
-                <p>تفعيل فوري وضمان كامل على جميع الخدمات الرقمية ⚡</p>
+
+                <h3>
+                    مرحباً بك في
+                </h3>
+
+                <h1>
+                    رمشة بلس
+                </h1>
+
+                <p>
+                    أفضل الخدمات الرقمية بأفضل الأسعار
+                </p>
+
             </div>
+
         </div>
-        
+
+
+        <!-- المميزات -->
+
         <div class="features-row">
+
             <div class="feature-item">
-                <div class="feature-icon">🛡️</div>
-                <span>ضمان كامل</span>
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <span>
+                    ضمان كامل
+                </span>
+
             </div>
+
+
             <div class="feature-item">
-                <div class="feature-icon">⚡</div>
-                <span>تفعيل فوري</span>
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <span>
+                    تسليم فوري
+                </span>
+
             </div>
+
+
             <div class="feature-item">
-                <div class="feature-icon">🎧</div>
-                <span>دعم 24/7</span>
+
+                <div class="feature-icon">
+                    🎧
+                </div>
+
+                <span>
+                    دعم 24/7
+                </span>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- الخدمات المميزة -->
-    <h2 class="section-title">خدماتنا المميزة ✨</h2>
-    
+
+    <!-- =========================
+         الخدمات المميزة
+    ========================= -->
+
+    <h2
+        class="section-title"
+        id="services"
+    >
+        خدماتنا المميزة ✨
+    </h2>
+
+
     <div class="services-grid">
-        <!-- خدمة 1: اشتراك نتفلكس -->
+
+
+        <!-- نتفلكس -->
+
         <div class="service-card">
-            <div class="service-icon-box" style="color: #e50914; font-weight: bold;">N</div>
-            <h3>اشتراك نتفلكس</h3>
-            <p>تفعيل فوري وسريع</p>
-            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20نتفلكس" class="order-btn" target="_blank">طلب الآن</a>
+
+            <div
+                class="service-icon-box"
+                style="color: #e50914; font-weight: bold;"
+            >
+                N
+            </div>
+
+            <h3>
+                اشتراك نتفلكس
+            </h3>
+
+            <p>
+                أشهر بأسعار مميزة
+            </p>
+
+            <a
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20نتفلكس"
+                class="order-btn"
+                target="_blank"
+            >
+                طلب الآن
+            </a>
+
         </div>
 
-        <!-- خدمة 2: اشتراك شاهد VIP -->
+
+        <!-- شاهد VIP -->
+
         <div class="service-card">
-            <div class="service-icon-box" style="color: #00d878; font-size: 16px; font-weight: bold;">شاهد</div>
-            <h3>اشتراك شاهد VIP</h3>
-            <p>مسلسلات وأفلام حصرية</p>
-            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20شاهد%20VIP" class="order-btn" target="_blank">طلب الآن</a>
+
+            <div
+                class="service-icon-box"
+                style="color: #00d878; font-size: 18px; font-weight: bold;"
+            >
+                شاهد
+            </div>
+
+            <h3>
+                اشتراك شاهد VIP
+            </h3>
+
+            <p>
+                مسلسلات وأفلام حصرية
+            </p>
+
+            <a
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20اشتراك%20شاهد%20VIP"
+                class="order-btn"
+                target="_blank"
+            >
+                طلب الآن
+            </a>
+
         </div>
 
-        <!-- خدمة 3: شاهد رياضة -->
+
+        <!-- شاهد رياضة -->
+
         <div class="service-card">
-            <div class="service-icon-box" style="color: #00bfff; font-size: 14px; font-weight: bold;">SPORTS</div>
-            <h3>شاهد رياضة</h3>
-            <p>مباريات ودوري روشن</p>
-            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20شاهد%20رياضة" class="order-btn" target="_blank">طلب الآن</a>
+
+            <div
+                class="service-icon-box"
+                style="color: #00bfff; font-size: 16px; font-weight: bold;"
+            >
+                SPORTS
+            </div>
+
+            <h3>
+                شاهد رياضة
+            </h3>
+
+            <p>
+                مباريات ودوري روشن
+            </p>
+
+            <a
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20شاهد%20رياضة"
+                class="order-btn"
+                target="_blank"
+            >
+                طلب الآن
+            </a>
+
         </div>
 
-        <!-- خدمة 4: متابعين تيك توك -->
+
+        <!-- متابعين تيك توك -->
+
         <div class="service-card">
-            <div class="service-icon-box" style="color: #fff; font-size: 26px;">♪</div>
-            <h3>متابعين تيك توك</h3>
-            <p>سرعة وجودة عالية</p>
-            <a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تيك%20توك" class="order-btn" target="_blank">طلب الآن</a>
+
+            <div
+                class="service-icon-box"
+                style="color: #fff; font-size: 26px;"
+            >
+                ♪
+            </div>
+
+            <h3>
+                متابعين تيك توك
+            </h3>
+
+            <p>
+                سرعة وجودة عالية
+            </p>
+
+            <a
+                href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20متابعين%20تيك%20توك"
+                class="order-btn"
+                target="_blank"
+            >
+                طلب الآن
+            </a>
+
         </div>
+
     </div>
 
-    <!-- قسم آراء وتقييمات العملاء -->
-    <section class="reviews-section">
-        <h2 class="section-title">آراء عملائنا ⭐</h2>
 
-        <div class="review-card">
-            <div class="review-header">
-                <span class="reviewer-name">محمد القحطاني</span>
-                <span class="review-stars">⭐⭐⭐⭐⭐</span>
-            </div>
-            <p class="review-text">ما شاء الله تبارك الله، تفعيل السلعة ما اخذ دقايق، والتعامل جداً راقي وسريع. الله يرزقكم.</p>
-        </div>
+    <!-- =========================
+         تقييم المتجر
+    ========================= -->
 
-        <div class="review-card">
-            <div class="review-header">
-                <span class="reviewer-name">سارة العتيبي</span>
-                <span class="review-stars">⭐⭐⭐⭐⭐</span>
-            </div>
-            <p class="review-text">افضل متجر تعاملت معه، اشتراك نتفلكس شغال زي العسل وتفعيل فوري انصح فيه وبقوة.</p>
-        </div>
+    <section class="review-section">
 
-        <div class="review-card">
-            <div class="review-header">
-                <span class="reviewer-name">فيصل الشمري</span>
-                <span class="review-stars">⭐⭐⭐⭐⭐</span>
-            </div>
-            <p class="review-text">خدمة شاهد رياضة ممتازة ومارست البث بدون أي تقطيع، شكراً لكم على المصداقية وسرعة الرد.</p>
-        </div>
+        <h2>
+            ⭐ قيّم تجربتك معنا
+        </h2>
+
+        <p>
+            رأيك يهمنا ويساعدنا على تطوير متجر
+            رمشة بلس وتقديم تجربة أفضل لك.
+        </p>
+
+
+        <!--
+            ضع رابط تقييم متجرك بدل علامة #
+            مثال:
+            href="رابط-التقييم-هنا"
+        -->
+
+        <a
+            href="#"
+            class="review-btn"
+        >
+            ⭐ تقييم المتجر
+        </a>
+
     </section>
 
+
+    <!-- =========================
+         الفوتر
+    ========================= -->
+
+    <footer>
+
+        <img
+            src="IMG_1574.jpeg"
+            alt="رمشة بلس"
+        >
+
+        <p>
+            © 2026 رمشة بلس — جميع الحقوق محفوظة
+        </p>
+
+    </footer>
+
+
 </div>
+
+
+<!-- =========================
+     الانتقال للخدمات
+========================= -->
+
+<script>
+
+    function goToServices() {
+
+        document
+            .getElementById("services")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+    }
+
+</script>
 
 </body>
 </html>
