@@ -522,6 +522,166 @@
         }
 
         /* =========================
+           روابط أسفل المتجر
+        ========================= */
+
+        .footer-links {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin: 8px 0 12px;
+        }
+
+        .footer-links button {
+            background: none;
+
+            border: none;
+
+            color: #8f849d;
+
+            font-size: 9px;
+
+            font-family: Tahoma, Arial, sans-serif;
+
+            cursor: pointer;
+
+            padding: 3px 4px;
+
+            transition: 0.3s;
+        }
+
+        .footer-links button:hover {
+            color: #c084fc;
+        }
+
+        .footer-links .separator {
+            color: #392d47;
+
+            font-size: 9px;
+        }
+
+        /* =========================
+           النوافذ المنبثقة
+        ========================= */
+
+        .policy-overlay {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.78);
+
+            z-index: 9999;
+
+            padding: 20px;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .policy-overlay.active {
+            display: flex;
+        }
+
+        .policy-box {
+            width: 100%;
+
+            max-width: 450px;
+
+            max-height: 85vh;
+
+            overflow-y: auto;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #160b26,
+                    #090312
+                );
+
+            border: 1px solid #371b63;
+
+            border-radius: 22px;
+
+            padding: 22px 18px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0, 0, 0, 0.7);
+
+            position: relative;
+        }
+
+        .policy-close {
+            position: absolute;
+
+            top: 12px;
+
+            left: 12px;
+
+            width: 34px;
+
+            height: 34px;
+
+            border-radius: 50%;
+
+            border: 1px solid #3b2550;
+
+            background: #130a20;
+
+            color: #fff;
+
+            font-size: 18px;
+
+            cursor: pointer;
+        }
+
+        .policy-box h2 {
+            color: #d8b4fe;
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+            padding-left: 35px;
+        }
+
+        .policy-box h3 {
+            color: #fff;
+
+            font-size: 13px;
+
+            margin-top: 15px;
+
+            margin-bottom: 5px;
+        }
+
+        .policy-box p,
+        .policy-box li {
+            color: #aaa1b3;
+
+            font-size: 11px;
+
+            line-height: 1.9;
+        }
+
+        .policy-box ul {
+            padding-right: 18px;
+
+            margin-top: 5px;
+        }
+
+        /* =========================
            الجوال
         ========================= */
 
@@ -571,9 +731,6 @@
 
     <header>
 
-
-        <!-- عروضنا -->
-
         <button
             class="header-action offers-btn"
             onclick="goToServices()"
@@ -588,8 +745,6 @@
         </button>
 
 
-        <!-- اسم المتجر -->
-
         <div class="logo-container">
 
             <div class="logo-text">
@@ -598,8 +753,6 @@
 
         </div>
 
-
-        <!-- القائمة -->
 
         <button
             class="header-action menu-btn"
@@ -610,7 +763,6 @@
             ☰
 
         </button>
-
 
     </header>
 
@@ -625,8 +777,6 @@
         <div class="hero-top">
 
 
-            <!-- الشعار المستطيل -->
-
             <div class="hero-badge-box">
 
                 <img
@@ -636,8 +786,6 @@
 
             </div>
 
-
-            <!-- النص -->
 
             <div class="hero-text">
 
@@ -658,10 +806,6 @@
 
         </div>
 
-
-        <!-- =========================
-             المميزات
-        ========================= -->
 
         <div class="features-row">
 
@@ -1070,6 +1214,29 @@
         >
 
 
+        <!-- روابط السياسات -->
+
+        <div class="footer-links">
+
+            <button onclick="openPolicy('about')">
+                من نحن
+            </button>
+
+            <span class="separator">|</span>
+
+            <button onclick="openPolicy('refund')">
+                سياسة الاسترجاع
+            </button>
+
+            <span class="separator">|</span>
+
+            <button onclick="openPolicy('terms')">
+                شروط المتجر
+            </button>
+
+        </div>
+
+
         <p>
             © 2026 رمشة بلس — جميع الحقوق محفوظة
         </p>
@@ -1082,7 +1249,198 @@
 
 
 <!-- =========================
-     الانتقال للخدمات
+     نافذة: من نحن
+========================= -->
+
+<div
+    class="policy-overlay"
+    id="about"
+    onclick="closeOutside(event, 'about')"
+>
+
+    <div class="policy-box">
+
+        <button
+            class="policy-close"
+            onclick="closePolicy('about')"
+        >
+            ×
+        </button>
+
+        <h2>
+            من نحن
+        </h2>
+
+        <p>
+            رمشة بلس متجر إلكتروني يقدم مجموعة من الخدمات
+            والاشتراكات الرقمية بأسعار مناسبة، مع الحرص
+            على تقديم تجربة سهلة وواضحة للعميل.
+        </p>
+
+        <p style="margin-top:10px;">
+            نسعى في رمشة بلس إلى توفير خدمات رقمية متنوعة
+            مع خدمة عملاء تساعدك قبل وبعد الطلب.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     نافذة: سياسة الاسترجاع
+========================= -->
+
+<div
+    class="policy-overlay"
+    id="refund"
+    onclick="closeOutside(event, 'refund')"
+>
+
+    <div class="policy-box">
+
+        <button
+            class="policy-close"
+            onclick="closePolicy('refund')"
+        >
+            ×
+        </button>
+
+        <h2>
+            سياسة الاسترجاع
+        </h2>
+
+        <p>
+            نحرص على تقديم الخدمة كما تم توضيحها للعميل
+            قبل إتمام الطلب.
+        </p>
+
+        <h3>
+            قبل تنفيذ الطلب
+        </h3>
+
+        <p>
+            يمكن للعميل طلب إلغاء الطلب والتواصل معنا قبل
+            البدء في تنفيذ أو تفعيل الخدمة.
+        </p>
+
+        <h3>
+            بعد تفعيل الخدمة
+        </h3>
+
+        <p>
+            بعد تفعيل أو تسليم الخدمة الرقمية، لا يمكن
+            استرجاع المبلغ لمجرد تغيير الرأي أو عدم الرغبة
+            في استخدام الخدمة.
+        </p>
+
+        <h3>
+            وجود مشكلة في الخدمة
+        </h3>
+
+        <p>
+            في حال وجود مشكلة في الخدمة بعد الاستلام،
+            يرجى التواصل معنا مباشرة، وسنعمل على حل المشكلة
+            أو استبدال الخدمة عند استحقاق ذلك.
+        </p>
+
+        <p style="margin-top:12px;">
+            تختلف إمكانية الاسترجاع أو التعويض حسب نوع
+            الخدمة وحالتها.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     نافذة: شروط المتجر
+========================= -->
+
+<div
+    class="policy-overlay"
+    id="terms"
+    onclick="closeOutside(event, 'terms')"
+>
+
+    <div class="policy-box">
+
+        <button
+            class="policy-close"
+            onclick="closePolicy('terms')"
+        >
+            ×
+        </button>
+
+        <h2>
+            شروط المتجر
+        </h2>
+
+        <h3>
+            1. الطلب والدفع
+        </h3>
+
+        <p>
+            بإتمام الطلب يقر العميل بأنه قرأ تفاصيل الخدمة
+            والسعر والشروط ووافق عليها.
+        </p>
+
+        <h3>
+            2. الخدمات الرقمية
+        </h3>
+
+        <p>
+            الخدمات الرقمية يتم تنفيذها أو تسليمها حسب
+            طبيعة كل خدمة، وقد تختلف مدة التنفيذ من خدمة
+            إلى أخرى.
+        </p>
+
+        <h3>
+            3. مسؤولية العميل
+        </h3>
+
+        <p>
+            يجب على العميل تزويد المتجر بالمعلومات الصحيحة
+            اللازمة لتنفيذ الطلب، ويتحمل مسؤولية صحة البيانات
+            التي يقدمها.
+        </p>
+
+        <h3>
+            4. المحافظة على بيانات الدخول
+        </h3>
+
+        <p>
+            في حال كانت الخدمة تتطلب بيانات دخول أو معلومات
+            خاصة، يجب على العميل المحافظة على بياناته وعدم
+            مشاركتها مع الآخرين.
+        </p>
+
+        <h3>
+            5. التواصل والدعم
+        </h3>
+
+        <p>
+            في حال وجود مشكلة أو استفسار بخصوص الطلب،
+            يمكن التواصل معنا عبر واتساب.
+        </p>
+
+        <h3>
+            6. الموافقة
+        </h3>
+
+        <p>
+            استخدام المتجر وإتمام الطلب يعني موافقة العميل
+            على هذه الشروط والسياسات.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     الجافاسكربت
 ========================= -->
 
 <script>
@@ -1097,6 +1455,42 @@
             });
 
     }
+
+
+    function openPolicy(id) {
+
+        document
+            .getElementById(id)
+            .classList
+            .add("active");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closePolicy(id) {
+
+        document
+            .getElementById(id)
+            .classList
+            .remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    function closeOutside(event, id) {
+
+        if (event.target.id === id) {
+
+            closePolicy(id);
+
+        }
+
+    }
+
 
 </script>
 
