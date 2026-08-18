@@ -146,7 +146,7 @@
         }
 
         /* =========================
-           صندوق الشعار المستطيل
+           صندوق الشعار
         ========================= */
 
         .hero-badge-box {
@@ -279,7 +279,7 @@
         }
 
         /* =========================
-           عنوان الخدمات
+           عناوين الأقسام
         ========================= */
 
         .section-title {
@@ -294,6 +294,20 @@
             font-weight: bold;
 
             scroll-margin-top: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+
+            color: #8f849d;
+
+            font-size: 10px;
+
+            margin-top: -10px;
+
+            margin-bottom: 18px;
+
+            line-height: 1.7;
         }
 
         /* =========================
@@ -413,6 +427,244 @@
             background: #581c87;
 
             color: #fff;
+        }
+
+        /* =========================
+           قسم الخدمات الإلكترونية
+        ========================= */
+
+        .digital-services-section {
+            margin-top: 35px;
+
+            scroll-margin-top: 20px;
+        }
+
+        .digital-services-header {
+            background:
+                linear-gradient(
+                    145deg,
+                    #160a27,
+                    #0b0413
+                );
+
+            border:
+                1px solid
+                #321653;
+
+            border-radius: 22px;
+
+            padding: 18px 15px;
+
+            text-align: center;
+
+            margin-bottom: 15px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.3);
+        }
+
+        .digital-services-header .big-icon {
+            width: 50px;
+            height: 50px;
+
+            margin: 0 auto 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #1b0b32;
+
+            border: 1px solid #4c1d75;
+
+            font-size: 23px;
+
+            box-shadow:
+                0 0 18px
+                rgba(126, 34, 206, 0.18);
+        }
+
+        .digital-services-header h2 {
+            font-size: 17px;
+
+            color: #fff;
+
+            margin-bottom: 7px;
+        }
+
+        .digital-services-header p {
+            color: #9ca3af;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+        .digital-services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+        .digital-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    #110720,
+                    #0c0515
+                );
+
+            border:
+                1px solid
+                #28143f;
+
+            border-radius: 20px;
+
+            padding: 18px 10px;
+
+            text-align: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            transition: 0.3s;
+
+            min-height: 205px;
+        }
+
+        .digital-card:hover {
+            border-color: #8b2be2;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 0 18px
+                rgba(126, 34, 206, 0.25);
+        }
+
+        .digital-icon {
+            width: 58px;
+            height: 58px;
+
+            background: #190b2e;
+
+            border:
+                1px solid
+                #432064;
+
+            border-radius: 17px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .digital-card h3 {
+            color: #fff;
+
+            font-size: 13px;
+
+            margin-bottom: 7px;
+        }
+
+        .digital-card p {
+            color: #9ca3af;
+
+            font-size: 9px;
+
+            line-height: 1.6;
+
+            margin-bottom: 14px;
+
+            flex-grow: 1;
+        }
+
+        .digital-order-btn {
+            display: block;
+
+            width: 100%;
+
+            padding: 8px 5px;
+
+            border-radius: 12px;
+
+            border:
+                1px solid
+                #6d28a9;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1b0b2e,
+                    #10051c
+                );
+
+            color: #d8b4fe;
+
+            text-decoration: none;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .digital-order-btn:hover {
+            background:
+                linear-gradient(
+                    135deg,
+                    #7e22ce,
+                    #581c87
+                );
+
+            color: #fff;
+        }
+
+        /* =========================
+           ملاحظة الخدمات
+        ========================= */
+
+        .custom-service-note {
+            margin-top: 14px;
+
+            background: #0e0619;
+
+            border:
+                1px dashed
+                #392052;
+
+            border-radius: 17px;
+
+            padding: 13px;
+
+            text-align: center;
+        }
+
+        .custom-service-note p {
+            color: #9ca3af;
+
+            font-size: 10px;
+
+            line-height: 1.8;
+        }
+
+        .custom-service-note strong {
+            color: #d8b4fe;
         }
 
         /* =========================
@@ -713,6 +965,7 @@
             .hero-text h1 {
                 font-size: 22px;
             }
+
         }
 
     </style>
@@ -870,13 +1123,13 @@
 
 
     <!-- =========================
-         شبكة الخدمات
+         شبكة الاشتراكات والخدمات
     ========================= -->
 
     <div class="services-grid">
 
 
-        <!-- 1 - نتفلكس -->
+        <!-- نتفلكس -->
 
         <div class="service-card">
 
@@ -909,7 +1162,7 @@
         </div>
 
 
-        <!-- 2 - شاهد VIP -->
+        <!-- شاهد VIP -->
 
         <div class="service-card">
 
@@ -943,7 +1196,7 @@
         </div>
 
 
-        <!-- 3 - شاهد رياضة -->
+        <!-- شاهد رياضة -->
 
         <div class="service-card">
 
@@ -977,7 +1230,7 @@
         </div>
 
 
-        <!-- 4 - OSN -->
+        <!-- OSN -->
 
         <div class="service-card">
 
@@ -1016,7 +1269,7 @@
         </div>
 
 
-        <!-- 5 - سناب بلس -->
+        <!-- سناب بلس -->
 
         <div class="service-card">
 
@@ -1051,7 +1304,7 @@
         </div>
 
 
-        <!-- 6 - متابعين تيك توك -->
+        <!-- متابعين تيك توك -->
 
         <div class="service-card">
 
@@ -1084,7 +1337,7 @@
         </div>
 
 
-        <!-- 7 - متابعين إنستقرام -->
+        <!-- متابعين إنستقرام -->
 
         <div class="service-card">
 
@@ -1092,7 +1345,6 @@
                 class="service-icon-box"
                 style="
                     color: #fff;
-
                     background:
                         linear-gradient(
                             135deg,
@@ -1100,11 +1352,8 @@
                             #fd1d1d,
                             #fcb045
                         );
-
                     border-color: #8b2cc1;
-
                     font-size: 25px;
-
                     font-weight: bold;
                 "
             >
@@ -1130,7 +1379,7 @@
         </div>
 
 
-        <!-- 8 - متابعين تويتر -->
+        <!-- متابعين تويتر -->
 
         <div class="service-card">
 
@@ -1167,6 +1416,200 @@
 
 
     </div>
+
+
+    <!-- =========================
+         الخدمات الإلكترونية
+    ========================= -->
+
+    <section
+        class="digital-services-section"
+        id="digital-services"
+    >
+
+
+        <div class="digital-services-header">
+
+            <div class="big-icon">
+                💻
+            </div>
+
+            <h2>
+                خدمات إلكترونية
+            </h2>
+
+            <p>
+                نساعدك في إنشاء وتطوير حضورك الإلكتروني
+                باحترافية، من المواقع والمتاجر إلى صفحات
+                الهبوط والتعديلات.
+            </p>
+
+        </div>
+
+
+        <div class="digital-services-grid">
+
+
+            <!-- إنشاء موقع -->
+
+            <div class="digital-card">
+
+                <div class="digital-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    إنشاء موقع إلكتروني
+                </h3>
+
+                <p>
+                    تصميم وإنشاء موقع إلكتروني خاص بك
+                    يناسب نشاطك واحتياجاتك.
+                </p>
+
+                <a
+                    href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20إنشاء%20موقع%20إلكتروني"
+                    class="digital-order-btn"
+                    target="_blank"
+                >
+                    اطلب الخدمة
+                </a>
+
+            </div>
+
+
+            <!-- إنشاء متجر -->
+
+            <div class="digital-card">
+
+                <div class="digital-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    إنشاء متجر إلكتروني
+                </h3>
+
+                <p>
+                    تجهيز متجر إلكتروني خاص بنشاطك
+                    بشكل مرتب وسهل الاستخدام.
+                </p>
+
+                <a
+                    href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20إنشاء%20متجر%20إلكتروني"
+                    class="digital-order-btn"
+                    target="_blank"
+                >
+                    اطلب الخدمة
+                </a>
+
+            </div>
+
+
+            <!-- تطوير متجر -->
+
+            <div class="digital-card">
+
+                <div class="digital-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    تطوير وتعديل متجر
+                </h3>
+
+                <p>
+                    تعديل متجرك الحالي، ترتيب الصفحات
+                    وتحسين المظهر وتجربة المستخدم.
+                </p>
+
+                <a
+                    href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20تطوير%20وتعديل%20متجري%20الإلكتروني"
+                    class="digital-order-btn"
+                    target="_blank"
+                >
+                    اطلب الخدمة
+                </a>
+
+            </div>
+
+
+     
+
+            </div>
+
+
+            <!-- تعديل موقع -->
+
+            <div class="digital-card">
+
+                <div class="digital-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    تعديل موقع إلكتروني
+                </h3>
+
+                <p>
+                    تعديل موقعك الحالي وإضافة الأقسام
+                    أو المميزات التي تحتاجها.
+                </p>
+
+                <a
+                    href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20تعديل%20موقعي%20الإلكتروني"
+                    class="digital-order-btn"
+                    target="_blank"
+                >
+                    اطلب الخدمة
+                </a>
+
+            </div>
+
+
+            <!-- خدمة مخصصة -->
+
+            <div class="digital-card">
+
+                <div class="digital-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    خدمة إلكترونية مخصصة
+                </h3>
+
+                <p>
+                    عندك فكرة أو خدمة مختلفة؟
+                    تواصل معنا واشرح لنا طلبك.
+                </p>
+
+                <a
+                    href="https://wa.me/966501286453?text=السلام%20عليكم%20لدي%20طلب%20خدمة%20إلكترونية%20مخصصة"
+                    class="digital-order-btn"
+                    target="_blank"
+                >
+                    اطلب الخدمة
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="custom-service-note">
+
+            <p>
+                💡 <strong>عندك طلب خاص؟</strong>
+                أرسل لنا فكرتك عبر واتساب، ونناقش معك
+                التفاصيل والتكلفة قبل البدء.
+            </p>
+
+        </div>
+
+
+    </section>
 
 
     <!-- =========================
@@ -1213,8 +1656,6 @@
             alt="رمشة بلس"
         >
 
-
-        <!-- روابط السياسات -->
 
         <div class="footer-links">
 
