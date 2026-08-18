@@ -1,2500 +1,1855 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>رمشة بلس - أفضل الخدمات الرقمية بأفضل الأسعار</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Tahoma', Arial, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #07030d;
-            color: #ffffff;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .phone-frame {
-            width: 100%;
-            max-width: 480px;
-            background-color: #07030d;
-            padding: 10px;
-        }
-
-        /* =========================
-           الهيدر
-        ========================= */
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 5px;
-            margin-bottom: 10px;
-        }
-
-        .header-action {
-            background: #130a24;
-            border: 1px solid #281447;
-            border-radius: 14px;
-            height: 42px;
-            padding: 0 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            color: #fff;
-            cursor: pointer;
-            font-size: 13px;
-            transition: 0.3s;
-        }
-
-        .header-action:hover {
-            background: #1c0d31;
-            border-color: #7e22ce;
-            transform: translateY(-1px);
-        }
-
-        .offers-btn .fire {
-            font-size: 17px;
-        }
-
-        .menu-btn {
-            width: 42px;
-            padding: 0;
-            font-size: 22px;
-        }
-
-        /* =========================
-           اسم المتجر
-        ========================= */
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
-            margin: 0 8px;
-        }
-
-        .logo-text {
-            color: #D8B4FE;
-            font-size: 21px;
-            font-weight: bold;
-            white-space: nowrap;
-            text-shadow:
-                0 0 8px rgba(216, 180, 254, 0.6),
-                0 0 18px rgba(168, 85, 247, 0.35);
-            letter-spacing: 0.5px;
-        }
-
-        /* =========================
-           البانر
-        ========================= */
-
-        .hero-banner {
-            background: linear-gradient(
-                145deg,
-                #120722 0%,
-                #090312 100%
-            );
-
-            border: 1px solid #29144a;
-            border-radius: 24px;
-            padding: 22px 15px;
-            text-align: center;
-            position: relative;
-            margin-bottom: 25px;
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .hero-badge-box {
-            width: 150px;
-            height: 95px;
-            background: transparent;
-            border: none;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .hero-badge-box img {
-            width: 130px;
-            height: auto;
-            object-fit: contain;
-            filter:
-                drop-shadow(
-                    0 0 8px
-                    rgba(255, 255, 255, 0.5)
-                );
-        }
-
-        .hero-text {
-            text-align: right;
-            flex-grow: 1;
-        }
-
-        .hero-text h3 {
-            font-size: 15px;
-            color: #d1c4e9;
-            font-weight: normal;
-            margin-bottom: 4px;
-        }
-
-        .hero-text h1 {
-            font-size: 24px;
-            color: #b875ff;
-            margin-bottom: 6px;
-            font-weight: bold;
-
-            text-shadow:
-                0 0 15px
-                rgba(168, 85, 247, 0.4);
-        }
-
-        .hero-text p {
-            font-size: 11px;
-            color: #9ca3af;
-            line-height: 1.4;
-        }
-
-        /* =========================
-           المميزات
-        ========================= */
-
-        .features-row {
-            display: flex;
-            justify-content: space-around;
-            gap: 10px;
-
-            border-top:
-                1px solid
-                rgba(255, 255, 255, 0.05);
-
-            padding-top: 15px;
-        }
-
-        .feature-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .feature-icon {
-            width: 42px;
-            height: 42px;
-
-            background: #170a2d;
-
-            border:
-                1px solid
-                #371b63;
-
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            color: #c084fc;
-            font-size: 16px;
-        }
-
-        .feature-item span {
-            font-size: 11px;
-            color: #d1d5db;
-        }
-
-        /* =========================
-           العناوين
-        ========================= */
-
-        .section-title {
-            text-align: center;
-            font-size: 17px;
-            margin-bottom: 18px;
-            color: #fff;
-            font-weight: bold;
-            scroll-margin-top: 20px;
-        }
-
-        /* =========================
-           الخدمات
-        ========================= */
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .service-card {
-            background: #0f071d;
-
-            border:
-                1px solid
-                #23113d;
-
-            border-radius: 20px;
-            padding: 18px 10px;
-            text-align: center;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: #7e22ce;
-
-            box-shadow:
-                0 0 15px
-                rgba(126, 34, 206, 0.3);
-        }
-
-        .service-icon-box {
-            width: 58px;
-            height: 58px;
-
-            background: #170a2d;
-
-            border:
-                1px solid
-                #371b63;
-
-            border-radius: 16px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 12px;
-
-            font-size: 24px;
-            color: #fff;
-        }
-
-        .service-card h3 {
-            font-size: 14px;
-            margin-bottom: 4px;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .service-card p {
-            font-size: 10px;
-            color: #9ca3af;
-            margin-bottom: 14px;
-        }
-
-        .order-btn {
-            background: transparent;
-
-            border:
-                1px solid
-                #581c87;
-
-            color: #d8b4fe;
-
-            padding: 7px 0;
-            width: 100%;
-            border-radius: 12px;
-
-            font-size: 12px;
-            cursor: pointer;
-
-            text-decoration: none;
-            display: block;
-
-            transition: 0.3s;
-        }
-
-        .order-btn:hover {
-            background: #581c87;
-            color: #fff;
-        }
-
-        /* =========================
-           الخدمات الإلكترونية
-        ========================= */
-
-        .digital-section {
-            margin-top: 35px;
-            scroll-margin-top: 20px;
-        }
-
-        .digital-header {
-            background:
-                linear-gradient(
-                    145deg,
-                    #120722,
-                    #090312
-                );
-
-            border:
-                1px solid
-                #29144a;
-
-            border-radius: 22px;
-
-            padding: 20px 15px;
-            text-align: center;
-
-            margin-bottom: 15px;
-
-            box-shadow:
-                0 8px 25px
-                rgba(0, 0, 0, 0.35);
-        }
-
-        .digital-header-icon {
-            width: 50px;
-            height: 50px;
-
-            margin: 0 auto 10px;
-
-            background: #170a2d;
-
-            border:
-                1px solid
-                #371b63;
-
-            border-radius: 15px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 23px;
-            color: #c084fc;
-        }
-
-        .digital-header h2 {
-            font-size: 17px;
-            color: #fff;
-            margin-bottom: 7px;
-        }
-
-        .digital-header p {
-            font-size: 10px;
-            color: #9ca3af;
-            line-height: 1.8;
-        }
-
-        .digital-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .digital-card {
-            background: #0f071d;
-
-            border:
-                1px solid
-                #23113d;
-
-            border-radius: 20px;
-
-            padding: 18px 10px;
-
-            text-align: center;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            min-height: 205px;
-
-            transition: 0.3s;
-        }
-
-        .digital-card:hover {
-            border-color: #7e22ce;
-
-            box-shadow:
-                0 0 15px
-                rgba(126, 34, 206, 0.3);
-
-            transform: translateY(-2px);
-        }
-
-        .digital-icon {
-            width: 58px;
-            height: 58px;
-
-            background: #170a2d;
-
-            border:
-                1px solid
-                #371b63;
-
-            border-radius: 16px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 25px;
-
-            margin-bottom: 12px;
-        }
-
-        .digital-card h3 {
-            font-size: 13px;
-            color: #fff;
-            margin-bottom: 7px;
-        }
-
-        .digital-card p {
-            font-size: 9px;
-            color: #9ca3af;
-            line-height: 1.7;
-            margin-bottom: 14px;
-            flex-grow: 1;
-        }
-
-        .digital-order-btn {
-            background: transparent;
-
-            border:
-                1px solid
-                #581c87;
-
-            color: #d8b4fe;
-
-            padding: 8px 0;
-
-            width: 100%;
-
-            border-radius: 12px;
-
-            font-size: 11px;
-            font-weight: bold;
-
-            text-decoration: none;
-            display: block;
-
-            transition: 0.3s;
-
-            cursor: pointer;
-        }
-
-        .digital-order-btn:hover {
-            background:
-                linear-gradient(
-                    135deg,
-                    #7e22ce,
-                    #581c87
-                );
-
-            color: #fff;
-        }
-
-        .digital-note {
-            margin-top: 14px;
-            padding: 13px;
-
-            background: #0f071d;
-
-            border:
-                1px dashed
-                #392052;
-
-            border-radius: 17px;
-
-            text-align: center;
-        }
-
-        .digital-note p {
-            color: #9ca3af;
-            font-size: 10px;
-            line-height: 1.8;
-        }
-
-        .digital-note strong {
-            color: #d8b4fe;
-        }
-
-        /* =========================
-           تقييم المتجر
-        ========================= */
-
-        .review-section {
-            margin-top: 25px;
-
-            padding: 20px 15px;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #120722,
-                    #090312
-                );
-
-            border:
-                1px solid
-                #29144a;
-
-            border-radius: 22px;
-
-            box-shadow:
-                0 8px 25px
-                rgba(0, 0, 0, 0.35);
-        }
-
-        .review-section h2 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        .review-section p {
-            font-size: 10px;
-            color: #9ca3af;
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-
-        .review-btn {
-            display: block;
-
-            width: 100%;
-
-            padding: 10px;
-
-            border-radius: 13px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #7e22ce,
-                    #581c87
-                );
-
-            border:
-                1px solid
-                #9333ea;
-
-            color: #fff;
-
-            text-decoration: none;
-
-            font-size: 11px;
-            font-weight: bold;
-
-            transition: 0.3s;
-        }
-
-        .review-btn:hover {
-            background: #9333ea;
-        }
-
-        /* =========================
-           الفوتر
-        ========================= */
-
-        footer {
-            text-align: center;
-            padding: 25px 0 10px;
-        }
-
-        footer img {
-            width: 60px;
-            opacity: 0.75;
-            margin-bottom: 8px;
-        }
-
-        footer p {
-            color: #625a6b;
-            font-size: 8px;
-        }
-
-        .footer-links {
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            flex-wrap: wrap;
-
-            gap: 8px;
-
-            margin: 8px 0 12px;
-        }
-
-        .footer-links button {
-            background: none;
-            border: none;
-
-            color: #8f849d;
-
-            font-size: 9px;
-
-            font-family: Tahoma, Arial, sans-serif;
-
-            cursor: pointer;
-
-            padding: 3px 4px;
-
-            transition: 0.3s;
-        }
-
-        .footer-links button:hover {
-            color: #c084fc;
-        }
-
-        .footer-links .separator {
-            color: #392d47;
-            font-size: 9px;
-        }
-
-        /* =========================
-           النوافذ المنبثقة
-        ========================= */
-
-        .policy-overlay {
-            display: none;
-
-            position: fixed;
-
-            inset: 0;
-
-            background: rgba(0, 0, 0, 0.78);
-
-            z-index: 9999;
-
-            padding: 20px;
-
-            align-items: center;
-            justify-content: center;
-        }
-
-        .policy-overlay.active {
-            display: flex;
-        }
-
-        .policy-box {
-            width: 100%;
-            max-width: 450px;
-
-            max-height: 85vh;
-
-            overflow-y: auto;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #160b26,
-                    #090312
-                );
-
-            border: 1px solid #371b63;
-
-            border-radius: 22px;
-
-            padding: 22px 18px;
-
-            box-shadow:
-                0 15px 50px
-                rgba(0, 0, 0, 0.7);
-
-            position: relative;
-        }
-
-        .policy-close {
-            position: absolute;
-
-            top: 12px;
-            left: 12px;
-
-            width: 34px;
-            height: 34px;
-
-            border-radius: 50%;
-
-            border: 1px solid #3b2550;
-
-            background: #130a20;
-
-            color: #fff;
-
-            font-size: 18px;
-
-            cursor: pointer;
-        }
-
-        .policy-box h2 {
-            color: #d8b4fe;
-
-            font-size: 18px;
-
-            margin-bottom: 15px;
-
-            padding-left: 35px;
-        }
-
-        .policy-box h3 {
-            color: #fff;
-
-            font-size: 13px;
-
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-
-        .policy-box p,
-        .policy-box li {
-            color: #aaa1b3;
-
-            font-size: 11px;
-
-            line-height: 1.9;
-        }
-
-        .policy-box ul {
-            padding-right: 18px;
-            margin-top: 5px;
-        }
-
-        /* =========================
-           نافذة الطلب والدفع
-        ========================= */
-
-        .payment-overlay {
-            display: none;
-
-            position: fixed;
-
-            inset: 0;
-
-            background: rgba(0, 0, 0, 0.82);
-
-            z-index: 10000;
-
-            padding: 15px;
-
-            align-items: center;
-            justify-content: center;
-        }
-
-        .payment-overlay.active {
-            display: flex;
-        }
-
-        .payment-box {
-            width: 100%;
-            max-width: 430px;
-
-            max-height: 90vh;
-            overflow-y: auto;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #180b2b,
-                    #090312
-                );
-
-            border: 1px solid #54257d;
-
-            border-radius: 24px;
-
-            padding: 22px 17px;
-
-            box-shadow:
-                0 20px 70px
-                rgba(0, 0, 0, 0.8);
-
-            position: relative;
-
-            animation: paymentShow 0.2s ease;
-        }
-
-        @keyframes paymentShow {
-
-            from {
-                opacity: 0;
-                transform: translateY(12px) scale(0.98);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-
-        }
-
-        .payment-close {
-            position: absolute;
-
-            top: 12px;
-            left: 12px;
-
-            width: 36px;
-            height: 36px;
-
-            border-radius: 50%;
-
-            border: 1px solid #43235e;
-
-            background: #12081d;
-
-            color: #fff;
-
-            font-size: 20px;
-
-            cursor: pointer;
-        }
-
-        .payment-title {
-            text-align: center;
-
-            color: #d8b4fe;
-
-            font-size: 19px;
-
-            margin-bottom: 5px;
-        }
-
-        .payment-subtitle {
-            text-align: center;
-
-            color: #9ca3af;
-
-            font-size: 10px;
-
-            margin-bottom: 18px;
-        }
-
-        .selected-product {
-            background: #0f071d;
-
-            border: 1px solid #32164e;
-
-            border-radius: 17px;
-
-            padding: 14px;
-
-            text-align: center;
-
-            margin-bottom: 14px;
-        }
-
-        .selected-product-name {
-            color: #fff;
-
-            font-size: 14px;
-
-            font-weight: bold;
-
-            margin-bottom: 5px;
-        }
-
-        .selected-product-price {
-            color: #c084fc;
-
-            font-size: 18px;
-
-            font-weight: bold;
-        }
-
-        .bank-card {
-            background: #0f071d;
-
-            border: 1px solid #32164e;
-
-            border-radius: 18px;
-
-            padding: 15px;
-
-            margin-bottom: 12px;
-        }
-
-        .bank-title {
-            text-align: center;
-
-            color: #fff;
-
-            font-size: 13px;
-
-            font-weight: bold;
-
-            margin-bottom: 12px;
-        }
-
-        .bank-row {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 8px;
-
-            padding: 9px 0;
-
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .bank-row:last-child {
-            border-bottom: none;
-        }
-
-        .bank-label {
-            color: #8f849d;
-
-            font-size: 10px;
-
-            white-space: nowrap;
-        }
-
-        .bank-value {
-            color: #fff;
-
-            font-size: 10px;
-
-            direction: ltr;
-
-            text-align: left;
-
-            word-break: break-all;
-
-            flex: 1;
-        }
-
-        .copy-btn {
-            background: #170a2d;
-
-            border: 1px solid #4a2670;
-
-            color: #d8b4fe;
-
-            border-radius: 9px;
-
-            padding: 6px 8px;
-
-            font-size: 9px;
-
-            cursor: pointer;
-
-            white-space: nowrap;
-        }
-
-        .copy-btn:hover {
-            background: #581c87;
-            color: #fff;
-        }
-
-        .payment-note {
-            background: rgba(126, 34, 206, 0.08);
-
-            border: 1px dashed #54257d;
-
-            border-radius: 15px;
-
-            padding: 12px;
-
-            text-align: center;
-
-            margin-bottom: 13px;
-        }
-
-        .payment-note p {
-            color: #aaa1b3;
-
-            font-size: 10px;
-
-            line-height: 1.8;
-        }
-
-        .payment-note strong {
-            color: #d8b4fe;
-        }
-
-        .whatsapp-payment-btn {
-            width: 100%;
-
-            border: none;
-
-            border-radius: 14px;
-
-            padding: 12px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #7e22ce,
-                    #581c87
-                );
-
-            color: #fff;
-
-            font-size: 12px;
-
-            font-weight: bold;
-
-            cursor: pointer;
-
-            transition: 0.3s;
-
-            box-shadow:
-                0 6px 20px
-                rgba(126, 34, 206, 0.25);
-        }
-
-        .whatsapp-payment-btn:hover {
-            transform: translateY(-1px);
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #9333ea,
-                    #6b21a8
-                );
-        }
-
-        .payment-help {
-            text-align: center;
-
-            color: #625a6b;
-
-            font-size: 8px;
-
-            margin-top: 10px;
-
-            line-height: 1.7;
-        }
-
-        /* =========================
-           الجوال
-        ========================= */
-
-        @media (max-width: 360px) {
-
-            .header-action {
-                padding: 0 9px;
-                font-size: 11px;
-            }
-
-            .menu-btn {
-                width: 40px;
-            }
-
-            .logo-text {
-                font-size: 18px;
-            }
-
-            .hero-badge-box {
-                width: 120px;
-                height: 80px;
-            }
-
-            .hero-badge-box img {
-                width: 105px;
-            }
-
-            .hero-text h1 {
-                font-size: 22px;
-            }
-
-            .bank-row {
-                flex-wrap: wrap;
-            }
-
-            .bank-value {
-                min-width: 100%;
-                order: 2;
-            }
-
-            .copy-btn {
-                margin-right: auto;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>رمشة بلس - أفضل الخدمات الرقمية بأفضل الأسعار</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Tahoma',Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#07030d;
+    color:#fff;
+    padding:10px;
+    display:flex;
+    justify-content:center;
+}
+
+.phone-frame{
+    width:100%;
+    max-width:480px;
+    background:#07030d;
+    padding:10px;
+}
+
+/* =========================
+   الهيدر
+========================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 5px;
+    margin-bottom:10px;
+}
+
+.header-action{
+    background:#130a24;
+    border:1px solid #281447;
+    border-radius:14px;
+    height:42px;
+    padding:0 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    color:#fff;
+    cursor:pointer;
+    font-size:13px;
+    transition:.3s;
+}
+
+.header-action:hover{
+    background:#1c0d31;
+    border-color:#7e22ce;
+    transform:translateY(-1px);
+}
+
+.offers-btn .fire{
+    font-size:17px;
+}
+
+.menu-btn{
+    width:42px;
+    padding:0;
+    font-size:22px;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:1;
+    margin:0 8px;
+}
+
+.logo-text{
+    color:#D8B4FE;
+    font-size:21px;
+    font-weight:bold;
+    white-space:nowrap;
+    text-shadow:
+        0 0 8px rgba(216,180,254,.6),
+        0 0 18px rgba(168,85,247,.35);
+}
+
+/* =========================
+   البانر
+========================= */
+
+.hero-banner{
+    background:linear-gradient(145deg,#120722 0%,#090312 100%);
+    border:1px solid #29144a;
+    border-radius:24px;
+    padding:22px 15px;
+    text-align:center;
+    position:relative;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.hero-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.hero-badge-box{
+    width:150px;
+    height:95px;
+    background:transparent;
+    border:none;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    flex-shrink:0;
+}
+
+.hero-badge-box img{
+    width:130px;
+    height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 0 8px rgba(255,255,255,.5));
+}
+
+.hero-text{
+    text-align:right;
+    flex-grow:1;
+}
+
+.hero-text h3{
+    font-size:15px;
+    color:#d1c4e9;
+    font-weight:normal;
+    margin-bottom:4px;
+}
+
+.hero-text h1{
+    font-size:24px;
+    color:#b875ff;
+    margin-bottom:6px;
+    font-weight:bold;
+    text-shadow:0 0 15px rgba(168,85,247,.4);
+}
+
+.hero-text p{
+    font-size:11px;
+    color:#9ca3af;
+    line-height:1.4;
+}
+
+.features-row{
+    display:flex;
+    justify-content:space-around;
+    gap:10px;
+    border-top:1px solid rgba(255,255,255,.05);
+    padding-top:15px;
+}
+
+.feature-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+}
+
+.feature-icon{
+    width:42px;
+    height:42px;
+    background:#170a2d;
+    border:1px solid #371b63;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#c084fc;
+    font-size:16px;
+}
+
+.feature-item span{
+    font-size:11px;
+    color:#d1d5db;
+}
+
+/* =========================
+   العناوين
+========================= */
+
+.section-title{
+    text-align:center;
+    font-size:17px;
+    margin-bottom:18px;
+    color:#fff;
+    font-weight:bold;
+    scroll-margin-top:20px;
+}
+
+/* =========================
+   الخدمات
+========================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.service-card{
+    background:#0f071d;
+    border:1px solid #23113d;
+    border-radius:20px;
+    padding:18px 10px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    transition:.3s;
+}
+
+.service-card:hover{
+    border-color:#7e22ce;
+    box-shadow:0 0 15px rgba(126,34,206,.3);
+}
+
+.service-icon-box{
+    width:58px;
+    height:58px;
+    background:#170a2d;
+    border:1px solid #371b63;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:12px;
+    font-size:24px;
+    color:#fff;
+}
+
+.service-card h3{
+    font-size:14px;
+    margin-bottom:4px;
+    color:#fff;
+    font-weight:bold;
+}
+
+.service-card p{
+    font-size:10px;
+    color:#9ca3af;
+    margin-bottom:14px;
+}
+
+.order-btn{
+    background:transparent;
+    border:1px solid #581c87;
+    color:#d8b4fe;
+    padding:7px 0;
+    width:100%;
+    border-radius:12px;
+    font-size:12px;
+    cursor:pointer;
+    text-decoration:none;
+    display:block;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    background:#581c87;
+    color:#fff;
+}
+
+/* =========================
+   الخدمات الإلكترونية
+========================= */
+
+.digital-section{
+    margin-top:35px;
+    scroll-margin-top:20px;
+}
+
+.digital-header{
+    background:linear-gradient(145deg,#120722,#090312);
+    border:1px solid #29144a;
+    border-radius:22px;
+    padding:20px 15px;
+    text-align:center;
+    margin-bottom:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+.digital-header-icon{
+    width:50px;
+    height:50px;
+    margin:0 auto 10px;
+    background:#170a2d;
+    border:1px solid #371b63;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    color:#c084fc;
+}
+
+.digital-header h2{
+    font-size:17px;
+    color:#fff;
+    margin-bottom:7px;
+}
+
+.digital-header p{
+    font-size:10px;
+    color:#9ca3af;
+    line-height:1.8;
+}
+
+.digital-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.digital-card{
+    background:#0f071d;
+    border:1px solid #23113d;
+    border-radius:20px;
+    padding:18px 10px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:205px;
+    transition:.3s;
+}
+
+.digital-card:hover{
+    border-color:#7e22ce;
+    box-shadow:0 0 15px rgba(126,34,206,.3);
+    transform:translateY(-2px);
+}
+
+.digital-icon{
+    width:58px;
+    height:58px;
+    background:#170a2d;
+    border:1px solid #371b63;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.digital-card h3{
+    font-size:13px;
+    color:#fff;
+    margin-bottom:7px;
+}
+
+.digital-card p{
+    font-size:9px;
+    color:#9ca3af;
+    line-height:1.7;
+    margin-bottom:14px;
+    flex-grow:1;
+}
+
+.digital-order-btn{
+    background:transparent;
+    border:1px solid #581c87;
+    color:#d8b4fe;
+    padding:8px 0;
+    width:100%;
+    border-radius:12px;
+    font-size:11px;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+    transition:.3s;
+}
+
+.digital-order-btn:hover{
+    background:linear-gradient(135deg,#7e22ce,#581c87);
+    color:#fff;
+}
+
+.digital-note{
+    margin-top:14px;
+    padding:13px;
+    background:#0f071d;
+    border:1px dashed #392052;
+    border-radius:17px;
+    text-align:center;
+}
+
+.digital-note p{
+    color:#9ca3af;
+    font-size:10px;
+    line-height:1.8;
+}
+
+.digital-note strong{
+    color:#d8b4fe;
+}
+
+/* =========================
+   التقييم
+========================= */
+
+.review-section{
+    margin-top:25px;
+    padding:20px 15px;
+    text-align:center;
+    background:linear-gradient(145deg,#120722,#090312);
+    border:1px solid #29144a;
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+.review-section h2{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.review-section p{
+    font-size:10px;
+    color:#9ca3af;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.review-btn{
+    display:block;
+    width:100%;
+    padding:10px;
+    border-radius:13px;
+    background:linear-gradient(135deg,#7e22ce,#581c87);
+    border:1px solid #9333ea;
+    color:#fff;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:bold;
+}
+
+/* =========================
+   الفوتر
+========================= */
+
+footer{
+    text-align:center;
+    padding:25px 0 10px;
+}
+
+footer img{
+    width:60px;
+    opacity:.75;
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#625a6b;
+    font-size:8px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:8px 0 12px;
+}
+
+.footer-links button{
+    background:none;
+    border:none;
+    color:#8f849d;
+    font-size:9px;
+    font-family:Tahoma,Arial,sans-serif;
+    cursor:pointer;
+    padding:3px 4px;
+}
+
+.footer-links .separator{
+    color:#392d47;
+    font-size:9px;
+}
+
+/* =========================
+   النوافذ
+========================= */
+
+.policy-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.82);
+    z-index:9999;
+    padding:20px;
+    align-items:center;
+    justify-content:center;
+}
+
+.policy-overlay.active{
+    display:flex;
+}
+
+.policy-box{
+    width:100%;
+    max-width:450px;
+    max-height:88vh;
+    overflow-y:auto;
+    background:linear-gradient(145deg,#160b26,#090312);
+    border:1px solid #371b63;
+    border-radius:22px;
+    padding:22px 18px;
+    box-shadow:0 15px 50px rgba(0,0,0,.7);
+    position:relative;
+}
+
+.policy-close{
+    position:absolute;
+    top:12px;
+    left:12px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    border:1px solid #3b2550;
+    background:#130a20;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.policy-box h2{
+    color:#d8b4fe;
+    font-size:18px;
+    margin-bottom:15px;
+    padding-left:35px;
+}
+
+.policy-box h3{
+    color:#fff;
+    font-size:13px;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.policy-box p,
+.policy-box li{
+    color:#aaa1b3;
+    font-size:11px;
+    line-height:1.9;
+}
+
+.policy-box ul{
+    padding-right:18px;
+    margin-top:5px;
+}
+
+/* =========================
+   نافذة الطلب
+========================= */
+
+.order-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    z-index:10000;
+    padding:15px;
+    align-items:center;
+    justify-content:center;
+}
+
+.order-overlay.active{
+    display:flex;
+}
+
+.order-box{
+    width:100%;
+    max-width:430px;
+    max-height:92vh;
+    overflow-y:auto;
+    background:linear-gradient(145deg,#160b26,#090312);
+    border:1px solid #54248a;
+    border-radius:24px;
+    padding:22px 17px;
+    box-shadow:0 20px 60px rgba(0,0,0,.8);
+    position:relative;
+}
+
+.order-close{
+    position:absolute;
+    top:12px;
+    left:12px;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:#130a20;
+    border:1px solid #3b2550;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.order-title{
+    text-align:center;
+    color:#d8b4fe;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.order-subtitle{
+    text-align:center;
+    color:#9ca3af;
+    font-size:10px;
+    margin-bottom:18px;
+}
+
+.product-summary{
+    background:#0f071d;
+    border:1px solid #29144a;
+    border-radius:17px;
+    padding:14px;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.product-summary h3{
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.product-summary .price{
+    color:#c084fc;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.plan-buttons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.plan-btn{
+    background:#0f071d;
+    border:1px solid #392052;
+    border-radius:13px;
+    color:#ddd;
+    padding:11px 5px;
+    cursor:pointer;
+    font-size:11px;
+}
+
+.plan-btn.active{
+    background:#581c87;
+    border-color:#a855f7;
+    color:#fff;
+}
+
+.trust-box{
+    background:#10091a;
+    border:1px solid #2d1748;
+    border-radius:17px;
+    padding:13px 10px;
+    margin-bottom:14px;
+}
+
+.trust-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#cfc5d8;
+    font-size:10px;
+    margin:6px 0;
+}
+
+.trust-item span{
+    font-size:16px;
+}
+
+.bank-title{
+    color:#d8b4fe;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.bank-item{
+    background:#0f071d;
+    border:1px solid #29144a;
+    border-radius:14px;
+    padding:11px;
+    margin-bottom:8px;
+}
+
+.bank-label{
+    color:#8f849d;
+    font-size:9px;
+    margin-bottom:5px;
+}
+
+.bank-value{
+    color:#fff;
+    font-size:12px;
+    direction:ltr;
+    text-align:center;
+    word-break:break-all;
+}
+
+.copy-btn{
+    width:100%;
+    margin-top:7px;
+    padding:7px;
+    border:1px solid #581c87;
+    border-radius:9px;
+    background:#170a2d;
+    color:#d8b4fe;
+    cursor:pointer;
+    font-size:10px;
+}
+
+.notice{
+    background:rgba(126,34,206,.09);
+    border:1px dashed #54248a;
+    border-radius:14px;
+    padding:11px;
+    color:#aaa1b3;
+    font-size:10px;
+    line-height:1.8;
+    text-align:center;
+    margin:12px 0;
+}
+
+.whatsapp-btn{
+    display:block;
+    width:100%;
+    padding:12px;
+    border-radius:13px;
+    text-align:center;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.contact-btn{
+    background:#123b26;
+    border:1px solid #1f7a48;
+    color:#8ff0b5;
+}
+
+.receipt-btn{
+    background:linear-gradient(135deg,#7e22ce,#581c87);
+    border:1px solid #9333ea;
+    color:#fff;
+}
+
+/* =========================
+   الجوال
+========================= */
+
+@media(max-width:360px){
+
+    .header-action{
+        padding:0 9px;
+        font-size:11px;
+    }
+
+    .menu-btn{
+        width:40px;
+    }
+
+    .logo-text{
+        font-size:18px;
+    }
+
+    .hero-badge-box{
+        width:120px;
+        height:80px;
+    }
+
+    .hero-badge-box img{
+        width:105px;
+    }
+
+    .hero-text h1{
+        font-size:22px;
+    }
+}
+
+</style>
 </head>
-
 
 <body>
 
-
 <div class="phone-frame">
 
+<header>
 
-    <!-- =========================
-         الهيدر
-    ========================= -->
+<button class="header-action offers-btn" onclick="goToServices()">
+<span class="fire">🔥</span>
+عروضنا
+</button>
 
-    <header>
+<div class="logo-container">
+<div class="logo-text">✦ رمشة بلس ✦</div>
+</div>
 
-        <button
-            class="header-action offers-btn"
-            onclick="goToServices()"
-        >
+<button class="header-action menu-btn" onclick="goToServices()" aria-label="القائمة">
+☰
+</button>
 
-            <span class="fire">
-                🔥
-            </span>
+</header>
 
-            عروضنا
 
-        </button>
+<section class="hero-banner">
 
+<div class="hero-top">
 
-        <div class="logo-container">
+<div class="hero-badge-box">
+<img src="IMG_1574.jpeg" alt="رمشة بلس">
+</div>
 
-            <div class="logo-text">
-                ✦ رمشة بلس ✦
-            </div>
+<div class="hero-text">
+<h3>مرحباً بك في</h3>
+<h1>رمشة بلس</h1>
+<p>أفضل الخدمات الرقمية بأفضل الأسعار</p>
+</div>
 
-        </div>
+</div>
 
+<div class="features-row">
 
-        <button
-            class="header-action menu-btn"
-            onclick="goToServices()"
-            aria-label="القائمة"
-        >
+<div class="feature-item">
+<div class="feature-icon">🛡️</div>
+<span>ضمان كامل</span>
+</div>
 
-            ☰
+<div class="feature-item">
+<div class="feature-icon">⚡</div>
+<span>تسليم سريع</span>
+</div>
 
-        </button>
+<div class="feature-item">
+<div class="feature-icon">🎧</div>
+<span>دعم عبر واتساب</span>
+</div>
 
-    </header>
+</div>
 
+</section>
 
-    <!-- =========================
-         البانر الرئيسي
-    ========================= -->
 
-    <section class="hero-banner">
+<h2 class="section-title" id="services">
+خدماتنا المميزة ✨
+</h2>
 
 
-        <div class="hero-top">
+<div class="services-grid">
 
 
-            <div class="hero-badge-box">
+<!-- نتفلكس -->
 
-                <img
-                    src="IMG_1574.jpeg"
-                    alt="رمشة بلس"
-                >
+<div class="service-card">
 
-            </div>
+<div class="service-icon-box" style="color:#e50914;font-weight:bold;">
+N
+</div>
 
+<h3>اشتراك نتفلكس</h3>
+<p>أشهر بأسعار مميزة</p>
 
-            <div class="hero-text">
+<button class="order-btn"
+onclick="openOrder('اشتراك نتفلكس',{
+'شهر':9.99,
+'سنة':59.99
+})">
+طلب الآن
+</button>
 
-                <h3>
-                    مرحباً بك في
-                </h3>
+</div>
 
-                <h1>
-                    رمشة بلس
-                </h1>
 
-                <p>
-                    أفضل الخدمات الرقمية بأفضل الأسعار
-                </p>
+<!-- شاهد -->
 
-            </div>
+<div class="service-card">
 
+<div class="service-icon-box"
+style="color:#00d878;font-size:18px;font-weight:bold;">
+شاهد
+</div>
 
-        </div>
+<h3>اشتراك شاهد VIP</h3>
+<p>مسلسلات وأفلام حصرية</p>
 
+<button class="order-btn"
+onclick="openOrder('اشتراك شاهد VIP',{
+'شهر':7.75,
+'سنة':49.99
+})">
+طلب الآن
+</button>
 
-        <div class="features-row">
+</div>
 
 
-            <div class="feature-item">
+<!-- شاهد رياضة -->
 
-                <div class="feature-icon">
-                    🛡️
-                </div>
+<div class="service-card">
 
-                <span>
-                    ضمان كامل
-                </span>
+<div class="service-icon-box"
+style="color:#00bfff;font-size:16px;font-weight:bold;">
+SPORTS
+</div>
 
-            </div>
+<h3>شاهد مباريات</h3>
+<p>مباريات ودوري روشن</p>
 
+<button class="order-btn"
+onclick="openOrder('اشتراك شاهد مباريات',{
+'شهر':62.99,
+'سنة':94.99
+})">
+طلب الآن
+</button>
 
-            <div class="feature-item">
+</div>
 
-                <div class="feature-icon">
-                    ⚡
-                </div>
 
-                <span>
-                    تسليم فوري
-                </span>
+<!-- OSN -->
 
-            </div>
+<div class="service-card">
 
+<div class="service-icon-box"
+style="color:#fff;background:linear-gradient(135deg,#111827,#312e81);font-size:20px;font-weight:bold;">
+OSN
+</div>
 
-            <div class="feature-item">
+<h3>اشتراك OSN</h3>
+<p>مسلسلات وأفلام حصرية</p>
 
-                <div class="feature-icon">
-                    🎧
-                </div>
+<button class="order-btn"
+onclick="openOrder('اشتراك OSN',{
+'شهر':24.99
+})">
+طلب الآن
+</button>
 
-                <span>
-                    دعم 24/7
-                </span>
+</div>
 
-            </div>
 
+<!-- سناب -->
 
-        </div>
+<div class="service-card">
 
+<div class="service-icon-box"
+style="background:#050505;color:#fff;border-color:#333;font-size:26px;">
+👻
+</div>
 
-    </section>
+<h3>سناب بلس</h3>
+<p>اشتراك سناب بلس</p>
 
+<button class="order-btn"
+onclick="openOrder('سناب بلس',{
+'شهر':18,
+'3 شهور':35.99
+})">
+طلب الآن
+</button>
 
-    <!-- =========================
-         عنوان الخدمات
-    ========================= -->
+</div>
 
-    <h2
-        class="section-title"
-        id="services"
-    >
 
-        خدماتنا المميزة ✨
+<!-- تيك توك -->
 
-    </h2>
+<div class="service-card">
 
+<div class="service-icon-box"
+style="color:#fff;font-size:26px;">
+♪
+</div>
 
-    <!-- =========================
-         شبكة الخدمات
-    ========================= -->
+<h3>متابعين تيك توك</h3>
+<p>3 ريال لكل 100 متابع</p>
 
-    <div class="services-grid">
+<button class="order-btn"
+onclick="openOrder('متابعين تيك توك',{
+'100 متابع':3
+})">
+طلب الآن
+</button>
 
+</div>
 
-        <!-- نتفلكس -->
 
-        <div class="service-card">
+<!-- انستقرام -->
 
-            <div
-                class="service-icon-box"
-                style="
-                    color: #e50914;
-                    font-weight: bold;
-                "
-            >
-                N
-            </div>
+<div class="service-card">
 
-            <h3>
-                اشتراك نتفلكس
-            </h3>
+<div class="service-icon-box"
+style="color:#fff;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border-color:#8b2cc1;font-size:25px;font-weight:bold;">
+◎
+</div>
 
-            <p>
-                اشتراكات شهرية وسنوية
-            </p>
+<h3>متابعين إنستقرام</h3>
+<p>تواصل معنا لمعرفة السعر</p>
 
-            <button
-                class="order-btn"
-                onclick="openPayment('اشتراك نتفلكس - شهر', '9.99')"
-            >
-                طلب شهري — 9.99 ﷼
-            </button>
+<a class="order-btn"
+href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بالاستفسار%20عن%20متابعين%20إنستقرام"
+target="_blank">
+تواصل معنا
+</a>
 
-            <button
-                class="order-btn"
-                onclick="openPayment('اشتراك نتفلكس - سنة', '59.99')"
-                style="margin-top:7px;"
-            >
-                طلب سنوي — 59.99 ﷼
-            </button>
+</div>
 
-        </div>
 
+<!-- X -->
 
-        <!-- شاهد VIP -->
+<div class="service-card">
 
-        <div class="service-card">
+<div class="service-icon-box"
+style="color:#fff;background:#000;border-color:#333;font-size:23px;font-weight:bold;">
+𝕏
+</div>
 
-            <div
-                class="service-icon-box"
-                style="
-                    color: #00d878;
-                    font-size: 18px;
-                    font-weight: bold;
-                "
-            >
-                شاهد
-            </div>
+<h3>متابعين منصة X</h3>
+<p>تواصل معنا لمعرفة السعر</p>
 
-            <h3>
-                اشتراك شاهد VIP
-            </h3>
+<a class="order-btn"
+href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بالاستفسار%20عن%20متابعين%20منصة%20X"
+target="_blank">
+تواصل معنا
+</a>
 
-            <p>
-                اشتراكات شهرية وسنوية
-            </p>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('اشتراك شاهد VIP - شهر', '7.75')"
-            >
-                طلب شهري — 7.75 ﷼
-            </button>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('اشتراك شاهد VIP - سنة', '49.99')"
-                style="margin-top:7px;"
-            >
-                طلب سنوي — 49.99 ﷼
-            </button>
-
-        </div>
-
-
-        <!-- شاهد مباريات -->
-
-        <div class="service-card">
-
-            <div
-                class="service-icon-box"
-                style="
-                    color: #00bfff;
-                    font-size: 16px;
-                    font-weight: bold;
-                "
-            >
-                SPORTS
-            </div>
-
-            <h3>
-                شاهد مباريات
-            </h3>
-
-            <p>
-                مباريات ودوري روشن
-            </p>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('اشتراك شاهد مباريات - شهر', '62.99')"
-            >
-                طلب شهري — 62.99 ﷼
-            </button>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('اشتراك شاهد مباريات - سنة', '94.99')"
-                style="margin-top:7px;"
-            >
-                طلب سنوي — 94.99 ﷼
-            </button>
-
-        </div>
-
-
-        <!-- OSN -->
-
-        <div class="service-card">
-
-            <div
-                class="service-icon-box"
-                style="
-                    color: #ffffff;
-                    background: linear-gradient(
-                        135deg,
-                        #111827,
-                        #312e81
-                    );
-                    font-size: 20px;
-                    font-weight: bold;
-                "
-            >
-                OSN
-            </div>
-
-            <h3>
-                اشتراك OSN
-            </h3>
-
-            <p>
-                مسلسلات وأفلام حصرية
-            </p>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('اشتراك OSN - شهر', '24.99')"
-            >
-                طلب الآن — 24.99 ﷼
-            </button>
-
-        </div>
-
-
-        <!-- سناب بلس -->
-
-        <div class="service-card">
-
-            <div
-                class="service-icon-box"
-                style="
-                    background: #050505;
-                    color: #fff;
-                    border-color: #333;
-                    font-size: 26px;
-                "
-            >
-                👻
-            </div>
-
-            <h3>
-                سناب بلس
-            </h3>
-
-            <p>
-                اشتراك شهر أو 3 أشهر
-            </p>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('سناب بلس - شهر', '18.00')"
-            >
-                شهر — 18.00 ﷼
-            </button>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('سناب بلس - 3 أشهر', '35.99')"
-                style="margin-top:7px;"
-            >
-                3 أشهر — 35.99 ﷼
-            </button>
-
-        </div>
-
-
-        <!-- تيك توك -->
-
-        <div class="service-card">
-
-            <div
-                class="service-icon-box"
-                style="
-                    color: #fff;
-                    font-size: 26px;
-                "
-            >
-                ♪
-            </div>
-
-            <h3>
-                متابعين تيك توك
-            </h3>
-
-            <p>
-                3 ﷼ لكل 100 متابع
-            </p>
-
-            <button
-                class="order-btn"
-                onclick="openPayment('متابعين تيك توك - 100 متابع', '3.00')"
-            >
-                100 متابع — 3 ﷼
-            </button>
-
-        </div>
-
-
-        <!-- إنستقرام -->
-
-        <div class="service-card">
-
-            <div
-                class="service-icon-box"
-                style="
-                    color: #fff;
-
-                    background:
-                        linear-gradient(
-                            135deg,
-                            #833ab4,
-                            #fd1d1d,
-                            #fcb045
-                        );
-
-                    border-color: #8b2cc1;
-
-                    font-size: 25px;
-
-                    font-weight: bold;
-                "
-            >
-                ◎
-            </div>
-
-            <h3>
-                متابعين إنستقرام
-            </h3>
-
-            <p>
-                تواصل معنا لمعرفة السعر
-            </p>
-
-            <button
-                class="order-btn"
-                onclick="openWhatsApp('السلام عليكم، أرغب بطلب متابعين إنستقرام وأرغب بمعرفة الأسعار')"
-            >
-                تواصل معنا
-            </button>
-
-        </div>
-
-
-        <!-- X -->
-
-        <div class="service-card">
-
-            <div
-                class="service-icon-box"
-                style="
-                    color: #fff;
-                    background: #000;
-                    border-color: #333;
-                    font-size: 23px;
-                    font-weight: bold;
-                "
-            >
-                𝕏
-            </div>
-
-            <h3>
-                متابعين منصة X
-            </h3>
-
-            <p>
-                تواصل معنا لمعرفة السعر
-            </p>
-
-            <button
-                class="order-btn"
-                onclick="openWhatsApp('السلام عليكم، أرغب بطلب متابعين منصة X وأرغب بمعرفة الأسعار')"
-            >
-                تواصل معنا
-            </button>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- =========================
-         الخدمات الإلكترونية
-    ========================= -->
-
-    <section
-        class="digital-section"
-        id="digital-services"
-    >
-
-
-        <div class="digital-header">
-
-            <div class="digital-header-icon">
-                💻
-            </div>
-
-            <h2>
-                خدمات إلكترونية
-            </h2>
-
-            <p>
-                نساعدك في إنشاء وتطوير مشروعك الإلكتروني
-                من المواقع والمتاجر إلى التعديلات والتجهيز.
-            </p>
-
-        </div>
-
-
-        <div class="digital-grid">
-
-
-            <!-- إنشاء موقع -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    🌐
-                </div>
-
-                <h3>
-                    إنشاء موقع إلكتروني
-                </h3>
-
-                <p>
-                    نصمم وننشئ لك موقعًا إلكترونيًا
-                    خاصًا بنشاطك واحتياجاتك.
-                </p>
-
-                <button
-                    class="digital-order-btn"
-                    onclick="openWhatsApp('السلام عليكم، أرغب بطلب إنشاء موقع إلكتروني')"
-                >
-                    اطلب الخدمة
-                </button>
-
-            </div>
-
-
-            <!-- إنشاء متجر -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    🛒
-                </div>
-
-                <h3>
-                    إنشاء متجر إلكتروني
-                </h3>
-
-                <p>
-                    نجهز لك متجرًا إلكترونيًا خاصًا
-                    بنشاطك بشكل احترافي ومرتب.
-                </p>
-
-                <button
-                    class="digital-order-btn"
-                    onclick="openWhatsApp('السلام عليكم، أرغب بطلب إنشاء متجر إلكتروني')"
-                >
-                    اطلب الخدمة
-                </button>
-
-            </div>
-
-
-            <!-- تطوير متجر -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    ⚙️
-                </div>
-
-                <h3>
-                    تطوير وتعديل متجر
-                </h3>
-
-                <p>
-                    نعدل ونطور متجرك الحالي ونرتب
-                    التصميم والأقسام حسب طلبك.
-                </p>
-
-                <button
-                    class="digital-order-btn"
-                    onclick="openWhatsApp('السلام عليكم، أرغب بطلب تطوير وتعديل متجري الإلكتروني')"
-                >
-                    اطلب الخدمة
-                </button>
-
-            </div>
-
-
-            <!-- تعديل موقع -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    🛠️
-                </div>
-
-                <h3>
-                    تعديل موقع إلكتروني
-                </h3>
-
-                <p>
-                    تعديل موقعك الحالي وإضافة الأقسام
-                    أو المميزات التي تحتاجها.
-                </p>
-
-                <button
-                    class="digital-order-btn"
-                    onclick="openWhatsApp('السلام عليكم، أرغب بطلب تعديل موقعي الإلكتروني')"
-                >
-                    اطلب الخدمة
-                </button>
-
-            </div>
-
-
-            <!-- خدمة إلكترونية مخصصة -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    ✨
-                </div>
-
-                <h3>
-                    خدمة إلكترونية مخصصة
-                </h3>
-
-                <p>
-                    عندك فكرة أو طلب مختلف؟
-                    تواصل معنا واشرح لنا طلبك.
-                </p>
-
-                <button
-                    class="digital-order-btn"
-                    onclick="openWhatsApp('السلام عليكم، لدي طلب خدمة إلكترونية مخصصة')"
-                >
-                    اطلب الخدمة
-                </button>
-
-            </div>
-
-
-            <!-- إضافة المنتجات وترتيب المتجر -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    🛍️
-                </div>
-
-                <h3>
-                    إضافة المنتجات وترتيب المتجر
-                </h3>
-
-                <p>
-                    نضيف منتجاتك ونرتب الأقسام
-                    وننسق المتجر بشكل احترافي ومنظم.
-                </p>
-
-                <button
-                    class="digital-order-btn"
-                    onclick="openWhatsApp('السلام عليكم، أرغب بطلب إضافة المنتجات وترتيب المتجر')"
-                >
-                    اطلب الخدمة
-                </button>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="digital-note">
-
-            <p>
-                💡 <strong>عندك طلب خاص؟</strong>
-                أرسل لنا فكرتك عبر واتساب ونناقش معك
-                التفاصيل والتكلفة قبل البدء.
-            </p>
-
-        </div>
-
-
-    </section>
-
-
-    <!-- =========================
-         تقييم المتجر
-    ========================= -->
-
-    <section class="review-section">
-
-
-        <h2>
-            ⭐ قيّم تجربتك معنا
-        </h2>
-
-
-        <p>
-            رأيك يهمنا ويساعدنا على تطوير متجر
-            رمشة بلس وتقديم تجربة أفضل لك.
-        </p>
-
-
-        <a
-            href="https://docs.google.com/forms/d/12UfiXVwpV9v-mZhR9fCthrwzqM962aI8nIpsQZdZw9k/viewform"
-            class="review-btn"
-            target="_blank"
-        >
-
-            ⭐ تقييم المتجر
-
-        </a>
-
-
-    </section>
-
-
-    <!-- =========================
-         الفوتر
-    ========================= -->
-
-    <footer>
-
-
-        <img
-            src="IMG_1574.jpeg"
-            alt="رمشة بلس"
-        >
-
-
-        <div class="footer-links">
-
-            <button onclick="openPolicy('about')">
-                من نحن
-            </button>
-
-            <span class="separator">|</span>
-
-            <button onclick="openPolicy('refund')">
-                سياسة الاسترجاع
-            </button>
-
-            <span class="separator">|</span>
-
-            <button onclick="openPolicy('terms')">
-                شروط المتجر
-            </button>
-
-        </div>
-
-
-        <p>
-            © 2026 رمشة بلس — جميع الحقوق محفوظة
-        </p>
-
-
-    </footer>
-
+</div>
 
 </div>
 
 
 <!-- =========================
-     نافذة الطلب والدفع
+الخدمات الإلكترونية
 ========================= -->
 
-<div
-    class="payment-overlay"
-    id="paymentOverlay"
-    onclick="closePaymentOutside(event)"
->
+<section class="digital-section" id="digital-services">
 
-    <div class="payment-box">
+<div class="digital-header">
 
+<div class="digital-header-icon">💻</div>
 
-        <button
-            class="payment-close"
-            onclick="closePayment()"
-        >
-            ×
-        </button>
+<h2>خدمات إلكترونية</h2>
 
+<p>
+نساعدك في إنشاء وتطوير مشروعك الإلكتروني
+من المواقع والمتاجر إلى التعديلات والتجهيز.
+</p>
 
-        <h2 class="payment-title">
-            إتمام الطلب 💳
-        </h2>
+</div>
 
 
-        <p class="payment-subtitle">
-            حوّل المبلغ ثم أرسل إيصال التحويل عبر واتساب
-        </p>
+<div class="digital-grid">
 
 
-        <div class="selected-product">
+<div class="digital-card">
 
-            <div
-                class="selected-product-name"
-                id="selectedProduct"
-            >
-                المنتج
-            </div>
+<div class="digital-icon">🌐</div>
 
-            <div
-                class="selected-product-price"
-                id="selectedPrice"
-            >
-                0.00 ﷼
-            </div>
+<h3>إنشاء موقع إلكتروني</h3>
 
-        </div>
+<p>
+نصمم وننشئ لك موقعًا إلكترونيًا
+خاصًا بنشاطك واحتياجاتك.
+</p>
 
+<a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20إنشاء%20موقع%20إلكتروني"
+class="digital-order-btn"
+target="_blank">
+اطلب الخدمة
+</a>
 
-        <div class="bank-card">
+</div>
 
 
-            <div class="bank-title">
-                💳 بيانات التحويل البنكي
-            </div>
+<div class="digital-card">
+
+<div class="digital-icon">🛒</div>
+
+<h3>إنشاء متجر إلكتروني</h3>
+
+<p>
+نجهز لك متجرًا إلكترونيًا خاصًا
+بنشاطك بشكل احترافي ومرتب.
+</p>
+
+<a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20إنشاء%20متجر%20إلكتروني"
+class="digital-order-btn"
+target="_blank">
+اطلب الخدمة
+</a>
+
+</div>
 
 
-            <div class="bank-row">
+<div class="digital-card">
 
-                <span class="bank-label">
-                    صاحب الحساب
-                </span>
+<div class="digital-icon">⚙️</div>
 
-                <span
-                    class="bank-value"
-                    style="direction:rtl;text-align:right;"
-                >
-                    عادل نايف منير المطيري
-                </span>
+<h3>تطوير وتعديل متجر</h3>
 
-            </div>
+<p>
+نعدل ونطور متجرك الحالي ونرتب
+التصميم والأقسام حسب طلبك.
+</p>
 
+<a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20تطوير%20وتعديل%20متجري%20الإلكتروني"
+class="digital-order-btn"
+target="_blank">
+اطلب الخدمة
+</a>
 
-            <div class="bank-row">
-
-                <span class="bank-label">
-                    رقم الحساب
-                </span>
-
-                <span
-                    class="bank-value"
-                    id="accountNumber"
-                >
-                    496000010006086140742
-                </span>
-
-                <button
-                    class="copy-btn"
-                    onclick="copyText('496000010006086140742', this)"
-                >
-                    نسخ
-                </button>
-
-            </div>
+</div>
 
 
-            <div class="bank-row">
+<div class="digital-card">
 
-                <span class="bank-label">
-                    الآيبان
-                </span>
+<div class="digital-icon">🛠️</div>
 
-                <span
-                    class="bank-value"
-                    id="ibanNumber"
-                >
-                    SA23 8000 0496 6080 1614 0742
-                </span>
+<h3>تعديل موقع إلكتروني</h3>
 
-                <button
-                    class="copy-btn"
-                    onclick="copyText('SA2380000496608016140742', this)"
-                >
-                    نسخ
-                </button>
+<p>
+تعديل موقعك الحالي وإضافة الأقسام
+أو المميزات التي تحتاجها.
+</p>
 
-            </div>
+<a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20تعديل%20موقعي%20الإلكتروني"
+class="digital-order-btn"
+target="_blank">
+اطلب الخدمة
+</a>
+
+</div>
 
 
-        </div>
+<div class="digital-card">
+
+<div class="digital-icon">✨</div>
+
+<h3>خدمة إلكترونية مخصصة</h3>
+
+<p>
+عندك فكرة أو طلب مختلف؟
+تواصل معنا واشرح لنا طلبك.
+</p>
+
+<a href="https://wa.me/966501286453?text=السلام%20عليكم%20لدي%20طلب%20خدمة%20إلكترونية%20مخصصة"
+class="digital-order-btn"
+target="_blank">
+اطلب الخدمة
+</a>
+
+</div>
 
 
-        <div class="payment-note">
+<div class="digital-card">
 
-            <p>
+<div class="digital-icon">🛍️</div>
 
-                📌 بعد التحويل، اضغط على الزر بالأسفل
-                وأرسل لنا <strong>صورة إيصال التحويل</strong>
-                عبر واتساب.
+<h3>إضافة المنتجات وترتيب المتجر</h3>
 
-                <br>
+<p>
+نضيف منتجاتك ونرتب الأقسام
+وننسق المتجر بشكل احترافي ومنظم.
+</p>
 
-                سيتم تجهيز طلبك بعد التحقق من العملية.
+<a href="https://wa.me/966501286453?text=السلام%20عليكم%20أرغب%20بطلب%20إضافة%20المنتجات%20وترتيب%20المتجر"
+class="digital-order-btn"
+target="_blank">
+اطلب الخدمة
+</a>
 
-            </p>
+</div>
 
-        </div>
-
-
-        <button
-            class="whatsapp-payment-btn"
-            id="whatsappPaymentBtn"
-            onclick="sendPaymentWhatsApp()"
-        >
-
-            📲 تم التحويل — إرسال الإيصال عبر واتساب
-
-        </button>
+</div>
 
 
-        <div class="payment-help">
+<div class="digital-note">
 
-            إذا واجهتك أي مشكلة في التحويل،
-            تواصل معنا عبر واتساب وسنساعدك.
+<p>
+💡 <strong>عندك طلب خاص؟</strong>
+أرسل لنا فكرتك عبر واتساب ونناقش معك
+التفاصيل والتكلفة قبل البدء.
+</p>
 
-        </div>
+</div>
+
+</section>
 
 
-    </div>
+<!-- =========================
+التقييم
+========================= -->
+
+<section class="review-section">
+
+<h2>⭐ قيّم تجربتك معنا</h2>
+
+<p>
+رأيك يهمنا ويساعدنا على تطوير متجر
+رمشة بلس وتقديم تجربة أفضل لك.
+</p>
+
+<a href="https://docs.google.com/forms/d/12UfiXVwpV9v-mZhR9fCthrwzqM962aI8nIpsQZdZw9k/viewform"
+class="review-btn"
+target="_blank">
+⭐ تقييم المتجر
+</a>
+
+</section>
+
+
+<!-- =========================
+الفوتر
+========================= -->
+
+<footer>
+
+<img src="IMG_1574.jpeg" alt="رمشة بلس">
+
+<div class="footer-links">
+
+<button onclick="openPolicy('about')">من نحن</button>
+
+<span class="separator">|</span>
+
+<button onclick="openPolicy('refund')">سياسة الاسترجاع</button>
+
+<span class="separator">|</span>
+
+<button onclick="openPolicy('terms')">شروط المتجر</button>
+
+</div>
+
+<p>© 2026 رمشة بلس — جميع الحقوق محفوظة</p>
+
+</footer>
 
 </div>
 
 
 <!-- =========================
-     نافذة: من نحن
+نافذة الطلب والدفع
 ========================= -->
 
-<div
-    class="policy-overlay"
-    id="about"
-    onclick="closeOutside(event, 'about')"
->
+<div class="order-overlay"
+id="orderModal"
+onclick="closeOrderOutside(event)">
 
-    <div class="policy-box">
+<div class="order-box">
 
-        <button
-            class="policy-close"
-            onclick="closePolicy('about')"
-        >
-            ×
-        </button>
+<button class="order-close"
+onclick="closeOrder()">
+×
+</button>
 
-        <h2>
-            من نحن
-        </h2>
+<h2 class="order-title">
+إتمام طلبك ✨
+</h2>
 
-        <p>
-            رمشة بلس متجر إلكتروني يقدم مجموعة من الخدمات
-            والاشتراكات الرقمية بأسعار مناسبة، مع الحرص
-            على تقديم تجربة سهلة وواضحة للعميل.
-        </p>
+<p class="order-subtitle">
+اختر الباقة المناسبة لك ثم أكمل الدفع
+</p>
 
-        <p style="margin-top:10px;">
-            نسعى في رمشة بلس إلى توفير خدمات رقمية متنوعة
-            مع خدمة عملاء تساعدك قبل وبعد الطلب.
-        </p>
+<div class="product-summary">
 
-    </div>
+<h3 id="orderProduct">
+الخدمة
+</h3>
+
+<div class="price">
+<span id="orderPrice">0.00</span> ريال
+</div>
+
+</div>
+
+<div class="plan-buttons"
+id="planButtons">
+</div>
+
+
+<div class="trust-box">
+
+<div class="trust-item">
+<span>🛡️</span>
+ضمان على الاشتراكات حسب نوع الخدمة
+</div>
+
+<div class="trust-item">
+<span>💬</span>
+دعم العملاء عبر واتساب
+</div>
+
+<div class="trust-item">
+<span>⚡</span>
+تجهيز الطلب بعد التحقق من التحويل
+</div>
+
+</div>
+
+
+<div class="bank-title">
+💳 بيانات التحويل البنكي
+</div>
+
+
+<div class="bank-item">
+
+<div class="bank-label">
+اسم صاحب الحساب
+</div>
+
+<div class="bank-value">
+عادل نايف منير المطيري
+</div>
+
+</div>
+
+
+<div class="bank-item">
+
+<div class="bank-label">
+رقم الحساب
+</div>
+
+<div class="bank-value"
+id="accountNumber">
+496000010006086140742
+</div>
+
+<button class="copy-btn"
+onclick="copyText('accountNumber')">
+📋 نسخ رقم الحساب
+</button>
+
+</div>
+
+
+<div class="bank-item">
+
+<div class="bank-label">
+رقم الآيبان
+</div>
+
+<div class="bank-value"
+id="ibanNumber">
+SA2380000496608016140742
+</div>
+
+<button class="copy-btn"
+onclick="copyText('ibanNumber')">
+📋 نسخ الآيبان
+</button>
+
+</div>
+
+
+<div class="notice">
+
+🔒 <strong>قبل التحويل:</strong><br>
+
+إذا كان لديك أي استفسار أو ترغب بالتأكد من الطلب،
+يمكنك التواصل معنا عبر واتساب أولًا.
+
+<br><br>
+
+بعد التحويل، أرسل صورة إيصال التحويل عبر واتساب،
+وسيتم التحقق من العملية ثم تجهيز طلبك.
+
+</div>
+
+
+<a id="contactWhatsapp"
+class="whatsapp-btn contact-btn"
+target="_blank">
+
+💬 تواصل معنا أولًا
+
+</a>
+
+
+<a id="receiptWhatsapp"
+class="whatsapp-btn receipt-btn"
+target="_blank">
+
+📲 أرسلت التحويل — إرسال الإيصال
+
+</a>
+
+</div>
 
 </div>
 
 
 <!-- =========================
-     نافذة: سياسة الاسترجاع
+من نحن
 ========================= -->
 
-<div
-    class="policy-overlay"
-    id="refund"
-    onclick="closeOutside(event, 'refund')"
->
+<div class="policy-overlay"
+id="about"
+onclick="closeOutside(event,'about')">
 
-    <div class="policy-box">
+<div class="policy-box">
 
-        <button
-            class="policy-close"
-            onclick="closePolicy('refund')"
-        >
-            ×
-        </button>
+<button class="policy-close"
+onclick="closePolicy('about')">
+×
+</button>
 
-        <h2>
-            سياسة الاسترجاع
-        </h2>
+<h2>من نحن</h2>
 
-        <p>
-            نحرص على تقديم الخدمة كما تم توضيحها للعميل
-            قبل إتمام الطلب.
-        </p>
+<p>
+رمشة بلس متجر إلكتروني يقدم مجموعة من الخدمات
+والاشتراكات الرقمية بأسعار مناسبة، مع الحرص
+على تقديم تجربة سهلة وواضحة للعميل.
+</p>
 
-        <h3>
-            قبل تنفيذ الطلب
-        </h3>
+<p style="margin-top:10px;">
+نسعى في رمشة بلس إلى توفير خدمات رقمية متنوعة
+مع خدمة عملاء تساعدك قبل وبعد الطلب.
+</p>
 
-        <p>
-            يمكن للعميل طلب إلغاء الطلب والتواصل معنا قبل
-            البدء في تنفيذ أو تفعيل الخدمة.
-        </p>
-
-        <h3>
-            بعد تفعيل الخدمة
-        </h3>
-
-        <p>
-            بعد تفعيل أو تسليم الخدمة الرقمية، لا يمكن
-            استرجاع المبلغ لمجرد تغيير الرأي أو عدم الرغبة
-            في استخدام الخدمة.
-        </p>
-
-        <h3>
-            وجود مشكلة في الخدمة
-        </h3>
-
-        <p>
-            في حال وجود مشكلة في الخدمة بعد الاستلام،
-            يرجى التواصل معنا مباشرة، وسنعمل على حل المشكلة
-            أو استبدال الخدمة عند استحقاق ذلك.
-        </p>
-
-        <p style="margin-top:12px;">
-            تختلف إمكانية الاسترجاع أو التعويض حسب نوع
-            الخدمة وحالتها.
-        </p>
-
-    </div>
+</div>
 
 </div>
 
 
 <!-- =========================
-     نافذة: شروط المتجر
+سياسة الاسترجاع
 ========================= -->
 
-<div
-    class="policy-overlay"
-    id="terms"
-    onclick="closeOutside(event, 'terms')"
->
+<div class="policy-overlay"
+id="refund"
+onclick="closeOutside(event,'refund')">
 
-    <div class="policy-box">
+<div class="policy-box">
 
-        <button
-            class="policy-close"
-            onclick="closePolicy('terms')"
-        >
-            ×
-        </button>
+<button class="policy-close"
+onclick="closePolicy('refund')">
+×
+</button>
 
-        <h2>
-            شروط المتجر
-        </h2>
+<h2>سياسة الاسترجاع</h2>
 
-        <h3>
-            1. الطلب والدفع
-        </h3>
+<p>
+نحرص على تقديم الخدمة كما تم توضيحها للعميل
+قبل إتمام الطلب.
+</p>
 
-        <p>
-            بإتمام الطلب يقر العميل بأنه قرأ تفاصيل الخدمة
-            والسعر والشروط ووافق عليها.
-        </p>
+<h3>قبل تنفيذ الطلب</h3>
 
-        <h3>
-            2. الخدمات الرقمية
-        </h3>
+<p>
+يمكن للعميل طلب إلغاء الطلب والتواصل معنا قبل
+البدء في تنفيذ أو تفعيل الخدمة.
+</p>
 
-        <p>
-            الخدمات الرقمية يتم تنفيذها أو تسليمها حسب
-            طبيعة كل خدمة، وقد تختلف مدة التنفيذ من خدمة
-            إلى أخرى.
-        </p>
+<h3>بعد تفعيل الخدمة</h3>
 
-        <h3>
-            3. مسؤولية العميل
-        </h3>
+<p>
+بعد تفعيل أو تسليم الخدمة الرقمية، لا يمكن
+استرجاع المبلغ لمجرد تغيير الرأي أو عدم الرغبة
+في استخدام الخدمة.
+</p>
 
-        <p>
-            يجب على العميل تزويد المتجر بالمعلومات الصحيحة
-            اللازمة لتنفيذ الطلب، ويتحمل مسؤولية صحة البيانات
-            التي يقدمها.
-        </p>
+<h3>وجود مشكلة في الخدمة</h3>
 
-        <h3>
-            4. المحافظة على بيانات الدخول
-        </h3>
+<p>
+في حال وجود مشكلة في الخدمة بعد الاستلام،
+يرجى التواصل معنا مباشرة، وسنعمل على حل المشكلة
+أو استبدال الخدمة عند استحقاق ذلك.
+</p>
 
-        <p>
-            في حال كانت الخدمة تتطلب بيانات دخول أو معلومات
-            خاصة، يجب على العميل المحافظة على بياناته وعدم
-            مشاركتها مع الآخرين.
-        </p>
+<p style="margin-top:12px;">
+تختلف إمكانية الاسترجاع أو التعويض حسب نوع
+الخدمة وحالتها.
+</p>
 
-        <h3>
-            5. التواصل والدعم
-        </h3>
-
-        <p>
-            في حال وجود مشكلة أو استفسار بخصوص الطلب،
-            يمكن التواصل معنا عبر واتساب.
-        </p>
-
-        <h3>
-            6. الموافقة
-        </h3>
-
-        <p>
-            استخدام المتجر وإتمام الطلب يعني موافقة العميل
-            على هذه الشروط والسياسات.
-        </p>
-
-    </div>
+</div>
 
 </div>
 
 
 <!-- =========================
-     JavaScript
+شروط المتجر
 ========================= -->
+
+<div class="policy-overlay"
+id="terms"
+onclick="closeOutside(event,'terms')">
+
+<div class="policy-box">
+
+<button class="policy-close"
+onclick="closePolicy('terms')">
+×
+</button>
+
+<h2>شروط المتجر</h2>
+
+<h3>1. الطلب والدفع</h3>
+
+<p>
+بإتمام الطلب يقر العميل بأنه قرأ تفاصيل الخدمة
+والسعر والشروط ووافق عليها.
+</p>
+
+<h3>2. الخدمات الرقمية</h3>
+
+<p>
+الخدمات الرقمية يتم تنفيذها أو تسليمها حسب
+طبيعة كل خدمة، وقد تختلف مدة التنفيذ من خدمة
+إلى أخرى.
+</p>
+
+<h3>3. مسؤولية العميل</h3>
+
+<p>
+يجب على العميل تزويد المتجر بالمعلومات الصحيحة
+اللازمة لتنفيذ الطلب، ويتحمل مسؤولية صحة البيانات
+التي يقدمها.
+</p>
+
+<h3>4. المحافظة على بيانات الدخول</h3>
+
+<p>
+في حال كانت الخدمة تتطلب بيانات دخول أو معلومات
+خاصة، يجب على العميل المحافظة على بياناته وعدم
+مشاركتها مع الآخرين.
+</p>
+
+<h3>5. التواصل والدعم</h3>
+
+<p>
+في حال وجود مشكلة أو استفسار بخصوص الطلب،
+يمكن التواصل معنا عبر واتساب.
+</p>
+
+<h3>6. الموافقة</h3>
+
+<p>
+استخدام المتجر وإتمام الطلب يعني موافقة العميل
+على هذه الشروط والسياسات.
+</p>
+
+</div>
+
+</div>
+
 
 <script>
 
-    /* =========================
-       بيانات الطلب الحالي
-    ========================= */
+/* =========================
+   واتساب
+========================= */
 
-    let currentProduct = "";
-    let currentPrice = "";
+const whatsappNumber = "966501286453";
 
-
-    /* =========================
-       رقم واتساب المتجر
-    ========================= */
-
-    const whatsappNumber = "966501286453";
+let currentProduct = "";
+let currentPlans = {};
+let currentPlan = "";
 
 
-    /* =========================
-       الانتقال للخدمات
-    ========================= */
+/* =========================
+   الانتقال للخدمات
+========================= */
 
-    function goToServices() {
+function goToServices(){
 
-        document
-            .getElementById("services")
-            .scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+    document
+    .getElementById("services")
+    .scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
 
-    }
-
-
-    /* =========================
-       فتح نافذة الدفع
-    ========================= */
-
-    function openPayment(product, price) {
-
-        currentProduct = product;
-        currentPrice = price;
-
-        document
-            .getElementById("selectedProduct")
-            .textContent = product;
-
-        document
-            .getElementById("selectedPrice")
-            .textContent = price + " ﷼";
-
-        document
-            .getElementById("paymentOverlay")
-            .classList
-            .add("active");
-
-        document.body.style.overflow = "hidden";
-
-    }
+}
 
 
-    /* =========================
-       إغلاق نافذة الدفع
-    ========================= */
+/* =========================
+   فتح الطلب
+========================= */
 
-    function closePayment() {
+function openOrder(product, plans){
 
-        document
-            .getElementById("paymentOverlay")
-            .classList
-            .remove("active");
+    currentProduct = product;
+    currentPlans = plans;
 
-        document.body.style.overflow = "";
+    document
+    .getElementById("orderProduct")
+    .textContent = product;
 
-    }
+    const buttons =
+        document.getElementById("planButtons");
 
+    buttons.innerHTML = "";
 
-    /* =========================
-       الإغلاق بالضغط خارج النافذة
-    ========================= */
+    const planNames = Object.keys(plans);
 
-    function closePaymentOutside(event) {
+    planNames.forEach((plan,index)=>{
 
-        if (
-            event.target.id === "paymentOverlay"
-        ) {
+        const button =
+            document.createElement("button");
 
-            closePayment();
+        button.className = "plan-btn";
+
+        button.textContent =
+            plan + " — " +
+            Number(plans[plan]).toFixed(2) +
+            " ريال";
+
+        button.onclick = function(){
+
+            selectPlan(plan);
+
+        };
+
+        buttons.appendChild(button);
+
+        if(index === 0){
+
+            setTimeout(()=>{
+                selectPlan(plan);
+            },0);
 
         }
 
-    }
+    });
+
+    document
+    .getElementById("orderModal")
+    .classList
+    .add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
 
 
-    /* =========================
-       نسخ البيانات
-    ========================= */
+/* =========================
+   اختيار الباقة
+========================= */
 
-    function copyText(text, button) {
+function selectPlan(plan){
 
-        navigator.clipboard
-            .writeText(text)
-            .then(function() {
+    currentPlan = plan;
 
-                const oldText = button.textContent;
+    document
+    .getElementById("orderPrice")
+    .textContent =
+        Number(currentPlans[plan]).toFixed(2);
 
-                button.textContent = "تم النسخ ✓";
+    const buttons =
+        document.querySelectorAll(".plan-btn");
 
-                setTimeout(function() {
+    buttons.forEach(button=>{
 
-                    button.textContent = oldText;
+        button.classList.remove("active");
 
-                }, 1800);
+        if(button.textContent.startsWith(plan)){
 
-            })
-            .catch(function() {
-
-                alert("تعذر النسخ تلقائيًا، يرجى نسخ الرقم يدويًا.");
-
-            });
-
-    }
-
-
-    /* =========================
-       إرسال طلب الدفع للواتساب
-    ========================= */
-
-    function sendPaymentWhatsApp() {
-
-        const message =
-            "السلام عليكم، تم تحويل مبلغ " +
-            currentPrice +
-            " ريال مقابل " +
-            currentProduct +
-            ".\n\n" +
-            "سأرسل لكم إيصال التحويل هنا للتحقق من العملية. شكرًا.";
-
-        const url =
-            "https://wa.me/" +
-            whatsappNumber +
-            "?text=" +
-            encodeURIComponent(message);
-
-        window.open(url, "_blank");
-
-    }
-
-
-    /* =========================
-       فتح واتساب للخدمات
-    ========================= */
-
-    function openWhatsApp(message) {
-
-        const url =
-            "https://wa.me/" +
-            whatsappNumber +
-            "?text=" +
-            encodeURIComponent(message);
-
-        window.open(url, "_blank");
-
-    }
-
-
-    /* =========================
-       النوافذ والسياسات
-    ========================= */
-
-    function openPolicy(id) {
-
-        document
-            .getElementById(id)
-            .classList
-            .add("active");
-
-        document.body.style.overflow = "hidden";
-
-    }
-
-
-    function closePolicy(id) {
-
-        document
-            .getElementById(id)
-            .classList
-            .remove("active");
-
-        document.body.style.overflow = "";
-
-    }
-
-
-    function closeOutside(event, id) {
-
-        if (event.target.id === id) {
-
-            closePolicy(id);
+            button.classList.add("active");
 
         }
 
+    });
+
+
+    updateWhatsappLinks();
+
+}
+
+
+/* =========================
+   تحديث روابط واتساب
+========================= */
+
+function updateWhatsappLinks(){
+
+    if(!currentPlan) return;
+
+    const price =
+        Number(currentPlans[currentPlan])
+        .toFixed(2);
+
+    const contactMessage =
+        `السلام عليكم، أرغب بالاستفسار عن ${currentProduct} - ${currentPlan} بسعر ${price} ريال قبل التحويل.`;
+
+    const receiptMessage =
+        `السلام عليكم، تم تحويل مبلغ ${price} ريال لطلب ${currentProduct} - ${currentPlan} من متجر رمشة بلس. سأرفق إيصال التحويل للتحقق من العملية.`;
+
+    document
+    .getElementById("contactWhatsapp")
+    .href =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(contactMessage);
+
+    document
+    .getElementById("receiptWhatsapp")
+    .href =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(receiptMessage);
+
+}
+
+
+/* =========================
+   إغلاق الطلب
+========================= */
+
+function closeOrder(){
+
+    document
+    .getElementById("orderModal")
+    .classList
+    .remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================
+   إغلاق بالنقر خارج النافذة
+========================= */
+
+function closeOrderOutside(event){
+
+    if(event.target.id === "orderModal"){
+
+        closeOrder();
+
     }
 
+}
 
-    /* =========================
-       زر ESC لإغلاق النوافذ
-    ========================= */
 
-    document.addEventListener(
-        "keydown",
-        function(event) {
+/* =========================
+   نسخ البيانات
+========================= */
 
-            if (event.key === "Escape") {
+function copyText(id){
 
-                closePayment();
+    const text =
+        document
+        .getElementById(id)
+        .textContent
+        .trim();
 
-                closePolicy("about");
-                closePolicy("refund");
-                closePolicy("terms");
+    navigator.clipboard
+    .writeText(text)
+    .then(()=>{
 
-            }
+        alert("تم نسخ البيانات بنجاح ✅");
 
-        }
-    );
+    })
+    .catch(()=>{
+
+        alert("تعذر النسخ، يرجى نسخ البيانات يدويًا.");
+
+    });
+
+}
+
+
+/* =========================
+   السياسات
+========================= */
+
+function openPolicy(id){
+
+    document
+    .getElementById(id)
+    .classList
+    .add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closePolicy(id){
+
+    document
+    .getElementById(id)
+    .classList
+    .remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+function closeOutside(event,id){
+
+    if(event.target.id === id){
+
+        closePolicy(id);
+
+    }
+
+}
+
+
+/* =========================
+   زر ESC
+========================= */
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key === "Escape"){
+
+        closeOrder();
+
+    }
+
+});
 
 </script>
-
 
 </body>
 </html>
