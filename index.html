@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,7 +21,6 @@
     --bg:#050308;
     --bg2:#0a0610;
     --card:#0d0815;
-    --card2:#120a1d;
     --purple:#a855f7;
     --purple2:#7e22ce;
     --light:#e9d5ff;
@@ -35,8 +35,8 @@ html{
 
 body{
     background:
-        radial-gradient(circle at 50% -10%, rgba(126,34,206,.20), transparent 35%),
-        radial-gradient(circle at 0% 40%, rgba(168,85,247,.07), transparent 25%),
+        radial-gradient(circle at 50% -10%,rgba(126,34,206,.20),transparent 35%),
+        radial-gradient(circle at 0% 40%,rgba(168,85,247,.07),transparent 25%),
         var(--bg);
     color:#fff;
     font-family:Tahoma,Arial,sans-serif;
@@ -53,13 +53,11 @@ button{
 }
 
 .container{
-    width:min(100% - 28px, 1050px);
+    width:min(100% - 28px,1050px);
     margin:auto;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     position:sticky;
@@ -120,10 +118,8 @@ header{
     height:42px;
     padding:0 14px;
     border-radius:13px;
-
     border:1px solid rgba(168,85,247,.20);
     background:rgba(255,255,255,.025);
-
     color:#ddd6e5;
     cursor:pointer;
     transition:.25s;
@@ -141,9 +137,7 @@ header{
     box-shadow:0 8px 25px rgba(126,34,206,.22);
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     position:relative;
@@ -273,9 +267,7 @@ header{
     transform:translateY(-2px);
 }
 
-/* =========================
-   TRUST
-========================= */
+/* TRUST */
 
 .trust-grid{
     display:grid;
@@ -309,9 +301,7 @@ header{
     font-size:9px;
 }
 
-/* =========================
-   SECTION
-========================= */
+/* SECTION */
 
 .section{
     padding:25px 0 65px;
@@ -339,9 +329,7 @@ header{
     font-size:11px;
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+/* PRODUCTS */
 
 .products{
     display:grid;
@@ -405,19 +393,9 @@ header{
     font-weight:bold;
 }
 
-.netflix{
-    color:#e50914;
-}
-
-.shahid{
-    color:#00d878;
-    font-size:14px;
-}
-
-.sports{
-    color:#00bfff;
-    font-size:12px;
-}
+.netflix{color:#e50914;}
+.shahid{color:#00d878;font-size:14px;}
+.sports{color:#00bfff;font-size:12px;}
 
 .osn{
     color:#fff;
@@ -428,9 +406,7 @@ header{
     background:#050505;
 }
 
-.tiktok{
-    color:#fff;
-}
+.tiktok{color:#fff;}
 
 .instagram{
     background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
@@ -480,9 +456,7 @@ header{
     color:#fff;
 }
 
-/* =========================
-   DIGITAL SERVICES
-========================= */
+/* DIGITAL SERVICES */
 
 .digital-box{
     position:relative;
@@ -575,9 +549,7 @@ header{
     margin-bottom:15px;
 }
 
-/* =========================
-   HOW IT WORKS
-========================= */
+/* STEPS */
 
 .steps{
     display:grid;
@@ -625,9 +597,7 @@ header{
     line-height:1.8;
 }
 
-/* =========================
-   REVIEW
-========================= */
+/* REVIEW */
 
 .review{
     text-align:center;
@@ -670,9 +640,7 @@ header{
     font-weight:bold;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     padding:45px 0 25px;
@@ -731,9 +699,7 @@ footer small{
     font-size:8px;
 }
 
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 
 .overlay{
     position:fixed;
@@ -816,9 +782,383 @@ footer small{
     padding-right:18px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* =====================================================
+   AI ASSISTANT
+===================================================== */
+
+.ai-button{
+    position:fixed;
+    bottom:22px;
+    left:22px;
+
+    width:62px;
+    height:62px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:
+        linear-gradient(135deg,#7e22ce,#a855f7);
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:27px;
+
+    cursor:pointer;
+
+    z-index:6000;
+
+    box-shadow:
+        0 10px 35px rgba(126,34,206,.45),
+        0 0 0 5px rgba(168,85,247,.06);
+
+    transition:.25s;
+}
+
+.ai-button:hover{
+    transform:scale(1.07);
+}
+
+.ai-pulse{
+    position:absolute;
+    inset:-5px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(168,85,247,.45);
+
+    animation:aiPulse 2s infinite;
+}
+
+@keyframes aiPulse{
+
+    0%{
+        transform:scale(.9);
+        opacity:.8;
+    }
+
+    70%{
+        transform:scale(1.15);
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+
+}
+
+.ai-window{
+    position:fixed;
+
+    left:22px;
+    bottom:95px;
+
+    width:min(390px,calc(100% - 30px));
+    height:560px;
+    max-height:calc(100vh - 120px);
+
+    background:
+        linear-gradient(145deg,#12091b,#07040b);
+
+    border:1px solid rgba(168,85,247,.25);
+
+    border-radius:25px;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.70),
+        0 0 50px rgba(126,34,206,.12);
+
+    overflow:hidden;
+
+    display:none;
+
+    flex-direction:column;
+
+    z-index:5999;
+}
+
+.ai-window.active{
+    display:flex;
+    animation:aiOpen .25s ease;
+}
+
+@keyframes aiOpen{
+
+    from{
+        opacity:0;
+        transform:translateY(15px) scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+.ai-header{
+    min-height:72px;
+
+    padding:12px 15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(126,34,206,.28),
+            rgba(168,85,247,.08)
+        );
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.ai-profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.ai-logo{
+    width:44px;
+    height:44px;
+
+    border-radius:14px;
+
+    object-fit:contain;
+
+    background:#09050d;
+
+    border:1px solid rgba(168,85,247,.25);
+}
+
+.ai-name{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.ai-name strong{
+    font-size:13px;
+}
+
+.ai-name span{
+    color:#22c55e;
+    font-size:8px;
+}
+
+.ai-close{
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.ai-messages{
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:16px 13px;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    scrollbar-width:thin;
+    scrollbar-color:#542080 transparent;
+}
+
+.ai-message{
+    max-width:86%;
+
+    padding:10px 12px;
+
+    border-radius:16px;
+
+    font-size:10px;
+
+    line-height:1.9;
+
+    white-space:pre-line;
+}
+
+.ai-message.bot{
+    align-self:flex-start;
+
+    background:#130b1d;
+
+    border:1px solid rgba(168,85,247,.13);
+
+    color:#ddd6e5;
+
+    border-bottom-right-radius:5px;
+}
+
+.ai-message.user{
+    align-self:flex-end;
+
+    background:linear-gradient(135deg,#7e22ce,#a855f7);
+
+    color:#fff;
+
+    border-bottom-left-radius:5px;
+}
+
+.ai-message strong{
+    color:#d8b4fe;
+}
+
+.ai-typing{
+    display:none;
+
+    align-self:flex-start;
+
+    padding:9px 12px;
+
+    background:#130b1d;
+
+    border:1px solid rgba(168,85,247,.13);
+
+    border-radius:15px;
+
+    font-size:15px;
+
+    color:#a855f7;
+}
+
+.ai-typing.active{
+    display:block;
+}
+
+.ai-quick{
+    padding:8px 10px;
+
+    display:flex;
+
+    gap:6px;
+
+    overflow-x:auto;
+
+    border-top:1px solid rgba(255,255,255,.04);
+}
+
+.ai-quick button{
+    white-space:nowrap;
+
+    padding:7px 10px;
+
+    border-radius:20px;
+
+    background:rgba(168,85,247,.07);
+
+    border:1px solid rgba(168,85,247,.18);
+
+    color:#c084fc;
+
+    font-size:8px;
+
+    cursor:pointer;
+}
+
+.ai-input{
+    padding:10px;
+
+    display:flex;
+
+    gap:7px;
+
+    background:#09050d;
+
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.ai-input input{
+    flex:1;
+
+    min-width:0;
+
+    height:42px;
+
+    border-radius:13px;
+
+    outline:none;
+
+    border:1px solid rgba(168,85,247,.16);
+
+    background:#120a19;
+
+    color:#fff;
+
+    padding:0 12px;
+
+    font-family:inherit;
+
+    font-size:10px;
+}
+
+.ai-input input::placeholder{
+    color:#675d70;
+}
+
+.ai-send{
+    width:42px;
+    height:42px;
+
+    border-radius:13px;
+
+    border:0;
+
+    background:linear-gradient(135deg,#7e22ce,#a855f7);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:17px;
+}
+
+/* AI PRODUCT BUTTON */
+
+.ai-product{
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:7px 11px;
+
+    border-radius:9px;
+
+    background:rgba(168,85,247,.12);
+
+    border:1px solid rgba(168,85,247,.22);
+
+    color:#d8b4fe;
+
+    font-size:9px;
+
+    cursor:pointer;
+}
+
+/* MOBILE */
 
 @media(max-width:800px){
 
@@ -940,6 +1280,24 @@ footer small{
         grid-template-columns:1fr;
     }
 
+    .ai-button{
+        width:57px;
+        height:57px;
+        left:16px;
+        bottom:17px;
+    }
+
+    .ai-window{
+        left:10px;
+        bottom:84px;
+
+        width:calc(100% - 20px);
+
+        height:min(570px,calc(100vh - 105px));
+
+        border-radius:22px;
+    }
+
 }
 
 @media(max-width:360px){
@@ -959,63 +1317,61 @@ footer small{
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+
+<!-- HEADER -->
 
 <header>
 
 <div class="container nav">
 
-    <a href="#" class="brand">
+<a href="#" class="brand">
 
-        <img
-            src="IMG_1574.jpeg"
-            alt="شعار رمشة بلس"
-        >
+<img
+src="IMG_1574.jpeg"
+alt="شعار رمشة بلس"
+>
 
-        <div class="brand-text">
+<div class="brand-text">
 
-            <strong>رمشة بلس</strong>
+<strong>رمشة بلس</strong>
 
-            <span>
-                اشتراكات وخدمات رقمية
-            </span>
+<span>
+اشتراكات وخدمات رقمية
+</span>
 
-        </div>
+</div>
 
-    </a>
+</a>
 
-    <div class="nav-actions">
+<div class="nav-actions">
 
-        <button
-            class="nav-btn secondary"
-            onclick="scrollToSection('services')"
-        >
-            الخدمات
-        </button>
+<button
+class="nav-btn secondary"
+onclick="scrollToSection('services')"
+>
+الخدمات
+</button>
 
-        <button
-            class="nav-btn primary"
-            onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات رمشة بلس')"
-        >
-            تواصل معنا
-        </button>
+<button
+class="nav-btn primary"
+onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات رمشة بلس')"
+>
+تواصل معنا
+</button>
 
-    </div>
+</div>
 
 </div>
 
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <main>
 
@@ -1023,143 +1379,134 @@ footer small{
 
 <div class="container hero-content">
 
-    <img
-        src="IMG_1574.jpeg"
-        class="hero-logo"
-        alt="رمشة بلس"
-    >
+<img
+src="IMG_1574.jpeg"
+class="hero-logo"
+alt="رمشة بلس"
+>
 
-    <div class="badge">
+<div class="badge">
 
-        <span class="badge-dot"></span>
+<span class="badge-dot"></span>
 
-        متجر رقمي جاهز لخدمتك
+مساعد رمشة بلس متواجد لخدمتك
 
-    </div>
+</div>
 
-    <h1>
+<h1>
 
-        كل خدماتك الرقمية
-        <span>في مكان واحد.</span>
+كل خدماتك الرقمية
 
-    </h1>
+<span>في مكان واحد.</span>
 
-    <p>
+</h1>
 
-        اشتراكات رقمية وخدمات إلكترونية
-        بأسعار مميزة، طلب سهل، وتواصل مباشر
-        مع فريق رمشة بلس.
+<p>
 
-    </p>
+اشتراكات رقمية وخدمات إلكترونية
+بأسعار مميزة، طلب سهل، وتواصل مباشر
+مع فريق رمشة بلس.
 
-    <div class="hero-buttons">
+</p>
 
-        <a
-            href="#services"
-            class="hero-btn main"
-        >
-            استعرض الخدمات
-        </a>
+<div class="hero-buttons">
 
-        <button
-            class="hero-btn secondary"
-            onclick="openWhatsApp('السلام عليكم، أحتاج مساعدة في اختيار الخدمة المناسبة')"
-        >
-            تحدث معنا
-        </button>
+<a
+href="#services"
+class="hero-btn main"
+>
+استعرض الخدمات
+</a>
 
-    </div>
+<button
+class="hero-btn secondary"
+onclick="toggleAI()"
+>
+🤖 اسأل مساعد رمشة
+</button>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     TRUST
-========================= -->
+<!-- TRUST -->
 
 <div class="container">
 
 <div class="trust-grid">
 
-    <div class="trust-card">
+<div class="trust-card">
 
-        <div class="trust-icon">
-            🛡️
-        </div>
+<div class="trust-icon">🛡️</div>
 
-        <strong>
-            ضمان على الاشتراكات
-        </strong>
+<strong>
+ضمان على الاشتراكات
+</strong>
 
-        <span>
-            نهتم بجودة الخدمة
-        </span>
+<span>
+نهتم بجودة الخدمة
+</span>
 
-    </div>
+</div>
 
-    <div class="trust-card">
+<div class="trust-card">
 
-        <div class="trust-icon">
-            ⚡
-        </div>
+<div class="trust-icon">⚡</div>
 
-        <strong>
-            تفعيل سريع
-        </strong>
+<strong>
+تفعيل سريع
+</strong>
 
-        <span>
-            نبدأ بتجهيز طلبك بسرعة
-        </span>
+<span>
+نبدأ بتجهيز طلبك بسرعة
+</span>
 
-    </div>
+</div>
 
-    <div class="trust-card">
+<div class="trust-card">
 
-        <div class="trust-icon">
-            🎧
-        </div>
+<div class="trust-icon">🤖</div>
 
-        <strong>
-            دعم مباشر
-        </strong>
+<strong>
+مساعد ذكي
+</strong>
 
-        <span>
-            تواصل معنا عبر واتساب
-        </span>
+<span>
+يساعدك في اختيار الخدمة
+</span>
 
-    </div>
+</div>
 
 </div>
 
 </div>
 
 
-<!-- =========================
-     DIGITAL SUBSCRIPTIONS
-========================= -->
+<!-- SUBSCRIPTIONS -->
 
 <section
-    class="section"
-    id="services"
+class="section"
+id="services"
 >
 
 <div class="container">
 
 <div class="section-heading">
 
-    <div class="small">
-        اشتراكات رقمية
-    </div>
+<div class="small">
+اشتراكات رقمية
+</div>
 
-    <h2>
-        اختر خدمتك
-    </h2>
+<h2>
+اختر خدمتك
+</h2>
 
-    <p>
-        خدمات رقمية مختارة لك بعناية
-    </p>
+<p>
+مو عارف وش يناسبك؟ اسأل مساعد رمشة بلس 🤖
+</p>
 
 </div>
 
@@ -1171,27 +1518,27 @@ footer small{
 
 <div class="product">
 
-    <div class="product-icon netflix">
-        N
-    </div>
+<div class="product-icon netflix">
+N
+</div>
 
-    <h3>
-        اشتراك نتفلكس
-    </h3>
+<h3>
+اشتراك نتفلكس
+</h3>
 
-    <p>
-        شهر 9.99 ريال
-        <br>
-        سنة 59.99 ريال
-    </p>
+<p>
+اشتراك شهري أو سنوي
+<br>
+اسأل المساعد عن السعر
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20نتفلكس"
-        target="_blank"
-    >
-        طلب الآن
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20نتفلكس"
+target="_blank"
+>
+طلب الآن
+</a>
 
 </div>
 
@@ -1200,56 +1547,56 @@ footer small{
 
 <div class="product">
 
-    <div class="product-icon shahid">
-        شاهد
-    </div>
+<div class="product-icon shahid">
+شاهد
+</div>
 
-    <h3>
-        اشتراك شاهد VIP
-    </h3>
+<h3>
+اشتراك شاهد VIP
+</h3>
 
-    <p>
-        شهر 7.75 ريال
-        <br>
-        سنة 49.99 ريال
-    </p>
+<p>
+اشتراك شهري أو سنوي
+<br>
+اسأل المساعد عن السعر
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20شاهد%20VIP"
-        target="_blank"
-    >
-        طلب الآن
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20شاهد%20VIP"
+target="_blank"
+>
+طلب الآن
+</a>
 
 </div>
 
 
-<!-- SHAHID SPORTS -->
+<!-- SPORTS -->
 
 <div class="product">
 
-    <div class="product-icon sports">
-        SPORTS
-    </div>
+<div class="product-icon sports">
+SPORTS
+</div>
 
-    <h3>
-        شاهد مباريات
-    </h3>
+<h3>
+شاهد مباريات
+</h3>
 
-    <p>
-        شهر 62.99 ريال
-        <br>
-        سنة 94.99 ريال
-    </p>
+<p>
+اشتراك شهري أو سنوي
+<br>
+اسأل المساعد عن السعر
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20شاهد%20مباريات"
-        target="_blank"
-    >
-        طلب الآن
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20شاهد%20مباريات"
+target="_blank"
+>
+طلب الآن
+</a>
 
 </div>
 
@@ -1258,25 +1605,27 @@ footer small{
 
 <div class="product">
 
-    <div class="product-icon osn">
-        OSN
-    </div>
+<div class="product-icon osn">
+OSN
+</div>
 
-    <h3>
-        اشتراك OSN
-    </h3>
+<h3>
+اشتراك OSN
+</h3>
 
-    <p>
-        شهر 24.99 ريال
-    </p>
+<p>
+اشتراك شهري
+<br>
+اسأل المساعد عن السعر
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20OSN"
-        target="_blank"
-    >
-        طلب الآن
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20اشتراك%20OSN"
+target="_blank"
+>
+طلب الآن
+</a>
 
 </div>
 
@@ -1285,27 +1634,27 @@ footer small{
 
 <div class="product">
 
-    <div class="product-icon snap">
-        👻
-    </div>
+<div class="product-icon snap">
+👻
+</div>
 
-    <h3>
-        سناب بلس
-    </h3>
+<h3>
+سناب بلس
+</h3>
 
-    <p>
-        شهر 18 ريال
-        <br>
-        3 شهور 35.99 ريال
-    </p>
+<p>
+اشتراك شهري أو عدة أشهر
+<br>
+اسأل المساعد عن السعر
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20سناب%20بلس"
-        target="_blank"
-    >
-        طلب الآن
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20سناب%20بلس"
+target="_blank"
+>
+طلب الآن
+</a>
 
 </div>
 
@@ -1314,27 +1663,27 @@ footer small{
 
 <div class="product">
 
-    <div class="product-icon tiktok">
-        ♪
-    </div>
+<div class="product-icon tiktok">
+♪
+</div>
 
-    <h3>
-        متابعين تيك توك
-    </h3>
+<h3>
+متابعين تيك توك
+</h3>
 
-    <p>
-        3 ريال لكل 100 متابع
-        <br>
-        سرعة وجودة عالية
-    </p>
+<p>
+خيارات متعددة
+<br>
+اسأل المساعد عن الأسعار
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20متابعين%20تيك%20توك"
-        target="_blank"
-    >
-        طلب الآن
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20متابعين%20تيك%20توك"
+target="_blank"
+>
+طلب الآن
+</a>
 
 </div>
 
@@ -1343,27 +1692,27 @@ footer small{
 
 <div class="product">
 
-    <div class="product-icon instagram">
-        ◎
-    </div>
+<div class="product-icon instagram">
+◎
+</div>
 
-    <h3>
-        متابعين إنستقرام
-    </h3>
+<h3>
+متابعين إنستقرام
+</h3>
 
-    <p>
-        خيارات متعددة
-        <br>
-        تواصل معنا للتفاصيل
-    </p>
+<p>
+خيارات متعددة
+<br>
+اسأل المساعد عن الأسعار
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20متابعين%20إنستقرام"
-        target="_blank"
-    >
-        تواصل معنا
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20متابعين%20إنستقرام"
+target="_blank"
+>
+تواصل معنا
+</a>
 
 </div>
 
@@ -1372,27 +1721,27 @@ footer small{
 
 <div class="product">
 
-    <div class="product-icon x">
-        𝕏
-    </div>
+<div class="product-icon x">
+𝕏
+</div>
 
-    <h3>
-        متابعين منصة X
-    </h3>
+<h3>
+متابعين منصة X
+</h3>
 
-    <p>
-        خيارات متعددة
-        <br>
-        تواصل معنا للتفاصيل
-    </p>
+<p>
+خيارات متعددة
+<br>
+اسأل المساعد عن الأسعار
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20متابعين منصة X"
-        target="_blank"
-    >
-        تواصل معنا
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20متابعين%20منصة%20X"
+target="_blank"
+>
+تواصل معنا
+</a>
 
 </div>
 
@@ -1404,9 +1753,7 @@ footer small{
 </section>
 
 
-<!-- =========================
-     ELECTRONIC SERVICES
-========================= -->
+<!-- ELECTRONIC SERVICES -->
 
 <section class="section">
 
@@ -1416,18 +1763,18 @@ footer small{
 
 <div class="digital-title">
 
-    <div class="digital-title-icon">
-        💻
-    </div>
+<div class="digital-title-icon">
+💻
+</div>
 
-    <h2>
-        خدمات إلكترونية
-    </h2>
+<h2>
+خدمات إلكترونية
+</h2>
 
-    <p>
-        نساعدك في بناء وتطوير حضورك الإلكتروني
-        من المواقع والمتاجر إلى التعديلات والتجهيز.
-    </p>
+<p>
+نساعدك في بناء وتطوير حضورك الإلكتروني
+من المواقع والمتاجر إلى التعديلات والتجهيز.
+</p>
 
 </div>
 
@@ -1437,150 +1784,150 @@ footer small{
 
 <div class="digital-card">
 
-    <div class="digital-card-icon">
-        🌐
-    </div>
+<div class="digital-card-icon">
+🌐
+</div>
 
-    <h3>
-        إنشاء موقع إلكتروني
-    </h3>
+<h3>
+إنشاء موقع إلكتروني
+</h3>
 
-    <p>
-        تصميم وإنشاء موقع مناسب لنشاطك واحتياجاتك.
-    </p>
+<p>
+تصميم وإنشاء موقع مناسب لنشاطك.
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20إنشاء%20موقع%20إلكتروني"
-        target="_blank"
-    >
-        اطلب الخدمة
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20إنشاء%20موقع%20إلكتروني"
+target="_blank"
+>
+اطلب الخدمة
+</a>
 
 </div>
 
 
 <div class="digital-card">
 
-    <div class="digital-card-icon">
-        🛒
-    </div>
+<div class="digital-card-icon">
+🛒
+</div>
 
-    <h3>
-        إنشاء متجر إلكتروني
-    </h3>
+<h3>
+إنشاء متجر إلكتروني
+</h3>
 
-    <p>
-        متجر مرتب واحترافي مناسب لنشاطك.
-    </p>
+<p>
+متجر مرتب واحترافي مناسب لنشاطك.
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20إنشاء%20متجر%20إلكتروني"
-        target="_blank"
-    >
-        اطلب الخدمة
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20إنشاء%20متجر%20إلكتروني"
+target="_blank"
+>
+اطلب الخدمة
+</a>
 
 </div>
 
 
 <div class="digital-card">
 
-    <div class="digital-card-icon">
-        ⚙️
-    </div>
+<div class="digital-card-icon">
+⚙️
+</div>
 
-    <h3>
-        تطوير وتعديل متجر
-    </h3>
+<h3>
+تطوير وتعديل متجر
+</h3>
 
-    <p>
-        تطوير التصميم والأقسام والمميزات حسب طلبك.
-    </p>
+<p>
+تطوير التصميم والأقسام والمميزات.
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20تطوير%20وتعديل%20متجري"
-        target="_blank"
-    >
-        اطلب الخدمة
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20تطوير%20وتعديل%20متجري"
+target="_blank"
+>
+اطلب الخدمة
+</a>
 
 </div>
 
 
 <div class="digital-card">
 
-    <div class="digital-card-icon">
-        🛠️
-    </div>
+<div class="digital-card-icon">
+🛠️
+</div>
 
-    <h3>
-        تعديل موقع إلكتروني
-    </h3>
+<h3>
+تعديل موقع إلكتروني
+</h3>
 
-    <p>
-        إضافة أقسام ومميزات وتعديلات على موقعك الحالي.
-    </p>
+<p>
+إضافة أقسام ومميزات لموقعك الحالي.
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20تعديل%20موقعي%20الإلكتروني"
-        target="_blank"
-    >
-        اطلب الخدمة
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20تعديل%20موقعي%20الإلكتروني"
+target="_blank"
+>
+اطلب الخدمة
+</a>
 
 </div>
 
 
 <div class="digital-card">
 
-    <div class="digital-card-icon">
-        🛍️
-    </div>
+<div class="digital-card-icon">
+🛍️
+</div>
 
-    <h3>
-        إضافة المنتجات
-    </h3>
+<h3>
+إضافة المنتجات
+</h3>
 
-    <p>
-        إضافة المنتجات وترتيب الأقسام وتنسيق المتجر.
-    </p>
+<p>
+إضافة المنتجات وترتيب أقسام المتجر.
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20إضافة%20المنتجات%20وترتيب%20المتجر"
-        target="_blank"
-    >
-        اطلب الخدمة
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20أرغب%20بطلب%20إضافة%20المنتجات%20وترتيب%20المتجر"
+target="_blank"
+>
+اطلب الخدمة
+</a>
 
 </div>
 
 
 <div class="digital-card">
 
-    <div class="digital-card-icon">
-        ✨
-    </div>
+<div class="digital-card-icon">
+✨
+</div>
 
-    <h3>
-        خدمة إلكترونية مخصصة
-    </h3>
+<h3>
+خدمة إلكترونية مخصصة
+</h3>
 
-    <p>
-        عندك فكرة مختلفة؟ اشرح لنا طلبك ونناقشه معك.
-    </p>
+<p>
+عندك فكرة مختلفة؟ اشرحها لنا.
+</p>
 
-    <a
-        class="order"
-        href="https://wa.me/966501286453?text=السلام%20عليكم،%20لدي%20طلب%20خدمة%20إلكترونية%20مخصصة"
-        target="_blank"
-    >
-        تواصل معنا
-    </a>
+<a
+class="order"
+href="https://wa.me/966501286453?text=السلام%20عليكم،%20لدي%20طلب%20خدمة%20إلكترونية%20مخصصة"
+target="_blank"
+>
+تواصل معنا
+</a>
 
 </div>
 
@@ -1594,9 +1941,7 @@ footer small{
 </section>
 
 
-<!-- =========================
-     HOW IT WORKS
-========================= -->
+<!-- HOW IT WORKS -->
 
 <section class="section">
 
@@ -1604,17 +1949,17 @@ footer small{
 
 <div class="section-heading">
 
-    <div class="small">
-        طريقة الطلب
-    </div>
+<div class="small">
+طريقة الطلب
+</div>
 
-    <h2>
-        أسهل مما تتوقع
-    </h2>
+<h2>
+أسهل مما تتوقع
+</h2>
 
-    <p>
-        ثلاث خطوات فقط لإتمام طلبك
-    </p>
+<p>
+ثلاث خطوات فقط لإتمام طلبك
+</p>
 
 </div>
 
@@ -1623,51 +1968,51 @@ footer small{
 
 <div class="step">
 
-    <div class="step-number">
-        1
-    </div>
+<div class="step-number">
+1
+</div>
 
-    <h3>
-        اختر الخدمة
-    </h3>
+<h3>
+اختر الخدمة
+</h3>
 
-    <p>
-        اختر الاشتراك أو الخدمة المناسبة لك.
-    </p>
+<p>
+اختر الخدمة أو اسأل مساعد رمشة بلس.
+</p>
 
 </div>
 
 
 <div class="step">
 
-    <div class="step-number">
-        2
-    </div>
+<div class="step-number">
+2
+</div>
 
-    <h3>
-        تواصل معنا
-    </h3>
+<h3>
+تواصل معنا
+</h3>
 
-    <p>
-        اضغط طلب الآن وتواصل معنا عبر واتساب.
-    </p>
+<p>
+اضغط طلب الآن وتواصل معنا عبر واتساب.
+</p>
 
 </div>
 
 
 <div class="step">
 
-    <div class="step-number">
-        3
-    </div>
+<div class="step-number">
+3
+</div>
 
-    <h3>
-        استلم طلبك
-    </h3>
+<h3>
+استلم طلبك
+</h3>
 
-    <p>
-        بعد إتمام الطلب يتم تجهيز الخدمة وتسليمها.
-    </p>
+<p>
+بعد إتمام الطلب يتم تجهيز الخدمة وتسليمها.
+</p>
 
 </div>
 
@@ -1678,9 +2023,7 @@ footer small{
 </section>
 
 
-<!-- =========================
-     REVIEW
-========================= -->
+<!-- REVIEW -->
 
 <section class="section">
 
@@ -1688,21 +2031,21 @@ footer small{
 
 <div class="review">
 
-    <h2>
-        ⭐ كيف كانت تجربتك؟
-    </h2>
+<h2>
+⭐ كيف كانت تجربتك؟
+</h2>
 
-    <p>
-        تقييمك يساعدنا على تطوير رمشة بلس
-        وتقديم تجربة أفضل لعملائنا.
-    </p>
+<p>
+تقييمك يساعدنا على تطوير رمشة بلس
+وتقديم تجربة أفضل لعملائنا.
+</p>
 
-    <a
-        href="https://docs.google.com/forms/d/12UfiXVwpV9v-mZhR9fCthrwzqM962aI8nIpsQZdZw9k/viewform"
-        target="_blank"
-    >
-        قيّم تجربتك
-    </a>
+<a
+href="https://docs.google.com/forms/d/12UfiXVwpV9v-mZhR9fCthrwzqM962aI8nIpsQZdZw9k/viewform"
+target="_blank"
+>
+قيّم تجربتك
+</a>
 
 </div>
 
@@ -1713,203 +2056,330 @@ footer small{
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
 <div class="container">
 
-    <img
-        src="IMG_1574.jpeg"
-        class="footer-logo"
-        alt="رمشة بلس"
-    >
+<img
+src="IMG_1574.jpeg"
+class="footer-logo"
+alt="رمشة بلس"
+>
 
-    <div class="footer-brand">
-        رمشة بلس
-    </div>
+<div class="footer-brand">
+رمشة بلس
+</div>
 
-    <div class="footer-desc">
-        اشتراكات وخدمات رقمية بكل سهولة
-    </div>
+<div class="footer-desc">
+اشتراكات وخدمات رقمية بكل سهولة
+</div>
 
-    <div class="footer-links">
+<div class="footer-links">
 
-        <button onclick="openModal('about')">
-            من نحن
-        </button>
+<button onclick="openModal('about')">
+من نحن
+</button>
 
-        <span>|</span>
+<span>|</span>
 
-        <button onclick="openModal('refund')">
-            سياسة الاسترجاع
-        </button>
+<button onclick="openModal('refund')">
+سياسة الاسترجاع
+</button>
 
-        <span>|</span>
+<span>|</span>
 
-        <button onclick="openModal('terms')">
-            الشروط والأحكام
-        </button>
+<button onclick="openModal('terms')">
+الشروط والأحكام
+</button>
 
-    </div>
+</div>
 
-    <small>
-        © 2026 رمشة بلس — جميع الحقوق محفوظة
-    </small>
+<small>
+© 2026 رمشة بلس — جميع الحقوق محفوظة
+</small>
 
 </div>
 
 </footer>
 
 
-<!-- =========================
-     MODALS
-========================= -->
+<!-- ABOUT -->
 
 <div
-    class="overlay"
-    id="about"
-    onclick="closeOutside(event,'about')"
+class="overlay"
+id="about"
+onclick="closeOutside(event,'about')"
 >
 
 <div class="modal">
 
-    <button
-        class="close"
-        onclick="closeModal('about')"
-    >
-        ×
-    </button>
+<button
+class="close"
+onclick="closeModal('about')"
+>
+×
+</button>
 
-    <h2>
-        من نحن
-    </h2>
+<h2>
+من نحن
+</h2>
 
-    <p>
-        رمشة بلس متجر إلكتروني يقدم مجموعة من
-        الاشتراكات والخدمات الرقمية بأسعار مميزة،
-        مع الحرص على توفير تجربة سهلة وواضحة للعميل.
-    </p>
+<p>
+رمشة بلس متجر إلكتروني يقدم مجموعة من
+الاشتراكات والخدمات الرقمية بأسعار مميزة،
+مع الحرص على توفير تجربة سهلة وواضحة للعميل.
+</p>
 
-    <p style="margin-top:10px;">
-        نسعى إلى توفير خدمات رقمية متنوعة
-        مع دعم مباشر قبل وبعد الطلب.
-    </p>
+<p style="margin-top:10px;">
+نسعى إلى توفير خدمات رقمية متنوعة
+مع دعم مباشر قبل وبعد الطلب.
+</p>
 
 </div>
+
+</div>
+
+
+<!-- REFUND -->
+
+<div
+class="overlay"
+id="refund"
+onclick="closeOutside(event,'refund')"
+>
+
+<div class="modal">
+
+<button
+class="close"
+onclick="closeModal('refund')"
+>
+×
+</button>
+
+<h2>
+سياسة الاسترجاع
+</h2>
+
+<h3>
+قبل تنفيذ الطلب
+</h3>
+
+<p>
+يمكن للعميل طلب إلغاء الطلب والتواصل معنا
+قبل البدء في تنفيذ أو تفعيل الخدمة.
+</p>
+
+<h3>
+بعد تفعيل الخدمة
+</h3>
+
+<p>
+بعد تفعيل أو تسليم الخدمة الرقمية،
+لا يمكن استرجاع المبلغ لمجرد تغيير الرأي
+أو عدم الرغبة في استخدام الخدمة.
+</p>
+
+<h3>
+وجود مشكلة
+</h3>
+
+<p>
+في حال وجود مشكلة في الخدمة بعد الاستلام،
+يرجى التواصل معنا مباشرة للعمل على حل المشكلة
+أو استبدال الخدمة عند استحقاق ذلك.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- TERMS -->
+
+<div
+class="overlay"
+id="terms"
+onclick="closeOutside(event,'terms')"
+>
+
+<div class="modal">
+
+<button
+class="close"
+onclick="closeModal('terms')"
+>
+×
+</button>
+
+<h2>
+الشروط والأحكام
+</h2>
+
+<h3>
+1. الطلب والدفع
+</h3>
+
+<p>
+بإتمام الطلب يقر العميل بأنه اطلع على
+تفاصيل الخدمة والسعر والشروط ووافق عليها.
+</p>
+
+<h3>
+2. الخدمات الرقمية
+</h3>
+
+<p>
+يتم تنفيذ أو تسليم الخدمات الرقمية حسب
+طبيعة كل خدمة، وقد تختلف مدة التنفيذ.
+</p>
+
+<h3>
+3. بيانات العميل
+</h3>
+
+<p>
+يجب على العميل تزويد المتجر بالمعلومات
+الصحيحة اللازمة لتنفيذ الطلب.
+</p>
+
+<h3>
+4. الدعم
+</h3>
+
+<p>
+في حال وجود مشكلة أو استفسار بخصوص الطلب،
+يمكن التواصل معنا عبر واتساب.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+     RAMSHA AI ASSISTANT
+================================================== -->
+
+<button
+class="ai-button"
+onclick="toggleAI()"
+aria-label="فتح مساعد رمشة بلس"
+>
+
+<span class="ai-pulse"></span>
+
+🤖
+
+</button>
+
+
+<div
+class="ai-window"
+id="aiWindow"
+>
+
+<div class="ai-header">
+
+<div class="ai-profile">
+
+<img
+src="IMG_1574.jpeg"
+class="ai-logo"
+alt="مساعد رمشة بلس"
+>
+
+<div class="ai-name">
+
+<strong>
+مساعد رمشة بلس
+</strong>
+
+<span>
+● متصل الآن
+</span>
+
+</div>
+
+</div>
+
+<button
+class="ai-close"
+onclick="toggleAI()"
+>
+×
+</button>
 
 </div>
 
 
 <div
-    class="overlay"
-    id="refund"
-    onclick="closeOutside(event,'refund')"
+class="ai-messages"
+id="aiMessages"
 >
 
-<div class="modal">
+<div class="ai-message bot">
 
-    <button
-        class="close"
-        onclick="closeModal('refund')"
-    >
-        ×
-    </button>
+هلا والله 👋
+أنا <strong>مساعد رمشة بلس</strong> 🤖💜
 
-    <h2>
-        سياسة الاسترجاع
-    </h2>
+أقدر أساعدك في معرفة الخدمات والأسعار،
+وأرشح لك الشيء المناسب حسب احتياجك.
 
-    <h3>
-        قبل تنفيذ الطلب
-    </h3>
-
-    <p>
-        يمكن للعميل طلب إلغاء الطلب والتواصل معنا
-        قبل البدء في تنفيذ أو تفعيل الخدمة.
-    </p>
-
-    <h3>
-        بعد تفعيل الخدمة
-    </h3>
-
-    <p>
-        بعد تفعيل أو تسليم الخدمة الرقمية،
-        لا يمكن استرجاع المبلغ لمجرد تغيير الرأي
-        أو عدم الرغبة في استخدام الخدمة.
-    </p>
-
-    <h3>
-        وجود مشكلة
-    </h3>
-
-    <p>
-        في حال وجود مشكلة في الخدمة بعد الاستلام،
-        يرجى التواصل معنا مباشرة للعمل على حل المشكلة
-        أو استبدال الخدمة عند استحقاق ذلك.
-    </p>
+وش حاب تعرف؟
 
 </div>
 
 </div>
 
 
-<div
-    class="overlay"
-    id="terms"
-    onclick="closeOutside(event,'terms')"
+<div class="ai-typing" id="aiTyping">
+•••
+</div>
+
+
+<div class="ai-quick">
+
+<button onclick="quickAI('وش الاشتراكات الموجودة عندكم؟')">
+الاشتراكات
+</button>
+
+<button onclick="quickAI('كم سعر نتفلكس؟')">
+نتفلكس
+</button>
+
+<button onclick="quickAI('كم سعر شاهد؟')">
+شاهد
+</button>
+
+<button onclick="quickAI('وش الخدمات الإلكترونية؟')">
+الخدمات الإلكترونية
+</button>
+
+<button onclick="quickAI('أبي أتواصل معكم')">
+التواصل
+</button>
+
+</div>
+
+
+<div class="ai-input">
+
+<input
+id="aiInput"
+type="text"
+placeholder="اكتب سؤالك هنا..."
+autocomplete="off"
 >
 
-<div class="modal">
-
-    <button
-        class="close"
-        onclick="closeModal('terms')"
-    >
-        ×
-    </button>
-
-    <h2>
-        الشروط والأحكام
-    </h2>
-
-    <h3>
-        1. الطلب والدفع
-    </h3>
-
-    <p>
-        بإتمام الطلب يقر العميل بأنه اطلع على
-        تفاصيل الخدمة والسعر والشروط ووافق عليها.
-    </p>
-
-    <h3>
-        2. الخدمات الرقمية
-    </h3>
-
-    <p>
-        يتم تنفيذ أو تسليم الخدمات الرقمية حسب
-        طبيعة كل خدمة، وقد تختلف مدة التنفيذ.
-    </p>
-
-    <h3>
-        3. بيانات العميل
-    </h3>
-
-    <p>
-        يجب على العميل تزويد المتجر بالمعلومات
-        الصحيحة اللازمة لتنفيذ الطلب.
-    </p>
-
-    <h3>
-        4. الدعم
-    </h3>
-
-    <p>
-        في حال وجود مشكلة أو استفسار بخصوص الطلب،
-        يمكن التواصل معنا عبر واتساب.
-    </p>
+<button
+class="ai-send"
+onclick="sendAI()"
+>
+➤
+</button>
 
 </div>
 
@@ -1918,16 +2388,16 @@ footer small{
 
 <script>
 
-/* =========================
+/* ==================================================
    SETTINGS
-========================= */
+================================================== */
 
 const WHATSAPP = "966501286453";
 
 
-/* =========================
+/* ==================================================
    SCROLL
-========================= */
+================================================== */
 
 function scrollToSection(id){
 
@@ -1945,9 +2415,9 @@ function scrollToSection(id){
 }
 
 
-/* =========================
+/* ==================================================
    WHATSAPP
-========================= */
+================================================== */
 
 function openWhatsApp(message){
 
@@ -1962,9 +2432,9 @@ function openWhatsApp(message){
 }
 
 
-/* =========================
+/* ==================================================
    MODALS
-========================= */
+================================================== */
 
 function openModal(id){
 
@@ -2009,27 +2479,667 @@ function closeOutside(event,id){
 }
 
 
-/* =========================
-   ESC KEY
-========================= */
+/* ==================================================
+   AI ASSISTANT
+================================================== */
 
-document.addEventListener("keydown",function(event){
+const aiWindow =
+    document.getElementById("aiWindow");
 
-    if(event.key === "Escape"){
+const aiMessages =
+    document.getElementById("aiMessages");
 
-        document
-            .querySelectorAll(".overlay.active")
-            .forEach(function(modal){
+const aiInput =
+    document.getElementById("aiInput");
 
-                modal.classList.remove("active");
+const aiTyping =
+    document.getElementById("aiTyping");
 
-            });
 
-        document.body.style.overflow="";
+function toggleAI(){
+
+    aiWindow.classList.toggle("active");
+
+    if(aiWindow.classList.contains("active")){
+
+        setTimeout(function(){
+
+            aiInput.focus();
+
+        },200);
 
     }
 
-});
+}
+
+
+/* إضافة رسالة */
+
+function addAIMessage(text,type="bot"){
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "ai-message " + type;
+
+    message.innerHTML =
+        text;
+
+    aiMessages.appendChild(message);
+
+    aiMessages.scrollTop =
+        aiMessages.scrollHeight;
+
+}
+
+
+/* زر الأسئلة السريعة */
+
+function quickAI(text){
+
+    aiInput.value = text;
+
+    sendAI();
+
+}
+
+
+/* إرسال الرسالة */
+
+function sendAI(){
+
+    const text =
+        aiInput.value.trim();
+
+    if(!text) return;
+
+    addAIMessage(
+        escapeHTML(text),
+        "user"
+    );
+
+    aiInput.value="";
+
+    aiTyping.classList.add("active");
+
+    aiMessages.scrollTop =
+        aiMessages.scrollHeight;
+
+    setTimeout(function(){
+
+        aiTyping.classList.remove("active");
+
+        const response =
+            getAIResponse(text);
+
+        addAIMessage(response,"bot");
+
+    },650);
+
+}
+
+
+/* ==================================================
+   AI KNOWLEDGE
+================================================== */
+
+function getAIResponse(message){
+
+    const text =
+        message
+        .toLowerCase()
+        .replace(/[؟?!.,]/g,"");
+
+
+    /* التحية */
+
+    if(
+        contains(text,[
+            "السلام",
+            "هلا",
+            "هلا والله",
+            "مرحبا",
+            "اهلا",
+            "أهلا",
+            "هاي",
+            "hello"
+        ])
+    ){
+
+        return `
+هلا والله 👋💜
+
+حياك في <strong>رمشة بلس</strong>!
+
+أنا مساعدك الذكي 🤖
+وأقدر أساعدك في:
+
+• الاشتراكات الرقمية
+• الأسعار
+• الخدمات الإلكترونية
+• اختيار الخدمة المناسبة
+
+وش حاب تعرف؟
+`;
+
+    }
+
+
+    /* نتفلكس */
+
+    if(
+        contains(text,[
+            "نتفلكس",
+            "نتفلكس",
+            "netflix"
+        ])
+    ){
+
+        return `
+أكيد 🎬
+
+<strong>اشتراك نتفلكس:</strong>
+
+• الشهري: <strong>9.99 ريال</strong>
+• السنوي: <strong>59.99 ريال</strong>
+
+إذا تبي تطلبه، أقدر أحولك مباشرة للواتساب 👇
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أرغب بطلب اشتراك نتفلكس')">
+طلب نتفلكس
+</button>
+`;
+
+    }
+
+
+    /* شاهد */
+
+    if(
+        contains(text,[
+            "شاهد",
+            "شاهد vip",
+            "شاهد vip"
+        ])
+    ){
+
+        return `
+تمام 📺
+
+<strong>شاهد VIP:</strong>
+
+• الشهري: <strong>7.75 ريال</strong>
+• السنوي: <strong>49.99 ريال</strong>
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أرغب بطلب اشتراك شاهد VIP')">
+طلب شاهد VIP
+</button>
+`;
+
+    }
+
+
+    /* مباريات */
+
+    if(
+        contains(text,[
+            "مباريات",
+            "رياضة",
+            "شاهد مباريات",
+            "sports"
+        ])
+    ){
+
+        return `
+إذا تبي المباريات ⚽🔥
+
+<strong>شاهد مباريات:</strong>
+
+• الشهري: <strong>62.99 ريال</strong>
+• السنوي: <strong>94.99 ريال</strong>
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أرغب بطلب اشتراك شاهد مباريات')">
+طلب الاشتراك
+</button>
+`;
+
+    }
+
+
+    /* OSN */
+
+    if(
+        contains(text,[
+            "osn",
+            "او اس ان",
+            "أو إس إن"
+        ])
+    ){
+
+        return `
+أكيد 🍿
+
+<strong>اشتراك OSN:</strong>
+
+• الشهري: <strong>24.99 ريال</strong>
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أرغب بطلب اشتراك OSN')">
+طلب OSN
+</button>
+`;
+
+    }
+
+
+    /* سناب */
+
+    if(
+        contains(text,[
+            "سناب",
+            "سناب بلس",
+            "snap"
+        ])
+    ){
+
+        return `
+أكيد 👻💜
+
+<strong>سناب بلس:</strong>
+
+• شهر: <strong>18 ريال</strong>
+• 3 شهور: <strong>35.99 ريال</strong>
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أرغب بطلب سناب بلس')">
+طلب سناب بلس
+</button>
+`;
+
+    }
+
+
+    /* تيك توك */
+
+    if(
+        contains(text,[
+            "تيك توك",
+            "تيكتوك",
+            "tiktok"
+        ])
+    ){
+
+        return `
+عندنا متابعين تيك توك 📱
+
+<strong>السعر:</strong>
+
+3 ريال لكل 100 متابع.
+
+إذا تبي تعرف كمية معينة،
+اكتب لي مثلاً:
+
+<strong>أبي 1000 متابع</strong>
+
+وأساعدك بالحسبة.
+`;
+
+    }
+
+
+    /* انستقرام */
+
+    if(
+        contains(text,[
+            "انستقرام",
+            "انستا",
+            "instagram"
+        ])
+    ){
+
+        return `
+أكيد 📸
+
+عندنا خدمات متابعين إنستقرام
+بخيارات متعددة.
+
+لأن السعر يختلف حسب العدد ونوع الخدمة،
+تقدر ترسل لي الكمية المطلوبة
+وأوجهك مباشرة للتفاصيل.
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أرغب بالاستفسار عن متابعين إنستقرام')">
+استفسار إنستقرام
+</button>
+`;
+
+    }
+
+
+    /* X */
+
+    if(
+        contains(text,[
+            "منصة x",
+            "تويتر",
+            "اكس",
+            "x"
+        ])
+    ){
+
+        return `
+أكيد 💜
+
+نوفر خدمات متابعين لمنصة X
+بخيارات متعددة.
+
+للتفاصيل والسعر حسب الكمية:
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أرغب بالاستفسار عن متابعين منصة X')">
+استفسار X
+</button>
+`;
+
+    }
+
+
+    /* كل الاشتراكات */
+
+    if(
+        contains(text,[
+            "الاشتراكات",
+            "الاشتراكات الموجودة",
+            "وش عندكم",
+            "الخدمات الموجودة",
+            "وش الخدمات",
+            "وش توفرون"
+        ])
+    ){
+
+        return `
+أكيد 🔥
+
+عندنا حالياً:
+
+🎬 <strong>نتفلكس</strong>
+📺 <strong>شاهد VIP</strong>
+⚽ <strong>شاهد مباريات</strong>
+🍿 <strong>OSN</strong>
+👻 <strong>سناب بلس</strong>
+🎵 <strong>متابعين تيك توك</strong>
+📸 <strong>متابعين إنستقرام</strong>
+𝕏 <strong>متابعين منصة X</strong>
+
+إذا محتار، قل لي وش استخدامك
+وأرشح لك الأنسب 👌
+`;
+
+    }
+
+
+    /* المواقع والمتاجر */
+
+    if(
+        contains(text,[
+            "موقع",
+            "مواقع",
+            "موقع إلكتروني",
+            "متجر",
+            "متجر إلكتروني",
+            "برمجة",
+            "تصميم موقع"
+        ])
+    ){
+
+        return `
+أكيد 💻🔥
+
+نقدم خدمات إلكترونية مثل:
+
+🌐 إنشاء موقع إلكتروني
+🛒 إنشاء متجر إلكتروني
+⚙️ تطوير وتعديل متجر
+🛠️ تعديل موقع إلكتروني
+🛍️ إضافة المنتجات وترتيبها
+✨ خدمات إلكترونية مخصصة
+
+إذا عندك مشروع أو فكرة،
+اشرح لي وش تحتاج وأنا أوجهك للخدمة المناسبة.
+`;
+
+    }
+
+
+    /* الأسعار */
+
+    if(
+        contains(text,[
+            "السعر",
+            "الاسعار",
+            "الأسعار",
+            "بكم",
+            "كم",
+            "كم السعر",
+            "رخيص",
+            "أسعاركم"
+        ])
+    ){
+
+        return `
+أبشر 💜
+
+عندنا أسعار مختلفة حسب الخدمة.
+
+مثلاً:
+
+🎬 نتفلكس يبدأ من <strong>9.99 ريال</strong>
+📺 شاهد VIP يبدأ من <strong>7.75 ريال</strong>
+👻 سناب بلس يبدأ من <strong>18 ريال</strong>
+⚽ شاهد مباريات يبدأ من <strong>62.99 ريال</strong>
+
+إذا تقول لي اسم الخدمة اللي تبيها،
+أعطيك السعر مباشرة.
+`;
+
+    }
+
+
+    /* طلب */
+
+    if(
+        contains(text,[
+            "ابي اطلب",
+            "أبي أطلب",
+            "ابغى اطلب",
+            "أبغى أطلب",
+            "طلب",
+            "شراء",
+            "اشتري"
+        ])
+    ){
+
+        return `
+أبشر 🔥
+
+وش الخدمة اللي تبي تطلبها؟
+
+مثلاً اكتب:
+
+<strong>أبي نتفلكس</strong>
+
+أو
+
+<strong>أبي شاهد</strong>
+
+أو
+
+<strong>أبي سناب بلس</strong>
+
+وأجهز لك الطلب 👌
+`;
+
+    }
+
+
+    /* واتساب */
+
+    if(
+        contains(text,[
+            "واتساب",
+            "تواصل",
+            "موظف",
+            "خدمة العملاء",
+            "اكلمكم",
+            "أكلمكم",
+            "رقمكم"
+        ])
+    ){
+
+        return `
+أكيد 📲
+
+تقدر تتواصل معنا مباشرة عبر واتساب.
+
+<button class="ai-product" onclick="openWhatsApp('السلام عليكم، أريد التواصل مع خدمة عملاء رمشة بلس')">
+فتح واتساب
+</button>
+`;
+
+    }
+
+
+    /* مساعدة */
+
+    if(
+        contains(text,[
+            "مساعدة",
+            "محتار",
+            "وش تنصح",
+            "انصحني",
+            "وش افضل",
+            "الأفضل",
+            "افضل"
+        ])
+    ){
+
+        return `
+ولا يهمك 😎💜
+
+خلني أساعدك.
+
+إذا تبي مشاهدة أفلام ومسلسلات:
+<strong>نتفلكس أو شاهد أو OSN</strong> 🎬
+
+إذا تبي المباريات:
+<strong>شاهد مباريات</strong> ⚽
+
+إذا تبي مميزات سناب:
+<strong>سناب بلس</strong> 👻
+
+وإذا عندك مشروع وتبي موقع أو متجر:
+<strong>الخدمات الإلكترونية</strong> 💻
+
+قل لي وش استخدامك وأنا أرشح لك الأنسب.
+`;
+
+    }
+
+
+    /* افتراضي */
+
+    return `
+أفهمك 👍
+
+أنا مساعد رمشة بلس 🤖
+وأقدر أساعدك في:
+
+🎬 الاشتراكات الرقمية
+💰 الأسعار
+💻 إنشاء المواقع والمتاجر
+📱 خدمات المتابعين
+📲 الطلب والتواصل
+
+جرب تكتب مثلاً:
+
+<strong>كم سعر نتفلكس؟</strong>
+
+أو:
+
+<strong>أبي اشتراك شاهد</strong>
+
+أو:
+
+<strong>أبي أسوي متجر إلكتروني</strong>
+`;
+
+}
+
+
+/* ==================================================
+   HELPERS
+================================================== */
+
+function contains(text,words){
+
+    return words.some(function(word){
+
+        return text.includes(word.toLowerCase());
+
+    });
+
+}
+
+
+function escapeHTML(text){
+
+    return text
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* ENTER */
+
+aiInput.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            sendAI();
+
+        }
+
+    }
+);
+
+
+/* ESC */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            document
+                .querySelectorAll(".overlay.active")
+                .forEach(function(modal){
+
+                    modal.classList.remove("active");
+
+                });
+
+            aiWindow.classList.remove("active");
+
+            document.body.style.overflow="";
+
+        }
+
+    }
+);
 
 </script>
 
