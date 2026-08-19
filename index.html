@@ -1,4 +1,4 @@
-html = r'''<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -42,6 +42,7 @@ footer{padding:45px 0 25px;text-align:center;border-top:1px solid rgba(255,255,2
 .ramash-suggestions{display:flex;gap:6px;overflow-x:auto;padding:8px 12px;border-top:1px solid rgba(255,255,255,.04)}.ramash-suggestions button{flex:none;padding:8px 10px;border-radius:11px;background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.18);color:#c084fc;font-size:8px;cursor:pointer}
 .ramash-input-area{display:flex;gap:7px;padding:10px;background:rgba(0,0,0,.20);border-top:1px solid rgba(255,255,255,.05)}.ramash-input{flex:1;min-width:0;height:44px;padding:0 13px;border-radius:13px;background:#0d0713;border:1px solid rgba(168,85,247,.17);color:#fff;outline:none;font-family:inherit;font-size:10px}.ramash-input:focus{border-color:rgba(168,85,247,.55)}.ramash-send{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#7e22ce,#a855f7);border:0;color:#fff;cursor:pointer;font-size:17px}
 .typing{display:flex;gap:4px;align-items:center}.typing span{width:5px;height:5px;background:#a855f7;border-radius:50%;animation:typing .8s infinite alternate}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}@keyframes typing{from{opacity:.25;transform:translateY(2px)}to{opacity:1;transform:translateY(-2px)}}
+.ramash-wa-button{width:100%;padding:10px;border-radius:11px;border:0;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-family:inherit;font-size:10px;font-weight:bold;cursor:pointer}
 @media(max-width:800px){.products{grid-template-columns:repeat(2,1fr)}.digital-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:550px){.nav{height:70px}.brand img{width:48px;height:48px}.brand-text strong{font-size:14px}.brand-text span{font-size:8px}.nav-btn{padding:0 10px;font-size:10px}.nav-btn.secondary{display:none}.hero{padding:55px 0 35px}.hero-logo{width:150px}.hero p{font-size:11px}.trust-grid{margin-bottom:35px}.trust-card{padding:14px 5px}.trust-card strong{font-size:10px}.trust-card span{font-size:8px}.section{padding-bottom:45px}.products{gap:9px}.product{padding:17px 9px;border-radius:18px}.product-icon{width:55px;height:55px}.product h3{font-size:11px}.product p,.product-description{font-size:8px}.digital-box{padding:25px 12px;border-radius:22px}.digital-grid{grid-template-columns:1fr 1fr;gap:9px}.digital-card{padding:17px 10px}.digital-card h3{font-size:10px}.digital-card p{font-size:8px}.steps{grid-template-columns:1fr}.ramash-launcher{right:16px;bottom:16px;width:58px;height:58px}.ramash-window{right:12px;bottom:84px;width:calc(100vw - 24px);height:calc(100vh - 105px);border-radius:22px}}
 @media(max-width:360px){.brand-text{display:none}.hero h1{font-size:29px}.products{grid-template-columns:1fr 1fr}}
@@ -126,14 +127,19 @@ footer{padding:45px 0 25px;text-align:center;border-top:1px solid rgba(255,255,2
 <div class="overlay" id="terms" onclick="closeOutside(event,'terms')"><div class="modal"><button class="close" onclick="closeModal('terms')">×</button><h2>الشروط والأحكام</h2><h3>1. الطلب والدفع</h3><p>بإتمام الطلب يقر العميل بأنه اطلع على تفاصيل الخدمة والسعر والشروط ووافق عليها.</p><h3>2. الخدمات الرقمية</h3><p>يتم تنفيذ أو تسليم الخدمات الرقمية حسب طبيعة كل خدمة، وقد تختلف مدة التنفيذ.</p><h3>3. بيانات العميل</h3><p>يجب على العميل تزويد المتجر بالمعلومات الصحيحة اللازمة لتنفيذ الطلب.</p><h3>4. الدعم</h3><p>في حال وجود مشكلة أو استفسار بخصوص الطلب، يمكن التواصل معنا عبر واتساب.</p></div></div>
 
 <button class="ramash-launcher" onclick="toggleRamash()" aria-label="فتح رَمّاش"><span class="ramash-face">🤖</span><span class="ramash-status"></span></button>
+
 <div class="ramash-window" id="ramashWindow">
 <div class="ramash-header"><div class="ramash-profile"><div class="ramash-avatar">🤖</div><div class="ramash-name"><strong>رَمّاش</strong><span>● متصل الآن</span></div></div><button class="ramash-close" onclick="closeRamash()">×</button></div>
-<div class="ramash-messages" id="ramashMessages"><div class="message bot">مرحبًا 👋
-أرحب تراحيب المطر 🌧️💜
-أنا رَمّاش 🤖 مساعدك في رمشة بلس، حاضر أخدمك وأفيدك باللي تحتاجه.
-أمر وتدلل، وش حاب تطلب؟✨
 
-وش حاب تعرف؟ 🔥</div></div>
+<div class="ramash-messages" id="ramashMessages">
+<div class="message bot">أرحب تراحيب المطر 🌧️💜
+أنا رَمّاش 🤖 مساعدك في رمشة بلس، حاضر أخدمك وأفيدك باللي تحتاجه.
+
+أمر وتدلل، وش حاب تطلب من رمشة بلس؟ ✨
+
+وش حاب تعرف؟ 🔥</div>
+</div>
+
 <div class="ramash-suggestions">
 <button onclick="askRamash('وش الخدمات الموجودة عندكم؟')">الخدمات</button>
 <button onclick="askRamash('كم سعر نتفلكس؟')">أسعار نتفلكس</button>
@@ -141,6 +147,7 @@ footer{padding:45px 0 25px;text-align:center;border-top:1px solid rgba(255,255,2
 <button onclick="askRamash('كيف أطلب؟')">طريقة الطلب</button>
 <button onclick="askRamash('أبي أكلم الدعم')">الدعم</button>
 </div>
+
 <div class="ramash-input-area"><input type="text" id="ramashInput" class="ramash-input" placeholder="اكتب سؤالك هنا..." autocomplete="off"><button class="ramash-send" onclick="sendRamashMessage()" aria-label="إرسال">➤</button></div>
 </div>
 
@@ -155,7 +162,13 @@ function openModal(id){const m=document.getElementById(id);if(m){m.classList.add
 function closeModal(id){const m=document.getElementById(id);if(m){m.classList.remove("active");document.body.style.overflow="";}}
 function closeOutside(event,id){if(event.target.id===id)closeModal(id);}
 
-function openRamash(){const w=document.getElementById("ramashWindow");if(w){w.classList.add("active");setTimeout(()=>document.getElementById("ramashInput").focus(),100);}}
+function openRamash(){
+ const w=document.getElementById("ramashWindow");
+ if(w){
+  w.classList.add("active");
+  setTimeout(()=>document.getElementById("ramashInput").focus(),100);
+ }
+}
 function closeRamash(){document.getElementById("ramashWindow").classList.remove("active");}
 function toggleRamash(){const w=document.getElementById("ramashWindow");w.classList.contains("active")?closeRamash():openRamash();}
 
@@ -167,47 +180,70 @@ function addRamashMessage(text,type){
  messages.appendChild(message);
  messages.scrollTop=messages.scrollHeight;
 }
+
 function showTyping(){
  const messages=document.getElementById("ramashMessages");
  const typing=document.createElement("div");
- typing.className="message bot";typing.id="ramashTyping";
+ typing.className="message bot";
+ typing.id="ramashTyping";
  typing.innerHTML='<div class="typing"><span></span><span></span><span></span></div>';
- messages.appendChild(typing);messages.scrollTop=messages.scrollHeight;
+ messages.appendChild(typing);
+ messages.scrollTop=messages.scrollHeight;
 }
+
 function removeTyping(){const t=document.getElementById("ramashTyping");if(t)t.remove();}
 
 function addWhatsAppButtonIfNeeded(reply){
  const keywords=["واتساب","الدعم","جاهز للطلب","تواصل"];
  if(!keywords.some(word=>reply.includes(word)))return;
+
  const messages=document.getElementById("ramashMessages");
- if(messages.querySelector(".ramash-wa-button"))return;
- const box=document.createElement("div");box.className="message bot";box.style.padding="8px";
- const button=document.createElement("button");button.className="ramash-wa-button";
+ const box=document.createElement("div");
+ box.className="message bot";
+ box.style.padding="8px";
+
+ const button=document.createElement("button");
+ button.className="ramash-wa-button";
  button.textContent="📲 تواصل مع رمشة بلس";
- button.style.cssText="width:100%;padding:10px;border-radius:11px;border:0;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-family:inherit;font-size:10px;font-weight:bold;cursor:pointer";
  button.onclick=()=>openWhatsApp("السلام عليكم، وصلتني من رَمّاش وأرغب بالاستفسار/الطلب");
- box.appendChild(button);messages.appendChild(box);messages.scrollTop=messages.scrollHeight;
+
+ box.appendChild(button);
+ messages.appendChild(box);
+ messages.scrollTop=messages.scrollHeight;
 }
 
 function getHistory(){
  return Array.from(document.querySelectorAll("#ramashMessages .message"))
- .filter(el=>el.id!=="ramashTyping" && !el.classList.contains("ramash-wa-button"))
- .map(el=>({role:el.classList.contains("user")?"user":"assistant",content:el.textContent.trim()}))
+ .filter(el=>el.id!=="ramashTyping")
+ .map(el=>({
+   role:el.classList.contains("user")?"user":"assistant",
+   content:el.textContent.trim()
+ }))
  .slice(-12);
 }
 
 async function askAI(text){
  const messages=getHistory();
  messages.push({role:"user",content:text});
+
  const response=await fetch(CHAT_ENDPOINT,{
    method:"POST",
    headers:{"Content-Type":"application/json","Accept":"application/json"},
    body:JSON.stringify({messages})
  });
+
  let data;
- try{data=await response.json();}catch(e){throw new Error("استجابة غير صالحة");}
- if(!response.ok || !data.success)throw new Error(data.error||"حدث خطأ");
- if(!data.response)throw new Error("لم تصل استجابة من الذكاء الاصطناعي");
+ try{data=await response.json();}
+ catch(e){throw new Error("استجابة غير صالحة");}
+
+ if(!response.ok || !data.success){
+   throw new Error(data.error||"حدث خطأ");
+ }
+
+ if(!data.response){
+   throw new Error("لم تصل استجابة من الذكاء الاصطناعي");
+ }
+
  return data.response;
 }
 
@@ -215,13 +251,24 @@ async function sendRamashMessage(){
  const input=document.getElementById("ramashInput");
  const text=input.value.trim();
  if(!text)return;
- addRamashMessage(text,"user");input.value="";showTyping();
+
+ addRamashMessage(text,"user");
+ input.value="";
+ showTyping();
+
  try{
    const reply=await askAI(text);
-   removeTyping();addRamashMessage(reply,"bot");addWhatsAppButtonIfNeeded(reply);
+   removeTyping();
+   addRamashMessage(reply,"bot");
+   addWhatsAppButtonIfNeeded(reply);
  }catch(error){
    removeTyping();
-   addRamashMessage("معليش، صار عندي خلل بسيط 🤖💜 حاول مرة ثانية بعد شوي، أو تواصل معنا مباشرة عبر واتساب.", "bot");
+
+   addRamashMessage(
+     "معليش، صار عندي خلل بسيط 🤖💜\nحاول مرة ثانية بعد شوي، أو تواصل معنا مباشرة عبر واتساب.",
+     "bot"
+   );
+
    addWhatsAppButtonIfNeeded("تواصل معنا عبر واتساب");
    console.error("Ramash AI error:",error);
  }
@@ -231,29 +278,43 @@ function askRamash(question){
  openRamash();
  addRamashMessage(question,"user");
  showTyping();
+
  askAI(question).then(reply=>{
-   removeTyping();addRamashMessage(reply,"bot");addWhatsAppButtonIfNeeded(reply);
+   removeTyping();
+   addRamashMessage(reply,"bot");
+   addWhatsAppButtonIfNeeded(reply);
  }).catch(error=>{
    removeTyping();
-   addRamashMessage("معليش، صار عندي خلل بسيط 🤖💜 حاول مرة ثانية بعد شوي، أو تواصل معنا مباشرة عبر واتساب.","bot");
+
+   addRamashMessage(
+     "معليش، صار عندي خلل بسيط 🤖💜\nحاول مرة ثانية بعد شوي، أو تواصل معنا مباشرة عبر واتساب.",
+     "bot"
+   );
+
    addWhatsAppButtonIfNeeded("تواصل معنا عبر واتساب");
    console.error("Ramash AI error:",error);
  });
 }
 
 document.getElementById("ramashInput").addEventListener("keydown",event=>{
- if(event.key==="Enter"){event.preventDefault();sendRamashMessage();}
+ if(event.key==="Enter"){
+  event.preventDefault();
+  sendRamashMessage();
+ }
 });
+
 document.addEventListener("keydown",event=>{
  if(event.key==="Escape"){
   document.querySelectorAll(".overlay.active").forEach(m=>m.classList.remove("active"));
-  closeRamash();document.body.style.overflow="";
+  closeRamash();
+  document.body.style.overflow="";
  }
 });
 </script>
 </body>
 </html>
 '''
-path=Path("/mnt/data/index.html")
+
+path = Path("/mnt/data/index.html")
 path.write_text(html, encoding="utf-8")
-print(f"تم إنشاء الملف: {path}")
+print(f"تم إنشاء الملف بنجاح: {path}")
