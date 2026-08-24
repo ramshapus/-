@@ -456,18 +456,79 @@ border-color:rgba(168,85,247,.35);
 transform:translateY(-2px)
 }
 
+/* ================= REAL BRAND LOGOS ================= */
+
 .category-product-icon{
-width:50px;
-height:50px;
+width:58px;
+height:58px;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:15px;
-background:#160d22;
-border:1px solid rgba(168,85,247,.15);
-font-size:21px;
-margin-bottom:12px
+border-radius:17px;
+background:rgba(255,255,255,.035);
+border:1px solid rgba(255,255,255,.08);
+overflow:hidden;
+margin-bottom:12px;
+box-shadow:0 8px 25px rgba(0,0,0,.18)
 }
+
+.category-product-icon svg{
+width:43px;
+height:43px;
+display:block
+}
+
+.category-product-icon.netflix svg{
+width:48px;
+height:48px
+}
+
+.category-product-icon.shahid svg{
+width:48px;
+height:48px
+}
+
+.category-product-icon.osn svg{
+width:48px;
+height:48px
+}
+
+.category-product-icon.ps svg{
+width:49px;
+height:49px
+}
+
+.category-product-icon.fortnite svg{
+width:51px;
+height:51px
+}
+
+.category-product-icon.vbucks svg{
+width:49px;
+height:49px
+}
+
+.category-product-icon.snap svg{
+width:46px;
+height:46px
+}
+
+.category-product-icon.tiktok svg{
+width:46px;
+height:46px
+}
+
+.category-product-icon.instagram svg{
+width:46px;
+height:46px
+}
+
+.category-product-icon.x svg{
+width:44px;
+height:44px
+}
+
+/* ================= PRODUCT ================= */
 
 .category-product h3{
 font-size:12px;
@@ -1321,8 +1382,12 @@ border-radius:17px
 
 .category-product-icon{
 width:47px;
-height:47px;
-font-size:19px
+height:47px
+}
+
+.category-product-icon svg{
+width:36px;
+height:36px
 }
 
 .category-product h3{
@@ -1433,8 +1498,6 @@ outline-offset:3px
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
 
 <div class="container nav">
@@ -1478,8 +1541,6 @@ onclick="openWhatsApp('السلام عليكم، أريد الاستفسار ع�
 </header>
 
 <main>
-
-<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -1536,69 +1597,33 @@ onclick="openRamash()">
 
 </section>
 
-<!-- ================= TRUST ================= -->
-
 <div class="container">
 
 <div class="trust-grid">
 
 <div class="trust-card">
-
-<div class="trust-icon">
-🛡️
-</div>
-
-<strong>
-ضمان على الخدمات
-</strong>
-
-<span>
-نهتم بجودة الخدمة
-</span>
-
+<div class="trust-icon">🛡️</div>
+<strong>ضمان على الخدمات</strong>
+<span>نهتم بجودة الخدمة</span>
 </div>
 
 <div class="trust-card">
-
-<div class="trust-icon">
-⚡
-</div>
-
-<strong>
-تفعيل سريع
-</strong>
-
-<span>
-نبدأ بتجهيز طلبك بسرعة
-</span>
-
+<div class="trust-icon">⚡</div>
+<strong>تفعيل سريع</strong>
+<span>نبدأ بتجهيز طلبك بسرعة</span>
 </div>
 
 <div class="trust-card">
-
-<div class="trust-icon">
-🎧
-</div>
-
-<strong>
-دعم مباشر
-</strong>
-
-<span>
-تواصل معنا عبر واتساب
-</span>
-
+<div class="trust-icon">🎧</div>
+<strong>دعم مباشر</strong>
+<span>تواصل معنا عبر واتساب</span>
 </div>
 
 </div>
 
 </div>
 
-<!-- ================= CATEGORIES ================= -->
-
-<section
-class="section"
-id="services">
+<section class="section" id="services">
 
 <div class="container">
 
@@ -1619,8 +1644,6 @@ id="services">
 </div>
 
 <div class="categories">
-
-<!-- خدمات إلكترونية -->
 
 <div
 class="category"
@@ -1644,8 +1667,6 @@ onclick="openCategory('digital')">
 
 </div>
 
-<!-- اشتراكات -->
-
 <div
 class="category"
 onclick="openCategory('subscriptions')">
@@ -1668,8 +1689,6 @@ onclick="openCategory('subscriptions')">
 
 </div>
 
-<!-- سوشيال -->
-
 <div
 class="category"
 onclick="openCategory('social')">
@@ -1691,8 +1710,6 @@ onclick="openCategory('social')">
 </div>
 
 </div>
-
-<!-- قيمنق -->
 
 <div
 class="category"
@@ -1722,8 +1739,6 @@ PlayStation وخدمات فورت نايت وأكثر
 
 </section>
 
-<!-- ================= REVIEWS ================= -->
-
 <section class="reviews-section">
 
 <div class="container">
@@ -1746,242 +1761,151 @@ PlayStation وخدمات فورت نايت وأكثر
 
 <div class="reviews-wrapper">
 
-<div
-class="reviews-slider"
-id="reviewsSlider">
+<div class="reviews-slider" id="reviewsSlider">
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"ممتازه"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"ممتازه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"افضل متجر واسعارهم رخيصه"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"افضل متجر واسعارهم رخيصه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"اسعارهم رخيصه وكويسه"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"اسعارهم رخيصه وكويسه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"خدمه سريعه والاهم الثقه👍🏻"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"خدمه سريعه والاهم الثقه👍🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"حلوه جدنا ومميزه"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"حلوه جدنا ومميزه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"ممتاز"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"ممتاز"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"❤️❤️"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"❤️❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"جميل جداً"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"جميل جداً"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"انصح بتعامل معهم متجر ثقه👍🏻❤️"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"انصح بتعامل معهم متجر ثقه👍🏻❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"عجيب"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"عجيب"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"فوق المتازه وانصح فيه"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"فوق المتازه وانصح فيه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">
-"الله يرزقكم ويعطيكم الف عافيه❤️"
-</div>
-<div class="review-customer">
-عميل رمشة بلس
-</div>
+<div class="review-text">"الله يرزقكم ويعطيكم الف عافيه❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 </div>
 
-<button
-class="review-arrow prev"
-onclick="previousReview()"
-aria-label="التقييم السابق">
+<button class="review-arrow prev" onclick="previousReview()" aria-label="التقييم السابق">›</button>
 
-›
-
-</button>
-
-<button
-class="review-arrow next"
-onclick="nextReview()"
-aria-label="التقييم التالي">
-
-‹
-
-</button>
+<button class="review-arrow next" onclick="nextReview()" aria-label="التقييم التالي">‹</button>
 
 </div>
 
-<div
-class="review-dots"
-id="reviewDots">
-</div>
+<div class="review-dots" id="reviewDots"></div>
 
-<div
-class="review-count"
-id="reviewCount">
-
-1 / 16
-
-</div>
+<div class="review-count" id="reviewCount">1 / 16</div>
 
 </div>
 
 </section>
-
-<!-- ================= CERTIFICATE ================= -->
 
 <section class="certificate-section">
 
@@ -2043,8 +1967,6 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 
 </section>
 
-<!-- ================= STEPS ================= -->
-
 <section class="section">
 
 <div class="container">
@@ -2069,13 +1991,9 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 
 <div class="step">
 
-<div class="step-number">
-1
-</div>
+<div class="step-number">1</div>
 
-<h3>
-اختر الخدمة
-</h3>
+<h3>اختر الخدمة</h3>
 
 <p>
 اختر القسم والخدمة المناسبة لك.
@@ -2085,13 +2003,9 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 
 <div class="step">
 
-<div class="step-number">
-2
-</div>
+<div class="step-number">2</div>
 
-<h3>
-تواصل معنا
-</h3>
+<h3>تواصل معنا</h3>
 
 <p>
 اسأل رَمّاش عن السعر والتفاصيل ثم أكمل طلبك عبر واتساب.
@@ -2101,13 +2015,9 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 
 <div class="step">
 
-<div class="step-number">
-3
-</div>
+<div class="step-number">3</div>
 
-<h3>
-استلم طلبك
-</h3>
+<h3>استلم طلبك</h3>
 
 <p>
 بعد إتمام الطلب يتم تجهيز الخدمة وتسليمها لك.
@@ -2120,8 +2030,6 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 </div>
 
 </section>
-
-<!-- ================= RATE ================= -->
 
 <section class="section">
 
@@ -2153,8 +2061,6 @@ rel="noopener">
 </section>
 
 </main>
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -2213,9 +2119,7 @@ onclick="closeCategoryOutside(event)">
 <button
 class="close"
 onclick="closeCategory()">
-
 ×
-
 </button>
 
 <div class="category-modal-head">
@@ -2377,7 +2281,7 @@ onclick="closeModal('terms')">
 
 </div>
 
-<!-- ================= RAMASH BUTTON ================= -->
+<!-- ================= RAMASH ================= -->
 
 <button
 class="ramash-launcher"
@@ -2392,8 +2296,6 @@ aria-label="فتح رَمّاش">
 </span>
 
 </button>
-
-<!-- ================= RAMASH WINDOW ================= -->
 
 <div
 class="ramash-window"
@@ -2531,6 +2433,93 @@ window.open(
 }
 
 /* =========================
+   BRAND SVG LOGOS
+========================= */
+
+const logos={
+
+netflix:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<path d="M27 18h14l18 45V18h14v64H59L41 37v45H27z" fill="#E50914"/>
+<path d="M41 18h14l18 64H59z" fill="#B20710"/>
+</svg>`,
+
+shahid:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<circle cx="50" cy="50" r="32" fill="#00C16A"/>
+<path d="M39 35h13c9 0 15 5 15 12 0 5-3 9-8 11 6 2 10 6 10 12 0 8-7 13-17 13H39V35zm12 12v11h5c4 0 7-2 7-6s-3-5-7-5h-5zm0 21h7c4 0 7-2 7-6s-3-6-7-6h-7v12z" fill="#fff"/>
+</svg>`,
+
+osn:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<circle cx="50" cy="50" r="34" fill="none" stroke="#fff" stroke-width="5"/>
+<text x="50" y="58" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="24" fill="#fff">OSN</text>
+</svg>`,
+
+playstation:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<path d="M33 23c7 2 14 5 18 9v36c-5-3-10-5-15-6V23h-3zm18 12c7 2 15 5 20 9 5 4 6 9 1 12-4 3-11 4-18 3v-9c4 0 7 0 9-1 2-1 2-3 0-4-3-2-7-3-12-4v-6z" fill="#fff"/>
+<path d="M24 60c7-2 16-2 23 0v8c-6-2-12-2-17 0-2 1-2 3 0 4 3 1 8 1 14 0v8c-9 2-18 1-23-2-7-4-7-13 3-18z" fill="#fff"/>
+</svg>`,
+
+fortnite:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<path d="M27 25h47l-5 9H43v13h22l-5 9H43v19H29V25h-2z" fill="#fff"/>
+</svg>`,
+
+vbucks:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<circle cx="50" cy="50" r="32" fill="#49B9F5"/>
+<circle cx="50" cy="50" r="25" fill="#8FE1FF"/>
+<path d="M35 39l15 30 15-30h-9L50 54l-6-15z" fill="#fff"/>
+</svg>`,
+
+snap:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#FFFC00"/>
+<path d="M50 24c-14 0-22 10-22 23v7c0 5-4 9-9 11l1 5c5 1 9 1 13 4 4 3 8 6 17 6s13-3 17-6c4-3 8-3 13-4l1-5c-5-2-9-6-9-11v-7c0-13-8-23-22-23z" fill="#050308"/>
+<circle cx="42" cy="49" r="3" fill="#FFFC00"/>
+<circle cx="58" cy="49" r="3" fill="#FFFC00"/>
+</svg>`,
+
+tiktok:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<path d="M59 22c2 9 7 14 16 16v11c-6 0-12-2-16-5v25c0 13-9 22-22 22-11 0-20-8-20-19s9-20 21-20c2 0 5 0 7 1v11c-2-1-4-1-6-1-6 0-10 4-10 9s4 9 9 9c6 0 10-4 10-11V22h11z" fill="#25F4EE"/>
+<path d="M54 22c2 9 7 14 16 16v8c-7-1-12-4-16-8v25c0 13-9 22-22 22-5 0-10-2-13-5 4 3 8 4 13 4 13 0 22-9 22-22V22z" fill="#FE2C55"/>
+<path d="M59 22c2 9 7 14 16 16v8c-9-2-14-7-16-16z" fill="#fff"/>
+</svg>`,
+
+instagram:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="24" fill="url(#ig)"/>
+<defs>
+<linearGradient id="ig" x1="0" y1="1" x2="1" y2="0">
+<stop offset="0" stop-color="#FFD600"/>
+<stop offset=".45" stop-color="#FF0069"/>
+<stop offset="1" stop-color="#7638FA"/>
+</linearGradient>
+</defs>
+<rect x="25" y="25" width="50" height="50" rx="15" fill="none" stroke="#fff" stroke-width="6"/>
+<circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="6"/>
+<circle cx="67" cy="34" r="4" fill="#fff"/>
+</svg>`,
+
+x:`
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="22" fill="#050308"/>
+<path d="M25 25h14l14 19 14-19h10L58 50l20 25H64L49 56 35 75H25l19-26z" fill="#fff"/>
+</svg>`
+
+};
+
+/* =========================
    CATEGORY DATA
 ========================= */
 
@@ -2603,28 +2592,28 @@ description:"اختر الاشتراك الرقمي الذي تريده",
 products:[
 
 {
-icon:"N",
+logo:"netflix",
 title:"Netflix",
 description:"اشتراك رقمي للترفيه والمشاهدة.",
 question:"أبي نتفلكس"
 },
 
 {
-icon:"شاهد",
+logo:"shahid",
 title:"شاهد VIP",
 description:"محتوى ترفيهي ومشاهدة رقمية.",
 question:"أبي شاهد"
 },
 
 {
-icon:"⚽",
+logo:"shahid",
 title:"شاهد رياضة",
 description:"محتوى رياضي ومشاهدة المباريات.",
 question:"أبي شاهد مباريات"
 },
 
 {
-icon:"OSN",
+logo:"osn",
 title:"OSN",
 description:"اشتراك ترفيهي لمشاهدة المحتوى الرقمي.",
 question:"أبي OSN"
@@ -2645,28 +2634,28 @@ description:"خدمات وبرامج لمنصات التواصل الاجتما�
 products:[
 
 {
-icon:"👻",
+logo:"snap",
 title:"Snapchat Plus",
 description:"سناب بلس مع مميزات قوية وتجربة محسنة.",
 question:"أبي سناب بلس"
 },
 
 {
-icon:"🎵",
+logo:"tiktok",
 title:"TikTok",
 description:"زيادة متابعين تيك توك حسب الكمية المطلوبة.",
 question:"أبي متابعين تيك توك"
 },
 
 {
-icon:"📸",
+logo:"instagram",
 title:"Instagram",
 description:"زيادة متابعين إنستقرام حسب الكمية المطلوبة.",
 question:"أبي متابعين إنستقرام"
 },
 
 {
-icon:"𝕏",
+logo:"x",
 title:"منصة X",
 description:"زيادة متابعين منصة X حسب الكمية المطلوبة.",
 question:"أبي متابعين منصة X"
@@ -2687,35 +2676,35 @@ description:"خدمات ومنتجات رقمية لمحبي الألعاب",
 products:[
 
 {
-icon:"🎮",
+logo:"playstation",
 title:"PlayStation Plus شهر",
 description:"اشتراك بلس لمدة شهر لسوني PS4 وPS5.",
 question:"أبي بلس سوني شهر"
 },
 
 {
-icon:"🎮",
+logo:"playstation",
 title:"PlayStation Plus 3 أشهر",
 description:"اشتراك بلس لمدة 3 أشهر لسوني PS4 وPS5.",
 question:"أبي بلس سوني 3 أشهر"
 },
 
 {
-icon:"🎮",
+logo:"playstation",
 title:"PlayStation Plus سنة",
 description:"اشتراك بلس لمدة سنة لسوني PS4 وPS5.",
 question:"أبي بلس سوني سنة"
 },
 
 {
-icon:"🟣",
+logo:"fortnite",
 title:"حسابات Fortnite",
 description:"حسابات فورت نايت متوفرة حسب الخيارات المتاحة.",
 question:"أبي حساب فورت نايت"
 },
 
 {
-icon:"💜",
+logo:"vbucks",
 title:"V-Bucks",
 description:"فيبوكس لفورت نايت حسب الكمية المطلوبة.",
 question:"أبي فيبوكس"
@@ -2760,11 +2749,29 @@ const card=document.createElement("div");
 
 card.className="category-product";
 
+let iconHTML="";
+
+if(product.logo && logos[product.logo]){
+
+iconHTML=`
+<div class="category-product-icon ${product.logo}">
+${logos[product.logo]}
+</div>
+`;
+
+}else{
+
+iconHTML=`
+<div class="category-product-icon">
+${product.icon || "✨"}
+</div>
+`;
+
+}
+
 card.innerHTML=`
 
-<div class="category-product-icon">
-${product.icon}
-</div>
+${iconHTML}
 
 <h3>
 ${product.title}
@@ -3226,7 +3233,7 @@ wa:false
 
 }
 
-/* ================= NETFLIX ================= */
+/* NETFLIX */
 
 if(
 q.includes("نتفلكس") ||
@@ -3283,7 +3290,7 @@ wa:true
 
 }
 
-/* ================= SHAHID SPORTS ================= */
+/* SHAHID SPORTS */
 
 if(
 q.includes("شاهد مباريات") ||
@@ -3306,7 +3313,7 @@ wa:true
 
 }
 
-/* ================= SHAHID ================= */
+/* SHAHID */
 
 if(
 q.includes("شاهد") ||
@@ -3362,7 +3369,7 @@ wa:true
 
 }
 
-/* ================= OSN ================= */
+/* OSN */
 
 if(
 q.includes("osn") ||
@@ -3381,7 +3388,7 @@ wa:true
 
 }
 
-/* ================= SNAP ================= */
+/* SNAP */
 
 if(
 q.includes("سناب") ||
@@ -3400,7 +3407,7 @@ wa:true
 
 }
 
-/* ================= TIKTOK ================= */
+/* TIKTOK */
 
 if(
 q.includes("تيك توك") ||
@@ -3420,7 +3427,7 @@ wa:true
 
 }
 
-/* ================= INSTAGRAM ================= */
+/* INSTAGRAM */
 
 if(
 q.includes("انستقرام") ||
@@ -3441,7 +3448,7 @@ wa:true
 
 }
 
-/* ================= X ================= */
+/* X */
 
 if(
 q.includes("منصه x") ||
@@ -3462,7 +3469,7 @@ wa:true
 
 }
 
-/* ================= GAMING ================= */
+/* GAMING */
 
 if(
 q.includes("قيمنق") ||
@@ -3540,7 +3547,7 @@ wa:true
 
 }
 
-/* ================= DIGITAL SERVICES ================= */
+/* DIGITAL SERVICES */
 
 const digital=[
 "خدمه الكترونيه",
@@ -3582,7 +3589,7 @@ wa:true
 
 }
 
-/* ================= SERVICES ================= */
+/* SERVICES */
 
 if(
 q.includes("الخدمات") ||
@@ -3607,7 +3614,7 @@ wa:false
 
 }
 
-/* ================= ORDER ================= */
+/* ORDER */
 
 if(
 q.includes("كيف اطلب") ||
@@ -3629,7 +3636,7 @@ wa:true
 
 }
 
-/* ================= SUPPORT ================= */
+/* SUPPORT */
 
 if(
 q.includes("دعم") ||
@@ -3650,7 +3657,7 @@ wa:true
 
 }
 
-/* ================= PRICE ================= */
+/* PRICE */
 
 if(
 q.includes("السعر") ||
