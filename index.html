@@ -471,6 +471,117 @@ line-height:1.9;
 margin-bottom:15px
 }
 
+/* ================= OFFICIAL CERTIFICATE ================= */
+
+.certificate-section{
+padding:10px 0 70px
+}
+
+.certificate-box{
+position:relative;
+overflow:hidden;
+padding:35px 22px;
+background:
+radial-gradient(circle at 50% 0%,rgba(126,34,206,.16),transparent 45%),
+#0b0611;
+border:1px solid rgba(168,85,247,.18);
+border-radius:28px;
+text-align:center
+}
+
+.certificate-badge{
+display:inline-flex;
+align-items:center;
+gap:7px;
+padding:8px 13px;
+border-radius:50px;
+background:rgba(34,197,94,.07);
+border:1px solid rgba(34,197,94,.18);
+color:#86efac;
+font-size:10px;
+margin-bottom:15px
+}
+
+.certificate-box h2{
+font-size:21px;
+margin-bottom:8px
+}
+
+.certificate-box p{
+color:#83798c;
+font-size:10px;
+line-height:1.9;
+max-width:550px;
+margin:0 auto 22px
+}
+
+.certificate-image-wrap{
+width:min(100%,520px);
+margin:0 auto 22px;
+padding:10px;
+background:rgba(255,255,255,.025);
+border:1px solid rgba(168,85,247,.16);
+border-radius:20px;
+box-shadow:0 15px 45px rgba(0,0,0,.25)
+}
+
+.certificate-image{
+display:block;
+width:100%;
+height:auto;
+border-radius:13px;
+cursor:pointer;
+transition:.3s
+}
+
+.certificate-image:hover{
+transform:scale(1.01)
+}
+
+.certificate-buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap
+}
+
+.certificate-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:190px;
+padding:13px 20px;
+border-radius:14px;
+font-size:11px;
+font-weight:bold;
+transition:.25s;
+cursor:pointer
+}
+
+.certificate-btn.verify{
+background:linear-gradient(135deg,#7e22ce,#a855f7);
+border:1px solid #a855f7;
+color:#fff;
+box-shadow:0 10px 30px rgba(126,34,206,.22)
+}
+
+.certificate-btn.whatsapp{
+background:rgba(255,255,255,.025);
+border:1px solid rgba(255,255,255,.09);
+color:#ddd6e5
+}
+
+.certificate-btn:hover{
+transform:translateY(-2px)
+}
+
+.certificate-note{
+margin-top:15px !important;
+margin-bottom:0 !important;
+font-size:8px !important;
+color:#62596b !important
+}
+
 /* ================= REVIEWS SLIDER ================= */
 
 .reviews-section{
@@ -1147,6 +1258,29 @@ font-size:10px
 font-size:8px
 }
 
+/* الشهادة على الجوال */
+
+.certificate-box{
+padding:27px 12px;
+border-radius:22px
+}
+
+.certificate-box h2{
+font-size:18px
+}
+
+.certificate-box p{
+font-size:9px
+}
+
+.certificate-buttons{
+flex-direction:column
+}
+
+.certificate-btn{
+width:100%
+}
+
 /* تقييمات الجوال */
 
 .review-card{
@@ -1257,7 +1391,7 @@ onclick="openWhatsApp('السلام عليكم، أريد الاستفسار ع�
 
 <main>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -1302,7 +1436,7 @@ onclick="openRamash()">
 
 </section>
 
-<!-- TRUST -->
+<!-- ================= TRUST ================= -->
 
 <div class="container">
 
@@ -1342,7 +1476,7 @@ onclick="openRamash()">
 
 </div>
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 
 <section class="section" id="services">
 
@@ -1540,7 +1674,7 @@ onclick="askRamash('أبي متابعين منصة X')">
 
 </section>
 
-<!-- DIGITAL SERVICES -->
+<!-- ================= DIGITAL SERVICES ================= -->
 
 <section class="section">
 
@@ -1700,6 +1834,68 @@ onclick="askRamash('عندي خدمة إلكترونية مخصصة')">
 
 </section>
 
+<!-- ================= OFFICIAL CERTIFICATE ================= -->
+
+<section class="certificate-section">
+
+<div class="container">
+
+<div class="certificate-box">
+
+<div class="certificate-badge">
+🇸🇦 توثيق رسمي
+</div>
+
+<h2>
+رمشة بلس موثقة
+</h2>
+
+<p>
+رمشة بلس لديها وثيقة عمل حر باسم النشاط، ويمكنك التحقق من بيانات الوثيقة عبر المركز السعودي للأعمال.
+</p>
+
+<div class="certificate-image-wrap">
+
+<img
+src="IMG_1893.jpeg"
+class="certificate-image"
+alt="شهادة توثيق رمشة بلس"
+loading="lazy">
+
+</div>
+
+<div class="certificate-buttons">
+
+<a
+href="https://business.sa/ar/eservices/details/3fd371e5-11de-4078-08cf-08dbf015747a"
+target="_blank"
+rel="noopener noreferrer"
+class="certificate-btn verify">
+
+🔎 تحقق من الشهادة
+
+</a>
+
+<button
+class="certificate-btn whatsapp"
+onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وثيقة توثيق رمشة بلس')">
+
+💬 استفسر عن التوثيق
+
+</button>
+
+</div>
+
+<p class="certificate-note">
+يمكنك التحقق من الوثيقة مباشرة عبر المركز السعودي للأعمال.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- ================= CUSTOMER REVIEWS ================= -->
 
 <section class="reviews-section">
@@ -1726,356 +1922,132 @@ onclick="askRamash('عندي خدمة إلكترونية مخصصة')">
 
 <div class="reviews-slider" id="reviewsSlider">
 
-<!-- 1 -->
+<div class="review-slide">
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍"</div>
+<div class="review-customer">عميل رمشة بلس</div>
+</div>
+</div>
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"ممتازه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 2 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"ممتازه"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 3 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"افضل متجر واسعارهم رخيصه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 4 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"اسعارهم رخيصه وكويسه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"افضل متجر واسعارهم رخيصه"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 5 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"اسعارهم رخيصه وكويسه"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 6 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"خدمه سريعه والاهم الثقه👍🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 7 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"خدمه سريعه والاهم الثقه👍🏻"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 8 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"حلوه جدنا ومميزه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 9 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"ممتاز"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"حلوه جدنا ومميزه"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 10 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"❤️❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"ممتاز"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 11 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"جميل جداً"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"❤️❤️"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 12 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"انصح بتعامل معهم متجر ثقه👍🏻❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"جميل جداً"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 13 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"عجيب"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"انصح بتعامل معهم متجر ثقه👍🏻❤️"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 14 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"فوق المتازه وانصح فيه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"عجيب"
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 15 -->
 
 <div class="review-slide">
-
 <div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"الله يرزقكم ويعطيكم الف عافيه❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-text">
-"فوق المتازه وانصح فيه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
-</div>
-
-<!-- 16 -->
-
-<div class="review-slide">
-
-<div class="review-card">
-
-<div class="review-stars">
-⭐⭐⭐⭐⭐
-</div>
-
-<div class="review-text">
-"الله يرزقكم ويعطيكم الف عافيه❤️"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -2106,7 +2078,7 @@ aria-label="التقييم التالي">
 
 </section>
 
-<!-- STEPS -->
+<!-- ================= STEPS ================= -->
 
 <section class="section">
 
@@ -2132,9 +2104,7 @@ aria-label="التقييم التالي">
 
 <div class="step">
 
-<div class="step-number">
-1
-</div>
+<div class="step-number">1</div>
 
 <h3>
 اختر الخدمة
@@ -2148,9 +2118,7 @@ aria-label="التقييم التالي">
 
 <div class="step">
 
-<div class="step-number">
-2
-</div>
+<div class="step-number">2</div>
 
 <h3>
 اسأل رَمّاش
@@ -2164,9 +2132,7 @@ aria-label="التقييم التالي">
 
 <div class="step">
 
-<div class="step-number">
-3
-</div>
+<div class="step-number">3</div>
 
 <h3>
 استلم طلبك
@@ -2184,7 +2150,7 @@ aria-label="التقييم التالي">
 
 </section>
 
-<!-- RATE -->
+<!-- ================= RATE ================= -->
 
 <section class="section">
 
@@ -2217,7 +2183,7 @@ rel="noopener">
 
 </main>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -2264,7 +2230,7 @@ alt="رمشة بلس">
 
 </footer>
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <div class="overlay"
 id="about"
@@ -2293,7 +2259,7 @@ onclick="closeModal('about')">
 
 </div>
 
-<!-- REFUND -->
+<!-- ================= REFUND ================= -->
 
 <div class="overlay"
 id="refund"
@@ -2338,7 +2304,7 @@ onclick="closeModal('refund')">
 
 </div>
 
-<!-- TERMS -->
+<!-- ================= TERMS ================= -->
 
 <div class="overlay"
 id="terms"
@@ -2391,7 +2357,7 @@ onclick="closeModal('terms')">
 
 </div>
 
-<!-- RAMASH BUTTON -->
+<!-- ================= RAMASH BUTTON ================= -->
 
 <button
 class="ramash-launcher"
@@ -2407,7 +2373,7 @@ aria-label="فتح رَمّاش">
 
 </button>
 
-<!-- RAMASH WINDOW -->
+<!-- ================= RAMASH WINDOW ================= -->
 
 <div class="ramash-window"
 id="ramashWindow">
@@ -3228,7 +3194,7 @@ text:
 "• سناب بلس 👻\n"+
 "• متابعين تيك توك 📈\n"+
 "• متابعين إنستقرام 📸\n"+
-"• متابعين منصة X 𝕏\‎n"+
+"• متابعين منصة X 𝕏\‎\n"+
 "• خدمات إلكترونية 💻\n\n"+
 "إذا عرفت وش تبي، قل لي وأعطيك السعر أو أوديك للواتساب ✨",
 
