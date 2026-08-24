@@ -4,693 +4,189 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>رمشة بلس | خدمات إلكترونية وإنشاء مواقع</title>
-
-<meta name="description" content="رمشة بلس يقدم خدمات إنشاء وتطوير المواقع والمتاجر الإلكترونية والتعديلات والخدمات الرقمية باحترافية ودعم مباشر.">
-
-<meta name="domain-verification" content="22efaa4eee4b548f2e5f99cc54a42800b7535499db59f483e180947b4ebd8ad5">
+<title>رمشة بلس | اشتراكات وخدمات رقمية</title>
+<meta name="description" content="رمشة بلس - اشتراكات رقمية وخدمات إلكترونية بأسعار مميزة ودعم سريع.">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box
-}
-
-:root{
---bg:#050308;
---card:#0d0815;
---purple:#a855f7;
---purple2:#7e22ce;
---light:#e9d5ff;
---muted:#9b92a5;
---border:rgba(168,85,247,.16);
---green:#22c55e
-}
-
-html{
-scroll-behavior:smooth
-}
-
-body{
-background:
-radial-gradient(circle at 50% -10%,rgba(126,34,206,.20),transparent 35%),
-radial-gradient(circle at 0% 40%,rgba(168,85,247,.07),transparent 25%),
-var(--bg);
-color:#fff;
-font-family:Tahoma,Arial,sans-serif;
-min-height:100vh
-}
-
-a{
-color:inherit;
-text-decoration:none
-}
-
-button{
-font-family:inherit
-}
-
-.container{
-width:min(100% - 28px,1050px);
-margin:auto
-}
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(5,3,8,.78);
-backdrop-filter:blur(20px);
--webkit-backdrop-filter:blur(20px);
-border-bottom:1px solid rgba(255,255,255,.05)
-}
-
-.nav{
-height:82px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:18px
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:10px
-}
-
-.brand img{
-width:58px;
-height:58px;
-object-fit:contain;
-filter:drop-shadow(0 0 14px rgba(168,85,247,.45))
-}
-
-.brand-text{
-display:flex;
-flex-direction:column;
-gap:3px
-}
-
-.brand-text strong{
-font-size:17px;
-color:#f3e8ff
-}
-
-.brand-text span{
-font-size:9px;
-color:#8e8497
-}
-
-.nav-actions{
-display:flex;
-align-items:center;
-gap:8px
-}
-
-.nav-btn{
-height:42px;
-padding:0 14px;
-border-radius:13px;
-border:1px solid rgba(168,85,247,.20);
-background:rgba(255,255,255,.025);
-color:#ddd6e5;
-cursor:pointer;
-transition:.25s
-}
-
-.nav-btn:hover{
-border-color:rgba(168,85,247,.6);
-background:rgba(126,34,206,.12)
-}
-
-.nav-btn.primary{
-background:linear-gradient(135deg,#7e22ce,#a855f7);
-border-color:#a855f7;
-color:white;
-box-shadow:0 8px 25px rgba(126,34,206,.22)
-}
-
-.hero{
-position:relative;
-overflow:hidden;
-padding:75px 0 55px
-}
-
-.hero::before{
-content:"";
-position:absolute;
-width:400px;
-height:400px;
-border-radius:50%;
-background:rgba(126,34,206,.14);
-filter:blur(100px);
-top:-180px;
-right:50%;
-transform:translateX(50%);
-pointer-events:none
-}
-
-.hero-content{
-position:relative;
-text-align:center
-}
-
-.hero-logo{
-width:180px;
-max-width:70%;
-height:auto;
-object-fit:contain;
-filter:
-drop-shadow(0 0 15px rgba(168,85,247,.45))
-drop-shadow(0 0 45px rgba(126,34,206,.20));
-margin-bottom:24px
-}
-
-.badge{
-display:inline-flex;
-align-items:center;
-gap:7px;
-padding:8px 13px;
-border-radius:50px;
-background:rgba(168,85,247,.08);
-border:1px solid rgba(168,85,247,.18);
-color:#d8b4fe;
-font-size:11px;
-margin-bottom:18px
-}
-
-.badge-dot{
-width:7px;
-height:7px;
-border-radius:50%;
-background:#22c55e;
-box-shadow:0 0 10px #22c55e
-}
-
-.hero h1{
-font-size:clamp(30px,6vw,56px);
-line-height:1.15;
-margin-bottom:15px;
-background:linear-gradient(90deg,#fff,#e9d5ff,#a855f7);
--webkit-background-clip:text;
-background-clip:text;
-color:transparent
-}
-
-.hero h1 span{
-display:block
-}
-
-.hero p{
-max-width:620px;
-margin:auto;
-color:#a59bad;
-font-size:14px;
-line-height:2
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:10px;
-margin-top:28px;
-flex-wrap:wrap
-}
-
-.hero-btn{
-min-width:150px;
-padding:13px 20px;
-border-radius:14px;
-font-size:12px;
-font-weight:bold;
-transition:.25s;
-cursor:pointer
-}
-
-.hero-btn.main{
-background:linear-gradient(135deg,#7e22ce,#a855f7);
-border:1px solid #a855f7;
-color:#fff;
-box-shadow:0 10px 35px rgba(126,34,206,.25)
-}
-
-.hero-btn.secondary{
-background:rgba(255,255,255,.025);
-border:1px solid rgba(255,255,255,.09);
-color:#ddd6e5
-}
-
-.hero-btn:hover{
-transform:translateY(-2px)
-}
-
-.trust-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-margin:25px 0 60px
-}
-
-.trust-card{
-padding:17px 10px;
-text-align:center;
-background:rgba(255,255,255,.018);
-border:1px solid rgba(255,255,255,.055);
-border-radius:18px
-}
-
-.trust-icon{
-font-size:22px;
-margin-bottom:8px
-}
-
-.trust-card strong{
-display:block;
-font-size:12px;
-margin-bottom:4px
-}
-
-.trust-card span{
-color:#827989;
-font-size:9px
-}
-
-.section{
-padding:25px 0 65px
-}
-
-.section-heading{
-text-align:center;
-margin-bottom:25px
-}
-
-.section-heading .small{
-color:#a855f7;
-font-size:10px;
-font-weight:bold;
-margin-bottom:8px
-}
-
-.section-heading h2{
-font-size:25px;
-margin-bottom:8px
-}
-
-.section-heading p{
-color:#817887;
-font-size:11px
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:13px
-}
-
-.product{
-position:relative;
-overflow:hidden;
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.035),
-rgba(255,255,255,.012)
-);
-border:1px solid var(--border);
-border-radius:22px;
-padding:20px 14px;
-transition:.3s
-}
-
-.product::before{
-content:"";
-position:absolute;
-width:100px;
-height:100px;
-border-radius:50%;
-background:rgba(168,85,247,.10);
-filter:blur(35px);
-top:-50px;
-right:-40px
-}
-
-.product:hover{
-transform:translateY(-5px);
-border-color:rgba(168,85,247,.48);
-box-shadow:0 20px 45px rgba(0,0,0,.30)
-}
-
-.product-icon{
-width:62px;
-height:62px;
-margin-bottom:15px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:17px;
-background:#160d22;
-border:1px solid rgba(168,85,247,.16);
-font-size:25px
-}
-
-.product h3{
-font-size:13px;
-margin-bottom:7px
-}
-
-.product p,
-.product-description{
-color:#817887;
-font-size:9px;
-line-height:1.8;
-min-height:32px;
-margin-bottom:15px
-}
-
-.order{
-display:block;
-width:100%;
-padding:10px;
-text-align:center;
-border-radius:12px;
-border:1px solid rgba(168,85,247,.25);
-background:rgba(126,34,206,.07);
-color:#d8b4fe;
-font-size:10px;
-font-weight:bold;
-transition:.25s;
-cursor:pointer
-}
-
-.order:hover{
-background:linear-gradient(135deg,#7e22ce,#a855f7);
-color:#fff
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px
-}
-
-.step{
-text-align:center;
-padding:22px 14px;
-background:#0b0611;
-border:1px solid rgba(255,255,255,.055);
-border-radius:20px
-}
-
-.step-number{
-width:38px;
-height:38px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:0 auto 12px;
-border-radius:50%;
-background:linear-gradient(135deg,#7e22ce,#a855f7);
-font-weight:bold;
-font-size:13px;
-box-shadow:0 8px 25px rgba(126,34,206,.25)
-}
-
-.step h3{
-font-size:12px;
-margin-bottom:7px
-}
-
-.step p{
-color:#817887;
-font-size:9px;
-line-height:1.8
-}
-
-.review{
-text-align:center;
-padding:30px 20px;
-border-radius:25px;
-background:
-linear-gradient(
-135deg,
-rgba(126,34,206,.13),
-rgba(168,85,247,.035)
-);
-border:1px solid rgba(168,85,247,.17)
-}
-
-.review h2{
-font-size:20px;
-margin-bottom:9px
-}
-
-.review p{
-color:#8c8294;
-font-size:10px;
-line-height:1.8;
-margin-bottom:18px
-}
-
-.review a{
-display:inline-block;
-padding:12px 25px;
-border-radius:13px;
-background:linear-gradient(135deg,#7e22ce,#a855f7);
-font-size:11px;
-font-weight:bold
-}
-
-footer{
-padding:45px 0 25px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.04)
-}
-
-.footer-logo{
-width:75px;
-height:75px;
-object-fit:contain;
-opacity:.9;
-filter:drop-shadow(0 0 15px rgba(168,85,247,.3));
-margin-bottom:12px
-}
-
-.footer-brand{
-color:#e9d5ff;
-font-size:14px;
-font-weight:bold;
-margin-bottom:5px
-}
-
-.footer-desc{
-color:#62596b;
-font-size:9px;
-margin-bottom:20px
-}
-
-.footer-links{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:8px;
-margin-bottom:18px
-}
-
-.footer-links button{
-background:none;
-border:0;
-color:#817887;
-font-size:9px;
-cursor:pointer
-}
-
-.footer-links button:hover{
-color:#c084fc
-}
-
-footer small{
-color:#4f4757;
-font-size:8px
-}
-
-.overlay{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.80);
-backdrop-filter:blur(8px);
-display:none;
-align-items:center;
-justify-content:center;
-padding:18px;
-z-index:5000
-}
-
-.overlay.active{
-display:flex
-}
-
-.modal{
-width:min(100%,500px);
-max-height:85vh;
-overflow-y:auto;
-background:linear-gradient(145deg,#160b23,#08040c);
-border:1px solid rgba(168,85,247,.25);
-border-radius:24px;
-padding:24px 20px;
-box-shadow:0 25px 80px rgba(0,0,0,.65);
-position:relative
-}
-
-.close{
-position:absolute;
-top:12px;
-left:12px;
-width:35px;
-height:35px;
-border-radius:50%;
-background:#130b1d;
-border:1px solid rgba(255,255,255,.08);
-color:#fff;
-font-size:20px;
-cursor:pointer
-}
-
-.modal h2{
-color:#d8b4fe;
-font-size:18px;
-margin-bottom:15px;
-padding-left:40px
-}
-
-.modal h3{
-font-size:12px;
-margin:17px 0 7px
-}
-
-.modal p,
-.modal li{
-color:#a59bad;
-font-size:10px;
-line-height:2
-}
-
-.modal ul{
-padding-right:18px
-}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#050308;--card:#0d0815;--purple:#a855f7;--purple2:#7e22ce;--light:#e9d5ff;--muted:#9b92a5;--border:rgba(168,85,247,.16);--green:#22c55e}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(circle at 50% -10%,rgba(126,34,206,.20),transparent 35%),radial-gradient(circle at 0% 40%,rgba(168,85,247,.07),transparent 25%),var(--bg);color:#fff;font-family:Tahoma,Arial,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.container{width:min(100% - 28px,1050px);margin:auto}
+
+header{position:sticky;top:0;z-index:1000;background:rgba(5,3,8,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 0 14px rgba(168,85,247,.45))}
+.brand-text{display:flex;flex-direction:column;gap:3px}
+.brand-text strong{font-size:17px;color:#f3e8ff}
+.brand-text span{font-size:9px;color:#8e8497}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.nav-btn{height:42px;padding:0 14px;border-radius:13px;border:1px solid rgba(168,85,247,.20);background:rgba(255,255,255,.025);color:#ddd6e5;cursor:pointer;transition:.25s}
+.nav-btn:hover{border-color:rgba(168,85,247,.6);background:rgba(126,34,206,.12)}
+.nav-btn.primary{background:linear-gradient(135deg,#7e22ce,#a855f7);border-color:#a855f7;color:white;box-shadow:0 8px 25px rgba(126,34,206,.22)}
+
+.hero{position:relative;overflow:hidden;padding:75px 0 55px}
+.hero::before{content:"";position:absolute;width:400px;height:400px;border-radius:50%;background:rgba(126,34,206,.14);filter:blur(100px);top:-180px;right:50%;transform:translateX(50%);pointer-events:none}
+.hero-content{position:relative;text-align:center}
+.hero-logo{width:180px;max-width:70%;height:auto;object-fit:contain;filter:drop-shadow(0 0 15px rgba(168,85,247,.45)) drop-shadow(0 0 45px rgba(126,34,206,.20));margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:50px;background:rgba(168,85,247,.08);border:1px solid rgba(168,85,247,.18);color:#d8b4fe;font-size:11px;margin-bottom:18px}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}
+.hero h1{font-size:clamp(30px,6vw,56px);line-height:1.15;margin-bottom:15px;background:linear-gradient(90deg,#fff,#e9d5ff,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 span{display:block}
+.hero p{max-width:620px;margin:auto;color:#a59bad;font-size:14px;line-height:2}
+.hero-buttons{display:flex;justify-content:center;gap:10px;margin-top:28px;flex-wrap:wrap}
+.hero-btn{min-width:150px;padding:13px 20px;border-radius:14px;font-size:12px;font-weight:bold;transition:.25s;cursor:pointer}
+.hero-btn.main{background:linear-gradient(135deg,#7e22ce,#a855f7);border:1px solid #a855f7;color:#fff;box-shadow:0 10px 35px rgba(126,34,206,.25)}
+.hero-btn.secondary{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.09);color:#ddd6e5}
+.hero-btn:hover{transform:translateY(-2px)}
+
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px 0 60px}
+.trust-card{padding:17px 10px;text-align:center;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.055);border-radius:18px}
+.trust-icon{font-size:22px;margin-bottom:8px}
+.trust-card strong{display:block;font-size:12px;margin-bottom:4px}
+.trust-card span{color:#827989;font-size:9px}
+
+.section{padding:25px 0 65px}
+.section-heading{text-align:center;margin-bottom:25px}
+.section-heading .small{color:#a855f7;font-size:10px;font-weight:bold;margin-bottom:8px}
+.section-heading h2{font-size:25px;margin-bottom:8px}
+.section-heading p{color:#817887;font-size:11px}
+
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.product{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid var(--border);border-radius:22px;padding:20px 14px;transition:.3s}
+.product::before{content:"";position:absolute;width:100px;height:100px;border-radius:50%;background:rgba(168,85,247,.10);filter:blur(35px);top:-50px;right:-40px}
+.product:hover{transform:translateY(-5px);border-color:rgba(168,85,247,.48);box-shadow:0 20px 45px rgba(0,0,0,.30)}
+
+.product-icon{width:62px;height:62px;margin-bottom:15px;display:flex;align-items:center;justify-content:center;border-radius:17px;background:#160d22;border:1px solid rgba(168,85,247,.16);font-size:24px;font-weight:bold}
+.netflix{color:#e50914}
+.shahid{color:#00d878;font-size:14px}
+.sports{color:#00bfff;font-size:12px}
+.osn{color:#fff;background:linear-gradient(135deg,#111827,#312e81)}
+.snap{background:#050505}
+.tiktok{color:#fff}
+.instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.x{background:#000;color:#fff}
+
+.product h3{font-size:13px;margin-bottom:7px}
+.product p,.product-description{color:#817887;font-size:9px;line-height:1.8;min-height:32px;margin-bottom:15px}
+
+.order{display:block;width:100%;padding:10px;text-align:center;border-radius:12px;border:1px solid rgba(168,85,247,.25);background:rgba(126,34,206,.07);color:#d8b4fe;font-size:10px;font-weight:bold;transition:.25s;cursor:pointer}
+.order:hover{background:linear-gradient(135deg,#7e22ce,#a855f7);color:#fff}
+
+.digital-box{position:relative;overflow:hidden;padding:35px 22px;background:radial-gradient(circle at 50% 0%,rgba(126,34,206,.16),transparent 45%),#0b0611;border:1px solid rgba(168,85,247,.16);border-radius:28px}
+.digital-title{text-align:center;margin-bottom:25px}
+.digital-title-icon{width:58px;height:58px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border-radius:18px;background:rgba(126,34,206,.12);border:1px solid rgba(168,85,247,.22);font-size:25px}
+.digital-title h2{font-size:21px;margin-bottom:7px}
+.digital-title p{color:#83798c;font-size:10px;line-height:1.9}
+
+.digital-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.digital-card{padding:20px 14px;background:rgba(255,255,255,.018);border:1px solid rgba(255,255,255,.055);border-radius:20px;transition:.3s}
+.digital-card:hover{transform:translateY(-3px);border-color:rgba(168,85,247,.35)}
+.digital-card-icon{font-size:24px;margin-bottom:13px}
+.digital-card h3{font-size:12px;margin-bottom:8px}
+.digital-card p{color:#817887;font-size:9px;line-height:1.9;margin-bottom:15px}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.step{text-align:center;padding:22px 14px;background:#0b0611;border:1px solid rgba(255,255,255,.055);border-radius:20px}
+.step-number{width:38px;height:38px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border-radius:50%;background:linear-gradient(135deg,#7e22ce,#a855f7);font-weight:bold;font-size:13px;box-shadow:0 8px 25px rgba(126,34,206,.25)}
+.step h3{font-size:12px;margin-bottom:7px}
+.step p{color:#817887;font-size:9px;line-height:1.8}
+
+.review{text-align:center;padding:30px 20px;border-radius:25px;background:linear-gradient(135deg,rgba(126,34,206,.13),rgba(168,85,247,.035));border:1px solid rgba(168,85,247,.17)}
+.review h2{font-size:20px;margin-bottom:9px}
+.review p{color:#8c8294;font-size:10px;line-height:1.8;margin-bottom:18px}
+.review a{display:inline-block;padding:12px 25px;border-radius:13px;background:linear-gradient(135deg,#7e22ce,#a855f7);font-size:11px;font-weight:bold}
+
+footer{padding:45px 0 25px;text-align:center;border-top:1px solid rgba(255,255,255,.04)}
+.footer-logo{width:75px;height:75px;object-fit:contain;opacity:.9;filter:drop-shadow(0 0 15px rgba(168,85,247,.3));margin-bottom:12px}
+.footer-brand{color:#e9d5ff;font-size:14px;font-weight:bold;margin-bottom:5px}
+.footer-desc{color:#62596b;font-size:9px;margin-bottom:20px}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.footer-links button{background:none;border:0;color:#817887;font-size:9px;cursor:pointer}
+.footer-links button:hover{color:#c084fc}
+footer small{color:#4f4757;font-size:8px}
+
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.80);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px;z-index:5000}
+.overlay.active{display:flex}
+.modal{width:min(100%,500px);max-height:85vh;overflow-y:auto;background:linear-gradient(145deg,#160b23,#08040c);border:1px solid rgba(168,85,247,.25);border-radius:24px;padding:24px 20px;box-shadow:0 25px 80px rgba(0,0,0,.65);position:relative}
+.close{position:absolute;top:12px;left:12px;width:35px;height:35px;border-radius:50%;background:#130b1d;border:1px solid rgba(255,255,255,.08);color:#fff;font-size:20px;cursor:pointer}
+.modal h2{color:#d8b4fe;font-size:18px;margin-bottom:15px;padding-left:40px}
+.modal h3{font-size:12px;margin:17px 0 7px}
+.modal p,.modal li{color:#a59bad;font-size:10px;line-height:2}
+.modal ul{padding-right:18px}
+
+.ramash-launcher{position:fixed;bottom:22px;right:22px;width:62px;height:62px;border-radius:50%;border:1px solid rgba(216,180,254,.35);background:linear-gradient(145deg,#7e22ce,#a855f7);color:#fff;cursor:pointer;z-index:7000;box-shadow:0 10px 35px rgba(126,34,206,.45),0 0 0 5px rgba(168,85,247,.06);display:flex;align-items:center;justify-content:center;transition:.3s}
+.ramash-launcher:hover{transform:translateY(-4px) scale(1.04)}
+.ramash-face{font-size:28px}
+.ramash-status{position:absolute;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid #12091b;bottom:2px;left:2px}
+
+.ramash-window{position:fixed;width:min(390px,calc(100vw - 24px));height:min(620px,calc(100vh - 100px));right:22px;bottom:95px;background:linear-gradient(145deg,#100719,#07030b);border:1px solid rgba(168,85,247,.28);border-radius:25px;box-shadow:0 25px 90px rgba(0,0,0,.75),0 0 40px rgba(126,34,206,.12);overflow:hidden;display:none;z-index:6999;flex-direction:column}
+.ramash-window.active{display:flex}
+
+.ramash-header{padding:15px;background:linear-gradient(135deg,rgba(126,34,206,.25),rgba(168,85,247,.05));border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}
+.ramash-profile{display:flex;align-items:center;gap:10px}
+.ramash-avatar{width:43px;height:43px;border-radius:15px;background:linear-gradient(135deg,#7e22ce,#a855f7);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 5px 20px rgba(126,34,206,.3)}
+.ramash-name strong{display:block;font-size:14px;margin-bottom:4px}
+.ramash-name span{color:#22c55e;font-size:9px}
+.ramash-close{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#fff;cursor:pointer;font-size:18px}
+
+.ramash-messages{flex:1;overflow-y:auto;padding:17px 13px;display:flex;flex-direction:column;gap:11px}
+.message{max-width:88%;padding:11px 13px;border-radius:16px;font-size:10px;line-height:1.9;white-space:pre-line}
+.message.bot{align-self:flex-start;background:#150b20;border:1px solid rgba(168,85,247,.13);color:#ddd6e5;border-bottom-right-radius:5px}
+.message.user{align-self:flex-end;background:linear-gradient(135deg,#7e22ce,#9333ea);color:#fff;border-bottom-left-radius:5px}
+
+.ramash-suggestions{display:flex;gap:6px;overflow-x:auto;padding:8px 12px;border-top:1px solid rgba(255,255,255,.04)}
+.ramash-suggestions button{flex:none;padding:8px 10px;border-radius:11px;background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.18);color:#c084fc;font-size:8px;cursor:pointer}
+
+.ramash-input-area{display:flex;gap:7px;padding:10px;background:rgba(0,0,0,.20);border-top:1px solid rgba(255,255,255,.05)}
+.ramash-input{flex:1;min-width:0;height:44px;padding:0 13px;border-radius:13px;background:#0d0713;border:1px solid rgba(168,85,247,.17);color:#fff;outline:none;font-family:inherit;font-size:10px}
+.ramash-input:focus{border-color:rgba(168,85,247,.55)}
+.ramash-send{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#7e22ce,#a855f7);border:0;color:#fff;cursor:pointer;font-size:17px}
+
+.ramash-wa-button{width:100%;padding:10px;border-radius:11px;border:0;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-family:inherit;font-size:10px;font-weight:bold;cursor:pointer}
 
 @media(max-width:800px){
-
-.products{
-grid-template-columns:repeat(2,1fr)
-}
-
+.products{grid-template-columns:repeat(2,1fr)}
+.digital-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:550px){
-
-.nav{
-height:70px
-}
-
-.brand img{
-width:48px;
-height:48px
-}
-
-.brand-text strong{
-font-size:14px
-}
-
-.brand-text span{
-font-size:8px
-}
-
-.nav-btn{
-padding:0 10px;
-font-size:10px
-}
-
-.nav-btn.secondary{
-display:none
-}
-
-.hero{
-padding:55px 0 35px
-}
-
-.hero-logo{
-width:150px
-}
-
-.hero p{
-font-size:11px
-}
-
-.trust-grid{
-margin-bottom:35px
-}
-
-.trust-card{
-padding:14px 5px
-}
-
-.trust-card strong{
-font-size:10px
-}
-
-.trust-card span{
-font-size:8px
-}
-
-.section{
-padding-bottom:45px
-}
-
-.products{
-gap:9px
-}
-
-.product{
-padding:17px 9px;
-border-radius:18px
-}
-
-.product-icon{
-width:55px;
-height:55px
-}
-
-.product h3{
-font-size:11px
-}
-
-.product p,
-.product-description{
-font-size:8px
-}
-
-.steps{
-grid-template-columns:1fr
-}
-
+.nav{height:70px}
+.brand img{width:48px;height:48px}
+.brand-text strong{font-size:14px}
+.brand-text span{font-size:8px}
+.nav-btn{padding:0 10px;font-size:10px}
+.nav-btn.secondary{display:none}
+.hero{padding:55px 0 35px}
+.hero-logo{width:150px}
+.hero p{font-size:11px}
+.trust-grid{margin-bottom:35px}
+.trust-card{padding:14px 5px}
+.trust-card strong{font-size:10px}
+.trust-card span{font-size:8px}
+.section{padding-bottom:45px}
+.products{gap:9px}
+.product{padding:17px 9px;border-radius:18px}
+.product-icon{width:55px;height:55px}
+.product h3{font-size:11px}
+.product p,.product-description{font-size:8px}
+.digital-box{padding:25px 12px;border-radius:22px}
+.digital-grid{grid-template-columns:1fr 1fr;gap:9px}
+.digital-card{padding:17px 10px}
+.digital-card h3{font-size:10px}
+.digital-card p{font-size:8px}
+.steps{grid-template-columns:1fr}
+.ramash-launcher{right:16px;bottom:16px;width:58px;height:58px}
+.ramash-window{right:12px;bottom:84px;width:calc(100vw - 24px);height:calc(100vh - 105px);border-radius:22px}
 }
 
 @media(max-width:360px){
-
-.brand-text{
-display:none
-}
-
-.hero h1{
-font-size:29px
-}
-
-.products{
-grid-template-columns:1fr 1fr
-}
-
+.brand-text{display:none}
+.hero h1{font-size:29px}
+.products{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -698,409 +194,249 @@ grid-template-columns:1fr 1fr
 <body>
 
 <header>
-
 <div class="container nav">
-
 <a href="#" class="brand">
-
 <img src="IMG_1574.jpeg" alt="شعار رمشة بلس">
-
 <div class="brand-text">
 <strong>رمشة بلس</strong>
-<span>خدمات إلكترونية</span>
+<span>اشتراكات وخدمات رقمية</span>
 </div>
-
 </a>
 
 <div class="nav-actions">
-
-<button class="nav-btn secondary"
-onclick="scrollToSection('services')">
-الخدمات
-</button>
-
-<button class="nav-btn primary"
-onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات رمشة بلس')">
-تواصل معنا
-</button>
-
+<button class="nav-btn secondary" onclick="scrollToSection('services')">الخدمات</button>
+<button class="nav-btn primary" onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات رمشة بلس')">تواصل معنا</button>
 </div>
-
 </div>
-
 </header>
 
 <main>
 
 <section class="hero">
-
 <div class="container hero-content">
 
-<img
-src="IMG_1574.jpeg"
-class="hero-logo"
-alt="رمشة بلس">
+<img src="IMG_1574.jpeg" class="hero-logo" alt="رمشة بلس">
 
 <div class="badge">
-
 <span class="badge-dot"></span>
-
-متواجدين لخدمتك
-
+رَمّاش متواجد لخدمتك
 </div>
 
 <h1>
-
-خدماتك الإلكترونية
-
-<span>بكل احترافية.</span>
-
+كل خدماتك الرقمية
+<span>في مكان واحد.</span>
 </h1>
 
 <p>
-
-نساعدك في إنشاء وتطوير المواقع والمتاجر الإلكترونية
-وتقديم الخدمات الإلكترونية المناسبة لنشاطك، مع تواصل مباشر وسريع.
-
+اشتراكات رقمية وخدمات إلكترونية، طلب سهل، وتواصل مباشر مع فريق رمشة بلس.
 </p>
 
 <div class="hero-buttons">
-
-<a
-href="#services"
-class="hero-btn main">
-
-استعرض الخدمات
-
-</a>
-
-<button
-class="hero-btn secondary"
-onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات رمشة بلس')">
-
-تواصل معنا
-
-</button>
-
+<a href="#services" class="hero-btn main">استعرض الخدمات</a>
+<button class="hero-btn secondary" onclick="openRamash()">اسأل رَمّاش 🤖</button>
 </div>
 
 </div>
-
 </section>
 
 <div class="container">
-
 <div class="trust-grid">
 
 <div class="trust-card">
-
 <div class="trust-icon">🛡️</div>
-
-<strong>جودة الخدمة</strong>
-
-<span>نهتم بتقديم خدمة احترافية</span>
-
+<strong>ضمان على الاشتراكات</strong>
+<span>نهتم بجودة الخدمة</span>
 </div>
 
 <div class="trust-card">
-
 <div class="trust-icon">⚡</div>
-
-<strong>تنفيذ سريع</strong>
-
-<span>نبدأ بتجهيز طلبك بأسرع وقت</span>
-
+<strong>تفعيل سريع</strong>
+<span>نبدأ بتجهيز طلبك بسرعة</span>
 </div>
 
 <div class="trust-card">
-
 <div class="trust-icon">🎧</div>
-
 <strong>دعم مباشر</strong>
-
 <span>تواصل معنا عبر واتساب</span>
-
 </div>
 
 </div>
-
 </div>
 
 <section class="section" id="services">
-
 <div class="container">
 
 <div class="section-heading">
-
-<div class="small">
-خدمات رمشة بلس
-</div>
-
-<h2>
-اختر الخدمة المناسبة لك
-</h2>
-
-<p>
-خدمات إلكترونية لإنشاء وتطوير حضورك على الإنترنت
-</p>
-
+<div class="small">اشتراكات رقمية</div>
+<h2>اختر خدمتك</h2>
+<p>لمعرفة الأسعار والتفاصيل اسأل رَمّاش 🤖</p>
 </div>
 
 <div class="products">
 
 <div class="product">
-
-<div class="product-icon">
-🌐
-</div>
-
-<h3>
-إنشاء موقع إلكتروني
-</h3>
-
-<div class="product-description">
-تصميم وإنشاء موقع إلكتروني احترافي مناسب لنشاطك واحتياجاتك.
-</div>
-
-<button
-class="order"
-onclick="openWhatsApp('السلام عليكم، أريد طلب خدمة إنشاء موقع إلكتروني')">
-
-اطلب الخدمة
-
-</button>
-
+<div class="product-icon netflix">N</div>
+<h3>اشتراك نتفلكس</h3>
+<div class="product-description">اشتراك رقمي للترفيه والمشاهدة.</div>
+<button class="order" onclick="askRamash('كم سعر نتفلكس؟')">اسأل رَمّاش</button>
 </div>
 
 <div class="product">
-
-<div class="product-icon">
-🛒
-</div>
-
-<h3>
-إنشاء متجر إلكتروني
-</h3>
-
-<div class="product-description">
-إنشاء متجر إلكتروني مرتب واحترافي مناسب لعرض منتجاتك وخدماتك.
-</div>
-
-<button
-class="order"
-onclick="openWhatsApp('السلام عليكم، أريد طلب خدمة إنشاء متجر إلكتروني')">
-
-اطلب الخدمة
-
-</button>
-
+<div class="product-icon shahid">شاهد</div>
+<h3>اشتراك شاهد VIP</h3>
+<div class="product-description">محتوى ترفيهي ومشاهدة رقمية.</div>
+<button class="order" onclick="askRamash('كم سعر شاهد؟')">اسأل رَمّاش</button>
 </div>
 
 <div class="product">
-
-<div class="product-icon">
-⚙️
-</div>
-
-<h3>
-تطوير وتعديل متجر
-</h3>
-
-<div class="product-description">
-تطوير تصميم المتجر وإضافة الأقسام والمميزات والتعديلات المطلوبة.
-</div>
-
-<button
-class="order"
-onclick="openWhatsApp('السلام عليكم، أريد طلب خدمة تطوير وتعديل متجر إلكتروني')">
-
-اطلب الخدمة
-
-</button>
-
+<div class="product-icon sports">SPORTS</div>
+<h3>اشتراك شاهد مباريات</h3>
+<div class="product-description">خدمة مشاهدة المباريات والمحتوى الرياضي.</div>
+<button class="order" onclick="askRamash('كم سعر شاهد مباريات؟')">اسأل رَمّاش</button>
 </div>
 
 <div class="product">
-
-<div class="product-icon">
-🛠️
-</div>
-
-<h3>
-تعديل موقع إلكتروني
-</h3>
-
-<div class="product-description">
-تعديل موقعك الحالي وإضافة الأقسام والمميزات والتغييرات التي تحتاجها.
-</div>
-
-<button
-class="order"
-onclick="openWhatsApp('السلام عليكم، أريد طلب خدمة تعديل موقع إلكتروني')">
-
-اطلب الخدمة
-
-</button>
-
+<div class="product-icon osn">OSN</div>
+<h3>اشتراك OSN</h3>
+<div class="product-description">اشتراك ترفيهي لمشاهدة المحتوى الرقمي.</div>
+<button class="order" onclick="askRamash('كم سعر OSN؟')">اسأل رَمّاش</button>
 </div>
 
 <div class="product">
-
-<div class="product-icon">
-🛍️
-</div>
-
-<h3>
-إضافة المنتجات
-</h3>
-
-<div class="product-description">
-إضافة المنتجات وترتيب الأقسام وتنسيق محتوى المتجر بشكل مرتب.
-</div>
-
-<button
-class="order"
-onclick="openWhatsApp('السلام عليكم، أريد طلب خدمة إضافة منتجات وترتيب متجري')">
-
-اطلب الخدمة
-
-</button>
-
+<div class="product-icon snap">👻</div>
+<h3>سناب بلس</h3>
+<div class="product-description">مزايا إضافية وتجربة محسّنة على سناب.</div>
+<button class="order" onclick="askRamash('أبي سناب بلس')">اسأل رَمّاش</button>
 </div>
 
 <div class="product">
-
-<div class="product-icon">
-✨
+<div class="product-icon tiktok">♪</div>
+<h3>متابعين تيك توك</h3>
+<div class="product-description">خيارات مختلفة لزيادة عدد المتابعين.</div>
+<button class="order" onclick="askRamash('كم سعر متابعين تيك توك؟')">اسأل رَمّاش</button>
 </div>
 
-<h3>
-خدمة إلكترونية مخصصة
-</h3>
-
-<div class="product-description">
-لديك طلب مختلف؟ اشرح لنا فكرتك وسنساعدك في تنفيذ الخدمة المناسبة.
+<div class="product">
+<div class="product-icon instagram">◎</div>
+<h3>متابعين إنستقرام</h3>
+<div class="product-description">خيارات متعددة حسب الكمية المطلوبة.</div>
+<button class="order" onclick="askRamash('أبي متابعين إنستقرام')">اسأل رَمّاش</button>
 </div>
 
-<button
-class="order"
-onclick="openWhatsApp('السلام عليكم، لدي طلب خدمة إلكترونية مخصصة وأرغب بالاستفسار')">
-
-اطلب الخدمة
-
-</button>
-
+<div class="product">
+<div class="product-icon x">𝕏</div>
+<h3>متابعين منصة X</h3>
+<div class="product-description">خيارات متعددة حسب الكمية المطلوبة.</div>
+<button class="order" onclick="askRamash('أبي متابعين منصة X')">اسأل رَمّاش</button>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <section class="section">
+<div class="container">
 
+<div class="digital-box">
+
+<div class="digital-title">
+<div class="digital-title-icon">💻</div>
+<h2>خدمات إلكترونية</h2>
+<p>نساعدك في بناء وتطوير حضورك الإلكتروني من المواقع والمتاجر إلى التعديلات والتجهيز.</p>
+</div>
+
+<div class="digital-grid">
+
+<div class="digital-card">
+<div class="digital-card-icon">🌐</div>
+<h3>إنشاء موقع إلكتروني</h3>
+<p>تصميم وإنشاء موقع مناسب لنشاطك واحتياجاتك.</p>
+<button class="order" onclick="askRamash('أبي إنشاء موقع إلكتروني')">اطلب الخدمة</button>
+</div>
+
+<div class="digital-card">
+<div class="digital-card-icon">🛒</div>
+<h3>إنشاء متجر إلكتروني</h3>
+<p>متجر مرتب واحترافي مناسب لنشاطك.</p>
+<button class="order" onclick="askRamash('أبي إنشاء متجر إلكتروني')">اطلب الخدمة</button>
+</div>
+
+<div class="digital-card">
+<div class="digital-card-icon">⚙️</div>
+<h3>تطوير وتعديل متجر</h3>
+<p>تطوير التصميم والأقسام والمميزات حسب طلبك.</p>
+<button class="order" onclick="askRamash('أبي تطوير وتعديل متجري')">اطلب الخدمة</button>
+</div>
+
+<div class="digital-card">
+<div class="digital-card-icon">🛠️</div>
+<h3>تعديل موقع إلكتروني</h3>
+<p>إضافة أقسام ومميزات وتعديلات على موقعك الحالي.</p>
+<button class="order" onclick="askRamash('أبي تعديل موقعي الإلكتروني')">اطلب الخدمة</button>
+</div>
+
+<div class="digital-card">
+<div class="digital-card-icon">🛍️</div>
+<h3>إضافة المنتجات</h3>
+<p>إضافة المنتجات وترتيب الأقسام وتنسيق المتجر.</p>
+<button class="order" onclick="askRamash('أبي إضافة منتجات وترتيب متجري')">اطلب الخدمة</button>
+</div>
+
+<div class="digital-card">
+<div class="digital-card-icon">✨</div>
+<h3>خدمة إلكترونية مخصصة</h3>
+<p>عندك فكرة مختلفة؟ اشرح لنا طلبك.</p>
+<button class="order" onclick="askRamash('عندي خدمة إلكترونية مخصصة')">اطلب الخدمة</button>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
 <div class="container">
 
 <div class="section-heading">
-
-<div class="small">
-طريقة الطلب
-</div>
-
-<h2>
-أسهل مما تتوقع
-</h2>
-
-<p>
-ثلاث خطوات فقط لطلب خدمتك
-</p>
-
+<div class="small">طريقة الطلب</div>
+<h2>أسهل مما تتوقع</h2>
+<p>ثلاث خطوات فقط لإتمام طلبك</p>
 </div>
 
 <div class="steps">
 
 <div class="step">
-
-<div class="step-number">
-1
-</div>
-
-<h3>
-اختر الخدمة
-</h3>
-
-<p>
-اختر الخدمة الإلكترونية المناسبة لاحتياجك.
-</p>
-
+<div class="step-number">1</div>
+<h3>اختر الخدمة</h3>
+<p>اختر الاشتراك أو الخدمة المناسبة لك.</p>
 </div>
 
 <div class="step">
-
-<div class="step-number">
-2
-</div>
-
-<h3>
-تواصل معنا
-</h3>
-
-<p>
-أرسل لنا تفاصيل طلبك عبر واتساب.
-</p>
-
+<div class="step-number">2</div>
+<h3>اسأل رَمّاش</h3>
+<p>اسأل المساعد عن السعر والتفاصيل.</p>
 </div>
 
 <div class="step">
-
-<div class="step-number">
-3
-</div>
-
-<h3>
-ابدأ التنفيذ
-</h3>
-
-<p>
-بعد الاتفاق على التفاصيل نبدأ بتنفيذ الخدمة.
-</p>
-
+<div class="step-number">3</div>
+<h3>استلم طلبك</h3>
+<p>بعد إتمام الطلب يتم تجهيز الخدمة وتسليمها.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <section class="section">
-
 <div class="container">
 
 <div class="review">
-
-<h2>
-⭐ كيف كانت تجربتك؟
-</h2>
-
-<p>
-تقييمك يساعدنا على تطوير رمشة بلس وتقديم تجربة أفضل لعملائنا.
-</p>
-
-<a
-href="https://docs.google.com/forms/d/12UfiXVwpV9v-mZhR9fCthrwzqM962aI8nIpsQZdZw9k/viewform"
-target="_blank"
-rel="noopener">
-
-قيّم تجربتك
-
-</a>
-
+<h2>⭐ كيف كانت تجربتك؟</h2>
+<p>تقييمك يساعدنا على تطوير رمشة بلس وتقديم تجربة أفضل لعملائنا.</p>
+<a href="https://docs.google.com/forms/d/12UfiXVwpV9v-mZhR9fCthrwzqM962aI8nIpsQZdZw9k/viewform" target="_blank" rel="noopener">قيّم تجربتك</a>
 </div>
 
 </div>
-
 </section>
 
 </main>
@@ -1109,177 +445,121 @@ rel="noopener">
 
 <div class="container">
 
-<img
-src="IMG_1574.jpeg"
-class="footer-logo"
-alt="رمشة بلس">
+<img src="IMG_1574.jpeg" class="footer-logo" alt="رمشة بلس">
 
-<div class="footer-brand">
-رمشة بلس
-</div>
+<div class="footer-brand">رمشة بلس</div>
 
-<div class="footer-desc">
-إنشاء مواقع ومتاجر وخدمات إلكترونية
-</div>
+<div class="footer-desc">اشتراكات وخدمات رقمية بكل سهولة</div>
 
 <div class="footer-links">
-
-<button onclick="openModal('about')">
-من نحن
-</button>
-
+<button onclick="openModal('about')">من نحن</button>
 <span>|</span>
-
-<button onclick="openModal('refund')">
-سياسة الاسترجاع
-</button>
-
+<button onclick="openModal('refund')">سياسة الاسترجاع</button>
 <span>|</span>
-
-<button onclick="openModal('terms')">
-الشروط والأحكام
-</button>
-
+<button onclick="openModal('terms')">الشروط والأحكام</button>
 </div>
 
-<small>
-© 2026 رمشة بلس — جميع الحقوق محفوظة
-</small>
+<small>© 2026 رمشة بلس — جميع الحقوق محفوظة</small>
 
 </div>
 
 </footer>
 
-<div
-class="overlay"
-id="about"
-onclick="closeOutside(event,'about')">
-
+<div class="overlay" id="about" onclick="closeOutside(event,'about')">
 <div class="modal">
+<button class="close" onclick="closeModal('about')">×</button>
+<h2>من نحن</h2>
+<p>رمشة بلس متجر إلكتروني يقدم مجموعة من الاشتراكات والخدمات الرقمية، مع الحرص على توفير تجربة سهلة وواضحة للعميل.</p>
+<p style="margin-top:10px;">نسعى إلى توفير خدمات رقمية متنوعة مع دعم مباشر قبل وبعد الطلب.</p>
+</div>
+</div>
 
-<button
-class="close"
-onclick="closeModal('about')">
-×
+<div class="overlay" id="refund" onclick="closeOutside(event,'refund')">
+<div class="modal">
+<button class="close" onclick="closeModal('refund')">×</button>
+<h2>سياسة الاسترجاع</h2>
+
+<h3>قبل تنفيذ الطلب</h3>
+<p>يمكن للعميل طلب إلغاء الطلب والتواصل معنا قبل البدء في تنفيذ أو تفعيل الخدمة.</p>
+
+<h3>بعد تفعيل الخدمة</h3>
+<p>بعد تفعيل أو تسليم الخدمة الرقمية، لا يمكن استرجاع المبلغ لمجرد تغيير الرأي أو عدم الرغبة في استخدام الخدمة.</p>
+
+<h3>وجود مشكلة</h3>
+<p>في حال وجود مشكلة في الخدمة بعد الاستلام، يرجى التواصل معنا مباشرة للعمل على حل المشكلة أو استبدال الخدمة عند استحقاق ذلك.</p>
+
+</div>
+</div>
+
+<div class="overlay" id="terms" onclick="closeOutside(event,'terms')">
+<div class="modal">
+<button class="close" onclick="closeModal('terms')">×</button>
+<h2>الشروط والأحكام</h2>
+
+<h3>1. الطلب والدفع</h3>
+<p>بإتمام الطلب يقر العميل بأنه اطلع على تفاصيل الخدمة والسعر والشروط ووافق عليها.</p>
+
+<h3>2. الخدمات الرقمية</h3>
+<p>يتم تنفيذ أو تسليم الخدمات الرقمية حسب طبيعة كل خدمة، وقد تختلف مدة التنفيذ.</p>
+
+<h3>3. بيانات العميل</h3>
+<p>يجب على العميل تزويد المتجر بالمعلومات الصحيحة اللازمة لتنفيذ الطلب.</p>
+
+<h3>4. الدعم</h3>
+<p>في حال وجود مشكلة أو استفسار بخصوص الطلب، يمكن التواصل معنا عبر واتساب.</p>
+
+</div>
+</div>
+
+<button class="ramash-launcher" onclick="toggleRamash()" aria-label="فتح رَمّاش">
+<span class="ramash-face">🤖</span>
+<span class="ramash-status"></span>
 </button>
 
-<h2>
-من نحن
-</h2>
+<div class="ramash-window" id="ramashWindow">
 
-<p>
-رمشة بلس متجر إلكتروني متخصص في تقديم الخدمات الإلكترونية وإنشاء وتطوير المواقع والمتاجر الإلكترونية.
-</p>
+<div class="ramash-header">
 
-<p style="margin-top:10px;">
-نسعى إلى تقديم خدمات احترافية وتجربة سهلة وواضحة للعميل، مع دعم مباشر قبل وأثناء وبعد تنفيذ الطلب.
-</p>
+<div class="ramash-profile">
+<div class="ramash-avatar">🤖</div>
 
+<div class="ramash-name">
+<strong>رَمّاش</strong>
+<span>● متصل الآن</span>
 </div>
 
 </div>
 
-<div
-class="overlay"
-id="refund"
-onclick="closeOutside(event,'refund')">
+<button class="ramash-close" onclick="closeRamash()">×</button>
 
-<div class="modal">
+</div>
 
-<button
-class="close"
-onclick="closeModal('refund')">
-×
-</button>
+<div class="ramash-messages" id="ramashMessages">
 
-<h2>
-سياسة الاسترجاع
-</h2>
+<div class="message bot">
+أرحب تراحيب المطر 🌧️💜
+أنا رَمّاش 🤖 مساعدك في رمشة بلس، حاضر أخدمك وأفيدك باللي تحتاجه.
 
-<h3>
-قبل تنفيذ الطلب
-</h3>
-
-<p>
-يمكن للعميل طلب إلغاء الطلب والتواصل معنا قبل البدء في تنفيذ الخدمة.
-</p>
-
-<h3>
-بعد بدء التنفيذ
-</h3>
-
-<p>
-بعد البدء في تنفيذ الخدمة أو تسليم الملفات والنتائج المتفق عليها، قد لا يكون الاسترجاع متاحًا بحسب حالة الطلب والخدمة المقدمة.
-</p>
-
-<h3>
-وجود مشكلة
-</h3>
-
-<p>
-في حال وجود مشكلة في الخدمة، يرجى التواصل معنا مباشرة للعمل على حل المشكلة أو إجراء التعديل المناسب حسب طبيعة الخدمة.
-</p>
-
+أمر وتدلل، وش حاب تطلب من رمشة بلس؟ ✨
 </div>
 
 </div>
 
-<div
-class="overlay"
-id="terms"
-onclick="closeOutside(event,'terms')">
+<div class="ramash-suggestions">
 
-<div class="modal">
+<button onclick="askRamash('وش الخدمات الموجودة عندكم؟')">الخدمات</button>
+<button onclick="askRamash('كم سعر نتفلكس؟')">نتفلكس</button>
+<button onclick="askRamash('كم سعر شاهد؟')">شاهد</button>
+<button onclick="askRamash('كم سعر شاهد مباريات؟')">المباريات</button>
+<button onclick="askRamash('أبي أكلم الدعم')">الدعم</button>
 
-<button
-class="close"
-onclick="closeModal('terms')">
-×
-</button>
+</div>
 
-<h2>
-الشروط والأحكام
-</h2>
+<div class="ramash-input-area">
 
-<h3>
-1. الطلب والدفع
-</h3>
+<input type="text" id="ramashInput" class="ramash-input" placeholder="اكتب سؤالك هنا..." autocomplete="off">
 
-<p>
-بإتمام الطلب يقر العميل بأنه اطلع على تفاصيل الخدمة والسعر والشروط ووافق عليها.
-</p>
-
-<h3>
-2. الخدمات الإلكترونية
-</h3>
-
-<p>
-يتم تنفيذ الخدمات الإلكترونية حسب طبيعة كل خدمة والمتطلبات المتفق عليها مع العميل.
-</p>
-
-<h3>
-3. بيانات العميل
-</h3>
-
-<p>
-يجب على العميل تزويد المتجر بالمعلومات الصحيحة اللازمة لتنفيذ الطلب.
-</p>
-
-<h3>
-4. مدة التنفيذ
-</h3>
-
-<p>
-قد تختلف مدة تنفيذ الخدمة حسب نوع الطلب وحجمه والمتطلبات الخاصة بالمشروع.
-</p>
-
-<h3>
-5. الدعم
-</h3>
-
-<p>
-في حال وجود مشكلة أو استفسار بخصوص الطلب، يمكن التواصل معنا عبر واتساب.
-</p>
+<button class="ramash-send" onclick="sendRamashMessage()" aria-label="إرسال">➤</button>
 
 </div>
 
@@ -1290,82 +570,527 @@ onclick="closeModal('terms')">
 const WHATSAPP="966501286453";
 
 function scrollToSection(id){
-
-const e=document.getElementById(id);
-
-if(e){
-
-e.scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
-
-}
-
+ const e=document.getElementById(id);
+ if(e)e.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 function openWhatsApp(message){
-
-window.open(
-"https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message),
-"_blank"
-);
-
+ window.open(
+   "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message),
+   "_blank"
+ );
 }
 
 function openModal(id){
-
-const modal=document.getElementById(id);
-
-if(modal){
-
-modal.classList.add("active");
-
-document.body.style.overflow="hidden";
-
-}
-
+ const m=document.getElementById(id);
+ if(m){
+   m.classList.add("active");
+   document.body.style.overflow="hidden";
+ }
 }
 
 function closeModal(id){
-
-const modal=document.getElementById(id);
-
-if(modal){
-
-modal.classList.remove("active");
-
-document.body.style.overflow="";
-
-}
-
+ const m=document.getElementById(id);
+ if(m){
+   m.classList.remove("active");
+   document.body.style.overflow="";
+ }
 }
 
 function closeOutside(event,id){
+ if(event.target.id===id)closeModal(id);
+}
 
-if(event.target.id===id){
+function openRamash(){
 
-closeModal(id);
+ const w=document.getElementById("ramashWindow");
+
+ if(w){
+
+   w.classList.add("active");
+
+   setTimeout(
+     ()=>document.getElementById("ramashInput").focus(),
+     100
+   );
+
+ }
 
 }
 
+function closeRamash(){
+ document.getElementById("ramashWindow").classList.remove("active");
 }
 
-document.addEventListener("keydown",function(event){
+function toggleRamash(){
 
-if(event.key==="Escape"){
+ const w=document.getElementById("ramashWindow");
 
-document
-.querySelectorAll(".overlay.active")
-.forEach(function(modal){
-
-modal.classList.remove("active");
-
-});
-
-document.body.style.overflow="";
+ w.classList.contains("active")
+ ?
+ closeRamash()
+ :
+ openRamash();
 
 }
+
+function addRamashMessage(text,type){
+
+ const messages=document.getElementById("ramashMessages");
+
+ const message=document.createElement("div");
+
+ message.className="message "+type;
+
+ message.textContent=text;
+
+ messages.appendChild(message);
+
+ messages.scrollTop=messages.scrollHeight;
+
+}
+
+function addWhatsAppButton(text){
+
+ const messages=document.getElementById("ramashMessages");
+
+ const box=document.createElement("div");
+
+ box.className="message bot";
+
+ box.style.padding="8px";
+
+ const button=document.createElement("button");
+
+ button.className="ramash-wa-button";
+
+ button.textContent="📲 تواصل مع رمشة بلس";
+
+ button.onclick=()=>openWhatsApp(
+   text || "السلام عليكم، وصلتني من رَمّاش وأرغب بالاستفسار/الطلب"
+ );
+
+ box.appendChild(button);
+
+ messages.appendChild(box);
+
+ messages.scrollTop=messages.scrollHeight;
+
+}
+
+function normalize(text){
+
+ return text.toLowerCase()
+ .replace(/[أإآ]/g,"ا")
+ .replace(/ة/g,"ه")
+ .replace(/ى/g,"ي")
+ .replace(/[؟?!،,.]/g," ")
+ .replace(/\s+/g," ")
+ .trim();
+
+}
+
+function localRamashReply(input){
+
+ const q=normalize(input);
+
+ const greetings=[
+   "السلام عليكم",
+   "سلام عليكم",
+   "السلام",
+   "هلا",
+   "هلا والله",
+   "مرحبا",
+   "مرحبا والله",
+   "اهلا",
+   "يا هلا",
+   "هاي"
+ ];
+
+ if(
+   greetings.some(
+     x=>q===x || q.startsWith(x+" ")
+   )
+ ){
+
+   return {
+
+     text:
+     "وعليكم السلام ورحمة الله وبركاته 🌧️💜\n"+
+     "أرحب تراحيب المطر، أنا رَمّاش 🤖 مساعدك في رمشة بلس، حاضر أخدمك وأفيدك باللي تحتاجه.\n\n"+
+     "أمر وتدلل، وش حاب تطلب من رمشة بلس؟ ✨",
+
+     wa:false
+
+   };
+
+ }
+
+ /* =========================
+    أسعار رَمّاش فقط
+    ========================= */
+
+ if(
+   q.includes("نتفلكس") ||
+   q.includes("نتفليكس") ||
+   q.includes("netflix")
+ ){
+
+   if(
+     q.includes("سنه") ||
+     q.includes("سنوي") ||
+     q.includes("سنة")
+   ){
+
+     return {
+       text:
+       "أبشر 🌟 اشتراك نتفلكس السنوي عندنا بـ 59.99 ريال فقط.\n\n"+
+       "إذا تبي تطلبه، أمر وتدلل 📲",
+       wa:true
+     };
+
+   }
+
+   if(
+     q.includes("شهر") ||
+     q.includes("شهري")
+   ){
+
+     return {
+       text:
+       "أبشر 🌟 اشتراك نتفلكس الشهري عندنا بـ 9.99 ريال فقط.\n\n"+
+       "إذا تبي تطلبه، أمر وتدلل 📲",
+       wa:true
+     };
+
+   }
+
+   return {
+     text:
+     "أبشر 🤍 نتفلكس متوفر عندنا:\n"+
+     "• شهر: 9.99 ريال\n"+
+     "• سنة: 59.99 ريال\n\n"+
+     "إذا تبي تطلب نتفلكس، أمر وتدلل 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("شاهد مباريات") ||
+   q.includes("شاهد رياض") ||
+   q.includes("مباريات") ||
+   q.includes("شاهد سبورت")
+ ){
+
+   return {
+     text:
+     "أبشر ⚽ اشتراك شاهد مباريات متوفر عندنا:\n"+
+     "• شهر: 62.99 ريال\n"+
+     "• سنة: 94.99 ريال\n\n"+
+     "إذا تبي تطلبه، أمر وتدلل 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("شاهد") ||
+   q.includes("vip")
+ ){
+
+   if(
+     q.includes("سنه") ||
+     q.includes("سنوي") ||
+     q.includes("سنة")
+   ){
+
+     return {
+       text:
+       "أبشر 📺 اشتراك شاهد VIP السنوي عندنا بـ 49.99 ريال فقط.\n\n"+
+       "إذا تبي تطلبه، أمر وتدلل 📲",
+       wa:true
+     };
+
+   }
+
+   if(
+     q.includes("شهر") ||
+     q.includes("شهري")
+   ){
+
+     return {
+       text:
+       "أبشر 📺 اشتراك شاهد VIP الشهري عندنا بـ 7.75 ريال فقط.\n\n"+
+       "إذا تبي تطلبه، أمر وتدلل 📲",
+       wa:true
+     };
+
+   }
+
+   return {
+     text:
+     "أبشر 📺 شاهد VIP متوفر عندنا:\n"+
+     "• شهر: 7.75 ريال\n"+
+     "• سنة: 49.99 ريال\n\n"+
+     "إذا تبي تطلب شاهد، أمر وتدلل 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("osn") ||
+   q.includes("اوسن")
+ ){
+
+   return {
+     text:
+     "أبشر 🎞️ اشتراك OSN الشهري متوفر عندنا بـ 24.99 ريال.\n\n"+
+     "إذا تبي تطلبه، أمر وتدلل 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("سناب") ||
+   q.includes("snap")
+ ){
+
+   return {
+     text:
+     "أبشر 👻 سناب بلس متوفر عندنا بأسعار مميزة، والباقات تختلف.\n\n"+
+     "تواصل معنا على واتساب ونعطيك الباقات المتوفرة والأسعار 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("تيك توك") ||
+   q.includes("تيكتوك") ||
+   q.includes("متابعين تيك")
+ ){
+
+   return {
+     text:
+     "أبشر 📈 متابعين تيك توك عندنا بـ 3 ريال لكل 100 متابع.\n\n"+
+     "إذا تبي كمية معينة، أرسل لنا على واتساب ونجهز لك طلبك 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("انستقرام") ||
+   q.includes("انستا") ||
+   q.includes("انستجرام") ||
+   q.includes("متابعين انستا")
+ ){
+
+   return {
+     text:
+     "أبشر 📸 متابعين إنستقرام متوفرين، والسعر يعتمد على الكمية المطلوبة.\n\n"+
+     "تواصل معنا على واتساب ونعطيك السعر مباشرة 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("منصه x") ||
+   q.includes("منصة x") ||
+   q.includes("تويتر") ||
+   q.includes("متابعين x")
+ ){
+
+   return {
+     text:
+     "أبشر 𝕏 متابعين منصة X متوفرين، والسعر يعتمد على الكمية المطلوبة.\n\n"+
+     "تواصل معنا على واتساب ونرتب لك طلبك 📲",
+     wa:true
+   };
+
+ }
+
+ const digital=[
+   "خدمه الكترونيه",
+   "خدمات الكترونيه",
+   "خدمة الكترونية",
+   "خدمات إلكترونية",
+   "موقع",
+   "متجر",
+   "تطوير",
+   "تعديل متجر",
+   "تعديل موقعي",
+   "اضافه منتجات",
+   "إضافة منتجات",
+   "تصميم موقع",
+   "تصميم متجر"
+ ];
+
+ if(
+   digital.some(
+     x=>q.includes(normalize(x))
+   )
+ ){
+
+   return {
+     text:
+     "أبشر 🤍 خدماتنا الإلكترونية تشمل إنشاء المواقع والمتاجر وتطويرها وتعديلها وإضافة المنتجات وغيرها.\n\n"+
+     "أسعار الخدمات الإلكترونية تختلف حسب طلبك، لذلك أرسل لنا تفاصيل الخدمة على واتساب ونخدمك مباشرة 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("الخدمات") ||
+   q.includes("وش عندكم") ||
+   q.includes("ايش عندكم") ||
+   q.includes("وش تقدمون")
+ ){
+
+   return {
+     text:
+     "أبشر يا الغالي 💜 عندنا:\n"+
+     "• نتفلكس 🎬\n"+
+     "• شاهد VIP 📺\n"+
+     "• شاهد مباريات ⚽\n"+
+     "• OSN 🎞️\n"+
+     "• سناب بلس 👻\n"+
+     "• متابعين تيك توك 📈\n"+
+     "• متابعين إنستقرام 📸\n"+
+     "• متابعين منصة X 𝕏\\n"+
+     "• خدمات إلكترونية 💻\n\n"+
+     "إذا عرفت وش تبي، قل لي وأعطيك السعر أو أوديك للواتساب ✨",
+     wa:false
+   };
+
+ }
+
+ if(
+   q.includes("كيف اطلب") ||
+   q.includes("طريقة الطلب") ||
+   q.includes("ابي اطلب") ||
+   q.includes("ابغى اطلب") ||
+   q.includes("أبي أطلب")
+ ){
+
+   return {
+     text:
+     "أبشر 🤍 اختر الخدمة اللي تبيها، وأنا أعطيك السعر والتفاصيل. وبعدها نكمل الطلب معك عبر واتساب 📲\n\n"+
+     "أمر وتدلل، وش الخدمة اللي تبيها؟ ✨",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("دعم") ||
+   q.includes("واتساب") ||
+   q.includes("اكلمكم") ||
+   q.includes("اتواصل") ||
+   q.includes("التواصل")
+ ){
+
+   return {
+     text:
+     "أبشر 💜 تقدر تتواصل معنا مباشرة عبر واتساب، وفريق رمشة بلس حاضر يخدمك 📲",
+     wa:true
+   };
+
+ }
+
+ if(
+   q.includes("السعر") ||
+   q.includes("الاسعار") ||
+   q.includes("بكم") ||
+   q.includes("كم")
+ ){
+
+   return {
+     text:
+     "أبشر 💜 قل لي اسم الخدمة اللي تبيها، مثل: نتفلكس، شاهد، OSN، سناب بلس أو متابعين تيك توك، وأنا أعطيك السعر مباشرة ✨",
+     wa:false
+   };
+
+ }
+
+ return {
+
+   text:
+   "أبشر يا الغالي 💜 ما فهمت طلبك بالكامل، لكن رَمّاش حاضر يخدمك.\n\n"+
+   "قل لي اسم الخدمة اللي تبيها، أو تواصل معنا مباشرة عبر واتساب ونخدمك على طول 📲",
+
+   wa:true
+
+ };
+
+}
+
+function askRamash(question){
+
+ openRamash();
+
+ addRamashMessage(question,"user");
+
+ setTimeout(()=>{
+
+   const result=localRamashReply(question);
+
+   addRamashMessage(result.text,"bot");
+
+   if(result.wa){
+
+     addWhatsAppButton(
+       "السلام عليكم، وصلتني من رَمّاش وأرغب بطلب/الاستفسار عن الخدمة"
+     );
+
+   }
+
+ },250);
+
+}
+
+function sendRamashMessage(){
+
+ const input=document.getElementById("ramashInput");
+
+ const text=input.value.trim();
+
+ if(!text)return;
+
+ input.value="";
+
+ askRamash(text);
+
+}
+
+document.getElementById("ramashInput").addEventListener(
+ "keydown",
+ event=>{
+   if(event.key==="Enter"){
+     event.preventDefault();
+     sendRamashMessage();
+   }
+ }
+);
+
+document.addEventListener("keydown",event=>{
+
+ if(event.key==="Escape"){
+
+   document
+   .querySelectorAll(".overlay.active")
+   .forEach(m=>m.classList.remove("active"));
+
+   closeRamash();
+
+   document.body.style.overflow="";
+
+ }
 
 });
 
