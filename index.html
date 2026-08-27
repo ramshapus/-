@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>رمشة بلس | خدمات واشتراكات رقمية</title>
+<title>رمشة بلس</title>
 
 <meta name="description" content="رمشة بلس - خدمات إلكترونية واشتراكات رقمية وبرامج سوشيال ميديا وخدمات قيمنق مع دعم مباشر.">
 
-<!-- شعار رمشة بلس كأيقونة للموقع -->
-<link rel="icon" type="image/jpeg" href="IMG_1574.jpeg">
-<link rel="apple-touch-icon" href="IMG_1574.jpeg">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://ramshaplus.store/">
+
+<!-- أيقونة الموقع -->
+<link rel="icon" type="image/jpeg" sizes="48x48" href="https://ramshaplus.store/IMG_1574.jpeg">
+<link rel="shortcut icon" type="image/jpeg" href="https://ramshaplus.store/IMG_1574.jpeg">
+<link rel="apple-touch-icon" href="https://ramshaplus.store/IMG_1574.jpeg">
+
+<!-- بيانات الموقع لمحركات البحث -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://ramshaplus.store/#website",
+  "url": "https://ramshaplus.store/",
+  "name": "رمشة بلس",
+  "alternateName": "رمشة",
+  "description": "رمشة بلس - خدمات إلكترونية واشتراكات رقمية وخدمات رقمية متنوعة."
+}
+</script>
+
+<!-- بيانات النشاط والشعار -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://ramshaplus.store/#organization",
+  "name": "رمشة بلس",
+  "url": "https://ramshaplus.store/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://ramshaplus.store/IMG_1574.jpeg"
+  }
+}
+</script>
 
 <style>
 
@@ -459,8 +494,6 @@ transition:.25s
 border-color:rgba(168,85,247,.35);
 transform:translateY(-2px)
 }
-
-/* ===== PROFESSIONAL SERVICE LOGOS ===== */
 
 .category-product-icon{
 width:58px;
@@ -2208,7 +2241,8 @@ id="ramashWindow">
 
 <button
 class="ramash-close"
-onclick="closeRamash">
+onclick="closeRamash()">
+
 ×
 </button>
 
@@ -3395,7 +3429,7 @@ result.text,
 if(result.wa){
 
 addWhatsAppButton(
-"السلام عليكم وصلت من رَمّاش وأرغب بالاستفسار أو الطلب"
+"السلام عليكم وصلتني من رَمّاش وأرغب بالاستفسار أو الطلب"
 );
 
 }
