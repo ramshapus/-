@@ -1,59 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>رمشة بلس</title>
+<title>رمشة بلس | خدمات إلكترونية وحلول رقمية</title>
 
-<meta name="description" content="رمشة بلس - خدمات إلكترونية واشتراكات رقمية وبرامج سوشيال ميديا وخدمات قيمنق مع دعم مباشر.">
+<meta name="description" content="رمشة بلس - خدمات إلكترونية تشمل إنشاء وتطوير المواقع والمتاجر الإلكترونية وخدمات برمجية مخصصة.">
 
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://ramshaplus.store/">
-
-<!-- أيقونة الموقع -->
-<link rel="icon" type="image/jpeg" sizes="48x48" href="https://ramshaplus.store/IMG_1574.jpeg">
-<link rel="shortcut icon" type="image/jpeg" href="https://ramshaplus.store/IMG_1574.jpeg">
-<link rel="apple-touch-icon" href="https://ramshaplus.store/IMG_1574.jpeg">
-
-<!-- بيانات الموقع لمحركات البحث -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://ramshaplus.store/#website",
-  "url": "https://ramshaplus.store/",
-  "name": "رمشة بلس",
-  "alternateName": "رمشة",
-  "description": "رمشة بلس - خدمات إلكترونية واشتراكات رقمية وخدمات رقمية متنوعة."
-}
-</script>
-
-<!-- بيانات النشاط والشعار -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://ramshaplus.store/#organization",
-  "name": "رمشة بلس",
-  "url": "https://ramshaplus.store/",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://ramshaplus.store/IMG_1574.jpeg"
-  }
-}
-</script>
+<link rel="icon" type="image/jpeg" href="IMG_1574.jpeg">
+<link rel="apple-touch-icon" href="IMG_1574.jpeg">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 :root{
 --bg:#050308;
@@ -63,38 +22,30 @@ box-sizing:border-box
 --light:#e9d5ff;
 --muted:#9b92a5;
 --border:rgba(168,85,247,.16);
---green:#22c55e;
+--green:#22c55e
 }
 
-html{
-scroll-behavior:smooth
-}
+html{scroll-behavior:smooth}
 
 body{
 background:
 radial-gradient(circle at 50% -10%,rgba(126,34,206,.20),transparent 35%),
-radial-gradient(circle at 0% 40%,rgba(168,85,247,.07),transparent 25%),
+radial-gradient(circle at 0 40%,rgba(168,85,247,.07),transparent 25%),
 var(--bg);
 color:#fff;
 font-family:Tahoma,Arial,sans-serif;
 min-height:100vh
 }
 
-a{
-color:inherit;
-text-decoration:none
-}
-
-button{
-font-family:inherit
-}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
 
 .container{
 width:min(100% - 28px,1050px);
 margin:auto
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
 position:sticky;
@@ -172,7 +123,7 @@ color:white;
 box-shadow:0 8px 25px rgba(126,34,206,.22)
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
 position:relative;
@@ -241,12 +192,10 @@ background-clip:text;
 color:transparent
 }
 
-.hero h1 span{
-display:block
-}
+.hero h1 span{display:block}
 
 .hero p{
-max-width:620px;
+max-width:650px;
 margin:auto;
 color:#a59bad;
 font-size:14px;
@@ -288,7 +237,7 @@ color:#ddd6e5
 transform:translateY(-2px)
 }
 
-/* ================= TRUST ================= */
+/* TRUST */
 
 .trust-grid{
 display:grid;
@@ -321,7 +270,7 @@ color:#827989;
 font-size:9px
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 .section{
 padding:25px 0 65px
@@ -349,51 +298,35 @@ color:#817887;
 font-size:11px
 }
 
-/* ================= MAIN CATEGORIES ================= */
+/* SERVICES */
 
 .categories{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:14px
 }
 
 .category{
 position:relative;
 overflow:hidden;
-min-height:190px;
-padding:24px 15px;
+min-height:205px;
+padding:25px 18px;
 border-radius:24px;
 background:
 radial-gradient(circle at 50% 0%,rgba(168,85,247,.13),transparent 55%),
 linear-gradient(145deg,#11091a,#09050d);
 border:1px solid rgba(168,85,247,.17);
 text-align:center;
-cursor:pointer;
 transition:.3s
 }
 
-.category::before{
-content:"";
-position:absolute;
-width:120px;
-height:120px;
-border-radius:50%;
-background:rgba(168,85,247,.10);
-filter:blur(40px);
-top:-60px;
-right:-40px;
-pointer-events:none
-}
-
 .category:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
 border-color:rgba(168,85,247,.55);
 box-shadow:0 20px 50px rgba(0,0,0,.35)
 }
 
 .category-icon{
-position:relative;
-z-index:1;
 width:66px;
 height:66px;
 display:flex;
@@ -403,35 +336,28 @@ margin:0 auto 15px;
 border-radius:20px;
 background:rgba(126,34,206,.12);
 border:1px solid rgba(168,85,247,.20);
-font-size:29px;
-box-shadow:0 10px 30px rgba(126,34,206,.10)
+font-size:29px
 }
 
 .category h3{
-position:relative;
-z-index:1;
-font-size:14px;
+font-size:15px;
 margin-bottom:8px
 }
 
 .category p{
-position:relative;
-z-index:1;
 color:#817887;
-font-size:9px;
-line-height:1.8;
+font-size:10px;
+line-height:1.9;
 margin-bottom:13px
 }
 
 .category-action{
-position:relative;
-z-index:1;
 color:#c084fc;
-font-size:9px;
+font-size:10px;
 font-weight:bold
 }
 
-/* ================= CATEGORY MODAL ================= */
+/* SERVICE MODAL */
 
 .category-modal{
 width:min(100%,720px);
@@ -506,34 +432,7 @@ background:
 linear-gradient(145deg,rgba(126,34,206,.18),rgba(255,255,255,.035));
 border:1px solid rgba(168,85,247,.18);
 margin-bottom:12px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,.18)
-}
-
-.category-product-icon img{
-width:38px;
-height:38px;
-object-fit:contain;
-display:block;
-filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))
-}
-
-.category-product-icon img.logo-wide{
-width:48px;
-height:38px
-}
-
-.category-product-icon img.logo-large{
-width:43px;
-height:43px
-}
-
-.category-product-icon .text-logo{
-font-size:12px;
-font-weight:bold;
-color:#fff;
-letter-spacing:.2px;
-text-align:center
+font-size:27px
 }
 
 .category-product h3{
@@ -549,11 +448,23 @@ min-height:34px;
 margin-bottom:13px
 }
 
-.category-product .order{
-margin-top:auto
+/* PRICE */
+
+.price{
+display:block;
+font-size:14px;
+font-weight:bold;
+color:#d8b4fe;
+margin-bottom:10px
 }
 
-/* ================= ORDER ================= */
+.price small{
+font-size:8px;
+color:#817887;
+font-weight:normal
+}
+
+/* ORDER */
 
 .order{
 display:block;
@@ -575,7 +486,7 @@ background:linear-gradient(135deg,#7e22ce,#a855f7);
 color:#fff
 }
 
-/* ================= CERTIFICATE ================= */
+/* CERTIFICATE */
 
 .certificate-section{
 padding:10px 0 70px
@@ -633,13 +544,7 @@ box-shadow:0 15px 45px rgba(0,0,0,.25)
 display:block;
 width:100%;
 height:auto;
-border-radius:13px;
-cursor:pointer;
-transition:.3s
-}
-
-.certificate-image:hover{
-transform:scale(1.01)
+border-radius:13px
 }
 
 .certificate-buttons{
@@ -665,8 +570,7 @@ cursor:pointer
 .certificate-btn.verify{
 background:linear-gradient(135deg,#7e22ce,#a855f7);
 border:1px solid #a855f7;
-color:#fff;
-box-shadow:0 10px 30px rgba(126,34,206,.22)
+color:#fff
 }
 
 .certificate-btn.whatsapp{
@@ -680,152 +584,13 @@ transform:translateY(-2px)
 }
 
 .certificate-note{
-margin-top:15px !important;
-margin-bottom:0 !important;
-font-size:8px !important;
-color:#62596b !important
+margin-top:15px!important;
+margin-bottom:0!important;
+font-size:8px!important;
+color:#62596b!important
 }
 
-/* ================= REVIEWS ================= */
-
-.reviews-section{
-padding:10px 0 70px
-}
-
-.reviews-wrapper{
-position:relative;
-overflow:hidden;
-padding:5px
-}
-
-.reviews-slider{
-display:flex;
-transition:transform .55s cubic-bezier(.4,0,.2,1);
-direction:ltr
-}
-
-.review-slide{
-min-width:100%;
-padding:8px
-}
-
-.review-card{
-position:relative;
-overflow:hidden;
-min-height:245px;
-padding:30px 24px;
-border-radius:26px;
-background:
-radial-gradient(circle at 90% 0%,rgba(168,85,247,.14),transparent 35%),
-linear-gradient(145deg,#11091a,#09050d);
-border:1px solid rgba(168,85,247,.20);
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-box-shadow:0 18px 55px rgba(0,0,0,.25)
-}
-
-.review-card::before{
-content:"“";
-position:absolute;
-top:-18px;
-right:18px;
-font-family:Georgia,serif;
-font-size:100px;
-line-height:1;
-color:rgba(168,85,247,.08)
-}
-
-.review-stars{
-font-size:20px;
-letter-spacing:3px;
-margin-bottom:18px
-}
-
-.review-text{
-position:relative;
-z-index:1;
-max-width:720px;
-color:#eee7f3;
-font-size:14px;
-line-height:2;
-margin-bottom:18px
-}
-
-.review-customer{
-color:#817887;
-font-size:9px
-}
-
-.review-arrow{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-width:40px;
-height:40px;
-border-radius:50%;
-border:1px solid rgba(168,85,247,.25);
-background:rgba(12,6,18,.85);
-color:#d8b4fe;
-cursor:pointer;
-z-index:5;
-font-size:18px;
-transition:.25s;
-display:flex;
-align-items:center;
-justify-content:center
-}
-
-.review-arrow:hover{
-background:linear-gradient(135deg,#7e22ce,#a855f7);
-color:#fff;
-transform:translateY(-50%) scale(1.06)
-}
-
-.review-arrow.prev{
-right:18px
-}
-
-.review-arrow.next{
-left:18px
-}
-
-.review-dots{
-display:flex;
-direction:ltr;
-justify-content:center;
-align-items:center;
-gap:6px;
-margin-top:18px
-}
-
-.review-dot{
-width:7px;
-height:7px;
-border-radius:50%;
-border:0;
-background:rgba(255,255,255,.18);
-cursor:pointer;
-padding:0;
-transition:.3s
-}
-
-.review-dot.active{
-width:22px;
-border-radius:20px;
-background:linear-gradient(90deg,#7e22ce,#a855f7)
-}
-
-.review-count{
-text-align:center;
-color:#62596b;
-font-size:8px;
-margin-top:9px
-}
-
-/* ================= STEPS ================= */
+/* STEPS */
 
 .steps{
 display:grid;
@@ -851,8 +616,7 @@ margin:0 auto 12px;
 border-radius:50%;
 background:linear-gradient(135deg,#7e22ce,#a855f7);
 font-weight:bold;
-font-size:13px;
-box-shadow:0 8px 25px rgba(126,34,206,.25)
+font-size:13px
 }
 
 .step h3{
@@ -866,13 +630,14 @@ font-size:9px;
 line-height:1.8
 }
 
-/* ================= RATE ================= */
+/* REVIEW */
 
 .review{
 text-align:center;
 padding:30px 20px;
 border-radius:25px;
-background:linear-gradient(
+background:
+linear-gradient(
 135deg,
 rgba(126,34,206,.13),
 rgba(168,85,247,.035)
@@ -901,7 +666,7 @@ font-size:11px;
 font-weight:bold
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 padding:45px 0 25px;
@@ -961,7 +726,7 @@ color:#4f4757;
 font-size:8px
 }
 
-/* ================= MODALS ================= */
+/* MODALS */
 
 .overlay{
 position:fixed;
@@ -1019,18 +784,13 @@ font-size:12px;
 margin:17px 0 7px
 }
 
-.modal p,
-.modal li{
+.modal p{
 color:#a59bad;
 font-size:10px;
 line-height:2
 }
 
-.modal ul{
-padding-right:18px
-}
-
-/* ================= RAMASH ================= */
+/* RAMASH */
 
 .ramash-launcher{
 position:fixed;
@@ -1057,9 +817,7 @@ transition:.3s
 transform:translateY(-4px) scale(1.04)
 }
 
-.ramash-face{
-font-size:28px
-}
+.ramash-face{font-size:28px}
 
 .ramash-status{
 position:absolute;
@@ -1121,8 +879,7 @@ background:linear-gradient(135deg,#7e22ce,#a855f7);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:22px;
-box-shadow:0 5px 20px rgba(126,34,206,.3)
+font-size:22px
 }
 
 .ramash-name strong{
@@ -1221,10 +978,6 @@ font-family:inherit;
 font-size:10px
 }
 
-.ramash-input:focus{
-border-color:rgba(168,85,247,.55)
-}
-
 .ramash-send{
 width:44px;
 height:44px;
@@ -1249,67 +1002,38 @@ font-weight:bold;
 cursor:pointer
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:850px){
-
-.categories{
-grid-template-columns:repeat(2,1fr)
-}
-
-}
+/* RESPONSIVE */
 
 @media(max-width:800px){
-
-.trust-grid{
-grid-template-columns:repeat(3,1fr)
-}
-
-.category-products{
-grid-template-columns:repeat(2,1fr)
-}
-
+.category-products{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:550px){
 
-.nav{
-height:70px
-}
+.nav{height:70px}
 
 .brand img{
 width:48px;
 height:48px
 }
 
-.brand-text strong{
-font-size:14px
-}
-
-.brand-text span{
-font-size:8px
-}
+.brand-text strong{font-size:14px}
+.brand-text span{font-size:8px}
 
 .nav-btn{
 padding:0 10px;
 font-size:10px
 }
 
-.nav-btn.secondary{
-display:none
-}
+.nav-btn.secondary{display:none}
 
 .hero{
 padding:55px 0 35px
 }
 
-.hero-logo{
-width:150px
-}
+.hero-logo{width:150px}
 
-.hero p{
-font-size:11px
-}
+.hero p{font-size:11px}
 
 .trust-grid{
 margin-bottom:35px
@@ -1319,24 +1043,17 @@ margin-bottom:35px
 padding:14px 5px
 }
 
-.trust-card strong{
-font-size:10px
-}
+.trust-card strong{font-size:10px}
+.trust-card span{font-size:8px}
 
-.trust-card span{
-font-size:8px
-}
-
-.section{
-padding-bottom:45px
-}
+.section{padding-bottom:45px}
 
 .categories{
 gap:9px
 }
 
 .category{
-min-height:170px;
+min-height:180px;
 padding:19px 9px;
 border-radius:19px
 }
@@ -1348,17 +1065,9 @@ font-size:24px;
 border-radius:17px
 }
 
-.category h3{
-font-size:11px
-}
-
-.category p{
-font-size:8px
-}
-
-.category-action{
-font-size:8px
-}
+.category h3{font-size:11px}
+.category p{font-size:8px}
+.category-action{font-size:8px}
 
 .category-modal{
 padding:23px 11px;
@@ -1369,17 +1078,10 @@ border-radius:23px
 padding-bottom:18px
 }
 
-.category-modal-head h2{
-font-size:18px
-}
+.category-modal-head h2{font-size:18px}
+.category-modal-head p{font-size:9px}
 
-.category-modal-head p{
-font-size:9px
-}
-
-.category-products{
-gap:8px
-}
+.category-products{gap:8px}
 
 .category-product{
 padding:14px 9px;
@@ -1389,76 +1091,28 @@ border-radius:17px
 .category-product-icon{
 width:49px;
 height:49px;
-border-radius:14px
+border-radius:14px;
+font-size:22px
 }
 
-.category-product-icon img{
-width:32px;
-height:32px
-}
+.category-product h3{font-size:10px}
+.category-product p{font-size:8px}
 
-.category-product-icon img.logo-wide{
-width:41px;
-height:32px
-}
-
-.category-product h3{
-font-size:10px
-}
-
-.category-product p{
-font-size:8px
-}
+.price{font-size:12px}
 
 .certificate-box{
 padding:27px 12px;
 border-radius:22px
 }
 
-.certificate-box h2{
-font-size:18px
-}
-
-.certificate-box p{
-font-size:9px
-}
+.certificate-box h2{font-size:18px}
+.certificate-box p{font-size:9px}
 
 .certificate-buttons{
 flex-direction:column
 }
 
-.certificate-btn{
-width:100%
-}
-
-.review-card{
-min-height:265px;
-padding:28px 35px
-}
-
-.review-text{
-font-size:11px;
-line-height:2
-}
-
-.review-stars{
-font-size:17px;
-letter-spacing:2px
-}
-
-.review-arrow{
-width:34px;
-height:34px;
-font-size:15px
-}
-
-.review-arrow.prev{
-right:8px
-}
-
-.review-arrow.next{
-left:8px
-}
+.certificate-btn{width:100%}
 
 .steps{
 grid-template-columns:1fr
@@ -1482,72 +1136,47 @@ border-radius:22px
 }
 
 @media(max-width:360px){
-
-.brand-text{
-display:none
+.brand-text{display:none}
+.hero h1{font-size:29px}
+.category{min-height:170px}
 }
-
-.hero h1{
-font-size:29px
-}
-
-.category{
-min-height:160px
-}
-
-}
-
-/* ================= ACCESSIBILITY ================= */
 
 button:focus-visible,
 a:focus-visible{
 outline:2px solid #c084fc;
 outline-offset:3px
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="container nav">
 
 <a href="#" class="brand">
-
 <img src="IMG_1574.jpeg" alt="شعار رمشة بلس">
 
 <div class="brand-text">
-
 <strong>رمشة بلس</strong>
-
-<span>خدمات واشتراكات رقمية</span>
-
+<span>خدمات إلكترونية وحلول رقمية</span>
 </div>
-
 </a>
 
 <div class="nav-actions">
 
 <button class="nav-btn secondary"
 onclick="scrollToSection('services')">
-
 الخدمات
-
 </button>
 
 <button class="nav-btn primary"
 onclick="openWhatsApp('السلام عليكم، أريد الاستفسار عن خدمات رمشة بلس')">
-
 تواصل معنا
-
 </button>
 
 </div>
-
 </div>
-
 </header>
 
 <main>
@@ -1562,46 +1191,33 @@ class="hero-logo"
 alt="رمشة بلس">
 
 <div class="badge">
-
 <span class="badge-dot"></span>
-
 رَمّاش متواجد لخدمتك
-
 </div>
 
 <h1>
-
-خدماتك الرقمية
-
-<span>في مكان واحد.</span>
-
+حلولك الرقمية
+<span>بشكل احترافي.</span>
 </h1>
 
 <p>
-
-خدمات إلكترونية واشتراكات رقمية وبرامج سوشيال ميديا وخدمات قيمنق مع تواصل مباشر ودعم مستمر.
-
+نقدم خدمات إنشاء وتطوير المواقع والمتاجر الإلكترونية وحلول برمجية مخصصة، مع دعم مباشر وتجربة واضحة للعميل.
 </p>
 
 <div class="hero-buttons">
 
 <a href="#services" class="hero-btn main">
-
-استعرض الأقسام
-
+استعرض الخدمات
 </a>
 
 <button class="hero-btn secondary"
 onclick="openRamash()">
-
 اسأل رَمّاش 🤖
-
 </button>
 
 </div>
 
 </div>
-
 </section>
 
 <div class="container">
@@ -1609,37 +1225,24 @@ onclick="openRamash()">
 <div class="trust-grid">
 
 <div class="trust-card">
-
 <div class="trust-icon">🛡️</div>
-
-<strong>ضمان على الخدمات</strong>
-
-<span>نهتم بجودة الخدمة</span>
-
+<strong>جودة الخدمة</strong>
+<span>نهتم بتقديم عمل احترافي</span>
 </div>
 
 <div class="trust-card">
-
 <div class="trust-icon">⚡</div>
-
-<strong>تفعيل سريع</strong>
-
+<strong>تنفيذ سريع</strong>
 <span>نبدأ بتجهيز طلبك بسرعة</span>
-
 </div>
 
 <div class="trust-card">
-
 <div class="trust-icon">🎧</div>
-
 <strong>دعم مباشر</strong>
-
 <span>تواصل معنا عبر واتساب</span>
-
 </div>
 
 </div>
-
 </div>
 
 <section class="section" id="services">
@@ -1653,25 +1256,25 @@ onclick="openRamash()">
 </div>
 
 <h2>
-اختر القسم المناسب لك
+حلول رقمية تناسب احتياجك
 </h2>
 
 <p>
-اضغط على القسم لاستعراض الخدمات المتوفرة
+اختر الخدمة لمعرفة التفاصيل والسعر
 </p>
 
 </div>
 
 <div class="categories">
 
-<div class="category" onclick="openCategory('digital')">
+<div class="category" onclick="openCategory('web')">
 
-<div class="category-icon">💻</div>
+<div class="category-icon">🌐</div>
 
-<h3>الخدمات الإلكترونية</h3>
+<h3>المواقع الإلكترونية</h3>
 
 <p>
-مواقع ومتاجر وتطوير وتعديلات وخدمات مخصصة
+إنشاء وتطوير وتعديل المواقع الإلكترونية باحترافية.
 </p>
 
 <div class="category-action">
@@ -1680,46 +1283,14 @@ onclick="openRamash()">
 
 </div>
 
-<div class="category" onclick="openCategory('subscriptions')">
+<div class="category" onclick="openCategory('stores')">
 
-<div class="category-icon">🎬</div>
+<div class="category-icon">🛒</div>
 
-<h3>الاشتراكات الرقمية</h3>
-
-<p>
-اشتراكات ترفيهية ورياضية وخدمات رقمية
-</p>
-
-<div class="category-action">
-استعرض الاشتراكات ←
-</div>
-
-</div>
-
-<div class="category" onclick="openCategory('social')">
-
-<div class="category-icon">📱</div>
-
-<h3>برامج السوشيال ميديا</h3>
+<h3>المتاجر الإلكترونية</h3>
 
 <p>
-سناب وتيك توك وإنستقرام ومنصة X
-</p>
-
-<div class="category-action">
-استعرض الخدمات ←
-</div>
-
-</div>
-
-<div class="category" onclick="openCategory('gaming')">
-
-<div class="category-icon">🎮</div>
-
-<h3>القيمنق</h3>
-
-<p>
-PlayStation وخدمات فورت نايت وأكثر
+إنشاء وتطوير وترتيب المتاجر الإلكترونية حسب احتياجك.
 </p>
 
 <div class="category-action">
@@ -1731,148 +1302,9 @@ PlayStation وخدمات فورت نايت وأكثر
 </div>
 
 </div>
-
 </section>
 
-<section class="reviews-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="small">
-تجارب عملائنا
-</div>
-
-<h2>آراء عملائنا ⭐</h2>
-
-<p>
-تقييمات حقيقية من عملاء رمشة بلس
-</p>
-
-</div>
-
-<div class="reviews-wrapper">
-
-<div class="reviews-slider" id="reviewsSlider">
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"ممتازه"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"افضل متجر واسعارهم رخيصه"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"اسعارهم رخيصه وكويسه"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"خدمه سريعه والاهم الثقه👍🏻"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"حلوه جدنا ومميزه"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"ممتاز"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"❤️❤️"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"جميل جداً"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"انصح بتعامل معهم متجر ثقه👍🏻❤️"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"عجيب"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"فوق المتازه وانصح فيه"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-<div class="review-slide"><div class="review-card">
-<div class="review-stars">⭐⭐⭐⭐⭐</div>
-<div class="review-text">"الله يرزقكم ويعطيكم الف عافيه❤️"</div>
-<div class="review-customer">عميل رمشة بلس</div>
-</div></div>
-
-</div>
-
-<button class="review-arrow prev"
-onclick="previousReview()"
-aria-label="التقييم السابق">›</button>
-
-<button class="review-arrow next"
-onclick="nextReview()"
-aria-label="التقييم التالي">‹</button>
-
-</div>
-
-<div class="review-dots" id="reviewDots"></div>
-
-<div class="review-count" id="reviewCount">
-1 / 16
-</div>
-
-</div>
-
-</section>
+<!-- CERTIFICATE -->
 
 <section class="certificate-section">
 
@@ -1887,7 +1319,7 @@ aria-label="التقييم التالي">‹</button>
 <h2>رمشة بلس موثقة</h2>
 
 <p>
-رمشة بلس لديها وثيقة عمل حر باسم النشاط ويمكنك التحقق من بيانات الوثيقة عبر المركز السعودي للأعمال.
+رمشة بلس لديها وثيقة عمل حر باسم النشاط، ويمكنك التحقق من بيانات الوثيقة عبر المركز السعودي للأعمال.
 </p>
 
 <div class="certificate-image-wrap">
@@ -1914,7 +1346,7 @@ class="certificate-btn verify">
 
 <button
 class="certificate-btn whatsapp"
-onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وثيقة توثيق رمشة بلس')">
+onclick="openWhatsApp('السلام عليكم، لدي استفسار عن توثيق رمشة بلس')">
 
 💬 استفسر عن التوثيق
 
@@ -1927,10 +1359,10 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 </p>
 
 </div>
-
 </div>
-
 </section>
+
+<!-- STEPS -->
 
 <section class="section">
 
@@ -1949,44 +1381,28 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 <div class="steps">
 
 <div class="step">
-
 <div class="step-number">1</div>
-
 <h3>اختر الخدمة</h3>
-
-<p>اختر القسم والخدمة المناسبة لك.</p>
-
+<p>اختر الخدمة المناسبة لك من الأقسام الموجودة.</p>
 </div>
 
 <div class="step">
-
 <div class="step-number">2</div>
-
 <h3>تواصل معنا</h3>
-
-<p>
-اسأل رَمّاش عن السعر والتفاصيل ثم أكمل طلبك عبر واتساب.
-</p>
-
+<p>اسأل رَمّاش عن التفاصيل ثم تواصل معنا عبر واتساب.</p>
 </div>
 
 <div class="step">
-
 <div class="step-number">3</div>
-
-<h3>استلم طلبك</h3>
-
-<p>
-بعد إتمام الطلب يتم تجهيز الخدمة وتسليمها لك.
-</p>
-
+<h3>استلم خدمتك</h3>
+<p>بعد الاتفاق يتم تنفيذ الخدمة وتسليمها لك.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
+
+<!-- REVIEW -->
 
 <section class="section">
 
@@ -2012,7 +1428,6 @@ rel="noopener">
 </div>
 
 </div>
-
 </section>
 
 </main>
@@ -2031,7 +1446,7 @@ alt="رمشة بلس">
 </div>
 
 <div class="footer-desc">
-خدمات واشتراكات رقمية بكل سهولة
+خدمات إلكترونية وحلول رقمية
 </div>
 
 <div class="footer-links">
@@ -2059,7 +1474,6 @@ alt="رمشة بلس">
 </small>
 
 </div>
-
 </footer>
 
 <!-- CATEGORY MODAL -->
@@ -2091,7 +1505,6 @@ id="categoryProducts">
 </div>
 
 </div>
-
 </div>
 
 <!-- ABOUT -->
@@ -2111,15 +1524,14 @@ onclick="closeModal('about')">
 <h2>من نحن</h2>
 
 <p>
-رمشة بلس متجر إلكتروني يقدم مجموعة من الخدمات والاشتراكات الرقمية مع الحرص على توفير تجربة سهلة وواضحة للعميل.
+رمشة بلس متجر خدمات إلكترونية يقدم حلولًا رقمية تشمل إنشاء وتطوير المواقع والمتاجر الإلكترونية والخدمات البرمجية المخصصة.
 </p>
 
 <p style="margin-top:10px;">
-نسعى إلى توفير خدمات رقمية متنوعة مع دعم مباشر قبل وبعد الطلب.
+نسعى إلى تقديم خدمات احترافية بأسلوب واضح مع دعم مباشر قبل وبعد تنفيذ الطلب.
 </p>
 
 </div>
-
 </div>
 
 <!-- REFUND -->
@@ -2138,26 +1550,25 @@ onclick="closeModal('refund')">
 
 <h2>سياسة الاسترجاع</h2>
 
-<h3>قبل تنفيذ الطلب</h3>
+<h3>قبل بدء التنفيذ</h3>
 
 <p>
-يمكن للعميل طلب إلغاء الطلب والتواصل معنا قبل البدء في تنفيذ أو تفعيل الخدمة.
+يمكن للعميل طلب إلغاء الخدمة والتواصل معنا قبل البدء في تنفيذها.
 </p>
 
-<h3>بعد تفعيل الخدمة</h3>
+<h3>بعد بدء التنفيذ</h3>
 
 <p>
-بعد تفعيل أو تسليم الخدمة الرقمية لا يمكن استرجاع المبلغ لمجرد تغيير الرأي أو عدم الرغبة في استخدام الخدمة.
+بعد بدء تنفيذ الخدمة قد لا يمكن استرجاع المبلغ بحسب المرحلة التي وصل إليها التنفيذ.
 </p>
 
 <h3>وجود مشكلة</h3>
 
 <p>
-في حال وجود مشكلة في الخدمة بعد الاستلام يرجى التواصل معنا مباشرة للعمل على حل المشكلة أو استبدال الخدمة عند استحقاق ذلك.
+في حال وجود مشكلة في الخدمة بعد التسليم يرجى التواصل معنا مباشرة للعمل على حلها.
 </p>
 
 </div>
-
 </div>
 
 <!-- TERMS -->
@@ -2182,29 +1593,34 @@ onclick="closeModal('terms')">
 بإتمام الطلب يقر العميل بأنه اطلع على تفاصيل الخدمة والسعر والشروط ووافق عليها.
 </p>
 
-<h3>2. الخدمات الرقمية</h3>
+<h3>2. تنفيذ الخدمات</h3>
 
 <p>
-يتم تنفيذ أو تسليم الخدمات الرقمية حسب طبيعة كل خدمة وقد تختلف مدة التنفيذ.
+يتم تنفيذ الخدمات الإلكترونية حسب التفاصيل المتفق عليها مع العميل، وقد تختلف مدة التنفيذ حسب طبيعة الطلب.
 </p>
 
 <h3>3. بيانات العميل</h3>
 
 <p>
-يجب على العميل تزويد المتجر بالمعلومات الصحيحة اللازمة لتنفيذ الطلب.
+يجب على العميل تزويدنا بالمعلومات الصحيحة اللازمة لتنفيذ الخدمة.
 </p>
 
-<h3>4. الدعم</h3>
+<h3>4. التعديلات</h3>
 
 <p>
-في حال وجود مشكلة أو استفسار بخصوص الطلب يمكن التواصل معنا عبر واتساب.
+يتم تنفيذ التعديلات وفق ما يتم الاتفاق عليه عند طلب الخدمة.
+</p>
+
+<h3>5. التواصل والدعم</h3>
+
+<p>
+يمكن التواصل معنا عبر واتساب للاستفسار أو متابعة الطلب.
 </p>
 
 </div>
-
 </div>
 
-<!-- RAMASH BUTTON -->
+<!-- RAMASH -->
 
 <button
 class="ramash-launcher"
@@ -2212,12 +1628,9 @@ onclick="toggleRamash()"
 aria-label="فتح رَمّاش">
 
 <span class="ramash-face">🤖</span>
-
 <span class="ramash-status"></span>
 
 </button>
-
-<!-- RAMASH WINDOW -->
 
 <div
 class="ramash-window"
@@ -2242,7 +1655,6 @@ id="ramashWindow">
 <button
 class="ramash-close"
 onclick="closeRamash()">
-
 ×
 </button>
 
@@ -2255,9 +1667,9 @@ id="ramashMessages">
 <div class="message bot">
 
 أرحب تراحيب المطر 🌧️💜
-أنا رَمّاش 🤖 مساعدك في رمشة بلس حاضر أخدمك وأفيدك باللي تحتاجه.
+أنا رَمّاش 🤖 مساعدك في رمشة بلس.
 
-أمر وتدلل وش حاب تطلب من رمشة بلس؟ ✨
+أمر وتدلل، وش الخدمة اللي تحتاجها؟ ✨
 
 </div>
 
@@ -2265,28 +1677,28 @@ id="ramashMessages">
 
 <div class="ramash-suggestions">
 
-<button onclick="askRamash('وش الخدمات الموجودة عندكم؟')">
-الخدمات
+<button onclick="askRamash('أبي إنشاء موقع إلكتروني')">
+إنشاء موقع
 </button>
 
-<button onclick="askRamash('أبي نتفلكس')">
-نتفلكس
+<button onclick="askRamash('أبي إنشاء متجر إلكتروني')">
+إنشاء متجر
 </button>
 
-<button onclick="askRamash('أبي شاهد')">
-شاهد
+<button onclick="askRamash('أبي تطوير وتعديل المواقع')">
+تطوير موقع
 </button>
 
-<button onclick="askRamash('أبي سناب بلس')">
-سناب بلس
+<button onclick="askRamash('أبي تطوير وتعديل المتاجر')">
+تطوير متجر
 </button>
 
-<button onclick="askRamash('أبي بلس سوني')">
-قيمنق
+<button onclick="askRamash('أبي إضافة المنتجات')">
+إضافة منتجات
 </button>
 
-<button onclick="askRamash('أبي متابعين تيك توك')">
-السوشيال
+<button onclick="askRamash('أبي خدمة برمجية مخصصة')">
+خدمة مخصصة
 </button>
 
 <button onclick="askRamash('أبي أكلم الدعم')">
@@ -2341,203 +1753,76 @@ window.open(
 
 }
 
-function brandLogo(slug,className=""){
-
-return `
-<img
-src="https://cdn.simpleicons.org/${slug}"
-class="${className}"
-alt=""
-loading="lazy"
-referrerpolicy="no-referrer">
-`;
-
-}
+/* الخدمات والأسعار */
 
 const categories={
 
-digital:{
+web:{
 
-icon:"💻",
-title:"الخدمات الإلكترونية",
-description:"اختر الخدمة الإلكترونية المناسبة لك",
+icon:"🌐",
+title:"المواقع الإلكترونية",
+description:"خدمات إنشاء وتطوير وتعديل المواقع",
 
 products:[
 
 {
 icon:"🌐",
 title:"إنشاء موقع إلكتروني",
-description:"تصميم وإنشاء موقع مناسب لنشاطك واحتياجاتك.",
+price:"240 ريال",
+description:"تصميم وإنشاء موقع إلكتروني مناسب لنشاطك واحتياجاتك.",
 question:"أبي إنشاء موقع إلكتروني"
 },
 
 {
+icon:"⚙️",
+title:"تطوير وتعديل المواقع",
+price:"80 ريال",
+description:"تطوير الموقع الحالي وإضافة التعديلات والمميزات المطلوبة.",
+question:"أبي تطوير وتعديل المواقع"
+}
+
+]
+
+},
+
+stores:{
+
+icon:"🛒",
+title:"المتاجر الإلكترونية",
+description:"حلول لإنشاء وتطوير وترتيب المتاجر",
+
+products:[
+
+{
 icon:"🛒",
 title:"إنشاء متجر إلكتروني",
-description:"متجر مرتب واحترافي مناسب لنشاطك.",
+price:"165 ريال",
+description:"إنشاء متجر إلكتروني مرتب واحترافي مناسب لنشاطك.",
 question:"أبي إنشاء متجر إلكتروني"
 },
 
 {
 icon:"⚙️",
-title:"تطوير وتعديل متجر",
-description:"تطوير التصميم والأقسام والمميزات حسب طلبك.",
-question:"أبي تطوير وتعديل متجري"
+title:"تطوير وتعديل المتاجر",
+price:"68 ريال",
+description:"تطوير التصميم والأقسام والمميزات حسب احتياج متجرك.",
+question:"أبي تطوير وتعديل المتجر"
 },
 
 {
-icon:"🛠️",
-title:"تعديل موقع إلكتروني",
-description:"إضافة أقسام ومميزات وتعديلات على موقعك الحالي.",
-question:"أبي تعديل موقعي الإلكتروني"
+icon:"📦",
+title:"إضافة المنتجات وترتيب المتجر",
+price:"36 ريال",
+description:"إضافة المنتجات وترتيب الأقسام وتنسيق المتجر بشكل احترافي.",
+question:"أبي إضافة المنتجات وترتيب المتجر"
 },
 
 {
-icon:"🛍️",
-title:"إضافة المنتجات",
-description:"إضافة المنتجات وترتيب الأقسام وتنسيق المتجر.",
-question:"أبي إضافة منتجات وترتيب متجري"
-},
-
-{
-icon:"✨",
-title:"خدمة إلكترونية مخصصة",
-description:"عندك فكرة مختلفة؟ اشرح لنا طلبك.",
-question:"عندي خدمة إلكترونية مخصصة"
-}
-
-]
-
-},
-
-subscriptions:{
-
-icon:"🎬",
-title:"الاشتراكات الرقمية",
-description:"اختر الاشتراك الرقمي الذي تريده",
-
-products:[
-
-{
-iconHtml:brandLogo("netflix","logo-large"),
-title:"Netflix",
-description:"اشتراك رقمي للترفيه والمشاهدة.",
-question:"أبي نتفلكس"
-},
-
-{
-iconHtml:brandLogo("shahid","logo-wide"),
-title:"شاهد VIP",
-description:"محتوى ترفيهي ومشاهدة رقمية.",
-question:"أبي شاهد"
-},
-
-{
-iconHtml:brandLogo("shahid","logo-wide"),
-title:"شاهد رياضة",
-description:"محتوى رياضي ومشاهدة المباريات.",
-question:"أبي شاهد مباريات"
-},
-
-{
-iconHtml:`<span class="text-logo">OSN</span>`,
-title:"OSN",
-description:"اشتراك ترفيهي لمشاهدة المحتوى الرقمي.",
-question:"أبي OSN"
-}
-
-]
-
-},
-
-social:{
-
-icon:"📱",
-title:"برامج السوشيال ميديا",
-description:"خدمات وبرامج لمنصات التواصل الاجتماعي",
-
-products:[
-
-{
-iconHtml:brandLogo("snapchat","logo-large"),
-title:"Snapchat Plus",
-description:"سناب بلس مع مميزات قوية وتجربة محسنة.",
-question:"أبي سناب بلس"
-},
-
-{
-iconHtml:brandLogo("tiktok","logo-large"),
-title:"TikTok",
-description:"زيادة متابعين تيك توك حسب الكمية المطلوبة.",
-question:"أبي متابعين تيك توك"
-},
-
-{
-iconHtml:brandLogo("instagram","logo-large"),
-title:"Instagram",
-description:"زيادة متابعين إنستقرام حسب الكمية المطلوبة.",
-question:"أبي متابعين إنستقرام"
-},
-
-{
-iconHtml:brandLogo("x","logo-large"),
-title:"منصة X",
-description:"زيادة متابعين منصة X حسب الكمية المطلوبة.",
-question:"أبي متابعين منصة X"
-}
-
-]
-
-},
-
-gaming:{
-
-icon:"🎮",
-title:"القيمنق",
-description:"خدمات ومنتجات رقمية لمحبي الألعاب",
-
-products:[
-
-{
-iconHtml:brandLogo("playstation","logo-large"),
-title:"PlayStation Plus شهر",
-description:"اشتراك بلس لمدة شهر لسوني PS4 وPS5.",
-question:"أبي بلس سوني شهر"
-},
-
-{
-iconHtml:brandLogo("playstation","logo-large"),
-title:"PlayStation Plus 3 أشهر",
-description:"اشتراك بلس لمدة 3 أشهر لسوني PS4 وPS5.",
-question:"أبي بلس سوني 3 أشهر"
-},
-
-{
-iconHtml:brandLogo("playstation","logo-large"),
-title:"PlayStation Plus سنة",
-description:"اشتراك بلس لمدة سنة لسوني PS4 وPS5.",
-question:"أبي بلس سوني سنة"
-},
-
-{
-iconHtml:brandLogo("fortnite","logo-large"),
-title:"حسابات Fortnite",
-description:"حسابات فورت نايت متوفرة حسب الخيارات المتاحة.",
-question:"أبي حساب فورت نايت"
-},
-
-{
-iconHtml:brandLogo("fortnite","logo-large"),
-title:"V-Bucks",
-description:"فيبوكس لفورت نايت حسب الكمية المطلوبة.",
-question:"أبي فيبوكس"
-},
-
-{
-icon:"🎲",
-title:"حسابات عشوائية",
-description:"حسابات عشوائية حسب المتوفر لدينا.",
-question:"أبي حسابات عشوائية"
+icon:"💻",
+title:"خدمات برمجية مخصصة",
+price:"حسب الطلب",
+description:"عندك فكرة أو طلب برمجي مختلف؟ تواصل معنا.",
+question:"أبي خدمة برمجية مخصصة"
 }
 
 ]
@@ -2568,27 +1853,26 @@ const card=document.createElement("div");
 
 card.className="category-product";
 
-const iconContent=
-product.iconHtml ||
-product.icon ||
-"";
-
 card.innerHTML=`
 
 <div class="category-product-icon">
-${iconContent}
+${product.icon}
 </div>
 
 <h3>${product.title}</h3>
 
 <p>${product.description}</p>
 
+<div class="price">
+${product.price}
+${product.price!=="حسب الطلب" ? '<small> شامل الخدمة</small>' : ''}
+</div>
+
 <button
 class="order"
 onclick="askRamash('${product.question}')">
 
-اسأل رَمّاش
-
+اطلب الخدمة
 </button>
 
 `;
@@ -2630,7 +1914,6 @@ const m=document.getElementById(id);
 if(m){
 
 m.classList.add("active");
-
 document.body.style.overflow="hidden";
 
 }
@@ -2644,7 +1927,6 @@ const m=document.getElementById(id);
 if(m){
 
 m.classList.remove("active");
-
 document.body.style.overflow="";
 
 }
@@ -2659,196 +1941,19 @@ closeModal(id);
 
 }
 
-const reviewsSlider=document.getElementById("reviewsSlider");
-const reviewSlides=document.querySelectorAll(".review-slide");
-const reviewDots=document.getElementById("reviewDots");
-const reviewCount=document.getElementById("reviewCount");
-
-let currentReview=0;
-let reviewTimer;
-
-function createReviewDots(){
-
-reviewDots.innerHTML="";
-
-reviewSlides.forEach((slide,index)=>{
-
-const dot=document.createElement("button");
-
-dot.className="review-dot";
-
-dot.setAttribute(
-"aria-label",
-"التقييم رقم "+(index+1)
-);
-
-dot.onclick=()=>goToReview(index);
-
-reviewDots.appendChild(dot);
-
-});
-
-}
-
-function updateReview(){
-
-if(!reviewsSlider)return;
-
-reviewsSlider.style.transform=
-"translateX(-"+(currentReview*100)+"%)";
-
-const dots=
-document.querySelectorAll(".review-dot");
-
-dots.forEach((dot,index)=>{
-
-dot.classList.toggle(
-"active",
-index===currentReview
-);
-
-});
-
-if(reviewCount){
-
-reviewCount.textContent=
-(currentReview+1)+" / "+reviewSlides.length;
-
-}
-
-}
-
-function goToReview(index){
-
-currentReview=index;
-
-if(currentReview<0){
-currentReview=reviewSlides.length-1;
-}
-
-if(currentReview>=reviewSlides.length){
-currentReview=0;
-}
-
-updateReview();
-restartReviewTimer();
-
-}
-
-function nextReview(){
-
-currentReview++;
-
-if(currentReview>=reviewSlides.length){
-currentReview=0;
-}
-
-updateReview();
-restartReviewTimer();
-
-}
-
-function previousReview(){
-
-currentReview--;
-
-if(currentReview<0){
-currentReview=reviewSlides.length-1;
-}
-
-updateReview();
-restartReviewTimer();
-
-}
-
-function startReviewTimer(){
-
-reviewTimer=setInterval(()=>{
-
-currentReview++;
-
-if(currentReview>=reviewSlides.length){
-currentReview=0;
-}
-
-updateReview();
-
-},5000);
-
-}
-
-function restartReviewTimer(){
-
-clearInterval(reviewTimer);
-startReviewTimer();
-
-}
-
-createReviewDots();
-updateReview();
-startReviewTimer();
-
-let reviewTouchStartX=0;
-let reviewTouchEndX=0;
-
-reviewsSlider.addEventListener(
-"touchstart",
-function(e){
-
-reviewTouchStartX=
-e.changedTouches[0].screenX;
-
-clearInterval(reviewTimer);
-
-},
-{passive:true}
-);
-
-reviewsSlider.addEventListener(
-"touchend",
-function(e){
-
-reviewTouchEndX=
-e.changedTouches[0].screenX;
-
-const distance=
-reviewTouchEndX-reviewTouchStartX;
-
-if(Math.abs(distance)>50){
-
-if(distance>0){
-previousReview();
-}else{
-nextReview();
-}
-
-}else{
-
-startReviewTimer();
-
-}
-
-},
-{passive:true}
-);
+/* RAMASH */
 
 function openRamash(){
 
-const w=
-document.getElementById("ramashWindow");
+const w=document.getElementById("ramashWindow");
 
 if(w){
 
 w.classList.add("active");
 
-setTimeout(
-()=>{
-document
-.getElementById("ramashInput")
-.focus();
-},
-100
-);
+setTimeout(()=>{
+document.getElementById("ramashInput").focus();
+},100);
 
 }
 
@@ -2864,8 +1969,7 @@ document
 
 function toggleRamash(){
 
-const w=
-document.getElementById("ramashWindow");
+const w=document.getElementById("ramashWindow");
 
 w.classList.contains("active")
 ?
@@ -2877,56 +1981,45 @@ openRamash();
 
 function addRamashMessage(text,type){
 
-const messages=
-document.getElementById("ramashMessages");
+const messages=document.getElementById("ramashMessages");
 
-const message=
-document.createElement("div");
+const message=document.createElement("div");
 
-message.className=
-"message "+type;
+message.className="message "+type;
 
 message.textContent=text;
 
 messages.appendChild(message);
 
-messages.scrollTop=
-messages.scrollHeight;
+messages.scrollTop=messages.scrollHeight;
 
 }
 
 function addWhatsAppButton(text){
 
-const messages=
-document.getElementById("ramashMessages");
+const messages=document.getElementById("ramashMessages");
 
-const box=
-document.createElement("div");
+const box=document.createElement("div");
 
 box.className="message bot";
-
 box.style.padding="8px";
 
-const button=
-document.createElement("button");
+const button=document.createElement("button");
 
-button.className=
-"ramash-wa-button";
+button.className="ramash-wa-button";
 
-button.textContent=
-"📲 تواصل مع رمشة بلس";
+button.textContent="📲 تواصل مع رمشة بلس";
 
 button.onclick=()=>openWhatsApp(
 text ||
-"السلام عليكم، جيت من رَمّاش وأرغب بالاستفسار أو الطلب"
+"السلام عليكم، وصلتني من رَمّاش وأرغب بالاستفسار أو الطلب"
 );
 
 box.appendChild(button);
 
 messages.appendChild(box);
 
-messages.scrollTop=
-messages.scrollHeight;
+messages.scrollTop=messages.scrollHeight;
 
 }
 
@@ -2947,55 +2040,37 @@ function localRamashReply(input){
 
 const q=normalize(input);
 
-const greetings=[
-"السلام عليكم",
-"سلام عليكم",
-"السلام",
-"هلا",
-"هلا والله",
-"مرحبا",
-"مرحبا والله",
-"اهلا",
-"يا هلا",
-"هاي"
-];
+if(
+q.includes("انشاء موقع") ||
+q.includes("إنشاء موقع") ||
+q.includes("تصميم موقع")
+){
+
+return{
+
+text:
+"أبشر 🌐 إنشاء موقع إلكتروني عندنا بـ 240 ريال.\n\n"+
+"إذا تبي تطلبه أو تستفسر عن التفاصيل تواصل معنا 📲",
+
+wa:true
+
+};
+
+}
 
 if(
-greetings.some(
-x=>q===x || q.startsWith(x+" ")
+q.includes("تطوير") &&
+(
+q.includes("موقع") ||
+q.includes("مواقع")
 )
 ){
 
 return{
 
 text:
-"وعليكم السلام ورحمة الله وبركاته 🌧️💜\n"+
-"أرحب تراحيب المطر أنا رَمّاش 🤖 مساعدك في رمشة بلس حاضر أخدمك وأفيدك باللي تحتاجه.\n\n"+
-"أمر وتدلل وش حاب تطلب من رمشة بلس؟ ✨",
-
-wa:false
-
-};
-
-}
-
-if(
-q.includes("نتفلكس") ||
-q.includes("نتفليكس") ||
-q.includes("netflix")
-){
-
-if(
-q.includes("سنه") ||
-q.includes("سنوي") ||
-q.includes("سنة")
-){
-
-return{
-
-text:
-"أبشر 🌟 اشتراك نتفلكس السنوي عندنا بـ 59.99 ريال فقط.\n\n"+
-"إذا تبي تطلبه أمر وتدلل 📲",
+"أبشر ⚙️ تطوير وتعديل المواقع عندنا بـ 80 ريال.\n\n"+
+"تواصل معنا ونوضح لك التفاصيل 📲",
 
 wa:true
 
@@ -3004,29 +2079,15 @@ wa:true
 }
 
 if(
-q.includes("شهر") ||
-q.includes("شهري")
+q.includes("انشاء متجر") ||
+q.includes("إنشاء متجر")
 ){
 
 return{
 
 text:
-"أبشر 🌟 اشتراك نتفلكس الشهري عندنا بـ 9.99 ريال فقط.\n\n"+
-"إذا تبي تطلبه أمر وتدلل 📲",
-
-wa:true
-
-};
-
-}
-
-return{
-
-text:
-"أبشر 🤍 نتفلكس متوفر عندنا:\n"+
-"• شهر: 9.99 ريال\n"+
-"• سنة: 59.99 ريال\n\n"+
-"إذا تبي تطلب نتفلكس أمر وتدلل 📲",
+"أبشر 🛒 إنشاء متجر إلكتروني عندنا بـ 165 ريال.\n\n"+
+"إذا تبي تطلبه تواصل معنا 📲",
 
 wa:true
 
@@ -3035,279 +2096,54 @@ wa:true
 }
 
 if(
-q.includes("شاهد مباريات") ||
-q.includes("شاهد رياض") ||
-q.includes("مباريات") ||
-q.includes("شاهد سبورت")
-){
-
-return{
-
-text:
-"أبشر ⚽ اشتراك شاهد مباريات متوفر عندنا:\n"+
-"• شهر: 62.99 ريال\n"+
-"• سنة: 94.99 ريال\n\n"+
-"إذا تبي تطلبه أمر وتدلل 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("شاهد") ||
-q.includes("vip")
-){
-
-if(
-q.includes("سنه") ||
-q.includes("سنوي") ||
-q.includes("سنة")
-){
-
-return{
-
-text:
-"أبشر 📺 اشتراك شاهد VIP السنوي عندنا بـ 49.99 ريال فقط.\n\n"+
-"إذا تبي تطلبه أمر وتدلل 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("شهر") ||
-q.includes("شهري")
-){
-
-return{
-
-text:
-"أبشر 📺 اشتراك شاهد VIP الشهري عندنا بـ 7.75 ريال فقط.\n\n"+
-"إذا تبي تطلب شاهد أمر وتدلل 📲",
-
-wa:true
-
-};
-
-}
-
-return{
-
-text:
-"أبشر 📺 شاهد VIP متوفر عندنا:\n"+
-"• شهر: 7.75 ريال\n"+
-"• سنة: 49.99 ريال\n\n"+
-"إذا تبي تطلب شاهد أمر وتدلل 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("osn") ||
-q.includes("اوسن")
-){
-
-return{
-
-text:
-"أبشر 🎞️ اشتراك OSN الشهري متوفر عندنا بـ 24.99 ريال.\n\n"+
-"إذا تبي تطلبه أمر وتدلل 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("سناب") ||
-q.includes("snap")
-){
-
-return{
-
-text:
-"أبشر 👻 سناب بلس متوفر عندنا بمميزات قوية.\n\n"+
-"الباقات والأسعار المتوفرة نوضحها لك عبر واتساب 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("تيك توك") ||
-q.includes("تيكتوك") ||
-q.includes("متابعين تيك")
-){
-
-return{
-
-text:
-"أبشر 📈 متابعين تيك توك متوفرين عندنا.\n\n"+
-"أرسل لنا الكمية المطلوبة على واتساب ونعطيك السعر مباشرة 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("انستقرام") ||
-q.includes("انستا") ||
-q.includes("انستجرام") ||
-q.includes("متابعين انستا")
-){
-
-return{
-
-text:
-"أبشر 📸 متابعين إنستقرام متوفرين.\n\n"+
-"تواصل معنا على واتساب ونعطيك السعر حسب الكمية المطلوبة 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("منصه x") ||
-q.includes("منصة x") ||
-q.includes("تويتر") ||
-q.includes("متابعين x")
-){
-
-return{
-
-text:
-"أبشر 𝕏 متابعين منصة X متوفرين.\n\n"+
-"تواصل معنا على واتساب ونعطيك السعر حسب الكمية المطلوبة 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("قيمنق") ||
-q.includes("قيمينق") ||
-q.includes("العاب") ||
-q.includes("بلايستيشن") ||
-q.includes("سوني") ||
-q.includes("بليستيشن") ||
-q.includes("بلس سوني") ||
-q.includes("فورت نايت") ||
-q.includes("فورتنايت") ||
-q.includes("فيبوكس") ||
-q.includes("v bucks") ||
-q.includes("حسابات عشوائيه")
-){
-
-if(
-q.includes("شهر") ||
-q.includes("3") ||
-q.includes("ثلاث") ||
-q.includes("سنه") ||
-q.includes("سنة")
-){
-
-return{
-
-text:
-"أبشر 🎮 عندنا PlayStation Plus لسوني PS4 وPS5:\n"+
-"• شهر\n"+
-"• 3 أشهر\n"+
-"• سنة\n\n"+
-"الأسعار والتوفر الحالي نوضحها لك عبر واتساب 📲",
-
-wa:true
-
-};
-
-}
-
-if(
-q.includes("فورت") ||
-q.includes("حساب")
-){
-
-return{
-
-text:
-"أبشر 🎮 عندنا خدمات قيمنق تشمل:\n"+
-"• حسابات فورت نايت\n"+
-"• V-Bucks\n"+
-"• حسابات عشوائية\n\n"+
-"أرسل لنا طلبك على واتساب ونوضح لك المتوفر والأسعار 📲",
-
-wa:true
-
-};
-
-}
-
-return{
-
-text:
-"أبشر 🎮 قسم القيمنق عندنا يشمل:\n"+
-"• PlayStation Plus شهر\n"+
-"• PlayStation Plus 3 أشهر\n"+
-"• PlayStation Plus سنة\n"+
-"• حسابات فورت نايت\n"+
-"• V-Bucks\n"+
-"• حسابات عشوائية\n\n"+
-"قل لي وش تبي وأخدمك ✨",
-
-wa:true
-
-};
-
-}
-
-const digital=[
-"خدمه الكترونيه",
-"خدمات الكترونيه",
-"خدمة الكترونية",
-"خدمات إلكترونية",
-"موقع",
-"متجر",
-"تطوير",
-"تعديل متجر",
-"تعديل موقعي",
-"اضافه منتجات",
-"إضافة منتجات",
-"تصميم موقع",
-"تصميم متجر"
-];
-
-if(
-digital.some(
-x=>q.includes(normalize(x))
+q.includes("تطوير") &&
+(
+q.includes("متجر") ||
+q.includes("متاجر")
 )
 ){
 
 return{
 
 text:
-"أبشر 🤍 خدماتنا الإلكترونية تشمل:\n"+
-"• إنشاء مواقع إلكترونية\n"+
-"• إنشاء متاجر إلكترونية\n"+
-"• تطوير وتعديل المتاجر\n"+
-"• تعديل المواقع\n"+
-"• إضافة المنتجات\n"+
-"• خدمات إلكترونية مخصصة\n\n"+
-"أرسل لنا تفاصيل طلبك على واتساب ونخدمك مباشرة 📲",
+"أبشر ⚙️ تطوير وتعديل المتاجر عندنا بـ 68 ريال.\n\n"+
+"تواصل معنا ونوضح لك التفاصيل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("اضافه منتجات") ||
+q.includes("إضافة منتجات") ||
+q.includes("ترتيب المتجر")
+){
+
+return{
+
+text:
+"أبشر 📦 إضافة المنتجات وترتيب المتجر عندنا بـ 36 ريال.\n\n"+
+"إذا تبي تطلب الخدمة تواصل معنا 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("برمج") ||
+q.includes("مخصص") ||
+q.includes("خدمه مخصصه")
+){
+
+return{
+
+text:
+"أبشر 💻 عندك طلب برمجي مخصص؟\n\n"+
+"أرسل لنا فكرتك عبر واتساب ونحدد لك التفاصيل والسعر حسب الطلب 📲",
 
 wa:true
 
@@ -3325,12 +2161,39 @@ q.includes("وش تقدمون")
 return{
 
 text:
-"أبشر يا الغالي 💜 عندنا:\n"+
-"• الخدمات الإلكترونية 💻\n"+
-"• الاشتراكات الرقمية 🎬\n"+
-"• برامج السوشيال ميديا 📱\n"+
-"• القيمنق 🎮\n\n"+
-"قل لي القسم اللي تبيه وأنا أعطيك التفاصيل ✨",
+"أبشر يا الغالي 💜 خدمات رمشة بلس تشمل:\n\n"+
+"• إنشاء موقع إلكتروني — 240 ريال\n"+
+"• إنشاء متجر إلكتروني — 165 ريال\n"+
+"• تطوير وتعديل المواقع — 80 ريال\n"+
+"• تطوير وتعديل المتاجر — 68 ريال\n"+
+"• إضافة المنتجات وترتيب المتجر — 36 ريال\n"+
+"• خدمات برمجية مخصصة — حسب الطلب\n\n"+
+"قل لي وش تحتاج وأخدمك ✨",
+
+wa:false
+
+};
+
+}
+
+if(
+q.includes("السعر") ||
+q.includes("الاسعار") ||
+q.includes("بكم") ||
+q.includes("كم")
+){
+
+return{
+
+text:
+"أبشر 💜 عندنا خدمات تبدأ من 36 ريال:\n\n"+
+"• إنشاء موقع: 240 ريال\n"+
+"• إنشاء متجر: 165 ريال\n"+
+"• تطوير المواقع: 80 ريال\n"+
+"• تطوير المتاجر: 68 ريال\n"+
+"• إضافة المنتجات: 36 ريال\n"+
+"• خدمات مخصصة: حسب الطلب\n\n"+
+"قل لي الخدمة اللي تبيها 📲",
 
 wa:false
 
@@ -3340,17 +2203,15 @@ wa:false
 
 if(
 q.includes("كيف اطلب") ||
-q.includes("طريقة الطلب") ||
+q.includes("طريقه الطلب") ||
 q.includes("ابي اطلب") ||
-q.includes("ابغى اطلب") ||
-q.includes("أبي أطلب")
+q.includes("ابغى اطلب")
 ){
 
 return{
 
 text:
-"أبشر 🤍 اختر القسم والخدمة اللي تبيها وأنا أعطيك التفاصيل.\n\n"+
-"وبعدها نكمل الطلب معك عبر واتساب 📲",
+"أبشر 🤍 اختر الخدمة اللي تناسبك، وبعدها تواصل معنا عبر واتساب لإكمال الطلب والتفاصيل 📲",
 
 wa:true
 
@@ -3377,29 +2238,11 @@ wa:true
 
 }
 
-if(
-q.includes("السعر") ||
-q.includes("الاسعار") ||
-q.includes("بكم") ||
-q.includes("كم")
-){
-
-return{
-
-text:
-"أبشر 💜 قل لي اسم الخدمة اللي تبيها مثل نتفلكس أو شاهد أو OSN أو سناب بلس أو خدمات القيمنق وأنا أساعدك بالتفاصيل ✨",
-
-wa:false
-
-};
-
-}
-
 return{
 
 text:
 "أبشر يا الغالي 💜 ما فهمت طلبك بالكامل.\n\n"+
-"قل لي اسم الخدمة اللي تبيها أو اختر أحد الأقسام من الموقع ونخدمك مباشرة 📲",
+"قل لي اسم الخدمة اللي تحتاجها مثل إنشاء موقع أو متجر أو تطوير وتعديل، وأنا أخدمك ✨",
 
 wa:true
 
@@ -3418,8 +2261,7 @@ question,
 
 setTimeout(()=>{
 
-const result=
-localRamashReply(question);
+const result=localRamashReply(question);
 
 addRamashMessage(
 result.text,
@@ -3429,7 +2271,7 @@ result.text,
 if(result.wa){
 
 addWhatsAppButton(
-"السلام عليكم وصلتني من رَمّاش وأرغب بالاستفسار أو الطلب"
+"السلام عليكم، وصلتني من رَمّاش وأرغب بالاستفسار أو الطلب"
 );
 
 }
@@ -3440,11 +2282,9 @@ addWhatsAppButton(
 
 function sendRamashMessage(){
 
-const input=
-document.getElementById("ramashInput");
+const input=document.getElementById("ramashInput");
 
-const text=
-input.value.trim();
+const text=input.value.trim();
 
 if(!text)return;
 
