@@ -14,12 +14,10 @@
 
 <link rel="canonical" href="https://ramshaplus.store/">
 
-<!-- أيقونة الموقع -->
 <link rel="icon" type="image/jpeg" sizes="48x48" href="https://ramshaplus.store/IMG_1574.jpeg">
 <link rel="shortcut icon" type="image/jpeg" href="https://ramshaplus.store/IMG_1574.jpeg">
 <link rel="apple-touch-icon" href="https://ramshaplus.store/IMG_1574.jpeg">
 
-<!-- بيانات الموقع لمحركات البحث -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,7 +30,6 @@
 }
 </script>
 
-<!-- بيانات النشاط والشعار -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -553,6 +550,21 @@ margin-bottom:13px
 margin-top:auto
 }
 
+/* ================= PRODUCT PRICE ================= */
+
+.product-price{
+color:#d8b4fe;
+font-size:11px;
+font-weight:bold;
+margin-bottom:10px
+}
+
+.product-price span{
+color:#817887;
+font-size:8px;
+font-weight:normal
+}
+
 /* ================= ORDER ================= */
 
 .order{
@@ -573,6 +585,252 @@ cursor:pointer
 .order:hover{
 background:linear-gradient(135deg,#7e22ce,#a855f7);
 color:#fff
+}
+
+.order.contact{
+background:rgba(34,197,94,.06);
+border-color:rgba(34,197,94,.20);
+color:#86efac
+}
+
+.order.contact:hover{
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:#fff
+}
+
+/* ================= CHECKOUT MODAL ================= */
+
+.checkout-modal{
+width:min(100%,540px);
+max-height:90vh;
+overflow-y:auto;
+background:
+radial-gradient(circle at 50% 0%,rgba(126,34,206,.18),transparent 45%),
+linear-gradient(145deg,#160b23,#08040c);
+border:1px solid rgba(168,85,247,.25);
+border-radius:28px;
+padding:28px 20px;
+box-shadow:0 25px 90px rgba(0,0,0,.75);
+position:relative
+}
+
+.checkout-head{
+text-align:center;
+padding:5px 25px 18px
+}
+
+.checkout-icon{
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 12px;
+border-radius:19px;
+background:rgba(126,34,206,.13);
+border:1px solid rgba(168,85,247,.22);
+font-size:27px
+}
+
+.checkout-head h2{
+font-size:22px;
+margin-bottom:7px
+}
+
+.checkout-head p{
+color:#817887;
+font-size:9px;
+line-height:1.9
+}
+
+.checkout-product{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:12px;
+padding:14px;
+border-radius:16px;
+background:rgba(255,255,255,.025);
+border:1px solid rgba(255,255,255,.06);
+margin-bottom:14px
+}
+
+.checkout-product-label{
+display:block;
+color:#817887;
+font-size:8px;
+margin-bottom:5px
+}
+
+.checkout-product strong{
+font-size:11px
+}
+
+.checkout-product-price{
+color:#d8b4fe;
+font-size:13px;
+font-weight:bold;
+white-space:nowrap
+}
+
+.checkout-field{
+margin-top:10px
+}
+
+.checkout-field label{
+display:block;
+color:#c4b5fd;
+font-size:9px;
+margin-bottom:6px
+}
+
+.checkout-field input,
+.checkout-field textarea{
+width:100%;
+padding:12px;
+border-radius:12px;
+background:#0d0713;
+border:1px solid rgba(168,85,247,.17);
+color:#fff;
+outline:none;
+font-family:inherit;
+font-size:10px
+}
+
+.checkout-field input:focus,
+.checkout-field textarea:focus{
+border-color:rgba(168,85,247,.55)
+}
+
+.checkout-field textarea{
+min-height:80px;
+resize:vertical
+}
+
+.checkout-quantity-wrap{
+display:none;
+margin-bottom:5px
+}
+
+.checkout-quantity-wrap.active{
+display:block
+}
+
+.checkout-quantity-info{
+color:#62596b;
+font-size:8px;
+margin-top:5px;
+line-height:1.7
+}
+
+.checkout-total{
+margin-top:15px;
+padding:15px;
+border-radius:15px;
+background:rgba(126,34,206,.09);
+border:1px solid rgba(168,85,247,.18);
+display:flex;
+justify-content:space-between;
+align-items:center
+}
+
+.checkout-total span{
+color:#8f8498;
+font-size:10px
+}
+
+.checkout-total strong{
+color:#d8b4fe;
+font-size:18px
+}
+
+.checkout-submit{
+width:100%;
+margin-top:12px;
+padding:14px;
+border:0;
+border-radius:14px;
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:#fff;
+font-size:11px;
+font-weight:bold;
+cursor:pointer;
+transition:.25s
+}
+
+.checkout-submit:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 30px rgba(34,197,94,.20)
+}
+
+.checkout-note{
+margin-top:10px;
+color:#665c6e;
+font-size:8px;
+line-height:1.8;
+text-align:center
+}
+
+.checkout-hala{
+margin-top:12px;
+padding:11px;
+border-radius:13px;
+background:rgba(168,85,247,.05);
+border:1px solid rgba(168,85,247,.13);
+color:#b8a6c4;
+font-size:8px;
+line-height:1.8;
+text-align:center
+}
+
+.checkout-alert{
+display:none;
+margin-top:10px;
+padding:10px;
+border-radius:12px;
+background:rgba(239,68,68,.08);
+border:1px solid rgba(239,68,68,.18);
+color:#fca5a5;
+font-size:9px;
+line-height:1.8
+}
+
+.checkout-alert.active{
+display:block
+}
+
+.checkout-success{
+text-align:center;
+padding:35px 15px 20px
+}
+
+.checkout-success-icon{
+font-size:55px;
+margin-bottom:15px
+}
+
+.checkout-success h2{
+font-size:21px;
+margin-bottom:10px;
+color:#d8b4fe
+}
+
+.checkout-success p{
+color:#817887;
+font-size:10px;
+line-height:2;
+margin-bottom:20px
+}
+
+.checkout-success button{
+padding:12px 30px;
+border-radius:13px;
+border:1px solid rgba(168,85,247,.25);
+background:linear-gradient(135deg,#7e22ce,#a855f7);
+color:#fff;
+font-size:10px;
+font-weight:bold;
+cursor:pointer
 }
 
 /* ================= CERTIFICATE ================= */
@@ -829,7 +1087,7 @@ margin-top:9px
 
 .steps{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(4,1fr);
 gap:12px
 }
 
@@ -1257,6 +1515,10 @@ cursor:pointer
 grid-template-columns:repeat(2,1fr)
 }
 
+.steps{
+grid-template-columns:repeat(2,1fr)
+}
+
 }
 
 @media(max-width:800px){
@@ -1410,6 +1672,10 @@ font-size:10px
 font-size:8px
 }
 
+.product-price{
+font-size:10px
+}
+
 .certificate-box{
 padding:27px 12px;
 border-radius:22px
@@ -1462,6 +1728,20 @@ left:8px
 
 .steps{
 grid-template-columns:1fr
+}
+
+.checkout-modal{
+padding:23px 12px;
+border-radius:23px
+}
+
+.checkout-product{
+align-items:flex-start;
+flex-direction:column
+}
+
+.checkout-product-price{
+font-size:12px
 }
 
 .ramash-launcher{
@@ -1940,7 +2220,7 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 
 <div class="small">طريقة الطلب</div>
 
-<h2>ثلاث خطوات فقط</h2>
+<h2>أربع خطوات فقط</h2>
 
 <p>من اختيار الخدمة حتى استلام طلبك</p>
 
@@ -1962,11 +2242,9 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 
 <div class="step-number">2</div>
 
-<h3>تواصل معنا</h3>
+<h3>أرسل طلبك</h3>
 
-<p>
-اسأل رَمّاش عن السعر والتفاصيل ثم أكمل طلبك عبر واتساب.
-</p>
+<p>اضغط اطلب الآن وأرسل تفاصيل طلبك عبر واتساب.</p>
 
 </div>
 
@@ -1974,11 +2252,19 @@ onclick="openWhatsApp('السلام عليكم، لدي استفسار عن وث
 
 <div class="step-number">3</div>
 
+<h3>فاتورة هلا</h3>
+
+<p>بعد تأكيد الطلب نرسل لك فاتورة هلا للدفع.</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">4</div>
+
 <h3>استلم طلبك</h3>
 
-<p>
-بعد إتمام الطلب يتم تجهيز الخدمة وتسليمها لك.
-</p>
+<p>بعد سداد الفاتورة يتم تجهيز الخدمة وتسليمها لك.</p>
 
 </div>
 
@@ -2088,6 +2374,184 @@ onclick="closeCategoryOutside(event)">
 <div
 class="category-products"
 id="categoryProducts">
+</div>
+
+</div>
+
+</div>
+
+<!-- CHECKOUT -->
+
+<div
+class="overlay"
+id="checkoutModal"
+onclick="closeCheckoutOutside(event)">
+
+<div class="checkout-modal">
+
+<button class="close" onclick="closeCheckout()">×</button>
+
+<div id="checkoutFormView">
+
+<div class="checkout-head">
+
+<div class="checkout-icon">🧾</div>
+
+<h2>تأكيد الطلب</h2>
+
+<p>
+أرسل تفاصيل طلبك عبر واتساب، وبعد تأكيد الطلب نرسل لك فاتورة هلا للدفع.
+</p>
+
+</div>
+
+<div class="checkout-product">
+
+<div>
+
+<span class="checkout-product-label">
+الخدمة المختارة
+</span>
+
+<strong id="checkoutProductName">
+—
+</strong>
+
+</div>
+
+<div
+class="checkout-product-price"
+id="checkoutProductPrice">
+
+—
+
+</div>
+
+</div>
+
+<div
+class="checkout-quantity-wrap"
+id="checkoutQuantityWrap">
+
+<div class="checkout-field">
+
+<label for="checkoutQuantity">
+الكمية
+</label>
+
+<input
+type="number"
+id="checkoutQuantity"
+min="100"
+step="100"
+value="100"
+oninput="calculateCheckoutTotal()">
+
+<div class="checkout-quantity-info">
+أدخل الكمية المطلوبة، وسيتم حساب السعر تلقائيًا.
+</div>
+
+</div>
+
+</div>
+
+<div class="checkout-field">
+
+<label for="checkoutName">
+الاسم
+</label>
+
+<input
+type="text"
+id="checkoutName"
+placeholder="اكتب اسمك"
+autocomplete="name">
+
+</div>
+
+<div class="checkout-field">
+
+<label for="checkoutPhone">
+رقم الجوال
+</label>
+
+<input
+type="tel"
+id="checkoutPhone"
+placeholder="05xxxxxxxx"
+autocomplete="tel">
+
+</div>
+
+<div class="checkout-field">
+
+<label for="checkoutNotes">
+ملاحظات الطلب
+</label>
+
+<textarea
+id="checkoutNotes"
+placeholder="اكتب أي تفاصيل أو ملاحظات مهمة للطلب..."></textarea>
+
+</div>
+
+<div class="checkout-total">
+
+<span>
+الإجمالي
+</span>
+
+<strong id="checkoutTotal">
+0.00 ريال
+</strong>
+
+</div>
+
+<div
+class="checkout-alert"
+id="checkoutAlert">
+</div>
+
+<button
+class="checkout-submit"
+onclick="submitCheckout(event)">
+
+📲 إرسال الطلب عبر واتساب
+
+</button>
+
+<div class="checkout-hala">
+💳 <strong>الدفع عبر فاتورة هلا</strong><br>
+بعد تأكيد تفاصيل الطلب، سيتم إرسال فاتورة هلا لك لإتمام الدفع.
+</div>
+
+<div class="checkout-note">
+لا يعتبر الطلب مدفوعًا إلا بعد سداد فاتورة هلا.
+</div>
+
+</div>
+
+<div
+id="checkoutSuccessView"
+class="checkout-success"
+style="display:none;">
+
+<div class="checkout-success-icon">
+✅
+</div>
+
+<h2>
+تم تجهيز طلبك
+</h2>
+
+<p id="checkoutSuccessText">
+تم فتح واتساب لإرسال تفاصيل الطلب. بعد تأكيد الطلب سيتم إرسال فاتورة هلا لك للدفع.
+</p>
+
+<button onclick="closeCheckout()">
+إغلاق
+</button>
+
 </div>
 
 </div>
@@ -2319,6 +2783,10 @@ aria-label="إرسال">
 
 const WHATSAPP="966501286453";
 
+let currentCheckoutProduct=null;
+
+/* ================= GENERAL ================= */
+
 function scrollToSection(id){
 
 const e=document.getElementById(id);
@@ -2341,6 +2809,8 @@ window.open(
 
 }
 
+/* ================= BRAND LOGO ================= */
+
 function brandLogo(slug,className=""){
 
 return `
@@ -2353,6 +2823,8 @@ referrerpolicy="no-referrer">
 `;
 
 }
+
+/* ================= PRODUCTS ================= */
 
 const categories={
 
@@ -2368,6 +2840,7 @@ products:[
 icon:"🌐",
 title:"إنشاء موقع إلكتروني",
 description:"تصميم وإنشاء موقع مناسب لنشاطك واحتياجاتك.",
+price:99.99,
 question:"أبي إنشاء موقع إلكتروني"
 },
 
@@ -2375,6 +2848,7 @@ question:"أبي إنشاء موقع إلكتروني"
 icon:"🛒",
 title:"إنشاء متجر إلكتروني",
 description:"متجر مرتب واحترافي مناسب لنشاطك.",
+price:59.99,
 question:"أبي إنشاء متجر إلكتروني"
 },
 
@@ -2389,6 +2863,7 @@ question:"أبي تطوير وتعديل متجري"
 icon:"🛠️",
 title:"تعديل موقع إلكتروني",
 description:"إضافة أقسام ومميزات وتعديلات على موقعك الحالي.",
+price:39.99,
 question:"أبي تعديل موقعي الإلكتروني"
 },
 
@@ -2396,6 +2871,7 @@ question:"أبي تعديل موقعي الإلكتروني"
 icon:"🛍️",
 title:"إضافة المنتجات",
 description:"إضافة المنتجات وترتيب الأقسام وتنسيق المتجر.",
+price:16.99,
 question:"أبي إضافة منتجات وترتيب متجري"
 },
 
@@ -2420,30 +2896,50 @@ products:[
 
 {
 iconHtml:brandLogo("netflix","logo-large"),
-title:"Netflix",
-description:"اشتراك رقمي للترفيه والمشاهدة.",
-question:"أبي نتفلكس"
+title:"Netflix — شهر",
+description:"اشتراك نتفليكس لمدة شهر.",
+price:9.99,
+question:"أبي نتفلكس شهر"
+},
+
+{
+iconHtml:brandLogo("netflix","logo-large"),
+title:"Netflix — سنة",
+description:"اشتراك نتفليكس لمدة سنة.",
+price:59.99,
+question:"أبي نتفلكس سنة"
 },
 
 {
 iconHtml:brandLogo("shahid","logo-wide"),
-title:"شاهد VIP",
-description:"محتوى ترفيهي ومشاهدة رقمية.",
-question:"أبي شاهد"
+title:"شاهد VIP — شهر",
+description:"اشتراك شاهد VIP لمدة شهر.",
+price:9.99,
+question:"أبي شاهد VIP شهر"
 },
 
 {
 iconHtml:brandLogo("shahid","logo-wide"),
-title:"شاهد رياضة",
-description:"محتوى رياضي ومشاهدة المباريات.",
-question:"أبي شاهد مباريات"
+title:"شاهد VIP — سنة",
+description:"اشتراك شاهد VIP لمدة سنة.",
+price:49.99,
+question:"أبي شاهد VIP سنة"
 },
 
 {
-iconHtml:`<span class="text-logo">OSN</span>`,
-title:"OSN",
-description:"اشتراك ترفيهي لمشاهدة المحتوى الرقمي.",
-question:"أبي OSN"
+iconHtml:brandLogo("shahid","logo-wide"),
+title:"شاهد مباريات — شهر",
+description:"اشتراك شاهد مباريات لمدة شهر.",
+price:62.99,
+question:"أبي شاهد مباريات شهر"
+},
+
+{
+iconHtml:brandLogo("shahid","logo-wide"),
+title:"شاهد مباريات — سنة",
+description:"اشتراك شاهد مباريات لمدة سنة.",
+price:94.99,
+question:"أبي شاهد مباريات سنة"
 }
 
 ]
@@ -2461,29 +2957,46 @@ products:[
 {
 iconHtml:brandLogo("snapchat","logo-large"),
 title:"Snapchat Plus",
-description:"سناب بلس مع مميزات قوية وتجربة محسنة.",
-question:"أبي سناب بلس"
+description:"باقات سناب بلس متوفرة بأسعار مميزة.",
+question:"أبي سناب بلس",
+variants:[
+{
+name:"3 أشهر",
+price:32.99
+},
+{
+name:"6 أشهر",
+price:45.99
+},
+{
+name:"12 شهر",
+price:89.99
+}
+]
 },
 
 {
 iconHtml:brandLogo("tiktok","logo-large"),
 title:"TikTok",
 description:"زيادة متابعين تيك توك حسب الكمية المطلوبة.",
-question:"أبي متابعين تيك توك"
+question:"أبي متابعين تيك توك",
+contact:true
 },
 
 {
 iconHtml:brandLogo("instagram","logo-large"),
 title:"Instagram",
 description:"زيادة متابعين إنستقرام حسب الكمية المطلوبة.",
-question:"أبي متابعين إنستقرام"
+question:"أبي متابعين إنستقرام",
+contact:true
 },
 
 {
 iconHtml:brandLogo("x","logo-large"),
 title:"منصة X",
 description:"زيادة متابعين منصة X حسب الكمية المطلوبة.",
-question:"أبي متابعين منصة X"
+question:"أبي متابعين منصة X",
+contact:true
 }
 
 ]
@@ -2546,6 +3059,8 @@ question:"أبي حسابات عشوائية"
 
 };
 
+/* ================= CATEGORY ================= */
+
 function openCategory(type){
 
 const data=categories[type];
@@ -2562,7 +3077,7 @@ const box=document.getElementById("categoryProducts");
 
 box.innerHTML="";
 
-data.products.forEach(product=>{
+data.products.forEach((product,index)=>{
 
 const card=document.createElement("div");
 
@@ -2572,6 +3087,34 @@ const iconContent=
 product.iconHtml ||
 product.icon ||
 "";
+
+let priceHtml="";
+
+if(product.price){
+
+priceHtml=`
+<div class="product-price">
+${product.price.toFixed(2)} ريال
+</div>
+`;
+
+}
+
+if(product.variants){
+
+priceHtml=`
+<div class="product-price">
+أسعار تبدأ من ${Math.min(...product.variants.map(v=>v.price)).toFixed(2)} ريال
+</div>
+`;
+
+}
+
+let buttonText="تواصل معنا";
+
+if(product.price || product.variants){
+buttonText="اطلب الآن";
+}
 
 card.innerHTML=`
 
@@ -2583,11 +3126,13 @@ ${iconContent}
 
 <p>${product.description}</p>
 
-<button
-class="order"
-onclick="askRamash('${product.question}')">
+${priceHtml}
 
-اسأل رَمّاش
+<button
+class="order ${product.contact ? "contact" : ""}"
+onclick="handleProductAction('${type}',${index})">
+
+${buttonText}
 
 </button>
 
@@ -2622,6 +3167,292 @@ closeCategory();
 }
 
 }
+
+/* ================= PRODUCT ACTION ================= */
+
+function handleProductAction(type,index){
+
+const product=
+categories[type] &&
+categories[type].products[index];
+
+if(!product)return;
+
+if(product.contact){
+
+openWhatsApp(
+"السلام عليكم، وصلتني من رمشة بلس وأرغب بالاستفسار عن "+product.title+
+"\nأحتاج معرفة السعر والتوفر."
+);
+
+return;
+
+}
+
+if(product.price || product.variants){
+
+openCheckout(product);
+
+return;
+
+}
+
+openWhatsApp(
+"السلام عليكم، أرغب بالاستفسار عن خدمة "+product.title+
+"\nأرجو توضيح السعر والتفاصيل."
+);
+
+}
+
+/* ================= CHECKOUT ================= */
+
+function openCheckout(product){
+
+currentCheckoutProduct=product;
+
+document.getElementById("checkoutFormView").style.display="block";
+
+document.getElementById("checkoutSuccessView").style.display="none";
+
+document.getElementById("checkoutAlert").classList.remove("active");
+
+document.getElementById("checkoutAlert").textContent="";
+
+document.getElementById("checkoutName").value="";
+
+document.getElementById("checkoutPhone").value="";
+
+document.getElementById("checkoutNotes").value="";
+
+document.getElementById("checkoutProductName").textContent=
+product.title;
+
+const quantityWrap=
+document.getElementById("checkoutQuantityWrap");
+
+quantityWrap.classList.remove("active");
+
+if(product.variants){
+
+const variantOptions=
+product.variants.map((variant,index)=>`
+<option value="${index}">
+${variant.name} — ${variant.price.toFixed(2)} ريال
+</option>
+`).join("");
+
+document.getElementById("checkoutProductPrice").innerHTML=`
+<select
+id="checkoutVariant"
+onchange="calculateCheckoutTotal()"
+style="
+padding:9px;
+border-radius:10px;
+background:#0d0713;
+border:1px solid rgba(168,85,247,.2);
+color:#d8b4fe;
+font-family:inherit;
+font-size:9px;
+outline:none;
+">
+${variantOptions}
+</select>
+`;
+
+}else{
+
+document.getElementById("checkoutProductPrice").textContent=
+product.price.toFixed(2)+" ريال";
+
+}
+
+calculateCheckoutTotal();
+
+document
+.getElementById("checkoutModal")
+.classList.add("active");
+
+document.body.style.overflow="hidden";
+
+setTimeout(()=>{
+document.getElementById("checkoutName").focus();
+},100);
+
+}
+
+function calculateCheckoutTotal(){
+
+if(!currentCheckoutProduct)return;
+
+let total=0;
+
+if(currentCheckoutProduct.variants){
+
+const select=
+document.getElementById("checkoutVariant");
+
+const index=
+select ? parseInt(select.value,10) : 0;
+
+const variant=
+currentCheckoutProduct.variants[index];
+
+total=
+variant ?
+variant.price :
+0;
+
+}else{
+
+total=currentCheckoutProduct.price || 0;
+
+}
+
+document.getElementById("checkoutTotal").textContent=
+total.toFixed(2)+" ريال";
+
+return total;
+
+}
+
+function submitCheckout(event){
+
+if(event){
+event.preventDefault();
+}
+
+if(!currentCheckoutProduct)return;
+
+const name=
+document.getElementById("checkoutName").value.trim();
+
+const phone=
+document.getElementById("checkoutPhone").value.trim();
+
+const notes=
+document.getElementById("checkoutNotes").value.trim();
+
+const alertBox=
+document.getElementById("checkoutAlert");
+
+function showAlert(message){
+
+alertBox.textContent=message;
+
+alertBox.classList.add("active");
+
+}
+
+if(!name){
+
+showAlert("اكتب اسمك أولاً لإكمال الطلب.");
+
+return;
+
+}
+
+const phoneDigits=
+phone.replace(/\D/g,"");
+
+if(phoneDigits.length<8){
+
+showAlert("اكتب رقم جوال صحيح.");
+
+return;
+
+}
+
+let selectedVariant="";
+
+if(currentCheckoutProduct.variants){
+
+const select=
+document.getElementById("checkoutVariant");
+
+const variant=
+currentCheckoutProduct.variants[
+parseInt(select.value,10)
+];
+
+if(variant){
+
+selectedVariant=variant.name;
+
+}
+
+}
+
+const total=
+calculateCheckoutTotal();
+
+const orderNumber=
+"RM-"+Math.floor(
+100000+
+Math.random()*900000
+);
+
+let message=
+"السلام عليكم، أرغب بطلب من رمشة بلس 🤍\n\n"+
+"رقم الطلب: "+orderNumber+"\n"+
+"الخدمة: "+currentCheckoutProduct.title+"\n";
+
+if(selectedVariant){
+
+message+=
+"المدة: "+selectedVariant+"\n";
+
+}
+
+message+=
+"السعر: "+total.toFixed(2)+" ريال\n"+
+"الاسم: "+name+"\n"+
+"الجوال: "+phone+"\n";
+
+if(notes){
+
+message+=
+"ملاحظات: "+notes+"\n";
+
+}
+
+message+=
+"\nأرجو تأكيد الطلب وإرسال فاتورة هلا للدفع. 💳";
+
+openWhatsApp(message);
+
+document.getElementById("checkoutFormView").style.display="none";
+
+document.getElementById("checkoutSuccessView").style.display="block";
+
+document.getElementById("checkoutSuccessText").textContent=
+"تم فتح واتساب لإرسال طلبك رقم "+orderNumber+
+". بعد تأكيد التفاصيل سيتم إرسال فاتورة هلا لك للدفع. 💳";
+
+}
+
+function closeCheckout(){
+
+document
+.getElementById("checkoutModal")
+.classList.remove("active");
+
+document.body.style.overflow="";
+
+currentCheckoutProduct=null;
+
+}
+
+function closeCheckoutOutside(event){
+
+if(event.target.id==="checkoutModal"){
+
+closeCheckout();
+
+}
+
+}
+
+/* ================= FOOTER MODALS ================= */
 
 function openModal(id){
 
@@ -2658,6 +3489,8 @@ closeModal(id);
 }
 
 }
+
+/* ================= REVIEWS ================= */
 
 const reviewsSlider=document.getElementById("reviewsSlider");
 const reviewSlides=document.querySelectorAll(".review-slide");
@@ -2832,6 +3665,8 @@ startReviewTimer();
 {passive:true}
 );
 
+/* ================= RAMASH ================= */
+
 function openRamash(){
 
 const w=
@@ -2979,6 +3814,8 @@ wa:false
 
 }
 
+/* ================= NETFLIX ================= */
+
 if(
 q.includes("نتفلكس") ||
 q.includes("نتفليكس") ||
@@ -3034,12 +3871,49 @@ wa:true
 
 }
 
+/* ================= SHAHID SPORTS ================= */
+
 if(
 q.includes("شاهد مباريات") ||
 q.includes("شاهد رياض") ||
 q.includes("مباريات") ||
 q.includes("شاهد سبورت")
 ){
+
+if(
+q.includes("سنه") ||
+q.includes("سنوي") ||
+q.includes("سنة")
+){
+
+return{
+
+text:
+"أبشر ⚽ اشتراك شاهد مباريات السنوي عندنا بـ 94.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("شهر") ||
+q.includes("شهري")
+){
+
+return{
+
+text:
+"أبشر ⚽ اشتراك شاهد مباريات الشهري عندنا بـ 62.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
 
 return{
 
@@ -3054,6 +3928,8 @@ wa:true
 };
 
 }
+
+/* ================= SHAHID VIP ================= */
 
 if(
 q.includes("شاهد") ||
@@ -3086,7 +3962,7 @@ q.includes("شهري")
 return{
 
 text:
-"أبشر 📺 اشتراك شاهد VIP الشهري عندنا بـ 7.75 ريال فقط.\n\n"+
+"أبشر 📺 اشتراك شاهد VIP الشهري عندنا بـ 9.99 ريال فقط.\n\n"+
 "إذا تبي تطلب شاهد أمر وتدلل 📲",
 
 wa:true
@@ -3099,7 +3975,7 @@ return{
 
 text:
 "أبشر 📺 شاهد VIP متوفر عندنا:\n"+
-"• شهر: 7.75 ريال\n"+
+"• شهر: 9.99 ريال\n"+
 "• سنة: 49.99 ريال\n\n"+
 "إذا تبي تطلب شاهد أمر وتدلل 📲",
 
@@ -3109,15 +3985,22 @@ wa:true
 
 }
 
+/* ================= SNAPCHAT PLUS ================= */
+
 if(
-q.includes("osn") ||
-q.includes("اوسن")
+q.includes("سناب") ||
+q.includes("snap")
+){
+
+if(
+q.includes("3") ||
+q.includes("ثلاث")
 ){
 
 return{
 
 text:
-"أبشر 🎞️ اشتراك OSN الشهري متوفر عندنا بـ 24.99 ريال.\n\n"+
+"أبشر 👻 سناب بلس لمدة 3 أشهر بـ 32.99 ريال.\n\n"+
 "إذا تبي تطلبه أمر وتدلل 📲",
 
 wa:true
@@ -3127,21 +4010,57 @@ wa:true
 }
 
 if(
-q.includes("سناب") ||
-q.includes("snap")
+q.includes("6") ||
+q.includes("ست")
 ){
 
 return{
 
 text:
-"أبشر 👻 سناب بلس متوفر عندنا بمميزات قوية.\n\n"+
-"الباقات والأسعار المتوفرة نوضحها لك عبر واتساب 📲",
+"أبشر 👻 سناب بلس لمدة 6 أشهر بـ 45.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
 
 wa:true
 
 };
 
 }
+
+if(
+q.includes("12") ||
+q.includes("سنه") ||
+q.includes("سنة") ||
+q.includes("سنوي")
+){
+
+return{
+
+text:
+"أبشر 👻 سناب بلس لمدة 12 شهر بـ 89.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+return{
+
+text:
+"أبشر 👻 سناب بلس متوفر بأسعار مميزة:\n"+
+"• 3 أشهر: 32.99 ريال\n"+
+"• 6 أشهر: 45.99 ريال\n"+
+"• 12 شهر: 89.99 ريال\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+/* ================= SOCIAL ================= */
 
 if(
 q.includes("تيك توك") ||
@@ -3152,8 +4071,8 @@ q.includes("متابعين تيك")
 return{
 
 text:
-"أبشر 📈 متابعين تيك توك متوفرين عندنا.\n\n"+
-"أرسل لنا الكمية المطلوبة على واتساب ونعطيك السعر مباشرة 📲",
+"أبشر 📈 خدمات زيادة متابعين تيك توك متوفرة.\n\n"+
+"تواصل معنا على واتساب ونعطيك السعر حسب الكمية المطلوبة 📲",
 
 wa:true
 
@@ -3171,7 +4090,7 @@ q.includes("متابعين انستا")
 return{
 
 text:
-"أبشر 📸 متابعين إنستقرام متوفرين.\n\n"+
+"أبشر 📸 خدمات زيادة متابعين إنستقرام متوفرة.\n\n"+
 "تواصل معنا على واتساب ونعطيك السعر حسب الكمية المطلوبة 📲",
 
 wa:true
@@ -3190,7 +4109,7 @@ q.includes("متابعين x")
 return{
 
 text:
-"أبشر 𝕏 متابعين منصة X متوفرين.\n\n"+
+"أبشر 𝕏 خدمات زيادة متابعين منصة X متوفرة.\n\n"+
 "تواصل معنا على واتساب ونعطيك السعر حسب الكمية المطلوبة 📲",
 
 wa:true
@@ -3198,6 +4117,8 @@ wa:true
 };
 
 }
+
+/* ================= GAMING ================= */
 
 if(
 q.includes("قيمنق") ||
@@ -3275,6 +4196,8 @@ wa:true
 
 }
 
+/* ================= DIGITAL SERVICES ================= */
+
 const digital=[
 "خدمه الكترونيه",
 "خدمات الكترونيه",
@@ -3315,6 +4238,8 @@ wa:true
 
 }
 
+/* ================= ALL SERVICES ================= */
+
 if(
 q.includes("الخدمات") ||
 q.includes("وش عندكم") ||
@@ -3338,6 +4263,8 @@ wa:false
 
 }
 
+/* ================= ORDER ================= */
+
 if(
 q.includes("كيف اطلب") ||
 q.includes("طريقة الطلب") ||
@@ -3349,14 +4276,16 @@ q.includes("أبي أطلب")
 return{
 
 text:
-"أبشر 🤍 اختر القسم والخدمة اللي تبيها وأنا أعطيك التفاصيل.\n\n"+
-"وبعدها نكمل الطلب معك عبر واتساب 📲",
+"أبشر 🤍 اختر القسم والخدمة اللي تبيها.\n\n"+
+"للخدمات ذات السعر المحدد تقدر تضغط «اطلب الآن»، وبعدها ترسل تفاصيلك عبر واتساب ونرسل لك فاتورة هلا بعد تأكيد الطلب 💳",
 
 wa:true
 
 };
 
 }
+
+/* ================= SUPPORT ================= */
 
 if(
 q.includes("دعم") ||
@@ -3377,6 +4306,8 @@ wa:true
 
 }
 
+/* ================= PRICES ================= */
+
 if(
 q.includes("السعر") ||
 q.includes("الاسعار") ||
@@ -3387,7 +4318,7 @@ q.includes("كم")
 return{
 
 text:
-"أبشر 💜 قل لي اسم الخدمة اللي تبيها مثل نتفلكس أو شاهد أو OSN أو سناب بلس أو خدمات القيمنق وأنا أساعدك بالتفاصيل ✨",
+"أبشر 💜 قل لي اسم الخدمة اللي تبيها مثل نتفلكس أو شاهد أو سناب بلس أو خدمات القيمنق وأنا أعطيك الأسعار والتفاصيل ✨",
 
 wa:false
 
@@ -3429,7 +4360,7 @@ result.text,
 if(result.wa){
 
 addWhatsAppButton(
-"السلام عليكم وصلتني من رَمّاش وأرغب بالاستفسار أو الطلب"
+"السلام عليكم، وصلتني من رَمّاش وأرغب بالاستفسار أو الطلب عن خدمات رمشة بلس."
 );
 
 }
@@ -3470,6 +4401,8 @@ sendRamashMessage();
 
 }
 );
+
+/* ================= ESCAPE ================= */
 
 document.addEventListener(
 "keydown",
