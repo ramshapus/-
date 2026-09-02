@@ -2741,6 +2741,10 @@ id="ramashMessages">
 شاهد
 </button>
 
+<button onclick="askRamash('أبي يوتيوب بريوم')">
+يوتيوب بريوم
+</button>
+
 <button onclick="askRamash('أبي سناب بلس')">
 سناب بلس
 </button>
@@ -2940,6 +2944,32 @@ title:"شاهد مباريات — سنة",
 description:"اشتراك شاهد مباريات لمدة سنة.",
 price:94.99,
 question:"أبي شاهد مباريات سنة"
+},
+
+/* ================= YOUTUBE PREMIUM ================= */
+
+{
+iconHtml:`
+<div class="text-logo">
+▶ YouTube
+</div>
+`,
+title:"YouTube Premium — شهر",
+description:"اشتراك يوتيوب بريوم لمدة شهر.",
+price:15.99,
+question:"أبي يوتيوب بريوم شهر"
+},
+
+{
+iconHtml:`
+<div class="text-logo">
+▶ YouTube
+</div>
+`,
+title:"YouTube Premium — سنة",
+description:"اشتراك يوتيوب بريوم لمدة سنة.",
+price:29.99,
+question:"أبي يوتيوب بريوم سنة"
 }
 
 ]
@@ -3985,6 +4015,65 @@ wa:true
 
 }
 
+/* ================= YOUTUBE PREMIUM ================= */
+
+if(
+q.includes("يوتيوب") ||
+q.includes("يوتوب") ||
+q.includes("youtube") ||
+q.includes("بريوم") ||
+q.includes("premium")
+){
+
+if(
+q.includes("سنه") ||
+q.includes("سنوي") ||
+q.includes("سنة")
+){
+
+return{
+
+text:
+"أبشر ▶️ اشتراك YouTube Premium السنوي عندنا بـ 29.99 ريال فقط.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("شهر") ||
+q.includes("شهري")
+){
+
+return{
+
+text:
+"أبشر ▶️ اشتراك YouTube Premium الشهري عندنا بـ 15.99 ريال فقط.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+return{
+
+text:
+"أبشر ▶️ YouTube Premium متوفر عندنا:\n"+
+"• شهر: 15.99 ريال\n"+
+"• سنة: 29.99 ريال\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
 /* ================= SNAPCHAT PLUS ================= */
 
 if(
@@ -4318,7 +4407,7 @@ q.includes("كم")
 return{
 
 text:
-"أبشر 💜 قل لي اسم الخدمة اللي تبيها مثل نتفلكس أو شاهد أو سناب بلس أو خدمات القيمنق وأنا أعطيك الأسعار والتفاصيل ✨",
+"أبشر 💜 قل لي اسم الخدمة اللي تبيها مثل نتفلكس أو شاهد أو يوتيوب بريوم أو سناب بلس أو خدمات القيمنق وأنا أعطيك الأسعار والتفاصيل ✨",
 
 wa:false
 
