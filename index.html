@@ -2946,8 +2946,6 @@ price:94.99,
 question:"أبي شاهد مباريات سنة"
 },
 
-/* ================= YOUTUBE PREMIUM ================= */
-
 {
 iconHtml:`
 <div class="text-logo">
@@ -3033,6 +3031,8 @@ contact:true
 
 },
 
+/* ================= GAMING ================= */
+
 gaming:{
 
 icon:"🎮",
@@ -3043,23 +3043,47 @@ products:[
 
 {
 iconHtml:brandLogo("playstation","logo-large"),
-title:"PlayStation Plus شهر",
-description:"اشتراك بلس لمدة شهر لسوني PS4 وPS5.",
-question:"أبي بلس سوني شهر"
+title:"PlayStation Plus",
+description:"اختر الباقة والمدة المناسبة لك لسوني PS4 وPS5.",
+question:"أبي بلس سوني",
+variants:[
+
+{
+name:"أساسي — شهر",
+price:13.99
 },
 
 {
-iconHtml:brandLogo("playstation","logo-large"),
-title:"PlayStation Plus 3 أشهر",
-description:"اشتراك بلس لمدة 3 أشهر لسوني PS4 وPS5.",
-question:"أبي بلس سوني 3 أشهر"
+name:"إضافي — شهر",
+price:15.99
 },
 
 {
-iconHtml:brandLogo("playstation","logo-large"),
-title:"PlayStation Plus سنة",
-description:"اشتراك بلس لمدة سنة لسوني PS4 وPS5.",
-question:"أبي بلس سوني سنة"
+name:"فاخر — شهر",
+price:21.99
+},
+
+{
+name:"أساسي — 3 أشهر",
+price:29.99
+},
+
+{
+name:"إضافي — 3 أشهر",
+price:37.99
+},
+
+{
+name:"فاخر — 3 أشهر",
+price:44.99
+},
+
+{
+name:"أساسي — سنة",
+price:59.99
+}
+
+]
 },
 
 {
@@ -3429,7 +3453,7 @@ let message=
 if(selectedVariant){
 
 message+=
-"المدة: "+selectedVariant+"\n";
+"الخيار: "+selectedVariant+"\n";
 
 }
 
@@ -4217,6 +4241,10 @@ q.includes("بلايستيشن") ||
 q.includes("سوني") ||
 q.includes("بليستيشن") ||
 q.includes("بلس سوني") ||
+q.includes("بلاي") ||
+q.includes("playstation") ||
+q.includes("ps4") ||
+q.includes("ps5") ||
 q.includes("فورت نايت") ||
 q.includes("فورتنايت") ||
 q.includes("فيبوكس") ||
@@ -4224,22 +4252,56 @@ q.includes("v bucks") ||
 q.includes("حسابات عشوائيه")
 ){
 
+/* ================= PLAYSTATION PLUS ================= */
+
 if(
-q.includes("شهر") ||
-q.includes("3") ||
-q.includes("ثلاث") ||
+q.includes("بلس") ||
+q.includes("بلايستيشن") ||
+q.includes("بليستيشن") ||
+q.includes("سوني") ||
+q.includes("playstation") ||
+q.includes("ps4") ||
+q.includes("ps5")
+){
+
+/* سنة أساسي */
+
+if(
 q.includes("سنه") ||
-q.includes("سنة")
+q.includes("سنة") ||
+q.includes("سنوي")
 ){
 
 return{
 
 text:
-"أبشر 🎮 عندنا PlayStation Plus لسوني PS4 وPS5:\n"+
-"• شهر\n"+
-"• 3 أشهر\n"+
-"• سنة\n\n"+
-"الأسعار والتوفر الحالي نوضحها لك عبر واتساب 📲",
+"أبشر 🎮 PlayStation Plus أساسي لمدة سنة بـ 59.99 ريال.\n\n"+
+"حالياً المتوفر السنوي عندنا هو الأساسي فقط.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+/* 3 أشهر فاخر */
+
+if(
+q.includes("3") ||
+q.includes("ثلاث")
+){
+
+if(
+q.includes("فاخر") ||
+q.includes("premium")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus فاخر لمدة 3 أشهر بـ 44.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
 
 wa:true
 
@@ -4248,7 +4310,161 @@ wa:true
 }
 
 if(
+q.includes("اضافي") ||
+q.includes("إضافي") ||
+q.includes("extra")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus إضافي لمدة 3 أشهر بـ 37.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("اساسي") ||
+q.includes("أساسي") ||
+q.includes("essential")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus أساسي لمدة 3 أشهر بـ 29.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus لمدة 3 أشهر:\n"+
+"• أساسي: 29.99 ريال\n"+
+"• إضافي: 37.99 ريال\n"+
+"• فاخر: 44.99 ريال\n\n"+
+"اختر الباقة اللي تبيها وأبشر 📲",
+
+wa:true
+
+};
+
+}
+
+/* شهر */
+
+if(
+q.includes("شهر") ||
+q.includes("شهري")
+){
+
+if(
+q.includes("فاخر") ||
+q.includes("premium")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus فاخر لمدة شهر بـ 21.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("اضافي") ||
+q.includes("إضافي") ||
+q.includes("extra")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus إضافي لمدة شهر بـ 15.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("اساسي") ||
+q.includes("أساسي") ||
+q.includes("essential")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus أساسي لمدة شهر بـ 13.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus لمدة شهر:\n"+
+"• أساسي: 13.99 ريال\n"+
+"• إضافي: 15.99 ريال\n"+
+"• فاخر: 21.99 ريال\n\n"+
+"اختر الباقة اللي تبيها وأبشر 📲",
+
+wa:true
+
+};
+
+}
+
+/* جميع الأسعار */
+
+return{
+
+text:
+"أبشر 🎮 أسعار PlayStation Plus عندنا:\n\n"+
+"شهر:\n"+
+"• أساسي: 13.99 ريال\n"+
+"• إضافي: 15.99 ريال\n"+
+"• فاخر: 21.99 ريال\n\n"+
+"3 أشهر:\n"+
+"• أساسي: 29.99 ريال\n"+
+"• إضافي: 37.99 ريال\n"+
+"• فاخر: 44.99 ريال\n\n"+
+"سنة:\n"+
+"• أساسي: 59.99 ريال\n\n"+
+"إذا تبي تطلب اختر الباقة وأبشر 📲",
+
+wa:true
+
+};
+
+}
+
+/* ================= OTHER GAMING ================= */
+
+if(
 q.includes("فورت") ||
+q.includes("فيبوكس") ||
+q.includes("v bucks") ||
 q.includes("حساب")
 ){
 
@@ -4271,9 +4487,7 @@ return{
 
 text:
 "أبشر 🎮 قسم القيمنق عندنا يشمل:\n"+
-"• PlayStation Plus شهر\n"+
-"• PlayStation Plus 3 أشهر\n"+
-"• PlayStation Plus سنة\n"+
+"• PlayStation Plus\n"+
 "• حسابات فورت نايت\n"+
 "• V-Bucks\n"+
 "• حسابات عشوائية\n\n"+
