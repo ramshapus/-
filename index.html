@@ -4761,8 +4761,10 @@ document.body.style.overflow="";
   <h2>طرق الدفع</h2>
   <p>ادفع بسهولة وأمان عبر هلا للمدفوعات 💳</p>
   <div class="payment-hala">
-    <div class="hala-icon">هلا</div>
-    <div>
+    <div class="hala-icon">
+      <img src="IMG_2062.png" alt="Hala">
+    </div>
+    <div class="hala-info">
       <strong>هلا للمدفوعات</strong>
       <span>دفع إلكتروني آمن وسريع</span>
     </div>
@@ -4796,30 +4798,30 @@ document.body.style.overflow="";
   gap: 15px;
 }
 .hala-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 15px;
+  width: 70px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  color: #111;
-  font-size: 18px;
-  font-weight: 900;
+  overflow: hidden;
 }
-.payment-hala div:last-child {
+.hala-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.hala-info {
   display: flex;
   flex-direction: column;
   text-align: right;
   gap: 4px;
 }
-.payment-hala strong {
+.hala-info strong {
   font-size: 15px;
 }
-.payment-hala span {
+.hala-info span {
   font-size: 12px;
   opacity: 0.65;
 }
 </style>
-</body>
-</html>
