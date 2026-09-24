@@ -72,7 +72,7 @@ body{
 background:
 radial-gradient(circle at 50% -10%,rgba(126,34,206,.20),transparent 35%),
 radial-gradient(circle at 0% 40%,rgba(168,85,247,.07),transparent 25%),
-radial-gradient(circle at 100% 70%,rgba(34,197,94,.025),transparent 25%),
+radial-gradient(circle at 100% 70%,rgba(168,85,247,.025),transparent 25%),
 var(--bg);
 color:#fff;
 font-family:Tahoma,Arial,sans-serif;
@@ -85,7 +85,7 @@ content:"";
 position:fixed;
 inset:0;
 pointer-events:none;
-opacity:.035;
+opacity:.025;
 background-image:
 linear-gradient(45deg,transparent 48%,#fff 49%,transparent 51%),
 linear-gradient(-45deg,transparent 48%,#fff 49%,transparent 51%);
@@ -137,8 +137,7 @@ gap:10px;
 width:58px;
 height:58px;
 object-fit:contain;
-filter:
-drop-shadow(0 0 14px rgba(168,85,247,.45));
+filter:drop-shadow(0 0 14px rgba(168,85,247,.45));
 }
 
 .brand-text{
@@ -187,22 +186,6 @@ color:white;
 box-shadow:0 8px 25px rgba(126,34,206,.22);
 }
 
-/* ================= NATIONAL MINI BADGE ================= */
-
-.national-mini{
-display:inline-flex;
-align-items:center;
-gap:5px;
-margin-right:8px;
-padding:5px 8px;
-border-radius:30px;
-background:rgba(34,197,94,.06);
-border:1px solid rgba(34,197,94,.16);
-color:#86efac;
-font-size:8px;
-white-space:nowrap;
-}
-
 /* ================= HERO ================= */
 
 .hero{
@@ -223,18 +206,6 @@ top:-230px;
 right:50%;
 transform:translateX(50%);
 pointer-events:none;
-}
-
-.hero::after{
-content:"96";
-position:absolute;
-font-size:220px;
-font-weight:bold;
-color:rgba(34,197,94,.018);
-left:-30px;
-top:40px;
-pointer-events:none;
-line-height:1;
 }
 
 .hero-content{
@@ -261,34 +232,6 @@ transform:translateY(0);
 50%{
 transform:translateY(-5px);
 }
-}
-
-.national-badge{
-display:inline-flex;
-align-items:center;
-gap:8px;
-padding:8px 14px;
-border-radius:50px;
-background:
-linear-gradient(
-90deg,
-rgba(34,197,94,.10),
-rgba(168,85,247,.08)
-);
-border:1px solid rgba(34,197,94,.20);
-color:#d9ffe6;
-font-size:10px;
-font-weight:bold;
-margin-bottom:14px;
-box-shadow:0 8px 30px rgba(34,197,94,.05);
-}
-
-.national-dot{
-width:7px;
-height:7px;
-border-radius:50%;
-background:#22c55e;
-box-shadow:0 0 12px #22c55e;
 }
 
 .badge{
@@ -321,7 +264,7 @@ background:linear-gradient(
 #fff 0%,
 #e9d5ff 45%,
 #a855f7 75%,
-#86efac 100%
+#d8b4fe 100%
 );
 -webkit-background-clip:text;
 background-clip:text;
@@ -330,15 +273,6 @@ color:transparent;
 
 .hero h1 span{
 display:block;
-}
-
-.hero-slogan{
-display:block;
-font-size:clamp(19px,3vw,29px);
-margin-top:12px;
-font-weight:bold;
-color:#86efac;
-text-shadow:0 0 25px rgba(34,197,94,.15);
 }
 
 .hero p{
@@ -384,54 +318,6 @@ color:#ddd6e5;
 transform:translateY(-3px);
 }
 
-/* ================= NATIONAL STRIP ================= */
-
-.national-strip{
-margin:12px auto 38px;
-padding:13px 18px;
-border-radius:17px;
-background:
-linear-gradient(
-90deg,
-rgba(34,197,94,.05),
-rgba(168,85,247,.08),
-rgba(34,197,94,.05)
-);
-border:1px solid rgba(34,197,94,.12);
-text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.national-strip::before,
-.national-strip::after{
-content:"✦";
-position:absolute;
-color:rgba(134,239,172,.35);
-font-size:18px;
-top:50%;
-transform:translateY(-50%);
-}
-
-.national-strip::before{
-right:18px;
-}
-
-.national-strip::after{
-left:18px;
-}
-
-.national-strip strong{
-font-size:12px;
-color:#d9ffe6;
-}
-
-.national-strip span{
-font-size:9px;
-color:#80788a;
-margin-right:8px;
-}
-
 /* ================= TRUST ================= */
 
 .trust-grid{
@@ -458,7 +344,7 @@ top:0;
 right:0;
 width:40%;
 height:1px;
-background:linear-gradient(90deg,transparent,#22c55e,transparent);
+background:linear-gradient(90deg,transparent,#a855f7,transparent);
 opacity:.45;
 }
 
@@ -549,7 +435,7 @@ bottom:0;
 left:0;
 width:70px;
 height:1px;
-background:linear-gradient(90deg,#22c55e,transparent);
+background:linear-gradient(90deg,#a855f7,transparent);
 opacity:.5;
 }
 
@@ -617,7 +503,7 @@ position:absolute;
 width:300px;
 height:150px;
 border-radius:50%;
-background:rgba(34,197,94,.035);
+background:rgba(168,85,247,.035);
 filter:blur(70px);
 left:50%;
 top:-80px;
@@ -655,7 +541,7 @@ transition:.25s;
 
 .payment-hala:hover{
 transform:translateY(-2px);
-border-color:rgba(34,197,94,.25);
+border-color:rgba(168,85,247,.35);
 box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
@@ -807,8 +693,6 @@ line-height:1.9;
 min-height:34px;
 margin-bottom:13px;
 }
-
-/* اخفاء الاسعار من بطاقات المنتجات */
 
 .product-price{
 display:none;
@@ -1086,24 +970,15 @@ border-radius:28px;
 text-align:center;
 }
 
-.certificate-box::after{
-content:"🇸🇦";
-position:absolute;
-font-size:90px;
-opacity:.025;
-left:-15px;
-bottom:-15px;
-}
-
 .certificate-badge{
 display:inline-flex;
 align-items:center;
 gap:7px;
 padding:8px 13px;
 border-radius:50px;
-background:rgba(34,197,94,.07);
-border:1px solid rgba(34,197,94,.18);
-color:#86efac;
+background:rgba(168,85,247,.07);
+border:1px solid rgba(168,85,247,.18);
+color:#d8b4fe;
 font-size:10px;
 margin-bottom:15px;
 }
@@ -1352,7 +1227,7 @@ bottom:0;
 right:0;
 width:55px;
 height:1px;
-background:linear-gradient(90deg,#22c55e,transparent);
+background:linear-gradient(90deg,#a855f7,transparent);
 }
 
 .step-number{
@@ -1422,6 +1297,46 @@ transform:translateY(-2px);
 box-shadow:0 10px 30px rgba(126,34,206,.25);
 }
 
+/* ================= SOCIAL ================= */
+
+.footer-social{
+text-align:center;
+margin:18px 0 15px;
+}
+
+.footer-social-title{
+font-size:13px;
+opacity:.7;
+margin-bottom:10px;
+}
+
+.footer-social-links{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.footer-social-links a{
+width:38px;
+height:38px;
+border-radius:11px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.1);
+color:inherit;
+text-decoration:none;
+font-size:19px;
+transition:.25s ease;
+}
+
+.footer-social-links a:hover{
+transform:translateY(-3px);
+border-color:rgba(160,80,255,.6);
+}
+
 /* ================= FOOTER ================= */
 
 footer{
@@ -1450,12 +1365,6 @@ margin-bottom:5px;
 color:#62596b;
 font-size:9px;
 margin-bottom:20px;
-}
-
-.footer-national{
-color:#86efac;
-font-size:8px;
-margin-bottom:16px;
 }
 
 .footer-links{
@@ -1831,10 +1740,6 @@ font-size:10px;
 display:none;
 }
 
-.national-mini{
-display:none;
-}
-
 .hero{
 padding:52px 0 32px;
 }
@@ -1845,19 +1750,6 @@ width:150px;
 
 .hero p{
 font-size:11px;
-}
-
-.hero-slogan{
-font-size:19px;
-}
-
-.national-strip{
-margin-bottom:30px;
-}
-
-.national-strip span{
-display:block;
-margin:5px 0 0;
 }
 
 .trust-grid{
@@ -2064,6 +1956,10 @@ height:calc(100vh - 105px);
 border-radius:22px;
 }
 
+.footer-social-title{
+font-size:11px;
+}
+
 }
 
 @media(max-width:360px){
@@ -2078,11 +1974,6 @@ font-size:29px;
 
 .category{
 min-height:160px;
-}
-
-.national-strip{
-padding-left:30px;
-padding-right:30px;
 }
 
 }
@@ -2117,10 +2008,6 @@ alt="شعار رمشة بلس">
 <span>خدمات واشتراكات رقمية</span>
 
 </div>
-
-<span class="national-mini">
-🇸🇦 96
-</span>
 
 </a>
 
@@ -2161,14 +2048,6 @@ src="IMG_1574.jpeg"
 class="hero-logo"
 alt="رمشة بلس">
 
-<div class="national-badge">
-
-<span class="national-dot"></span>
-
-اليوم الوطني السعودي 96
-
-</div>
-
 <div class="badge">
 
 <span class="badge-dot"></span>
@@ -2184,12 +2063,6 @@ alt="رمشة بلس">
 <span>في مكان واحد.</span>
 
 </h1>
-
-<div class="hero-slogan">
-
-🇸🇦 عزّنا بطبعنا
-
-</div>
 
 <p>
 
@@ -2222,14 +2095,6 @@ onclick="openRamash()">
 </section>
 
 <div class="container">
-
-<div class="national-strip">
-
-<strong>🇸🇦 عزّنا بطبعنا</strong>
-
-<span>نحتفل بهويتنا ونستمر بتقديم خدماتنا الرقمية بروح سعودية</span>
-
-</div>
 
 <div class="trust-grid">
 
@@ -2447,414 +2312,220 @@ id="reviewsSlider">
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"ممتازه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"ممتازه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"افضل متجر واسعارهم رخيصه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"افضل متجر واسعارهم رخيصه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"اسعارهم رخيصه وكويسه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"اسعارهم رخيصه وكويسه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"خدمه سريعه والاهم الثقه👍🏻"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"خدمه سريعه والاهم الثقه👍🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"حلوه جداً ومميزه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"حلوه جداً ومميزه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"ممتاز"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"ممتاز"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"❤️❤️"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"❤️❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"جميل جداً"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"جميل جداً"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"انصح بتعامل معهم متجر ثقه👍🏻❤️"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"انصح بتعامل معهم متجر ثقه👍🏻❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"عجيب"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"عجيب"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"فوق الممتازه وانصح فيه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"فوق الممتازه وانصح فيه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"الله يرزقكم ويعطيكم الف عافيه❤️"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"الله يرزقكم ويعطيكم الف عافيه❤️"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"فوق الممتازة وأنصح فيه"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"فوق الممتازة وأنصح فيه"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"خدمة فخمة 😍"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"خدمة فخمة 😍"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"الصراحة متجر فخم والتعامل معهم فوق الممتاز ويردون بسرعة وأفضل تجربة لي"
-</div>
-
-<div class="review-customer">
-عميل رمشة بلس
-</div>
-
+<div class="review-text">"الصراحة متجر فخم والتعامل معهم فوق الممتاز ويردون بسرعة وأفضل تجربة لي"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
 </div>
 
 <div class="review-slide">
 <div class="review-card">
-
 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-<div class="review-text">
-"متجر فوق التقييم ويردون بسرعة"
+<div class="review-text">"متجر فوق التقييم ويردون بسرعة"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-
-<div class="review-customer">
-عميل رمشة بلس
 </div>
 
-</div>
-</div>
-<!-- التقييم 21 -->
 <div class="review-slide">
-  <div class="review-card">
-    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-    <div class="review-text">
-    تجربة ممتازة وسرعة بالرد والتنفيذ، أنصح فيهم👍🏻
-    </div>
-    <div class="review-customer">
-    عميل رمشة بلس
-    </div>
-  </div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"تجربة ممتازة وسرعة بالرد والتنفيذ، أنصح فيهم👍🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
+</div>
 </div>
 
-<!-- التقييم 22 -->
 <div class="review-slide">
-  <div class="review-card">
-    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-    <div class="review-text">
-    "الأفضل في المجال 🔥👍🏾"
-    </div>
-    <div class="review-customer">
-    عميل رمشة بلس
-    </div>
-  </div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"الأفضل في المجال 🔥👍🏾"</div>
+<div class="review-customer">عميل رمشة بلس</div>
+</div>
 </div>
 
-<!-- التقييم 23 -->
 <div class="review-slide">
-  <div class="review-card">
-    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-    <div class="review-text">
-    رائع سريعين ومحترمين الله يوفقهم أنصح بهم 🙏🏻
-    </div>
-    <div class="review-customer">
-    عميل رمشة بلس
-    </div>
-  </div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"رائع سريعين ومحترمين الله يوفقهم أنصح بهم 🙏🏻"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-<!-- التقييم 24 -->
+</div>
+
 <div class="review-slide">
-  <div class="review-card">
-    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-    <div class="review-text">
-    فوق التقييم
-    </div>
-    <div class="review-customer">
-    عميل رمشة بلس
-    </div>
-  </div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"فوق التقييم"</div>
+<div class="review-customer">عميل رمشة بلس</div>
+</div>
 </div>
 
-<!-- التقييم 25 -->
 <div class="review-slide">
-  <div class="review-card">
-    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-    <div class="review-text">
-    خدمة سريعة وعلى طول تسلمت الحساب
-    </div>
-    <div class="review-customer">
-    عميل رمشة بلس
-    </div>
-  </div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"خدمة سريعة وعلى طول تسلمت الحساب"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-<!-- التقييم 26 -->
+</div>
+
 <div class="review-slide">
-  <div class="review-card">
-    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-    <div class="review-text">
-      "سعر مناسب وسرعه فالخدمه استقبال العملاء ٢٤ساعه وثقه مليووون شكراً"
-    </div>
-
-    <div class="review-customer">
-      عميل رمشة بلس
-    </div>
-  </div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"سعر مناسب وسرعه فالخدمه استقبال العملاء ٢٤ساعه وثقه مليووون شكراً"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
-  <!-- التقييم 27 -->
+</div>
+
 <div class="review-slide">
-  <div class="review-card">
-    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-
-    <div class="review-text">
-      "افضل واضمن متجر جربته الصراحة"
-    </div>
-
-    <div class="review-customer">
-      عميل رمشة بلس
-    </div>
-  </div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<div class="review-text">"افضل واضمن متجر جربته الصراحة"</div>
+<div class="review-customer">عميل رمشة بلس</div>
 </div>
+</div>
+
 </div>
 
 <button
@@ -2897,7 +2568,7 @@ id="reviewCount">
 <div class="certificate-box">
 
 <div class="certificate-badge">
-🇸🇦 توثيق رسمي
+🔐 توثيق رسمي
 </div>
 
 <h2>
@@ -3096,10 +2767,6 @@ alt="رمشة بلس">
 خدمات واشتراكات رقمية بكل سهولة
 </div>
 
-<div class="footer-national">
-🇸🇦 اليوم الوطني السعودي 96 — عزّنا بطبعنا
-</div>
-
 <div class="footer-links">
 
 <button onclick="openModal('about')">
@@ -3119,171 +2786,51 @@ alt="رمشة بلس">
 </button>
 
 </div>
-<!-- التواصل الاجتماعي -->
+
 <div class="footer-social">
-  <div class="footer-social-title">تابعنا على التواصل الاجتماعي</div>
 
-  <div class="footer-social-links">
-
-    <a href="https://snapchat.com/t/M5LXgWuQ"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="سناب شات">
-      👻
-    </a>
-
-    <a href="https://www.tiktok.com/@ramshaplus"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="تيك توك">
-      ♪
-    </a>
-
-    <a href="https://www.instagram.com/ramshaplus"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="إنستقرام">
-      ◎
-    </a>
-
-    <a href="https://x.com/ramshaplus"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="X">
-      𝕏
-    </a>
-
-  </div>
+<div class="footer-social-title">
+تابعنا على التواصل الاجتماعي
 </div>
 
-<style>
-.footer-social {
-  text-align: center;
-  margin: 18px 0 15px;
-}
+<div class="footer-social-links">
 
-.footer-social-title {
-  font-size: 13px;
-  opacity: 0.7;
-  margin-bottom: 10px;
-}
+<a
+href="https://snapchat.com/t/M5LXgWuQ"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="سناب شات">
+👻
+</a>
 
-.footer-social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+<a
+href="https://www.tiktok.com/@ramshaplus"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="تيك توك">
+♪
+</a>
 
-.footer-social-links a {
-  width: 38px;
-  height: 38px;
-  border-radius: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: inherit;
-  text-decoration: none;
-  font-size: 19px;
-  transition: 0.25s ease;
-}
+<a
+href="https://www.instagram.com/ramshaplus"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="إنستقرام">
+◎
+</a>
 
-.footer-social-links a:hover {
-  transform: translateY(-3px);
-  border-color: rgba(160,80,255,0.6);
-}
-</style>
-</section>
+<a
+href="https://x.com/ramshaplus"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="X">
+𝕏
+</a>
 
-<style>
-.social-section {
-  text-align: center;
-  padding: 45px 20px;
-  margin-top: 30px;
-}
+</div>
 
-.social-section h2 {
-  margin: 0 0 8px;
-  font-size: 25px;
-}
+</div>
 
-.social-section p {
-  margin: 0 0 25px;
-  opacity: 0.7;
-}
-
-.social-links {
-  max-width: 850px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
-
-.social-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 17px 12px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: inherit;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.social-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(160,80,255,0.6);
-  box-shadow: 0 8px 25px rgba(120,60,255,0.15);
-}
-
-.social-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.08);
-  font-size: 24px;
-  font-weight: 900;
-  flex-shrink: 0;
-}
-
-.social-card div {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  gap: 3px;
-}
-
-.social-card strong {
-  font-size: 15px;
-}
-
-.social-card small {
-  font-size: 12px;
-  opacity: 0.55;
-  direction: ltr;
-}
-
-@media (max-width: 750px) {
-  .social-links {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 450px) {
-  .social-links {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
 <small>
 © 2026 رمشة بلس — جميع الحقوق محفوظة
 </small>
@@ -4700,7 +4247,6 @@ updateReview();
 startReviewTimer();
 
 let reviewTouchStartX=0;
-
 let reviewTouchEndX=0;
 
 reviewsSlider.addEventListener(
@@ -5074,7 +4620,7 @@ text:
 "أبشر 📺 شاهد VIP متوفر عندنا:\n"+
 "• شهر: 9.99 ريال\n"+
 "• سنة: 49.99 ريال\n\n"+
-"إذا تبي تطلب شاهد أمر وتدلل 📲",
+"إذا تبي تطلبه أمر وتدلل 📲",
 
 wa:true
 
@@ -5760,8 +5306,7 @@ document.body.style.overflow="";
 
 }
 
-}
-);
+});
 
 </script>
 
