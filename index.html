@@ -3571,7 +3571,6 @@ title:"القيمنق",
 description:"خدمات ومنتجات رقمية لمحبي الألعاب",
 
 products:[
-
 {
 iconHtml:brandLogo("playstation","logo-large"),
 title:"PlayStation Plus",
@@ -3580,44 +3579,23 @@ question:"أبي بلس سوني",
 variants:[
 
 {
-name:"أساسي — شهر",
-price:13.99
+name:"شهر",
+price:24.99
 },
 
 {
-name:"إضافي — شهر",
-price:15.99
+name:"3 أشهر",
+price:39.99
 },
 
 {
-name:"فاخر — شهر",
-price:21.99
-},
-
-{
-name:"أساسي — 3 أشهر",
-price:29.99
-},
-
-{
-name:"إضافي — 3 أشهر",
-price:37.99
-},
-
-{
-name:"فاخر — 3 أشهر",
-price:44.99
-},
-
-{
-name:"أساسي — سنة",
-price:59.99
+name:"سنة",
+price:57.99
 }
 
 ]
 },
 
-{
 iconHtml:brandLogo("fortnite","logo-large"),
 title:"حسابات Fortnite",
 description:"حسابات فورت نايت متوفرة حسب الخيارات المتاحة.",
@@ -5018,20 +4996,70 @@ wa:true
 
 return{
 
-text:
-"أبشر 🎮 أسعار PlayStation Plus عندنا:\n\n"+
-"شهر:\n"+
-"• أساسي: 13.99 ريال\n"+
-"• إضافي: 15.99 ريال\n"+
-"• فاخر: 21.99 ريال\n\n"+
-"3 أشهر:\n"+
-"• أساسي: 29.99 ريال\n"+
-"• إضافي: 37.99 ريال\n"+
-"• فاخر: 44.99 ريال\n\n"+
-"سنة:\n"+
-"• أساسي: 59.99 ريال\n\n"+
-"إذا تبي تطلب اختر الباقة وأبشر 📲",
+if(
+q.includes("سنه") ||
+q.includes("سنة") ||
+q.includes("سنوي")
+){
 
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus لمدة سنة بـ 57.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("3") ||
+q.includes("ثلاث")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus لمدة 3 أشهر بـ 39.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+if(
+q.includes("شهر") ||
+q.includes("شهري")
+){
+
+return{
+
+text:
+"أبشر 🎮 PlayStation Plus لمدة شهر بـ 24.99 ريال.\n\n"+
+"إذا تبي تطلبه أمر وتدلل 📲",
+
+wa:true
+
+};
+
+}
+
+return{
+
+text:
+"أبشر 🎮 أسعار PlayStation Plus عندنا:\n"+
+"• شهر: 24.99 ريال\n"+
+"• 3 أشهر: 39.99 ريال\n"+
+"• سنة: 57.99 ريال\n\n"+
+"إذا تبي تطلب اختر المدة وأبشر 📲",
+
+wa:true
+
+};
 wa:true
 
 };
