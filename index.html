@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-39RQ039RLK"></script>
@@ -17,10 +14,6 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>رمشة بلس | اشتراكات رقمية وخدمات إلكترونية</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>رمشة بلس | اشتراكات رقمية وخدمات إلكترونية</title>
 
 <meta name="description" content="رمشة بلس - خدمات إلكترونية واشتراكات رقمية وبرامج سوشيال ميديا وخدمات قيمنق مع دعم مباشر.">
@@ -2332,16 +2325,6 @@ const categories = {
     products: [
 
       {
-        name: "PlayStation Plus",
-        description: "اشتراك PS Plus",
-        options: [
-          { label:"شهر — 24.99 ريال", price:24.99 },
-          { label:"3 أشهر — 39.99 ريال", price:39.99 },
-          { label:"سنة — 57.99 ريال", price:57.99 }
-        ]
-      },
-
-      {
         name: "Fortnite Accounts",
         description: "حسابات فورتنايت",
         options: [
@@ -3259,26 +3242,20 @@ ${result.map(x =>
   }
 
 
-  /* بلايستيشن */
+  /* بلايستيشن / بلس السوني */
 
   if(
     text.includes("بلايستيشن") ||
     text.includes("بلاي") ||
+    text.includes("سوني") ||
     text.includes("ps plus") ||
-    text.includes("قيمنق")
+    text.includes("بلس")
   ){
 
-    const result =
-      findProducts(["PlayStation"]);
-
     return `
-🎮 PlayStation Plus
+🎮 اشتراك PlayStation Plus (بلس السوني)
 
-${result.map(x =>
-  formatProduct(x.product)
-).join("\n\n")}
-
-ولدينا أيضاً خدمات وحسابات قيمنق أخرى.
+عذراً، اشتراك بلايستيشن بلس **غير متوفر حالياً** في المتجر ❌
 `;
   }
 
@@ -3389,7 +3366,7 @@ ${getCategoryPrices("subscriptions")}
 📱 السوشيال ميديا:
 ${getCategoryPrices("social")}
 
-🎮 القيمنق:
+🎮 القيمنق (حسابات وعملات):
 ${getCategoryPrices("gaming")}
 `;
   }
@@ -3415,7 +3392,6 @@ ${getCategoryPrices("gaming")}
 شاهد
 يوتيوب
 سناب
-بلايستيشن
 موقع
 متجر
 
@@ -3491,7 +3467,7 @@ ${getCategoryPrices("gaming")}
 📺 شاهد
 ▶️ يوتيوب
 👻 سناب
-🎮 بلايستيشن
+🎮 قيمنق وفورتنايت
 📱 تيك توك
 📸 انستقرام
 💻 المواقع والمتاجر
