@@ -181,9 +181,10 @@ img{max-width:100%}
     <span class="trend-sub">رمشة بلس</span>
   </div>
 </div>
-
-<button id="enableTrendSound" type="button">🔊 فعّل صوت الترند</button>
 🇸🇦 وطن لا نحميه لا نستحق العيش فيه 💚
+  
+<button id="enableTrendSound" type="button">🔊 فعّل صوت الترند</button>
+
 <video
   id="qamtahAudio"
   src="./v1c044g50000dak5hmnog65h56dgqgn0.mov"
@@ -704,8 +705,8 @@ document.addEventListener("keydown",e=>{
   button.addEventListener("click", function () {
     soundEnabled = !soundEnabled;
     button.textContent = soundEnabled
-      ? "🔇 إيقاف صوت الترند"
-      : "🔊 فعّل صوت الترند";
+      ? "🔇 إيقاف الصوت"
+      : "🔊 فعّل صوت ";
 
     clearTimeout(showTimer);
     clearTimeout(hideTimer);
