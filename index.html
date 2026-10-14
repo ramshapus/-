@@ -173,6 +173,26 @@ img{max-width:100%}
 </head>
 
 <body>
+    
+<div class="ramsha-trend" id="ramshaTrend" aria-hidden="true">
+  <span class="trend-flag">🇸🇦</span>
+  <div class="trend-copy">
+    السعودية 🇸🇦💚
+    <span class="trend-sub">رمشة بلس</span>
+  </div>
+</div>
+
+<button id="enableTrendSound" type="button">🔊 فعّل صوت الترند</button>
+
+<video
+  id="qamtahAudio"
+  src="./export_1791956600529.mov"
+  preload="auto"
+  playsinline
+  style="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none"
+  aria-hidden="true">
+</video>
+
 <header class="header">
   <div class="header-inner">
     <a href="#" class="brand"><img src="IMG_1574.jpeg" alt="شعار رمشة بلس"><div><div class="brand-name">رمشة بلس</div><div class="brand-sub">خدماتك الرقمية في مكان واحد</div></div></a>
@@ -640,6 +660,77 @@ document.addEventListener("keydown",e=>{
     closeCategory();closeCheckout();closePolicy();closeRamash();
   }
 });
+   
+// 🇸🇦 وطن لانحميه لانستحق العيش فيه
+(function () {
+  const trend = document.getElementById("ramshaTrend");
+  const media = document.getElementById("qamtahAudio");
+  const button = document.getElementById("enableTrendSound");
+
+  if (!trend || !media || !button) return;
+
+  let soundEnabled = false;
+  let showTimer;
+  let hideTimer;
+
+  function stopSound() {
+    media.pause();
+    try { media.currentTime = 0; } catch (e) {}
+  }
+
+  function showTrend() {
+    if (document.hidden) return;
+
+    trend.classList.add("show");
+
+    if (soundEnabled) {
+      try { media.currentTime = 0; } catch (e) {}
+      media.play().catch(function () {
+        button.textContent = "🔊 اضغط لتفعيل الصوت";
+      });
+    }
+
+    const duration = Number.isFinite(media.duration) && media.duration > 0
+      ? Math.max(2200, media.duration * 1000)
+      : 4000;
+
+    hideTimer = setTimeout(function () {
+      trend.classList.remove("show");
+      stopSound();
+      showTimer = setTimeout(showTrend, 3000);
+    }, duration);
+  }
+
+  button.addEventListener("click", function () {
+    soundEnabled = !soundEnabled;
+    button.textContent = soundEnabled
+      ? "🔇 إيقاف صوت الترند"
+      : "🔊 فعّل صوت الترند";
+
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+
+    if (soundEnabled) {
+      showTrend();
+    } else {
+      stopSound();
+    }
+  });
+
+  document.addEventListener("visibilitychange", function () {
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+    trend.classList.remove("show");
+    stopSound();
+
+    if (!document.hidden) {
+      showTimer = setTimeout(showTrend, 1000);
+    }
+  });
+
+  showTimer = setTimeout(showTrend, 1000);
+})();
+
 </script>
 </body>
 </html>
