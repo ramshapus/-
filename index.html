@@ -119,6 +119,56 @@ img{max-width:100%}
 @media(max-width:900px){.categories{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.certificate{grid-template-columns:220px 1fr}}
 @media(max-width:650px){.header-inner{min-height:65px;padding:8px 12px}.brand-sub{display:none}.brand-name{font-size:15px}.brand img{width:38px;height:38px}.header-btn{padding:8px 10px;font-size:10px}.hero{min-height:530px}.hero-logo{width:90px;height:90px}.hero h1{font-size:39px}.hero p{font-size:13px;padding:0 12px}.section{padding:52px 0}.section-title{font-size:25px}.container{width:calc(100% - 22px)}.trust-grid{grid-template-columns:1fr}.trust-card{display:flex;align-items:center;text-align:right;gap:12px;padding:13px}.trust-icon{margin:0}.categories{gap:8px}.category-card{min-height:155px;padding:15px 12px;border-radius:17px}.category-icon{font-size:26px}.category-title{font-size:13px}.category-desc{font-size:9px}.payment-card{flex-direction:column;align-items:stretch;padding:18px;gap:15px}.products-grid{grid-template-columns:1fr}.modal-body{padding:13px}.modal{max-height:92vh}.certificate{grid-template-columns:1fr;padding:16px}.certificate-img{max-width:280px;margin:auto}.certificate-info{text-align:center}.steps{grid-template-columns:1fr 1fr;gap:8px}.step{padding:14px}.footer-top{grid-template-columns:1fr;gap:25px}.review-text{font-size:14px}.ramash-window{left:10px;bottom:83px;width:calc(100vw - 20px);height:475px}.ramash-button{left:12px;bottom:12px}}
 @media(max-width:380px){.header-actions .header-btn:first-child{display:none}.hero h1{font-size:34px}.category-card{min-height:145px}}
+  
+/* 🇸🇦*/
+.ramsha-trend {
+  position: fixed;
+  top: 85px;
+  left: 50%;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  max-width: calc(100vw - 24px);
+  border: 1px solid rgba(168,85,247,.45);
+  border-radius: 18px;
+  background: linear-gradient(135deg,#10091b,#241035);
+  color: white;
+  box-shadow: 0 10px 35px rgba(0,0,0,.35);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%,-12px);
+  transition: opacity .25s, transform .25s, visibility .25s;
+  pointer-events: none;
+}
+.ramsha-trend.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%,0);
+}
+.trend-flag {font-size:27px;line-height:1}
+.trend-copy {font-size:13px;font-weight:900;line-height:1.5}
+.trend-sub {display:block;color:#d8b4fe;font-size:10px}
+#enableTrendSound {
+  position:fixed;
+  top:145px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1600;
+  padding:10px 15px;
+  border:1px solid #a855f7;
+  border-radius:12px;
+  background:#170d24;
+  color:white;
+  font:bold 12px Tahoma,sans-serif;
+}
+@media(max-width:600px) {
+  .ramsha-trend {top:78px}
+  #enableTrendSound {top:139px}
+}
+
 </style>
 </head>
 
