@@ -168,7 +168,36 @@ img{max-width:100%}
   .ramsha-trend {top:78px}
   #enableTrendSound {top:139px}
 }
-
+.ramsha-trend {
+  gap: 12px;
+  padding: 13px 16px;
+  width: max-content;
+  max-width: calc(100vw - 24px);
+  justify-content: center;
+  border: 1px solid rgba(168,85,247,.5);
+  border-radius: 18px;
+  background: linear-gradient(135deg,#10091b,#241035);
+}
+.trend-flag {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+.trend-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.8;
+}
+.trend-message {
+  display: block;
+  white-space: nowrap;
+}
+.trend-sub {
+  margin-top: 3px;
+  font-size: 10px;
+}
 </style>
 </head>
 
@@ -177,14 +206,13 @@ img{max-width:100%}
 <div class="ramsha-trend" id="ramshaTrend" aria-hidden="true">
   <span class="trend-flag">🇸🇦</span>
   <div class="trend-copy">
-     🇸🇦 وطن لا نحميه لا نستحق العيش فيه 🔥
-
-    <span class="trend-sub">رمشة بلس</span>
+    <span class="trend-message">وطن لا نحميه</span>
+    <span class="trend-message">لا نستحق العيش فيه 🔥</span>
+    <span class="trend-sub">💜 رمشة بلس</span>
   </div>
 </div>
-  
-<button id="enableTrendSound" type="button">🔊 فعّل صوت الترند</button>
 
+<button id="enableTrendSound" type="button">🔊 فعل الصوت</button>
 <video
   id="qamtahAudio"
   src="./v1c044g50000dak5hmnog65h56dgqgn0.mov"
@@ -706,7 +734,7 @@ document.addEventListener("keydown",e=>{
     soundEnabled = !soundEnabled;
     button.textContent = soundEnabled
       ? "🔇 إيقاف الصوت"
-      : "🔊 فعّل صوت ";
+      : "🔊 فعّل الصوت ";
 
     clearTimeout(showTimer);
     clearTimeout(hideTimer);
