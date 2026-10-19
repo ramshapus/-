@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -59,6 +60,20 @@ img{max-width:100%}
 .category-card{min-height:175px;padding:20px 15px;background:linear-gradient(145deg,rgba(168,85,247,.07),rgba(255,255,255,.025)),var(--card);border:1px solid var(--border);border-radius:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:.25s}
 .category-card:hover{transform:translateY(-4px);border-color:rgba(168,85,247,.4)}
 .category-icon{font-size:31px}.category-title{font-size:16px;font-weight:900}.category-desc{color:var(--muted);font-size:11px}.category-open{color:#c084fc;font-size:11px;font-weight:800;margin-top:12px}
+
+/* أقسام القيمنق الفرعية */
+.gaming-subcategories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.gaming-subcategory{min-width:0;min-height:175px;padding:17px;background:linear-gradient(145deg,rgba(168,85,247,.09),rgba(255,255,255,.02)),var(--card);border:1px solid var(--border);border-radius:20px;display:flex;align-items:center;gap:14px;text-align:right;color:var(--text);transition:transform .2s,border-color .2s}
+.gaming-subcategory:hover{transform:translateY(-3px);border-color:rgba(168,85,247,.5)}
+.gaming-subcategory img{width:76px;height:76px;flex:0 0 76px;object-fit:contain;border-radius:15px;background:rgba(255,255,255,.04);padding:5px}
+.gaming-subcategory-icon{width:76px;height:76px;flex:0 0 76px;display:grid;place-items:center;font-size:36px;background:rgba(168,85,247,.1);border-radius:15px}
+.gaming-subcategory-title{font-size:14px;font-weight:900}
+.gaming-subcategory-desc{font-size:10px;color:var(--muted);margin-top:4px}
+.gaming-subcategory-open{font-size:10px;color:#c084fc;font-weight:900;margin-top:9px}
+.category-back-wrap{margin-bottom:15px}
+.category-back{width:100%;padding:11px 14px;border:1px solid var(--border);background:rgba(168,85,247,.07);border-radius:12px;color:#d8b4fe;font-weight:900;font-size:12px;text-align:right}
+.category-back:hover{background:rgba(168,85,247,.14)}
+
 .payment-card{max-width:850px;margin:auto;padding:25px;border:1px solid var(--border);border-radius:24px;background:var(--card);display:flex;align-items:center;justify-content:space-between;gap:25px}
 .payment-info{display:flex;align-items:center;gap:16px}.payment-icon{font-size:30px}.payment-info h3{font-size:18px}.payment-info p{color:var(--muted);font-size:12px}
 .payment-tag{padding:8px 12px;border-radius:10px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.14);color:#86efac;font-size:11px;font-weight:800}
@@ -67,7 +82,7 @@ img{max-width:100%}
 .modal{width:min(900px,100%);max-height:90vh;overflow:auto;background:#0a0710;border:1px solid rgba(168,85,247,.2);border-radius:24px;box-shadow:var(--shadow)}
 .modal-head{position:sticky;top:0;z-index:2;background:rgba(10,7,16,.96);border-bottom:1px solid rgba(255,255,255,.06);padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .modal-title{font-size:18px;font-weight:900}.modal-close{width:36px;height:36px;border-radius:11px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.04);color:#fff;font-size:18px}
-.modal-body{padding:20px}.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.modal-body{padding:20px}.products-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .product{padding:16px;border:1px solid rgba(255,255,255,.065);background:rgba(255,255,255,.025);border-radius:18px}
 .product-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.product-name{font-weight:900;font-size:14px}.product-desc{color:var(--muted);font-size:10px;margin-top:3px}
 .product-options{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
@@ -117,95 +132,38 @@ img{max-width:100%}
 .toast{position:fixed;right:50%;bottom:20px;transform:translate(50%,20px);opacity:0;pointer-events:none;z-index:5000;background:#17101f;border:1px solid rgba(168,85,247,.25);color:#fff;padding:11px 16px;border-radius:12px;font-size:11px;transition:.25s}
 .toast.show{opacity:1;transform:translate(50%,0)}
 @media(max-width:900px){.categories{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.certificate{grid-template-columns:220px 1fr}}
-@media(max-width:650px){.header-inner{min-height:65px;padding:8px 12px}.brand-sub{display:none}.brand-name{font-size:15px}.brand img{width:38px;height:38px}.header-btn{padding:8px 10px;font-size:10px}.hero{min-height:530px}.hero-logo{width:90px;height:90px}.hero h1{font-size:39px}.hero p{font-size:13px;padding:0 12px}.section{padding:52px 0}.section-title{font-size:25px}.container{width:calc(100% - 22px)}.trust-grid{grid-template-columns:1fr}.trust-card{display:flex;align-items:center;text-align:right;gap:12px;padding:13px}.trust-icon{margin:0}.categories{gap:8px}.category-card{min-height:155px;padding:15px 12px;border-radius:17px}.category-icon{font-size:26px}.category-title{font-size:13px}.category-desc{font-size:9px}.payment-card{flex-direction:column;align-items:stretch;padding:18px;gap:15px}.products-grid{grid-template-columns:1fr}.modal-body{padding:13px}.modal{max-height:92vh}.certificate{grid-template-columns:1fr;padding:16px}.certificate-img{max-width:280px;margin:auto}.certificate-info{text-align:center}.steps{grid-template-columns:1fr 1fr;gap:8px}.step{padding:14px}.footer-top{grid-template-columns:1fr;gap:25px}.review-text{font-size:14px}.ramash-window{left:10px;bottom:83px;width:calc(100vw - 20px);height:475px}.ramash-button{left:12px;bottom:12px}}
+@media(max-width:650px){
+.header-inner{min-height:65px;padding:8px 12px}.brand-sub{display:none}.brand-name{font-size:15px}.brand img{width:38px;height:38px}.header-btn{padding:8px 10px;font-size:10px}
+.hero{min-height:530px}.hero-logo{width:90px;height:90px}.hero h1{font-size:39px}.hero p{font-size:13px;padding:0 12px}
+.section{padding:52px 0}.section-title{font-size:25px}.container{width:calc(100% - 22px)}
+.trust-grid{grid-template-columns:1fr}.trust-card{display:flex;align-items:center;text-align:right;gap:12px;padding:13px}.trust-icon{margin:0}
+.categories{gap:8px}.category-card{min-height:155px;padding:15px 12px;border-radius:17px}.category-icon{font-size:26px}.category-title{font-size:13px}.category-desc{font-size:9px}
+.gaming-subcategories{gap:9px}.gaming-subcategory{min-height:155px;padding:12px;flex-direction:column;align-items:flex-start;gap:9px}.gaming-subcategory img,.gaming-subcategory-icon{width:58px;height:58px;flex-basis:58px}.gaming-subcategory-title{font-size:12px}.gaming-subcategory-desc{font-size:9px}
+.payment-card{flex-direction:column;align-items:stretch;padding:18px;gap:15px}
+.products-grid{grid-template-columns:1fr}.modal-body{padding:13px}.modal{max-height:92vh}
+.certificate{grid-template-columns:1fr;padding:16px}.certificate-img{max-width:280px;margin:auto}.certificate-info{text-align:center}
+.steps{grid-template-columns:1fr 1fr;gap:8px}.step{padding:14px}.footer-top{grid-template-columns:1fr;gap:25px}.review-text{font-size:14px}
+.ramash-window{left:10px;bottom:83px;width:calc(100vw - 20px);height:475px}.ramash-button{left:12px;bottom:12px}
+}
 @media(max-width:380px){.header-actions .header-btn:first-child{display:none}.hero h1{font-size:34px}.category-card{min-height:145px}}
-  
-/* 🇸🇦*/
-.ramsha-trend {
-  position: fixed;
-  top: 85px;
-  left: 50%;
-  z-index: 900;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  max-width: calc(100vw - 24px);
-  border: 1px solid rgba(168,85,247,.45);
-  border-radius: 18px;
-  background: linear-gradient(135deg,#10091b,#241035);
-  color: white;
-  box-shadow: 0 10px 35px rgba(0,0,0,.35);
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%,-12px);
-  transition: opacity .25s, transform .25s, visibility .25s;
-  pointer-events: none;
+
+/* 🇸🇦 */
+.ramsha-trend{
+position:fixed;top:85px;left:50%;z-index:900;display:flex;align-items:center;gap:12px;padding:13px 16px;width:max-content;max-width:calc(100vw - 24px);justify-content:center;border:1px solid rgba(168,85,247,.5);border-radius:18px;background:linear-gradient(135deg,#10091b,#241035);color:white;box-shadow:0 10px 35px rgba(0,0,0,.35);text-align:center;opacity:0;visibility:hidden;transform:translate(-50%,-12px);transition:opacity .25s,transform .25s,visibility .25s;pointer-events:none
 }
-.ramsha-trend.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%,0);
-}
-.trend-flag {font-size:27px;line-height:1}
-.trend-copy {font-size:13px;font-weight:900;line-height:1.5}
-.trend-sub {display:block;color:#d8b4fe;font-size:10px}
-#enableTrendSound {
-  position:fixed;
-  top:145px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:1600;
-  padding:10px 15px;
-  border:1px solid #a855f7;
-  border-radius:12px;
-  background:#170d24;
-  color:white;
-  font:bold 12px Tahoma,sans-serif;
-}
-@media(max-width:600px) {
-  .ramsha-trend {top:78px}
-  #enableTrendSound {top:139px}
-}
-.ramsha-trend {
-  gap: 12px;
-  padding: 13px 16px;
-  width: max-content;
-  max-width: calc(100vw - 24px);
-  justify-content: center;
-  border: 1px solid rgba(168,85,247,.5);
-  border-radius: 18px;
-  background: linear-gradient(135deg,#10091b,#241035);
-}
-.trend-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-.trend-message {
-  color: #22c55e;
-  font-size: 23px;
-  font-weight: 900;
-  line-height: 1.4;
-  white-space: nowrap;
-}
-.trend-underline {
-  display: block;
-  width: 88px;
-  height: 3px;
-  border-radius: 4px;
-  background: #ef4444;
-}
-.trend-underline.second {
-  width: 65px;
-}
+.ramsha-trend.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.trend-flag{font-size:27px;line-height:1}
+.trend-copy{display:flex;flex-direction:column;align-items:center;gap:4px}
+.trend-message{color:#22c55e;font-size:23px;font-weight:900;line-height:1.4;white-space:nowrap}
+.trend-underline{display:block;width:88px;height:3px;border-radius:4px;background:#ef4444}
+.trend-underline.second{width:65px}
+#enableTrendSound{position:fixed;top:145px;left:50%;transform:translateX(-50%);z-index:1600;padding:10px 15px;border:1px solid #a855f7;border-radius:12px;background:#170d24;color:white;font:bold 12px Tahoma,sans-serif}
+@media(max-width:600px){.ramsha-trend{top:78px}#enableTrendSound{top:139px}}
 </style>
 </head>
 
 <body>
-    
+
 <div class="ramsha-trend" id="ramshaTrend" aria-hidden="true">
   <span class="trend-flag">🇸🇦</span>
   <div class="trend-copy">
@@ -216,14 +174,7 @@ img{max-width:100%}
 </div>
 
 <button id="enableTrendSound" type="button">🔊 فعل الصوت</button>
-<video
-  id="qamtahAudio"
-  src="./v1c044g50000dak5hmnog65h56dgqgn0.mov"
-  preload="auto"
-  playsinline
-  style="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none"
-  aria-hidden="true">
-</video>
+<video id="qamtahAudio" src="./v1c044g50000dak5hmnog65h56dgqgn0.mov" preload="auto" playsinline style="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none" aria-hidden="true"></video>
 
 <header class="header">
   <div class="header-inner">
@@ -294,40 +245,43 @@ img{max-width:100%}
   <div><div class="footer-brand"><img src="IMG_1574.jpeg" alt="رمشة بلس"><strong>رمشة بلس</strong></div><p>خدماتك الرقمية في مكان واحد. اشتراكات رقمية وخدمات إلكترونية وبرامج سوشيال ميديا وخدمات قيمنق مع دعم مباشر.</p></div>
   <div><h4>روابط مهمة</h4><div class="footer-links">
     <button onclick="openPolicy('about')">عن رمشة بلس</button><button onclick="openPolicy('refund')">سياسة الاسترجاع</button><button onclick="openPolicy('terms')">الشروط والأحكام</button>
-    <a href="https://business.sa/ar/eservices/details/3fd371e5-11de-4078-08cf-08dbf015747a" target="_blank">التحقق من الشهادة</a>
+    <a href="https://business.sa/ar/eservices/details/3fd371e5-11de-4078-08cf-08dbf015747a" target="_blank" rel="noopener">التحقق من الشهادة</a>
   </div></div>
   <div><h4>تابعنا</h4><div class="socials">
-    <a class="social" href="https://snapchat.com/t/M5LXgWuQ" target="_blank">Snapchat</a>
-    <a class="social" href="https://www.tiktok.com/@ramshaplus" target="_blank">TikTok</a>
-    <a class="social" href="https://www.instagram.com/@ramshaplus" target="_blank">Instagram</a>
-    <a class="social" href="https://x.com/ramshaplus" target="_blank">X</a>
+    <a class="social" href="https://snapchat.com/t/M5LXgWuQ" target="_blank" rel="noopener">Snapchat</a>
+    <a class="social" href="https://www.tiktok.com/@ramshaplus" target="_blank" rel="noopener">TikTok</a>
+    <a class="social" href="https://www.instagram.com/@ramshaplus" target="_blank" rel="noopener">Instagram</a>
+    <a class="social" href="https://x.com/ramshaplus" target="_blank" rel="noopener">X</a>
   </div></div>
 </div><div class="footer-bottom">جميع الحقوق محفوظة لرمشة بلس 2026 ©</div></div></footer>
 
 <div class="overlay" id="categoryOverlay"><div class="modal">
-  <div class="modal-head"><div class="modal-title" id="categoryModalTitle">الخدمات</div><button class="modal-close" onclick="closeCategory()">×</button></div>
-  <div class="modal-body"><div class="products-grid" id="productsGrid"></div></div>
+  <div class="modal-head"><div class="modal-title" id="categoryModalTitle">الخدمات</div><button class="modal-close" onclick="closeCategory()" aria-label="إغلاق">×</button></div>
+  <div class="modal-body">
+    <div class="category-back-wrap" id="categoryBackWrap" hidden></div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
 </div></div>
 
 <div class="overlay" id="checkoutOverlay"><div class="modal">
-  <div class="modal-head"><div class="modal-title">تأكيد الطلب</div><button class="modal-close" onclick="closeCheckout()">×</button></div>
+  <div class="modal-head"><div class="modal-title">تأكيد الطلب</div><button class="modal-close" onclick="closeCheckout()" aria-label="إغلاق">×</button></div>
   <div class="modal-body"><div class="checkout-box">
     <div class="checkout-product"><strong id="checkoutProduct">المنتج</strong><span id="checkoutPrice">السعر</span></div>
-    <div class="field"><label>اسم العميل</label><input id="customerName" type="text" placeholder="اكتب اسمك"></div>
-    <div class="field"><label>رقم الجوال</label><input id="customerPhone" type="tel" placeholder="05xxxxxxxx"></div>
+    <div class="field"><label for="customerName">اسم العميل</label><input id="customerName" type="text" placeholder="اكتب اسمك"></div>
+    <div class="field"><label for="customerPhone">رقم الجوال</label><input id="customerPhone" type="tel" placeholder="05xxxxxxxx"></div>
     <div class="order-note">بعد الضغط على تأكيد الطلب سيتم فتح واتساب وإرسال تفاصيل طلبك، وبعدها يتم تجهيز فاتورة الدفع عبر هلا.</div>
     <div class="checkout-actions"><button class="btn btn-secondary" onclick="closeCheckout()">رجوع</button><button class="btn btn-primary" onclick="confirmOrder()">تأكيد الطلب</button></div>
   </div></div>
 </div></div>
 
 <div class="overlay" id="policyOverlay"><div class="modal">
-  <div class="modal-head"><div class="modal-title" id="policyTitle">المعلومات</div><button class="modal-close" onclick="closePolicy()">×</button></div>
+  <div class="modal-head"><div class="modal-title" id="policyTitle">المعلومات</div><button class="modal-close" onclick="closePolicy()" aria-label="إغلاق">×</button></div>
   <div class="modal-body"><div class="policy-content" id="policyContent"></div></div>
 </div></div>
 
 <button class="ramash-button" onclick="toggleRamash()" aria-label="رَمّاش">🤖</button>
 <div class="ramash-window" id="ramashWindow">
-  <div class="ramash-head"><div class="ramash-title"><div class="ramash-avatar">🤖</div><div><strong>رَمّاش</strong><span>متواجد لخدمتك</span></div></div><button class="ramash-close" onclick="closeRamash()">×</button></div>
+  <div class="ramash-head"><div class="ramash-title"><div class="ramash-avatar">🤖</div><div><strong>رَمّاش</strong><span>متواجد لخدمتك</span></div></div><button class="ramash-close" onclick="closeRamash()" aria-label="إغلاق">×</button></div>
   <div class="ramash-messages" id="ramashMessages"><div class="msg bot">هلا والله 👋🏻 أنا رَمّاش 🤖
 
 أقدر أساعدك تعرف الأسعار والخدمات وطريقة الطلب.</div></div>
@@ -338,9 +292,9 @@ img{max-width:100%}
     <button class="quick-btn" onclick="quickRamash('يوتيوب')">يوتيوب</button>
     <button class="quick-btn" onclick="quickRamash('طريقة الطلب')">طريقة الطلب</button>
   </div>
-  <div class="ramash-input"><input id="ramashInput" type="text" placeholder="اكتب سؤالك..." onkeydown="if(event.key==='Enter')sendRamash()"><button class="ramash-send" onclick="sendRamash()">↑</button></div>
+  <div class="ramash-input"><input id="ramashInput" type="text" placeholder="اكتب سؤالك..." onkeydown="if(event.key==='Enter')sendRamash()"><button class="ramash-send" onclick="sendRamash()" aria-label="إرسال">↑</button></div>
 </div>
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 "use strict";
@@ -368,7 +322,7 @@ const categories={
     {name:"متابعين Instagram",description:"خدمات متابعين انستقرام",options:[{label:"تواصل معنا",contact:true}]},
     {name:"متابعين X",description:"خدمات متابعين منصة X",options:[{label:"تواصل معنا",contact:true}]}
   ]},
-  gaming:{title:"القيمنق",icon:"🎮",desc:"اشتراكات وحسابات وخدمات قيمنق",products:[
+  gaming:{title:"القيمنق",icon:"🎮",desc:"ألعاب PC وسوني وXbox وNintendo واشتراكات وحسابات",products:[
     {name:"PlayStation Plus",description:"اشتراك PS Plus",options:[
       {label:"شهر — غير متوفر",unavailable:true},
       {label:"3 أشهر — غير متوفر",unavailable:true},
@@ -380,72 +334,176 @@ const categories={
   ]}
 };
 
-  const reviews = [
-  "خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍",
-  "ممتازه",
-  "تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️",
-  "افضل متجر واسعارهم رخيصه",
-  "اسعارهم رخيصه وكويسه",
-  "متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻",
-  "خدمه سريعه والاهم الثقه👍🏻",
-  "خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يرزقهم وضمان ما شاء الله هذا ثاني شهر اخذ منهم وأسعارهم حلوه",
-  "حلوه جداً ومميزه",
-  "ممتاز",
-  "❤️❤️",
-  "جميل جداً",
-  "انصح بتعامل معهم متجر ثقه👍🏻❤️",
-  "عجيب",
-  "فوق الممتازه وانصح فيه",
-  "الله يرزقكم ويعطيكم الف عافيه❤️",
-  "فوق الممتازة وأنصح فيه",
-  "خدمة فخمة 😍",
-  "الصراحة متجر فخم والتعامل معهم فوق الممتاز ويردون بسرعة وأفضل تجربة لي",
-  "متجر فوق التقييم ويردون بسرعة",
-  "تجربة ممتازة وسرعة بالرد والتنفيذ، أنصح فيهم👍🏻",
-  "الأفضل في المجال 🔥👍🏾",
-  "رائع سريعين ومحترمين الله يوفقهم أنصح بهم 🙏🏻",
-  "فوق التقييم",
-  "خدمة سريعة وعلى طول تسلمت الحساب",
-  "سعر مناسب وسرعه فالخدمه استقبال العملاء ٢٤ساعه وثقه مليووون شكراً",
-  "افضل واضمن متجر جربته الصراحة",
-  "خدمه سريعه وحلوه",
-  "تعامل رهيب ومتجر ارهب يستاهل❤️",
-  "سريع ومتعاون الله يسعده",
-  "اسسسطوريييه",
-  "جميله",
-  "رائعة"
+/* الأقسام الفرعية للقيمنق */
+categories.gaming.subcategories=[
+  {
+    key:"pc",
+    title:"ألعاب PC",
+    image:"IMG_2502.webp",
+    desc:"ألعاب الكمبيوتر وSteam",
+    products:[{name:"ألعاب PC",description:"ألعاب الكمبيوتر وSteam",options:[{label:"تواصل معنا",contact:true}]}]
+  },
+  {
+    key:"playstation",
+    title:"ألعاب سوني",
+    image:"IMG_2501.jpeg",
+    desc:"ألعاب وخدمات PlayStation",
+    products:[{name:"ألعاب سوني",description:"ألعاب وخدمات PlayStation",options:[{label:"تواصل معنا",contact:true}]}]
+  },
+  {
+    key:"xbox",
+    title:"ألعاب Xbox",
+    image:"IMG_2503.webp",
+    desc:"ألعاب وخدمات إكس بوكس",
+    products:[{name:"ألعاب Xbox",description:"ألعاب وخدمات إكس بوكس",options:[{label:"تواصل معنا",contact:true}]}]
+  },
+  {
+    key:"nintendo",
+    title:"ألعاب Nintendo",
+    image:"IMG_2504.png",
+    desc:"ألعاب وخدمات نينتندو",
+    products:[{name:"ألعاب Nintendo",description:"ألعاب وخدمات نينتندو",options:[{label:"تواصل معنا",contact:true}]}]
+  },
+  {
+    key:"accounts",
+    title:"الاشتراكات والحسابات",
+    icon:"👾",
+    desc:"بلس سوني وفورتنايت وV-Bucks وحسابات",
+    products:categories.gaming.products
+  }
 ];
 
 const categoryGrid=document.getElementById("categoryGrid");
+
 Object.entries(categories).forEach(([key,category])=>{
   const card=document.createElement("div");
   card.className="category-card";
   card.innerHTML=`<div><div class="category-icon">${category.icon}</div><div class="category-title">${category.title}</div><div class="category-desc">${category.desc}</div></div><div class="category-open">عرض الخدمات ←</div>`;
-  card.onclick=()=>openCategory(key);
+  card.addEventListener("click",()=>openCategory(key));
   categoryGrid.appendChild(card);
 });
 
+/* فتح الأقسام */
 function openCategory(key){
   const category=categories[key];
   if(!category)return;
-  document.getElementById("categoryModalTitle").textContent=category.title;
+
+  if(key==="gaming"){
+    renderGamingSubcategories();
+    return;
+  }
+
+  renderCategoryProducts(category.title,category.products,false);
+}
+
+/* عرض بطاقات القيمنق الفرعية */
+function renderGamingSubcategories(){
+  const category=categories.gaming;
   const grid=document.getElementById("productsGrid");
+  const backWrap=document.getElementById("categoryBackWrap");
+
+  document.getElementById("categoryModalTitle").textContent=category.title;
+  backWrap.hidden=true;
+  backWrap.innerHTML="";
+  grid.className="gaming-subcategories";
   grid.innerHTML="";
-  category.products.forEach(product=>{
+
+  category.subcategories.forEach(subcategory=>{
+    const card=document.createElement("button");
+    card.type="button";
+    card.className="gaming-subcategory";
+
+    let visual;
+    if(subcategory.image){
+      const image=document.createElement("img");
+      image.src=subcategory.image;
+      image.alt=subcategory.title;
+      image.loading="lazy";
+      image.onerror=()=>{image.style.display="none";};
+      visual=image;
+    }else{
+      const icon=document.createElement("span");
+      icon.className="gaming-subcategory-icon";
+      icon.textContent=subcategory.icon||"🎮";
+      visual=icon;
+    }
+
+    const info=document.createElement("span");
+    info.innerHTML=`
+      <span class="gaming-subcategory-title">${subcategory.title}</span>
+      <span class="gaming-subcategory-desc">${subcategory.desc}</span>
+      <span class="gaming-subcategory-open">استعرض القسم ←</span>
+    `;
+
+    card.append(visual,info);
+    card.addEventListener("click",()=>{
+      renderCategoryProducts(subcategory.title,subcategory.products,true);
+    });
+    grid.appendChild(card);
+  });
+
+  document.getElementById("categoryOverlay").classList.add("active");
+  document.body.classList.add("modal-open");
+}
+
+/* عرض المنتجات مع خيار الرجوع عند فتح قسم فرعي */
+function renderCategoryProducts(title,products,showBack){
+  const grid=document.getElementById("productsGrid");
+  const backWrap=document.getElementById("categoryBackWrap");
+
+  document.getElementById("categoryModalTitle").textContent=title;
+  grid.className="products-grid";
+  grid.innerHTML="";
+  backWrap.innerHTML="";
+  backWrap.hidden=!showBack;
+
+  if(showBack){
+    const backButton=document.createElement("button");
+    backButton.type="button";
+    backButton.className="category-back";
+    backButton.textContent="→ رجوع إلى أقسام القيمنق";
+    backButton.addEventListener("click",renderGamingSubcategories);
+    backWrap.appendChild(backButton);
+  }
+
+  products.forEach(product=>{
     const productBox=document.createElement("div");
     productBox.className="product";
+
     let buttons="";
     product.options.forEach(option=>{
-      const isUnav = option.unavailable;
-      const data={category:category.title,product:product.name,option:option.label,price:option.price||null,contact:!!option.contact,unavailable:!!isUnav};
-      buttons+=`<button class="option-btn ${option.contact?"contact":""} ${isUnav?"unavailable":""}" ${isUnav?"disabled":""} data-product="${encodeURIComponent(JSON.stringify(data))}">${option.label}</button>`;
+      const isUnav=!!option.unavailable;
+      const data={
+        category:title,
+        product:product.name,
+        option:option.label,
+        price:option.price||null,
+        contact:!!option.contact,
+        unavailable:isUnav
+      };
+
+      buttons+=`<button type="button" class="option-btn ${option.contact?"contact":""} ${isUnav?"unavailable":""}" ${isUnav?"disabled":""} data-product="${encodeURIComponent(JSON.stringify(data))}">${option.label}</button>`;
     });
-    productBox.innerHTML=`<div class="product-top"><div><div class="product-name">${product.name}</div><div class="product-desc">${product.description}</div></div></div><div class="product-options">${buttons}</div>`;
+
+    productBox.innerHTML=`
+      <div class="product-top">
+        <div>
+          <div class="product-name">${product.name}</div>
+          <div class="product-desc">${product.description}</div>
+        </div>
+      </div>
+      <div class="product-options">${buttons}</div>
+    `;
+
     productBox.querySelectorAll("button[data-product]").forEach(button=>{
-      button.addEventListener("click",()=>selectProduct(JSON.parse(decodeURIComponent(button.dataset.product))));
+      button.addEventListener("click",()=>{
+        selectProduct(JSON.parse(decodeURIComponent(button.dataset.product)));
+      });
     });
+
     grid.appendChild(productBox);
   });
+
   document.getElementById("categoryOverlay").classList.add("active");
   document.body.classList.add("modal-open");
 }
@@ -459,11 +517,14 @@ let selectedProduct=null;
 
 function selectProduct(data){
   if(!data)return;
+
   if(data.unavailable){
     showToast("هذا الخيار غير متوفر حالياً");
     return;
   }
+
   selectedProduct=data;
+
   if(data.contact){
     closeCategory();
     setTimeout(()=>{
@@ -472,6 +533,7 @@ function selectProduct(data){
     },150);
     return;
   }
+
   closeCategory();
   document.getElementById("checkoutProduct").textContent=`${data.product} — ${data.option}`;
   document.getElementById("checkoutPrice").textContent=`${Number(data.price).toFixed(2)} ريال`;
@@ -497,12 +559,16 @@ function confirmOrder(){
     showToast("هذا الخيار غير متوفر حالياً");
     return;
   }
+
   const name=document.getElementById("customerName").value.trim();
   const phone=document.getElementById("customerPhone").value.trim();
+
   if(!name){showToast("اكتب اسمك أولاً");return;}
   if(!phone||phone.length<8){showToast("اكتب رقم جوال صحيح");return;}
+
   const orderNumber=generateOrderNumber();
   const message=`السلام عليكم رمشة بلس 👋🏻\n\nأرغب بطلب خدمة:\n\nرقم الطلب:\n${orderNumber}\n\nالقسم:\n${selectedProduct.category}\n\nالخدمة:\n${selectedProduct.product}\n\nالخيار:\n${selectedProduct.option}\n\nالسعر:\n${Number(selectedProduct.price).toFixed(2)} ريال\n\nاسم العميل:\n${name}\n\nرقم الجوال:\n${phone}\n\nبانتظار تجهيز الطلب وفاتورة الدفع عبر هلا 🙏🏻`;
+
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,"_blank");
   closeCheckout();
   selectedProduct=null;
@@ -514,30 +580,82 @@ function openWhatsApp(){
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,"_blank");
 }
 
+/* تقييمات العملاء الـ33 */
+const reviews=[
+"خدمه سريعه واسلوب عسل ومحترمين وسعرهم رخيص🤍",
+"ممتازه",
+"تفعيل سريع وخدمه عسل عسى الله يبارك لكم ❤️",
+"افضل متجر واسعارهم رخيصه",
+"اسعارهم رخيصه وكويسه",
+"متجر مميز خدمته رهيبه وكل شي عندهم المتجر فوق التقيم🤚🏻",
+"خدمه سريعه والاهم الثقه👍🏻",
+"خدمه الدفع وخدمه التسليم سريعه وتعامل خدمه العملاء كويسين ويردون بسرعه ماشاءالله الله يبارك لهم وأسعارهم حلوه",
+"حلوه جداً ومميزه",
+"ممتاز",
+"❤️❤️",
+"جميل جداً",
+"انصح بتعامل معهم متجر ثقه👍🏻❤️",
+"عجيب",
+"فوق الممتازه وانصح فيه",
+"الله يرزقكم ويعطيكم الف عافيه❤️",
+"فوق الممتازة وأنصح فيه",
+"خدمة فخمة 😍",
+"الصراحة متجر فخم والتعامل معهم فوق الممتاز ويردون بسرعة وأفضل تجربة لي",
+"متجر فوق التقييم ويردون بسرعة",
+"تجربة ممتازة وسرعة بالرد والتنفيذ، أنصح فيهم👍🏻",
+"الأفضل في المجال 🔥👍🏾",
+"رائع سريعين ومحترمين الله يوفقهم أنصح بهم 🙏🏻",
+"فوق التقييم",
+"خدمة سريعة وعلى طول تسلمت الحساب",
+"سعر مناسب وسرعه فالخدمه استقبال العملاء ٢٤ساعه وثقه مليووون شكراً",
+"افضل واضمن متجر جربته الصراحة",
+"خدمه سريعه وحلوه",
+"تعامل رهيب ومتجر ارهب يستاهل❤️",
+"سريع ومتعاون الله يسعده",
+"اسسسطوريييه",
+"جميله",
+"رائعة"
+];
+
 const reviewTrack=document.getElementById("reviewTrack");
 const reviewDots=document.getElementById("reviewDots");
 let currentReview=0;
+
 reviews.forEach((review,index)=>{
   const slide=document.createElement("div");
   slide.className="review-slide";
+
   const stars=document.createElement("div");
-  stars.className="stars";stars.textContent="★★★★★";
+  stars.className="stars";
+  stars.textContent="★★★★★";
+
   const reviewText=document.createElement("div");
-  reviewText.className="review-text";reviewText.textContent=`“${review}”`;
+  reviewText.className="review-text";
+  reviewText.textContent=`“${review}”`;
+
   const author=document.createElement("div");
-  author.className="review-author";author.textContent="عميل رمشة بلس";
+  author.className="review-author";
+  author.textContent="عميل رمشة بلس";
+
   slide.append(stars,reviewText,author);
   reviewTrack.appendChild(slide);
+
   const dot=document.createElement("button");
+  dot.type="button";
   dot.className="dot"+(index===0?" active":"");
+  dot.setAttribute("aria-label",`عرض التقييم ${index+1}`);
   dot.addEventListener("click",()=>goReview(index));
   reviewDots.appendChild(dot);
 });
+
 function goReview(index){
   currentReview=(index+reviews.length)%reviews.length;
   reviewTrack.style.transform=`translateX(${currentReview*100}%)`;
-  document.querySelectorAll(".dot").forEach((dot,i)=>dot.classList.toggle("active",i===currentReview));
+  document.querySelectorAll(".dot").forEach((dot,i)=>{
+    dot.classList.toggle("active",i===currentReview);
+  });
 }
+
 setInterval(()=>goReview(currentReview+1),3000);
 
 const policies={
@@ -547,25 +665,31 @@ const policies={
 };
 
 function openPolicy(type){
-  const policy=policies[type];if(!policy)return;
+  const policy=policies[type];
+  if(!policy)return;
   document.getElementById("policyTitle").textContent=policy.title;
   document.getElementById("policyContent").innerHTML=policy.content;
   document.getElementById("policyOverlay").classList.add("active");
   document.body.classList.add("modal-open");
 }
+
 function closePolicy(){
   document.getElementById("policyOverlay").classList.remove("active");
   document.body.classList.remove("modal-open");
 }
 
+/* رَمّاش */
 const ramashWindow=document.getElementById("ramashWindow");
 const ramashMessages=document.getElementById("ramashMessages");
+
 function openRamash(){ramashWindow.classList.add("active")}
 function closeRamash(){ramashWindow.classList.remove("active")}
 function toggleRamash(){ramashWindow.classList.toggle("active")}
+
 function normalizeArabic(text){
   return text.toLowerCase().replace(/[أإآ]/g,"ا").replace(/ة/g,"ه").replace(/ى/g,"ي").replace(/[ًٌٍَُِّْـ]/g,"").trim();
 }
+
 function addRamashMessage(text,type="bot"){
   const message=document.createElement("div");
   message.className=`msg ${type}`;
@@ -573,14 +697,18 @@ function addRamashMessage(text,type="bot"){
   ramashMessages.appendChild(message);
   ramashMessages.scrollTop=ramashMessages.scrollHeight;
 }
+
 function quickRamash(text){
   document.getElementById("ramashInput").value=text;
   sendRamash();
 }
+
 function sendRamash(){
   const input=document.getElementById("ramashInput");
-  const text=input.value.trim();if(!text)return;
-  addRamashMessage(text,"user");input.value="";
+  const text=input.value.trim();
+  if(!text)return;
+  addRamashMessage(text,"user");
+  input.value="";
   setTimeout(()=>addRamashMessage(getRamashReply(text),"bot"),250);
 }
 
@@ -589,7 +717,9 @@ function findProducts(words){
   Object.values(categories).forEach(category=>{
     category.products.forEach(product=>{
       const productText=normalizeArabic(`${product.name} ${product.description}`);
-      if(words.some(word=>productText.includes(normalizeArabic(word))))results.push({category,product});
+      if(words.some(word=>productText.includes(normalizeArabic(word)))){
+        results.push({category,product});
+      }
     });
   });
   return results;
@@ -601,6 +731,7 @@ function formatProduct(product){
   if(prices)result+=`\n${prices}`;
   return result;
 }
+
 function getCategoryPrices(categoryKey){
   return categories[categoryKey].products.map(formatProduct).join("\n\n");
 }
@@ -620,57 +751,72 @@ function getRamashReply(input){
     return "🎮 تنبيه بخصوص بلايستيشن بلس\n\nنعتذر منك، اشتراك PlayStation Plus غير متوفر حالياً بجميع المدد:\n• شهر — غير متوفر\n• 3 أشهر — غير متوفر\n• سنة — غير متوفر\n\nأوقفنا الطلب عليه مؤقتاً، وبقية خدمات القيمنق تقدر تستفسر عنها من قسم القيمنق. 🤍";
   }
 
-  if(text.includes("قيمنق")||text.includes("العاب")||text.includes("فورتنايت")||text.includes("في بوكس")||text.includes("v-bucks")){
-    return `🎮 خدمات القيمنق\n\n${getCategoryPrices("gaming")}`;
+  if(text.includes("قيمنق")||text.includes("العاب")||text.includes("فورتنايت")||text.includes("في بوكس")||text.includes("v-bucks")||text.includes("xbox")||text.includes("نينتندو")||text.includes("pc")){
+    return `🎮 أقسام القيمنق\n\n• ألعاب PC\n• ألعاب سوني\n• ألعاب Xbox\n• ألعاب Nintendo\n• الاشتراكات والحسابات\n\nافتح قسم القيمنق في المتجر واختر القسم المناسب لك.`;
   }
 
   if(text.includes("نتفلكس")||text.includes("netflix")){
     return `🎬 نتفلكس\n\n${findProducts(["Netflix"]).map(x=>formatProduct(x.product)).join("\n\n")}\n\nإذا تبي تطلب اضغط على قسم الاشتراكات الرقمية.`;
   }
+
   if(text.includes("شاهد")||text.includes("مباريات")){
     return `📺 شاهد\n\n${findProducts(["Shahid"]).map(x=>formatProduct(x.product)).join("\n\n")}`;
   }
+
   if(text.includes("يوتيوب")||text.includes("youtube")){
     return `▶️ YouTube Premium\n\n${findProducts(["YouTube"]).map(x=>formatProduct(x.product)).join("\n\n")}`;
   }
+
   if(text.includes("سناب")||text.includes("snapchat")){
     return `👻 Snapchat Plus\n\n${findProducts(["Snapchat"]).map(x=>formatProduct(x.product)).join("\n\n")}`;
   }
+
   if(text.includes("تيك")||text.includes("tiktok")){
     return `📱 TikTok\n\n${findProducts(["TikTok"]).map(x=>formatProduct(x.product)).join("\n\n")}\n\nللاستفسار عن الكمية والسعر تواصل معنا.`;
   }
+
   if(text.includes("انستا")||text.includes("انستقرام")||text.includes("instagram")){
     return `📸 Instagram\n\n${findProducts(["Instagram"]).map(x=>formatProduct(x.product)).join("\n\n")}\n\nللاستفسار عن الكمية والسعر تواصل معنا.`;
   }
+
   if(text.includes("تويتر")||text==="x"||text.includes("متابعين x")){
     return `𝕏 خدمات X\n\n${findProducts(["متابعين X"]).map(x=>formatProduct(x.product)).join("\n\n")}\n\nللاستفسار عن الكمية والسعر تواصل معنا.`;
   }
+
   if(text.includes("موقع")||text.includes("متجر")||text.includes("اضافه منتجات")||text.includes("خدمات الكترونيه")){
     return `💻 الخدمات الإلكترونية\n\n${getCategoryPrices("digital")}`;
   }
+
   if(text.includes("كل الاسعار")||text.includes("جميع الاسعار")||text.includes("كل الخدمات")||text==="الخدمات"){
-    return `📋 خدمات رمشة بلس\n\n💻 الخدمات الإلكترونية:\n${getCategoryPrices("digital")}\n\n📺 الاشتراكات الرقمية:\n${getCategoryPrices("subscriptions")}\n\n📱 السوشيال ميديا:\n${getCategoryPrices("social")}\n\n🎮 القيمنق:\n${getCategoryPrices("gaming")}`;
+    return `📋 خدمات رمشة بلس\n\n💻 الخدمات الإلكترونية:\n${getCategoryPrices("digital")}\n\n📺 الاشتراكات الرقمية:\n${getCategoryPrices("subscriptions")}\n\n📱 السوشيال ميديا:\n${getCategoryPrices("social")}\n\n🎮 الاشتراكات والحسابات:\n${getCategoryPrices("gaming")}`;
   }
+
   if(text.includes("السعر")||text.includes("اسعار")||text.includes("كم")||text.includes("بكم")){
     return "أكيد 👌🏻\n\nعندنا اشتراكات رقمية وخدمات إلكترونية وسوشيال ميديا وقيمنق.\n\nاكتب اسم الخدمة مثلاً:\nنتفلكس\nشاهد\nيوتيوب\nسناب\nبلايستيشن\nموقع\nمتجر\n\nوأعطيك السعر مباشرة.";
   }
+
   if(text.includes("دعم")||text.includes("موظف")||text.includes("اتواصل")||text.includes("واتساب")){
     return "أكيد 🤍\n\nتقدر تتواصل معنا مباشرة عبر واتساب وبيتم الرد عليك حسب توفر فريق الدعم.\n\nاضغط تواصل معنا أعلى المتجر.";
   }
+
   if(text.includes("شهاده")||text.includes("توثيق")||text.includes("موثق")){
     return "✓ عندنا شهادة باسم رمشة بلس من مركز الأعمال.\n\nتقدر تشوف الشهادة وتتحقق منها من قسم التوثيق في المتجر.";
   }
+
   if(text.includes("هلا")&&(text.includes("دفع")||text.includes("فاتوره"))){
     return "💳 الدفع يتم عبر فاتورة هلا.\n\nبعد تأكيد الطلب يتم تجهيز الفاتورة وإرسالها لك لإكمال الدفع.";
   }
-  return "ما فهمت عليك بالكامل 😅\n\nجرب تسألني عن:\n🎬 نتفلكس\n📺 شاهد\n▶️ يوتيوب\n👻 سناب\n🎮 بلايستيشن\n📱 تيك توك\n📸 انستقرام\n💻 المواقع والمتاجر\n💰 الأسعار\n🛒 طريقة الطلب\n\nأو اكتب كل الخدمات.";
+
+  return "ما فهمت عليك بالكامل 😅\n\nجرب تسألني عن:\n🎬 نتفلكس\n📺 شاهد\n▶️ يوتيوب\n👻 سناب\n🎮 القيمنق\n📱 تيك توك\n📸 انستقرام\n💻 المواقع والمتاجر\n💰 الأسعار\n🛒 طريقة الطلب\n\nأو اكتب كل الخدمات.";
 }
 
 function scrollToSection(id){
   const element=document.getElementById(id);
   if(element)element.scrollIntoView({behavior:"smooth",block:"start"});
 }
+
 let toastTimer;
+
 function showToast(message){
   const toast=document.getElementById("toast");
   toast.textContent=message;
@@ -679,6 +825,7 @@ function showToast(message){
   toastTimer=setTimeout(()=>toast.classList.remove("show"),3500);
 }
 
+/* إغلاق النوافذ */
 ["categoryOverlay","checkoutOverlay","policyOverlay"].forEach(id=>{
   document.getElementById(id).addEventListener("click",function(e){
     if(e.target!==this)return;
@@ -687,82 +834,109 @@ function showToast(message){
     if(id==="policyOverlay")closePolicy();
   });
 });
+
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape"){
-    closeCategory();closeCheckout();closePolicy();closeRamash();
+    closeCategory();
+    closeCheckout();
+    closePolicy();
+    closeRamash();
   }
 });
-   
-// 🇸🇦 وطن لانحميه لانستحق العيش فيه
-(function () {
-  const trend = document.getElementById("ramshaTrend");
-  const media = document.getElementById("qamtahAudio");
-  const button = document.getElementById("enableTrendSound");
 
-  if (!trend || !media || !button) return;
+/* 🇸🇦 عرض السعودية والتحكم بالصوت */
+(function(){
+  const trend=document.getElementById("ramshaTrend");
+  const media=document.getElementById("qamtahAudio");
+  const button=document.getElementById("enableTrendSound");
 
-  let soundEnabled = false;
+  if(!trend||!media||!button)return;
+
+  let soundEnabled=false;
   let showTimer;
   let hideTimer;
 
-  function stopSound() {
+  function stopSound(){
     media.pause();
-    try { media.currentTime = 0; } catch (e) {}
+    try{media.currentTime=0;}catch(e){}
   }
 
-  function showTrend() {
-    if (document.hidden) return;
+  function scheduleNext(){
+    clearTimeout(showTimer);
+    showTimer=setTimeout(showTrend,3000);
+  }
+
+  function showTrend(){
+    if(document.hidden)return;
 
     trend.classList.add("show");
 
-    if (soundEnabled) {
-      try { media.currentTime = 0; } catch (e) {}
-      media.play().catch(function () {
-        button.textContent = "🔊 اضغط لتفعيل الصوت";
+    if(soundEnabled){
+      try{media.currentTime=0;}catch(e){}
+      media.play().catch(()=>{
+        button.textContent="🔊 اضغط لتشغيل الصوت";
       });
     }
 
-    const duration = Number.isFinite(media.duration) && media.duration > 0
-      ? Math.max(2200, media.duration * 1000)
-      : 4000;
+    const duration=Number.isFinite(media.duration)&&media.duration>0
+      ?Math.max(2200,media.duration*1000)
+      :4000;
 
-    hideTimer = setTimeout(function () {
+    clearTimeout(hideTimer);
+    hideTimer=setTimeout(()=>{
       trend.classList.remove("show");
       stopSound();
-      showTimer = setTimeout(showTrend, 3000);
-    }, duration);
+      scheduleNext();
+    },duration);
   }
 
-  button.addEventListener("click", function () {
-    soundEnabled = !soundEnabled;
-    button.textContent = soundEnabled
-      ? "🔇 إيقاف الصوت"
-      : "🔊 فعّل الصوت ";
-
+  button.addEventListener("click",()=>{
+    soundEnabled=!soundEnabled;
     clearTimeout(showTimer);
     clearTimeout(hideTimer);
 
-    if (soundEnabled) {
-      showTrend();
-    } else {
+    if(soundEnabled){
+      button.textContent="🔇 إيقاف الصوت";
+      trend.classList.add("show");
+
+      /* محاولة التشغيل مباشرة بعد ضغط المستخدم */
+      try{media.currentTime=0;}catch(e){}
+
+      media.play().then(()=>{
+        const duration=Number.isFinite(media.duration)&&media.duration>0
+          ?Math.max(2200,media.duration*1000)
+          :4000;
+
+        clearTimeout(hideTimer);
+        hideTimer=setTimeout(()=>{
+          trend.classList.remove("show");
+          stopSound();
+          if(soundEnabled)scheduleNext();
+        },duration);
+      }).catch(()=>{
+        button.textContent="🔊 تعذّر التشغيل — اضغط للمحاولة";
+        showToast("تعذّر تشغيل الصوت. تأكد من وجود ملف الصوت في GitHub.");
+      });
+    }else{
+      button.textContent="🔊 فعل الصوت";
+      trend.classList.remove("show");
       stopSound();
     }
   });
 
-  document.addEventListener("visibilitychange", function () {
+  document.addEventListener("visibilitychange",()=>{
     clearTimeout(showTimer);
     clearTimeout(hideTimer);
     trend.classList.remove("show");
     stopSound();
 
-    if (!document.hidden) {
-      showTimer = setTimeout(showTrend, 1000);
+    if(!document.hidden){
+      showTimer=setTimeout(showTrend,1000);
     }
   });
 
-  showTimer = setTimeout(showTrend, 1000);
+  showTimer=setTimeout(showTrend,1000);
 })();
-
 </script>
 </body>
 </html>
