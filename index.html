@@ -515,6 +515,7 @@ function closeCategory(){
 
 let selectedProduct=null;
 
+  
 function selectProduct(data){
   if(!data)return;
 
@@ -527,21 +528,41 @@ function selectProduct(data){
 
   if(data.contact){
     closeCategory();
+
     setTimeout(()=>{
-      const message=`السلام عليكم 👋🏻\n\nأرغب بالاستفسار عن خدمة:\n${data.product}\n\nالقسم:\n${data.category}`;
-      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,"_blank");
+      const gamingMessages={
+        "ألعاب PC":"السلام عليكم، أبي أطلب لعبة PC.\n\nاسم اللعبة:",
+        "ألعاب سوني":"السلام عليكم، أبي أطلب لعبة سوني.\n\nاسم اللعبة:",
+        "ألعاب Xbox":"السلام عليكم، أبي أطلب لعبة Xbox.\n\nاسم اللعبة:",
+        "ألعاب Nintendo":"السلام عليكم، أبي أطلب لعبة Nintendo.\n\nاسم اللعبة:"
+      };
+
+      const message=gamingMessages[data.category] ||
+        `السلام عليكم 👋🏻\n\nأرغب بالاستفسار عن خدمة:\n${data.product}\n\nالقسم:\n${data.category}`;
+
+      window.open(
+        `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
     },150);
+
     return;
   }
 
   closeCategory();
-  document.getElementById("checkoutProduct").textContent=`${data.product} — ${data.option}`;
-  document.getElementById("checkoutPrice").textContent=`${Number(data.price).toFixed(2)} ريال`;
+
+  document.getElementById("checkoutProduct").textContent=
+    `${data.product} — ${data.option}`;
+
+  document.getElementById("checkoutPrice").textContent=
+    `${Number(data.price).toFixed(2)} ريال`;
+
   document.getElementById("customerName").value="";
   document.getElementById("customerPhone").value="";
   document.getElementById("checkoutOverlay").classList.add("active");
   document.body.classList.add("modal-open");
 }
+
 
 function closeCheckout(){
   document.getElementById("checkoutOverlay").classList.remove("active");
